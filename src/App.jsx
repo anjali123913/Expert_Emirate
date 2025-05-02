@@ -10,7 +10,7 @@ function App() {
       <Navbar/>
       <HeroSection />
       <SecondHero />
-      <PlansSection/>
+      {/* <PlansSection/> */}
     </div>
   );
 }
