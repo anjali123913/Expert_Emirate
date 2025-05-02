@@ -1,4 +1,4 @@
-// src/components/Navbar.jsx
+
 import React from "react";
 import logo from "../assets/react.svg";
 

@@ -1,4 +1,4 @@
-// src/components/Hero.jsx
+
 import React from "react";
 import cityscape from "../assets/cityscape.png";
 import { motion } from "framer-motion";
