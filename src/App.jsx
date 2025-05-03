@@ -3,6 +3,10 @@ import Navbar from "./components/Navbar";
 import SecondHero from "./components/SecondHero";
 import HeroSection from "./components/HeroSection";
 import PlansSection from "./homepage/PlansSection";
+import MarketSection from "./homepage/MarketSection";
+import TrustSection from "./homepage/TrustSection";
+import PricingSection from "./homepage/PricingSection";
+
 
 function App() {
   return (
@@ -10,7 +14,10 @@ function App() {
       <Navbar/>
       <HeroSection />
       <SecondHero />
-      {/* <PlansSection/> */}
+      <MarketSection/>
+      <TrustSection/>
+      <PricingSection/>
+     
     </div>
   );
 }
