@@ -1,6 +1,6 @@
 import React from "react";
 import arrowImg from "../assets/arrow.png";
-import logoImg from "../assets/logo.png";
+import logoImg from "../assets//heroSectionImages/logo.png";
 import { FaInstagram, FaFacebookF, FaYoutube, FaXTwitter } from "react-icons/fa6";
 
 export default function PlansSection() {
