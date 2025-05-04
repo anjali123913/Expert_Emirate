@@ -12,7 +12,7 @@ const PricingCard = () => {
   return (
     <div className="flex justify-center items-center " style={font}>
       <div
-        className="group relative w-[600px] h-72 max-w-3xl rounded-2xl overflow-hidden p-6 md:p-10 border border-gray-700  bg-gray-950  transition-all duration-500 hover:border-yellow-500 hover:shadow-yellow-500 shadow-md"
+        className="group relative w-[550px] h-80 max-w-3xl rounded-2xl overflow-hidden p-4 md:p-12 border border-gray-700  bg-gray-950  transition-all duration-500 hover:border-yellow-500 hover:shadow-yellow-500 shadow-md"
         style={{
           backgroundImage: `url(${"bgImage"})`,
           backgroundSize: "cover",
@@ -20,7 +20,7 @@ const PricingCard = () => {
         }}
       >
         {/* Glowing icons */}
-        <div className="absolute top-4 right-4 flex  z-10">
+        <div className="absolute top-2 right-4 flex  z-10">
           {[icon1, icon2, icon3].map((icon, i) => (
             <div
               key={i}

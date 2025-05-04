@@ -10,7 +10,7 @@ const ExpertCard = () => {
   return (
     <div className="flex justify-center items-center ">
       <div
-        className="group relative w-72 h-72 rounded-xl overflow-hidden border-2 border-transparent hover:border-yellow-500 
+        className="group relative w-80 h-80 rounded-xl overflow-hidden border-2 border-transparent hover:border-yellow-500 
         transition-all duration-500 shadow-md hover:shadow-yellow-500"
         style={{
           backgroundImage: `url(${bgImage})`,
