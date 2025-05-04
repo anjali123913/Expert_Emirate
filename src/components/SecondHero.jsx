@@ -10,20 +10,8 @@ import CustomerDashboard from "./herosection/CustomerDashboard";
 import MarqueeSlider from "./herosection/MarqueeSlider";
 const SecondHero = () => {
   return (
-    <section className="relative w-full min-h-screen pt-24 px-4 md:px-16 bg-gradient-to-b from-[#0f0c29] via-[#302b63] to-[#24243e] text-white overflow-hidden">
-      {/* Top Video */}
-      <div className="w-full mb-10 overflow-hidden rounded-2xl shadow-lg">
-        <video
-          autoPlay
-          muted
-          loop
-          playsInline
-          className="w-full h-[300px] md:h-[500px] object-cover"
-        >
-          <source src={video} type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
-      </div>
+    <section className="relative w-full min-h-screen pt-24 px-4 md:px-16 bg-gradient-to-b from-[#000] via-[#000] to-[#000] text-white overflow-hidden ">
+     
 
       {/* Section Content */}
       <motion.div
@@ -31,7 +19,7 @@ const SecondHero = () => {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
         // viewport={{ once: true }}
-        className="max-w-4xl mx-auto text-center"
+        className=" mx-20 text-center"
       >
       
 
