@@ -45,11 +45,11 @@ const ForexSection = () => {
       </div>
 
       {/* Gold Chart Image Section */}
-      <div className="w-full sm:w-1/4 md:w-1/3 lg:w-1/4 h-auto">
+      <div className="w-full   my-10">
         <img
           src={chartImage}
           alt="Gold Chart"
-          className="w-full md:w-[600px] rounded-lg shadow-xl"
+          className="w-full h-full object-cente rounded-lg shadow-xl"
         />
       </div>
     </section>
