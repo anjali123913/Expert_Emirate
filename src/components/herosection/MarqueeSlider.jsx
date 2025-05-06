@@ -1,4 +1,3 @@
-// MarqueeFull.jsx
 import React from 'react';
 import { FaCloud, FaCogs, FaIndustry, FaRegBuilding, FaBuilding } from 'react-icons/fa';
 
@@ -13,8 +12,8 @@ const items = [
 
 const MarqueeSlider = () => {
   return (
-    <div className="w-full mt-10 border border-gray-700 rounded-md bg-gradient-to-r from-black via-[#0f0f0f] to-black overflow-hidden">
-      <div className="flex animate-marquee whitespace-nowrap">
+    <div className="w-full mt-10 border border-gray-700 rounded-md bg-gradient-to-r from-black via-[#0f0f0f] to-black overflow-hidden flex animate-marqueeLeft whitespace-nowrap">
+      <div className="flex flex-row-reverse animate-marquee-left whitespace-nowrap">
         {[...items, ...items].map((item, index) => (
           <div
             key={index}

@@ -80,7 +80,7 @@ import arrowImg from "../../assets/arrow.png";
 
 export default function CustomerDashboard() {
   return (
-    <div className="flex items-center justify-center gap-5 p-5 border-2 border-black rounded-2xl bg-black transition-all duration-300 group hover:border-yellow-500">
+    <div className=" w-5/6 flex items-center justify-center gap-5 p-5 border-2 border-black rounded-2xl bg-black transition-all duration-300 group hover:border-yellow-500">
       <div className="w-1/2">
         <h1 className="text-start text-3xl my-2 font-extrabold text-white transition-all duration-300 group-hover:text-yellow-500">
           CUSTOMER DASHBOARD
