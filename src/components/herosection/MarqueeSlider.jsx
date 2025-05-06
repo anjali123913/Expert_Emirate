@@ -1,31 +1,32 @@
+// MarqueeFull.jsx
 import React from 'react';
 import { FaCloud, FaCogs, FaIndustry, FaRegBuilding, FaBuilding } from 'react-icons/fa';
+import { FaBriefcase } from 'react-icons/fa6';
 
 const items = [
-  { icon: <FaCloud />, text: 'application' },
-  { icon: <FaCogs />, text: 'business' },
-  { icon: <FaIndustry />, text: 'enterprise' },
-  { icon: <FaRegBuilding />, text: 'agency' },
-  { icon: <FaBuilding />, text: 'company' },
-  { icon: <FaCloud />, text: 'application' },
+  { icon: <FaCloud />, label: "application" },
+  { icon: <FaBriefcase />, label: "business" },
+  { icon: <FaCogs />, label: "enterprise" },
+  { icon: <FaRegBuilding />, label: "agency" },
+  { icon: <FaBuilding />, label: "company" },
 ];
 
-const MarqueeSlider = () => {
+export default function MarqueeSlider() {
+  const scrollingItems = [...items, ...items]; // Duplicate for infinite scroll effect
+
   return (
-    <div className="w-full mt-10 border border-gray-700 rounded-md bg-gradient-to-r from-black via-[#0f0f0f] to-black overflow-hidden flex animate-marqueeLeft whitespace-nowrap">
-      <div className="flex flex-row-reverse animate-marquee-left whitespace-nowrap">
+    <div className="w-full mt-10 border border-gray-700 rounded-md bg-gradient-to-r from-black via-[#0f0f0f] to-black overflow-hidden">
+      <div className="flex animate-marquee whitespace-nowrap">
         {[...items, ...items].map((item, index) => (
           <div
             key={index}
-            className="flex items-center px-8 py-4 text-[#d3c17d] text-base font-semibold hover:text-yellow-400 transition-colors duration-300 cursor-pointer"
+            className="flex items-center gap-3 text-[#e5e5e5] text-base sm:text-lg font-bold opacity-80 hover:opacity-100 transition-opacity duration-300"
           >
-            <span className="mr-2 text-lg">{item.icon}</span>
-            {item.text}
+            <span className="text-lg sm:text-xl">{item.icon}</span>
+            <span className="tracking-wide">{item.label}</span>
           </div>
         ))}
       </div>
     </div>
   );
-};
-
-export default MarqueeSlider;
+}

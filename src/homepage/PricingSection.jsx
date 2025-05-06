@@ -49,7 +49,7 @@ const plans = [
 ];
 
 export default function PricingSection() {
-  const [clicked, setClicked] = useState(false);
+  const [isHovered, setIsHovered] = useState(false);
 
   return (
     <div className="bg-black text-white py-20 px-4 md:px-10">
@@ -57,7 +57,9 @@ export default function PricingSection() {
         {plans.map((plan, idx) => (
           <div
             key={idx}
-            className={`bg-[#14121F] p-8 rounded-2xl shadow-lg flex-1 border ${
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
+            className={`bg-[#14121F] p-8 rounded-2xl shadow-lg flex-1 border transition duration-300 ${
               idx === 2 ? 'border-yellow-500' : 'border-gray-700'
             }`}
           >
@@ -80,7 +82,6 @@ export default function PricingSection() {
             </p>
 
             <button
-              onClick={() => setClicked(true)}
               className="bg-gradient-to-r from-yellow-400 to-yellow-600 hover:from-yellow-500 hover:to-yellow-700 text-black px-6 py-2 rounded-full font-semibold transition duration-300 hover:text-white mb-6"
             >
               Buy Now
@@ -89,10 +90,20 @@ export default function PricingSection() {
             <ul className="space-y-3 text-sm">
               {plan.features.map((feature, i) => (
                 <li key={i} className="flex items-center gap-2 group">
-                  <span className="text-yellow-400">
-                    {clicked ? '✅' : '⭕️'}
+                  <div
+                    className={`w-5 h-5 rounded-full border-2 flex items-center justify-center transition-all duration-300 ${
+                      isHovered
+                        ? 'bg-yellow-400 border-yellow-400'
+                        : 'border-gray-400'
+                    }`}
+                  >
+                    {isHovered && (
+                      <span className="text-xs font-bold text-black">✓</span>
+                    )}
+                  </div>
+                  <span className="text-gray-300 group-hover:text-yellow-400 transition-colors duration-200">
+                    {feature}
                   </span>
-                  <span className="text-gray-300 group-hover:text-yellow-400 transition-colors duration-200">{feature}</span>
                 </li>
               ))}
             </ul>
