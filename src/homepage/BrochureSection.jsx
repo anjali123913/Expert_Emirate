@@ -21,7 +21,7 @@ const BrochureSection = () => {
               Expert Emirates Brochure
             </h2>
           </div>
-          <button className="bg-gradient-to-r from-[#FFD966] to-[#C29B2F] text-black rounded-full px-4 py-3 text-base font-semibold shadow-md hover:scale-105 transition-all duration-300">
+          <button className="bg-gradient-to-r from-[#FFD966] to-[#C29B2F] text-black rounded-full px-4 py-3 text-base font-poppins shadow-md hover:scale-105 transition-all duration-200">
             Download Now
           </button>
         </div>
