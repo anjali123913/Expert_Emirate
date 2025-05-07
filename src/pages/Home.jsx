@@ -13,8 +13,10 @@ import InsightSection from "../homepage/InsightSection";
 import ExpertMotion from "../homepage/ExpertMotion";
 import ButtonTabs from "../homepage/ButtonTabs";
 import ForexSection from "../homepage/ForexSection";
-import AwardsSection from "../homepage/AwardsSection";
+import AwardsSection from "../homepage/awardsSections/AwardsSection";
 import TradersFeedbackSection from "../homepage/TradersFeedbackSection";
+import WorldMapWithMarkers from "../homepage/WorldMapWithMarkers";
+import WorldMapLabels from "../homepage/WorldMapWithMarkers";
 
 const HomePage = () => {
   return (
@@ -32,6 +34,7 @@ const HomePage = () => {
       <WhyExpertSection/>
       <InsightSection/>
       <ExpertMotion/>
+      <WorldMapLabels/>
       <AwardsSection/>
       <TradersFeedbackSection/>
     </div>
