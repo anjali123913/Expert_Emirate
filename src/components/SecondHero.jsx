@@ -36,7 +36,6 @@ const SecondHero = () => {
         <div>
           <MarqueeSlider />
         </div>
-
       </motion.div>
     </section>
   );

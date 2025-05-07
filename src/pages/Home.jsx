@@ -7,11 +7,14 @@ import MarketSection from "../homepage/MarketSection";
 import TrustSection from "../homepage/TrustSection";
 import PricingSection from "../homepage/PricingSection";
 import ScrollingCards from "../homepage/ScrollingCards";
-// import ButtonTabs from "../homepage/ButtonTabs";
 import BrochureSection from "../homepage/BrochureSection";
 import WhyExpertSection from "../homepage/WhyExpertSection";
 import InsightSection from "../homepage/InsightSection";
-// import ExpertMotion from "../homepage/ExpertMotion";
+import ExpertMotion from "../homepage/ExpertMotion";
+import ButtonTabs from "../homepage/ButtonTabs";
+import ForexSection from "../homepage/ForexSection";
+import AwardsSection from "../homepage/AwardsSection";
+import TradersFeedbackSection from "../homepage/TradersFeedbackSection";
 
 const HomePage = () => {
   return (
@@ -19,7 +22,8 @@ const HomePage = () => {
       <HeroSection />
       <SecondHero />
       <MarketSection />
-      {/* <ButtonTabs/> */}
+      <ButtonTabs/>
+      <ForexSection/>
       <ScrollingCards/>
       <TrustSection />
       <PricingSection />
@@ -27,7 +31,9 @@ const HomePage = () => {
       <MobileTradingSection />
       <WhyExpertSection/>
       <InsightSection/>
-      {/* <ExpertMotion/> */}
+      <ExpertMotion/>
+      <AwardsSection/>
+      <TradersFeedbackSection/>
     </div>
   );
 };
