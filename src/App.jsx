@@ -9,18 +9,20 @@ import PricingSection from "./homepage/PricingSection";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import HomePage from "./pages/Home";
 import Footer from "./components/Footer";
+import Career from "./carrier/Career";
 
 function App() {
   return (
     <div className="">
-    <Router>
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-      </Routes>
-      <Footer/>
-    </Router>
-  </div>
+      <Router>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/careers" element={<Career />} />
+        </Routes>
+        <Footer />
+      </Router>
+    </div>
   );
 }
 
