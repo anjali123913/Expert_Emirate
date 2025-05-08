@@ -9,7 +9,7 @@ const Footer = () => {
         <div className="text-transparent">invisible</div>
         <a
           href="#top"
-          className="bg-gradient-to-r from-[#281000] via-[#C0971C] via-50% to-[#281000] text-black rounded-full px-12 py-6 font-bold transition"
+          className="bg-gradient-to-r from-[#dc6f27] via-[#deaf24] via-50% to-[#d8691f] text-black rounded-full px-12 py-6 font-bold transition"
         >
           Go to Top
         </a>
