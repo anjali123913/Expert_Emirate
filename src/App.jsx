@@ -8,7 +8,7 @@ import TrustSection from "./homepage/TrustSection";
 import PricingSection from "./homepage/PricingSection";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import HomePage from "./pages/Home";
-
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -18,6 +18,7 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
       </Routes>
+      <Footer/>
     </Router>
   </div>
   );

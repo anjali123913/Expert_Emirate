@@ -17,7 +17,8 @@ import AwardsSection from "../homepage/awardsSections/AwardsSection";
 import TradersFeedbackSection from "../homepage/TradersFeedbackSection";
 import WorldMapWithMarkers from "../homepage/WorldMapWithMarkers";
 import WorldMapLabels from "../homepage/WorldMapWithMarkers";
-
+import Reviews from "../homepage/Reviews";
+import FeatureSection from "../homepage/FeatureSection";
 const HomePage = () => {
   return (
     <div className="bg-dark text-white font-sans">
@@ -37,6 +38,8 @@ const HomePage = () => {
       <WorldMapLabels/>
       <AwardsSection/>
       <TradersFeedbackSection/>
+      <Reviews/>
+      <FeatureSection/>
     </div>
   );
 };

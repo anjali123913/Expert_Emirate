@@ -32,8 +32,8 @@ const WhyExpertSection = () => {
           className="px-8 sm:px-10 py-3 text-lg font-semibold rounded-full text-white bg-black border transition-all duration-300 hover:bg-gradient-to-r from-[#FFD966] via-[#C29B2F] to-[#A8831B] hover:text-black"
           style={{
             borderImage: "linear-gradient(93.42deg, #FFD966 0%, #A8831B 100%)",
-            borderImageSlice: 1,
-            borderWidth: "1px",
+            // borderImageSlice: 1,
+            // borderWidth: "1px",
             borderStyle: "solid",
           }}
         >
