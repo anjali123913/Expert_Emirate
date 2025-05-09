@@ -4,6 +4,9 @@ import JoinExpertEmirate from "./JoinExpertEmirate";
 import CareersSection from "./CareersSection";
 import BenefitsGlassCard from "./BenefitsGlassCard";
 import CareerBenefitsSection from "./CareerBenefitsSection";
+import GrowthForm from "./GrowthForm";
+import OpenPositions from "./OpenPositions";
+import FeatureSection from "../homepage/FeatureSection";
 
 export default function Career() {
   return (
@@ -13,6 +16,9 @@ export default function Career() {
       <CareersSection />
       <BenefitsGlassCard />
       <CareerBenefitsSection />
+      <GrowthForm/>
+      <OpenPositions/>
+      <FeatureSection/>
     </div>
   );
 }

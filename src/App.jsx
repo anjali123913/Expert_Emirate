@@ -1,15 +1,12 @@
 import React from "react";
 import Navbar from "./components/Navbar";
-import SecondHero from "./components/SecondHero";
-import HeroSection from "./components/HeroSection";
-import PlansSection from "./homepage/PlansSection";
-import MarketSection from "./homepage/MarketSection";
-import TrustSection from "./homepage/TrustSection";
-import PricingSection from "./homepage/PricingSection";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import HomePage from "./pages/Home";
 import Footer from "./components/Footer";
 import Career from "./carrier/Career";
+import FaqSection from "./faq/FaqSection";
+import EducationData from "./education/EducationData";
+import AwardsSection from "./forecastAwards/AwardsSection";
 
 function App() {
   return (
@@ -19,6 +16,9 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/careers" element={<Career />} />
+           <Route path="/FAQ" element={<FaqSection/>} />
+            <Route path="/Education" element={<EducationData/>} />
+             <Route path="/Forecasts" element={<AwardsSection/>} />
         </Routes>
         <Footer />
       </Router>

@@ -6,59 +6,55 @@ import rocket from "../assets/rocket.png";
 
 const features = [
   {
-    title: "Why Treasure Funded ?",
-    icon: megaphone,
-    bg: "#1C1B2A"
+    title: "Why Tresure Funded ?",
+    icon: megaphone
   },
   {
     title: "Account Management",
-    icon: folder,
-    bg: "#1C1B2A"
+    icon: folder
   },
   {
     title: "Support",
-    icon: heartBox,
-    bg: "#1C1B2A"
+    icon: heartBox
   }
 ];
 
 export default function FeatureSection() {
   return (
-    <div className="bg-[#111317] px-6 py-10 rounded-[20px] max-w-[1300px] mx-auto">
-      <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-10">
+    <div className="bg-black px-4 md:px-8 lg:px-10 py-14 font-[Poppins] max-w-[1300px] mx-auto">
+      {/* Heading */}
+      <h2 className="text-[28px] sm:text-[32px] md:text-[36px] font-semibold leading-[42px] tracking-[0.12em] text-center text-white mb-14">
         Choose Where To Go Next
       </h2>
 
       {/* Cards */}
-      <div className="flex flex-col md:flex-row justify-between gap-[54.75px]">
+      <div className="flex flex-col md:flex-row justify-center items-center md:items-stretch gap-10 flex-wrap">
         {features.map((item, index) => (
           <div
             key={index}
-            className="group relative flex flex-col items-center text-center px-6 py-8 w-full rounded-[12px] transform transition-transform duration-300 hover:-translate-y-2 hover:bg-gradient-to-r hover:from-yellow-500 hover:to-yellow-300"
-            style={{
-              background: item.bg,
-              color: "#FFD700"
-            }}
+            className="bg-[#1C1B2A] w-full sm:w-[300px] h-[220px] rounded-[16px] flex flex-col justify-center items-center text-center transition-transform duration-300 hover:-translate-y-2"
           >
             <img
               src={item.icon}
               alt={item.title}
-              className="h-24 mb-4 transform transition-transform duration-300 group-hover:-translate-y-3"
+              className="h-[100px] mb-4 transition-transform duration-300 hover:-translate-y-2"
             />
-            <h3 className="text-lg font-semibold z-10">{item.title}</h3>
+            <p className="text-[#FFE976] text-[14px] font-semibold px-4">{item.title}</p>
           </div>
         ))}
       </div>
 
       {/* CTA Section */}
-      <div className="mt-16 flex flex-col md:flex-row justify-between items-center gap-8 px-6 py-8 bg-[#1C1B2A] rounded-[20px]">
-        <div>
-          <h3 className="text-2xl font-bold text-white mb-4">Want to get started?</h3>
-          <button className="bg-gradient-to-r from-yellow-400 to-yellow-300 text-black font-semibold px-6 py-3 rounded-full shadow hover:opacity-90 transition">
+      <div className="mt-16 bg-[#1D1B25] rounded-[20px] flex flex-col md:flex-row items-center justify-between px-6 md:px-10 py-10 gap-8">
+        <div className="text-center md:text-left">
+          <p className="text-[22px] sm:text-[26px] md:text-[28px] font-semibold text-[#FFE976] mb-4">
+            Want to get started?
+          </p>
+          <button className="bg-gradient-to-b from-[#281000] via-[#C0971C] to-[#FFE976] text-black font-semibold px-6 py-3 rounded-full shadow-lg hover:scale-105 transition">
             Join Expert Emirates
           </button>
         </div>
-        <img src={rocket} alt="rocket" className="h-32" />
+        <img src={rocket} alt="rocket" className="h-28 sm:h-32" />
       </div>
     </div>
   );
