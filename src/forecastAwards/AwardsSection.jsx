@@ -2,6 +2,10 @@ import React from "react";
 import trophy1 from "../assets/awards/trofy1.png";
 import trophy2 from "../assets/awards/trofy2.png";
 import trophy3 from "../assets/awards/trofy3.png";
+import CommunitySection from "./CommunitySection";
+import WhyChooseSection from "./WhyChooseSection";
+import KeyBenefits from "./KeyBenefits ";
+import FeatureSection from "../homepage/FeatureSection";
 
 const awards = [
   {
@@ -83,6 +87,12 @@ const AwardsSection = () => {
         <button className="px-6 py-3 font-semibold rounded-full bg-gradient-to-r from-yellow-600 via-yellow-300 to-yellow-600 text-black">
           View More
         </button>
+      </div>
+      <div>
+        <WhyChooseSection/>
+        <CommunitySection/>
+        <KeyBenefits/>
+        <FeatureSection/>
       </div>
     </section>
   );

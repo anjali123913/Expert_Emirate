@@ -7,6 +7,7 @@ import Career from "./carrier/Career";
 import FaqSection from "./faq/FaqSection";
 import EducationData from "./education/EducationData";
 import AwardsSection from "./forecastAwards/AwardsSection";
+import Support from "./support/Support";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
            <Route path="/FAQ" element={<FaqSection/>} />
             <Route path="/Education" element={<EducationData/>} />
              <Route path="/Forecasts" element={<AwardsSection/>} />
+              <Route path="/Support" element={<Support/>} />
         </Routes>
         <Footer />
       </Router>
