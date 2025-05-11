@@ -24,3 +24,14 @@ body{
     animation: marquee-right 10s linear infinite;
   }
   
+
+  @layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+}

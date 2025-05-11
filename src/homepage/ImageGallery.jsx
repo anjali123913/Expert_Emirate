@@ -20,7 +20,7 @@ const ImageGallery = () => {
 
   return (
     <div className="relative bg-black py-10 flex items-center justify-center mx-auto">
-      <div className="flex  overflow-x-auto space-x-4 px-4 ">
+      <div className="flex  overflow-x-auto space-x-4 px-4 overflow-auto scrollbar-none  no-scrollbar">
         {images.map((src, idx) => (
           <img
             key={idx}
