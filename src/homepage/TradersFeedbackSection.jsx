@@ -8,12 +8,12 @@ const TradersFeedbackSection = () => {
      <div className="w-full bg-black py-12 flex justify-center items-center">
       <div className="w-[575px] h-[197px] flex flex-col items-center justify-center gap-[33px] text-center text-white font-['Helvetica Neue']">
         {/* Button */}
-        <button className="px-4 py-1 text-white text-[14px] rounded-full border border-white">
+        <button className="px-4 py-1 text-white text-[14px] rounded-full border border-black bg-gray-900 font-sans font-semibold">
           Traders Feedback
         </button>
 
         {/* Gradient Heading */}
-        <h2 className="text-[19px] font-bold leading-[100%] bg-gradient-to-b from-[#281000]  via-[#C0971C] to-[#281000] text-transparent bg-clip-text">
+        <h2 className="text-3xl font-bold leading-[100%] bg-gradient-to-b from-[#f18137]  via-[#f3d57b] to-[#f18137] text-transparent bg-clip-text">
           Our Traders <span className="text-red-500">L❤️ve</span> Us
         </h2>
 
@@ -24,12 +24,12 @@ const TradersFeedbackSection = () => {
         </p>
 
         {/* Rating */}
-        <div className="text-[16px] leading-[100%]">
+        <div className="text-xl leading-[100%] my-4">
           <p>
             <span className="font-bold">Excellent - </span>
-            <span className="text-yellow-400">★★★★★</span>
+            <span className="text-yellow-400">★★★★</span> <span>★</span>
           </p>
-          <p>Rated 4.5 / 5 based on 20,000 reviews on</p>
+          <p className='my-3'>Rated 4.5 / 5 based on 20,000 reviews on</p>
         </div>
       </div>
     </div>
