@@ -8,6 +8,7 @@ import FaqSection from "./faq/FaqSection";
 import EducationData from "./education/EducationData";
 import AwardsSection from "./forecastAwards/AwardsSection";
 import Support from "./support/Support";
+import AboutUs from "./about/AboutUs";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
             <Route path="/Education" element={<EducationData/>} />
              <Route path="/Forecasts" element={<AwardsSection/>} />
               <Route path="/Support" element={<Support/>} />
+                <Route path="/about-us" element={<AboutUs/>} />
         </Routes>
         <Footer />
       </Router>

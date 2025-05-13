@@ -2,6 +2,7 @@ import React from "react";
 import icon3 from "../../assets/heroSectionImages/image 10.png";
 import icon2 from "../../assets/heroSectionImages/image 11.png";
 import icon1 from "../../assets/heroSectionImages/image 12.png";
+import { Link } from "react-router-dom";
 
 const PricingCard = () => {
   const font = {
@@ -45,9 +46,11 @@ const PricingCard = () => {
 
           {/* Buttons */}
           <div className="flex gap-4 flex-wrap">
+           <Link to="/about-us">
             <button className="bg-gradient-to-r from-yellow-400 to-yellow-600 text-black font-semibold px-6 py-2 rounded-full shadow-lg hover:scale-105 transition">
               About Us
             </button>
+           </Link>
             <button className="border border-yellow-500 text-white font-semibold px-6 py-2 rounded-full hover:scale-105 transition">
               Pricing
             </button>
