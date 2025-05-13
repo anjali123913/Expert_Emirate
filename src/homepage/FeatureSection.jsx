@@ -21,7 +21,7 @@ const features = [
 
 export default function FeatureSection() {
   return (
-    <div className="bg-black px-4 md:px-8 lg:px-10 py-14 font-[Poppins] max-w-[1300px] mx-auto">
+    <div className="bg-black px-4 md:px-8 lg:px-10 py-14 font-[Poppins] mx-auto">
       {/* Heading */}
       <h2 className="text-white text-center align-middle font-bold text-[32px] leading-[100%] tracking-[0em] font-sans my-5">
         Choose Where To Go Next
