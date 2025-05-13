@@ -9,13 +9,13 @@ export default function InsightSection() {
         
         {/* LEFT TEXT BLOCK */}
         <div className="w-full md:w-1/2">
-          <h2 className="text-2xl md:text-4xl font-semibold leading-snug">
-            Dominate{" "}
-            <span className="text-[#f7b737]">Markets Smarter, Faster,</span>
+          <h2 className="text-2xl md:text-3xl font-semibold leading-snug">
+            Dominate {" "}
+            <span className="text-2xl sm:text-3xl md:text-3xl font-bold font-sans leading-tight  bg-gradient-to-t from-transparent via-yellow-300 to-transparent bg-clip-text text-transparent  tracking-wider mt-3">Markets Smarter <span className="text-white text-lg">,</span> Faster<span className="text-white text-lg">,</span></span>
             <br />
-            and with <span className="text-[#f39f5a]">Unmatched Precision</span>
+            and with <span className="text-2xl sm:text-3xl md:text-3xl font-bold font-sans leading-tight  bg-gradient-to-t from-transparent via-yellow-300 to-transparent bg-clip-text text-transparent  tracking-wider mt-3">Unmatched Precision</span>
           </h2>
-          <p className="mt-4 text-sm md:text-base text-gray-300">
+          <p className="mt-4 text-sm md:text-lg text-gray-100 tracking-tight font-sans font-normal">
             At Expert Emirates, we don’t just follow trends—we create them.
             Whether you're trading Forex, Crypto, or COMEX, our arsenal of tools and
             expertise ensures you stay ahead of the curve.

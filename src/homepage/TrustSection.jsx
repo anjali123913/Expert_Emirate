@@ -18,7 +18,9 @@ const TrustSection = () => {
 
       {/* Subtext */}
       <p className="text-gray-300 max-w-2xl mt-4 text-base md:text-lg">
-        Take control of the Forex market with Expert Emirates! No more guesswork—just expert insights, powerful signals, and strategies that put you ahead of the game!
+        Take control of the Forex market with Expert Emirates! No more
+        guesswork—just expert insights, powerful signals, and strategies that
+        put you ahead of the game!
       </p>
     </section>
   );
