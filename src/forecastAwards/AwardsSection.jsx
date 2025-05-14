@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import React from "react";
 import trophy1 from "../assets/awards/trofy1.png";
 import trophy2 from "../assets/awards/trofy2.png";
@@ -84,9 +85,12 @@ const AwardsSection = () => {
 
       {/* View More Button */}
       <div className="text-center mt-10">
+       <Link to="/company-news"
+        >
         <button className="px-6 py-3 font-semibold rounded-full bg-gradient-to-r from-yellow-600 via-yellow-300 to-yellow-600 text-black">
           View More
         </button>
+       </Link>
       </div>
       <div>
         <WhyChooseSection/>

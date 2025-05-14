@@ -9,6 +9,9 @@ import EducationData from "./education/EducationData";
 import AwardsSection from "./forecastAwards/AwardsSection";
 import Support from "./support/Support";
 import AboutUs from "./about/AboutUs";
+import Portfolio from "./portfolio/Portfolio";
+import CompanyNews from "./company-news/CompanyNews";
+import Forex from "./forex/Forex";
 
 function App() {
   return (
@@ -23,6 +26,10 @@ function App() {
              <Route path="/Forecasts" element={<AwardsSection/>} />
               <Route path="/Support" element={<Support/>} />
                 <Route path="/about-us" element={<AboutUs/>} />
+                 <Route path="/profile-management" element={<Portfolio/>} />
+               <Route path="/company-news" element={<CompanyNews/>} />
+                <Route path="/forex" element={<Forex/>} />
+
         </Routes>
         <Footer />
       </Router>
