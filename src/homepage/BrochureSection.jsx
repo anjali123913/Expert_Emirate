@@ -3,7 +3,7 @@ import brochureImage from "../assets/brochure.png"; // Adjust path if needed
 
 const BrochureSection = () => {
   return (
-    <div className="w-full bg-[#0F0F13]  py-16 px-4 sm:px-6 lg:px-10 relative overflow-hidden">
+    <div className="group w-full bg-[#0F0F13]  py-16 px-4 sm:px-6 lg:px-10 relative overflow-hidden">
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden  ">
         <div className="absolute top-1/3 left-1/4 w-40 h-40 rounded-full bg-[#FFD966]/5 blur-3xl animate-pulseSlow"></div>
@@ -11,7 +11,7 @@ const BrochureSection = () => {
       </div>
 
       <div
-        className="group border hover:border-yellow-600 w-full max-w-[1300px] mx-auto rounded-[30px] p-8 lg:p-12 flex flex-col lg:flex-row items-center justify-between gap-10 
+        className=" border hover:border-yellow-600 w-full max-w-[1300px] mx-auto rounded-[30px] p-8 lg:p-12 flex flex-col lg:flex-row items-center justify-between gap-10 
         border-transparent 
         bg-gradient-to-br from-[#1A1A1F] to-[#0F0F13] 
         hover:shadow-xl hover:shadow-[#FFD966]/10 
@@ -31,7 +31,7 @@ const BrochureSection = () => {
           <p className="text-gray-400 text-lg max-w-[600px] mx-auto lg:mx-0 animate-fadeIn delay-200">
             Get comprehensive insights into our trading solutions, market strategies, and exclusive offerings.
           </p>
-          <button className="max-w-[220px] bg-gradient-to-r from-[#FFD966] to-[#C29B2F] text-black rounded-full px-6 py-3 text-lg font-poppins font-bold shadow-lg hover:scale-105 hover:shadow-[#FFD966]/40 transition-all duration-300 animate-fadeIn delay-300 group-hover:from-[#FFE082] group-hover:to-[#D4AC3F] relative overflow-hidden">
+          <button className="max-w-[220px] bg-gradient-to-l from-[#452e06] via-[#d1bf5a] via-50% to-[#452e06] text-black rounded-full px-6 py-3 text-lg font-poppins font-bold shadow-lg hover:scale-105 transition-all duration-300 animate-fadeIn delay-300 group-hover:from-[#6c550e] group-hover:to-[#D4AC3F] relative overflow-hidden">
             <span className="relative z-10 flex items-center justify-center gap-2">
               Download Now
               <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 group-hover:translate-y-1 transition-transform duration-300" viewBox="0 0 20 20" fill="currentColor">
@@ -59,3 +59,4 @@ const BrochureSection = () => {
 };
 
 export default BrochureSection;
+
