@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const ButtonTabs = () => {
   const tabs = [
@@ -16,6 +17,7 @@ const ButtonTabs = () => {
       <div className="max-w-[1136px] mx-auto overflow-x-auto">
         <div className="flex items-center gap-4 sm:gap-6 md:gap-[20px] w-max min-w-full">
           {tabs.map((tab, index) => (
+           <Link to={tab}>
             <button
               key={index}
               onClick={() => setActiveIndex(index)}
@@ -29,6 +31,7 @@ const ButtonTabs = () => {
             >
               {tab}
             </button>
+           </Link>
           ))}
         </div>
       </div>
