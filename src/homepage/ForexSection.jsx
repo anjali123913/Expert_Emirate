@@ -1,6 +1,6 @@
 import React from 'react';
 import forexImg from '../assets/forex-box.png'; // Make sure the path is correct
-import { Link } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const ForexSection = () => {
   return (
