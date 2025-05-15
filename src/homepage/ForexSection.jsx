@@ -16,12 +16,22 @@ const ForexSection = () => {
             hover:from-[#bfa207] hover:to-[#8c6b00] hover:text-black">
             Forex
           </button>
+<<<<<<< HEAD
          </Link></div>
        <Link to="/gold">
           <button className="px-5 py-2 rounded-full bg-[#1C1B23] text-white text-sm font-medium transition duration-300
             hover:bg-gradient-to-r hover:from-[#bfa207] hover:to-[#8c6b00] hover:text-black">
             GOLD
           </button></Link>
+=======
+         </Link>
+         <Link to="/gold">
+          <button className="px-5 py-2 rounded-full bg-[#1C1B23] text-white text-sm font-medium transition duration-300
+            hover:bg-gradient-to-r hover:from-[#bfa207] hover:to-[#8c6b00] hover:text-black">
+            GOLD
+          </button>
+         </Link>
+>>>>>>> cec572a (CryptoCurrency,gold)
         </div>
 
         {/* Title */}

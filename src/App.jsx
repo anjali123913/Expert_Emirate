@@ -12,6 +12,8 @@ import AboutUs from "./about/AboutUs";
 import Portfolio from "./portfolio/Portfolio";
 import CompanyNews from "./company-news/CompanyNews";
 import Forex from "./forex/Forex";
+import Gold from "./gold/Gold";
+import CryptoCurrency from "./crypto-currency/CryptoCurrency";
 
 function App() {
   return (
@@ -28,7 +30,14 @@ function App() {
                 <Route path="/about-us" element={<AboutUs/>} />
                  <Route path="/profile-management" element={<Portfolio/>} />
                <Route path="/company-news" element={<CompanyNews/>} />
+<<<<<<< HEAD
                 <Route path="/Forex + Gold" element={<Forex/>} />
+=======
+                <Route path="/forex" element={<Forex/>} />
+                 <Route path="/gold" element={<Gold/>} />
+                  <Route path="/cryptocurrency" element={<CryptoCurrency/>} />
+
+>>>>>>> cec572a (CryptoCurrency,gold)
 
         </Routes>
         <Footer />
