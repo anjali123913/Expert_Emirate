@@ -28,7 +28,7 @@ function App() {
                 <Route path="/about-us" element={<AboutUs/>} />
                  <Route path="/profile-management" element={<Portfolio/>} />
                <Route path="/company-news" element={<CompanyNews/>} />
-                <Route path="/forex" element={<Forex/>} />
+                <Route path="/Forex + Gold" element={<Forex/>} />
 
         </Routes>
         <Footer />

@@ -3,8 +3,10 @@ import ForexHeroSection from "./ForexHeroSection";
 
 export default function Forex() {
   return (
-    <div>
-<ForexHeroSection/>
+    <div className="bg-black w-full h-full">
+      <div className="w-full">
+        <ForexHeroSection />
+      </div>{" "}
     </div>
-  );      
+  );
 }

@@ -81,11 +81,17 @@ export default function PricingSection() {
                 : 'Our premium package for ultimate trading performance. Includes everything in Pro.'}
             </p>
 
-            <button
-              className="bg-gradient-to-r from-yellow-400 to-yellow-600 hover:from-yellow-500 hover:to-yellow-700 text-black px-6 py-2 rounded-full font-semibold transition duration-300 hover:text-white mb-6"
-            >
-              Buy Now
-            </button>
+   <button
+  className="
+  text-yellow-500
+  my-4
+  border border-yellow-700
+            hover:bg-gradient-to-l hover:from-[#452e06] hover:via-[#d1bf5a] hover:via-50% hover:to-[#452e06] hover:text-black rounded-full px-10 tracking-wider py-3 font-bold transition"
+>
+  Buy Now
+</button>
+
+
 
             <ul className="space-y-3 text-sm">
               {plan.features.map((feature, i) => (
