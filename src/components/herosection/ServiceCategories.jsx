@@ -29,15 +29,19 @@ const ServicesCard = () => {
         </button>
 </Link>
 
+        <Link to="/FundedAccounts">
         <button className="relative overflow-hidden bg-black text-white border border-yellow-400 rounded-full px-4 py-2 text-sm transition hover:text-black z-0 group">
           <span className="relative z-10"> FNDED ACCOUNTS</span>
           <span className="absolute inset-0 z-0 bg-gradient-to-r from-yellow-800 via-transparent to-yellow-800 bg-yellow-500 opacity-0 group-hover:opacity-100 transition duration-300"></span>
         </button>
+        </Link>
+<Link to="/TradingBot">
 
         <button className="relative overflow-hidden bg-black text-white border border-yellow-400 rounded-full px-4 py-2 text-sm transition hover:text-black z-0 group">
           <span className="relative z-10"> ROBOT TRADING</span>
           <span className="absolute inset-0 z-0 bg-gradient-to-r from-yellow-800 via-transparent to-yellow-800 bg-yellow-500 opacity-0 group-hover:opacity-100 transition duration-300"></span>
         </button>
+</Link>
       
       <Link to="profile-management
   ">

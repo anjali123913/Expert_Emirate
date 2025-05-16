@@ -14,6 +14,10 @@ import CompanyNews from "./company-news/CompanyNews";
 import Forex from "./forex/Forex";
 import Gold from "./gold/Gold";
 import CryptoCurrency from "./crypto-currency/CryptoCurrency";
+import FundedAccounts from "./funded-accounts/FundedAccounts";
+import TradingBot from "./tradingBot/TradingBot";
+import Platform from "./platformMT4/Platform";
+import PlatformMt5 from "./PlatformMT5/PlatformMt5";
 
 function App() {
   return (
@@ -30,14 +34,17 @@ function App() {
                 <Route path="/about-us" element={<AboutUs/>} />
                  <Route path="/profile-management" element={<Portfolio/>} />
                <Route path="/company-news" element={<CompanyNews/>} />
-<<<<<<< HEAD
-                <Route path="/Forex + Gold" element={<Forex/>} />
-=======
                 <Route path="/forex" element={<Forex/>} />
                  <Route path="/gold" element={<Gold/>} />
                   <Route path="/cryptocurrency" element={<CryptoCurrency/>} />
+                  <Route path="/FundedAccounts" element={<FundedAccounts/>} />
+                  <Route path="/TradingBot" element={<TradingBot/>} />
+                  <Route path="/MT4 Platform" element={<Platform/>} />
+                  <Route path="/MT5 Platform" element={<PlatformMt5/>} />
 
->>>>>>> cec572a (CryptoCurrency,gold)
+
+
+
 
         </Routes>
         <Footer />

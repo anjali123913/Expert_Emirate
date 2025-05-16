@@ -61,7 +61,10 @@ const Footer = () => {
             </h3>
             <ul className="space-y-1">
               {items.map((item) => (
-                <li key={item}>{item}</li>
+                <li key={item}>
+                <Link to={`/${item}` }>{item}</Link>
+
+                </li>
               ))}
             </ul>
           </div>

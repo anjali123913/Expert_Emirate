@@ -12,24 +12,19 @@ import MetalsTable from "./MetalsData";
 
 export default function Forex() {
   return (
-<<<<<<< HEAD
     <div className="bg-black w-full h-full">
       <div className="w-full">
         <ForexHeroSection />
-      </div>{" "}
-=======
-    <div>
-      <ForexHeroSection/>
-      <CategoryTabs/>
-      <ForexInfo />
-      <TutorialVideo/>
-      <ExpertTrade/>
-      <CurrencyMarket/>
-      <PopularSharesTable/>
-      <MetalsTable />
-      <WhyTradersTrustUs/>
-     <FeatureSection/>
->>>>>>> cec572a (CryptoCurrency,gold)
+        <CategoryTabs />
+        <ForexInfo />
+        <TutorialVideo />
+        <ExpertTrade />
+        <CurrencyMarket />
+        <PopularSharesTable />
+        <MetalsTable />
+        <WhyTradersTrustUs />
+        <FeatureSection />
+      </div>
     </div>
   );
 }

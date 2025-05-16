@@ -11,27 +11,18 @@ const ForexSection = () => {
         
         {/* Buttons */}
         <div className="flex gap-4">
-       <div>  <Link to={"/forex"}>
-          <button className="px-5 py-2 rounded-full bg-gradient-to-r from-[#FFD700] to-[#B8860B] text-black text-sm font-medium transition duration-300 
-            hover:from-[#bfa207] hover:to-[#8c6b00] hover:text-black">
-            Forex
-          </button>
-<<<<<<< HEAD
-         </Link></div>
-       <Link to="/gold">
-          <button className="px-5 py-2 rounded-full bg-[#1C1B23] text-white text-sm font-medium transition duration-300
-            hover:bg-gradient-to-r hover:from-[#bfa207] hover:to-[#8c6b00] hover:text-black">
-            GOLD
-          </button></Link>
-=======
-         </Link>
-         <Link to="/gold">
-          <button className="px-5 py-2 rounded-full bg-[#1C1B23] text-white text-sm font-medium transition duration-300
-            hover:bg-gradient-to-r hover:from-[#bfa207] hover:to-[#8c6b00] hover:text-black">
-            GOLD
-          </button>
-         </Link>
->>>>>>> cec572a (CryptoCurrency,gold)
+          <Link to="/forex">
+            <button className="px-5 py-2 rounded-full bg-gradient-to-r from-[#FFD700] to-[#B8860B] text-black text-sm font-medium transition duration-300 
+              hover:from-[#bfa207] hover:to-[#8c6b00] hover:text-black">
+              Forex
+            </button>
+          </Link>
+          <Link to="/gold">
+            <button className="px-5 py-2 rounded-full bg-[#1C1B23] text-white text-sm font-medium transition duration-300
+              hover:bg-gradient-to-r hover:from-[#bfa207] hover:to-[#8c6b00] hover:text-black">
+              GOLD
+            </button>
+          </Link>
         </div>
 
         {/* Title */}

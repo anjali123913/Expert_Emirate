@@ -1,9 +1,8 @@
 import React from "react";
-// import bg from "../assets/cryptoCurrency/image1.png";
-import bg from "../assets/forex/image1.png";
-import overlay from "../assets/forex/image1.png";
+import bg from "../assets/FundedAccounts/image1.png";
+import overlay from "../assets/FundedAccounts/image2.png";
 
-const ForexHeroSection = () => {
+const FundedHeroSection = () => {
   return (
     <div className="w-full bg-black flex justify-center px-4 mt-14">
       <div className="relative w-full max-w-[1240px] h-[251px] rounded-[20px] overflow-hidden">
@@ -30,7 +29,7 @@ const ForexHeroSection = () => {
             {/* Forex Text on Top */}
             <div className="absolute inset-0 flex items-center justify-center">
               <h1 className="text-white text-[28px] md:text-[40px] lg:text-[52px] font-poppins font-semibold leading-none text-center">
-                Forex
+                Funded Accounts
               </h1>
             </div>
           </div>
@@ -40,4 +39,4 @@ const ForexHeroSection = () => {
   );
 };
 
-export default ForexHeroSection;
+export default FundedHeroSection;

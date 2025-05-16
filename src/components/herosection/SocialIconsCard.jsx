@@ -1,12 +1,12 @@
 import React from "react";
-import socialImage from "../../assets/socalmedia.png"; // You can rename Screenshot (223).png to socalmedia.png for consistency
+import socialImage from "../../assets/socalmedia.png";
 
 const SocialIconsCard = () => {
   return (
     <div className="flex justify-center items-center">
       <div
-        className="w-80 h-80 bg-black rounded-2xl p-4 border border-gray-700 
-        hover:border-yellow-400 shadow-md hover:shadow-yellow-500 
+        className="w-80 h-80 bg-black rounded-2xl p-4 
+        shadow-md hover:shadow-yellow-500 
         transition-all duration-500 relative overflow-hidden flex justify-center items-center group"
       >
         <img
