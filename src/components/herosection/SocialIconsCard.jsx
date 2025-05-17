@@ -1,23 +1,66 @@
 import React from "react";
-import socialImage from "../../assets/socalmedia.png";
+import {
+  FaInstagram,
+  FaYoutube,
+  FaFacebookF,
+  FaXTwitter,
+} from "react-icons/fa6";
 
 const SocialIconsCard = () => {
   return (
     <div className="flex justify-center items-center">
       <div
-        className="w-80 h-80 bg-black rounded-2xl p-4 
-        shadow-md hover:shadow-yellow-500 
-        transition-all duration-500 relative overflow-hidden flex justify-center items-center group"
+        className="group w-80 h-80 rounded-2xl p-10 border-2 border-gray-900
+        transition-all duration-500 relative overflow-hidden flex flex-col justify-between items-center"
+        style={{
+          background:
+            "linear-gradient(283.02deg, rgba(243, 165, 1, 0.07) 0.62%, rgba(13, 12, 19, 0.2) 99.27%)",
+        }}
       >
-        <img
-          src={socialImage}
-          alt="Social Media Icons"
-          className="w-100 h-100 object-contain transition-transform duration-500 group-hover:scale-105"
-        />
+        {/* ICONS ROW 1 */}
+        <div className="flex items-center justify-center gap-16">
+          {[FaInstagram, FaFacebookF].map((Icon, idx) => (
+            <div
+              key={idx}
+              className="group/icon bg-gradient-to-br from-yellow-500 to-yellow-700 w-16 h-16 rounded-full flex items-center justify-center 
+              shadow-yellow-400 shadow-md hover:scale-110 transition-transform duration-500
+              border border-gray-900 group/icon-hover:border-t-yellow-600 group/icon-hover:border-l-yellow-700 group/icon-hover:border-r-yellow-700 hover:border-b-yellow-600 "
+            >
+              <div
+                className="bg-black w-12 h-12 rounded-full flex items-center justify-center 
+                shadow-gray-400 shadow-md group-hover:scale-110 transition-transform duration-500
+                group-hover:border-yellow-400"
+              >
+                <Icon className="text-yellow-400 text-3xl group-hover/icon:scale-110 transition-transform duration-500" />
+              </div>
+            </div>
+          ))}
+        </div>
 
-        {/* Gradient overlay on hover */}
-        <div className="absolute inset-0 z-0 bg-gradient-to-t from-yellow-600/30 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-700" />
-      </div>
+        {/* ICONS ROW 2 */}
+        <div className="flex items-center justify-center gap-16">
+          {[FaYoutube, FaXTwitter].map((Icon, idx) => (
+            <div
+              key={idx}
+              className="group/icon bg-gradient-to-br from-yellow-500 to-yellow-700 w-16 h-16 rounded-full flex items-center justify-center 
+              shadow-yellow-400 shadow-md hover:scale-110 transition-transform duration-500
+              group-hover:border-yellow-500"
+            >
+              <div
+                className="bg-black w-12 h-12 rounded-full flex items-center justify-center 
+                shadow-gray-400 shadow-md group-hover:scale-110 transition-transform duration-500
+                group-hover:border-yellow-400"
+              >
+                <Icon className="text-yellow-400 text-3xl group-hover/icon:scale-110 transition-transform duration-500" />
+              </div>
+            </div>
+          ))}
+        </div>
+
+
+        {/* Border Highlight on Icon Hover */}
+        <div className="absolute inset-0 border border-transparent group-hover:border-t-yellow-600 group-hover:border-l-yellow-700 group-hover:border-r-yellow-700 group-hover:border-b-yellow-600 rounded-2xl transition-all duration-500 pointer-events-none" />
+</div>
     </div>
   );
 };

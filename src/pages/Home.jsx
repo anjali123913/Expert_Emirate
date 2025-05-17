@@ -17,11 +17,8 @@ import TradersFeedbackSection from "../homepage/TradersFeedbackSection";
 import WorldMapLabels from "../homepage/WorldMapWithMarkers";
 import Reviews from "../homepage/Reviews";
 import FeatureSection from "../homepage/FeatureSection";
-<<<<<<< HEAD
 import CurrencyMarket from "../forex/CurrencyMarket";
-=======
 import StockMarcketChart from "../homepage/StockMarcketChart";
->>>>>>> b3edf1b (owner code merged in)
 const HomePage = () => {
   return (
     <div className="bg-dark text-white font-sans">
@@ -30,12 +27,9 @@ const HomePage = () => {
       <MarketSection />
       <ButtonTabs/>
       <ForexSection/>
-<<<<<<< HEAD
-      <CurrencyMarket/>
-=======
     <StockMarcketChart/>
-      <ScrollingCards/>
->>>>>>> b3edf1b (owner code merged in)
+      <CurrencyMarket/>
+      {/* <ScrollingCards/> */}
       <TrustSection />
       <PricingSection />
       <BrochureSection/>
