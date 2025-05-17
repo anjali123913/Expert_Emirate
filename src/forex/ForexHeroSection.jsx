@@ -1,7 +1,6 @@
 import React from "react";
-// import bg from "../assets/cryptoCurrency/image1.png";
 import bg from "../assets/forex/image1.png";
-import overlay from "../assets/forex/image1.png";
+import overlay from "../assets/forex/image2.png";
 
 const ForexHeroSection = () => {
   return (

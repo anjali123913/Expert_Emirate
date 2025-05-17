@@ -1,10 +1,10 @@
 import React from "react";
-import mt4Image from "../assets/platformMT4/image4.png"; // Replace with correct image
+import mt4Image from "../assets/platformMT4/image4.png";
 
 const MT4FeaturesSection = () => {
   return (
     <section
-      className="bg-black text-white py-16 px-4 md:px-20 font-[Poppins]"
+      className="bg-black text-white py-16 px-4 md:px-10 lg:px-16 font-[Poppins]"
       style={{ fontFamily: "Poppins, sans-serif" }}
     >
       {/* Heading */}
@@ -20,22 +20,27 @@ const MT4FeaturesSection = () => {
         MT4 Platform Features
       </h2>
 
-      {/* Main Container with Gradient Border */}
+      {/* Gradient Border Box */}
       <div
-        className="rounded-2xl p-[2px]"
+        className="max-w-[1300px] mx-auto rounded-[20px] p-[1px]"
         style={{
-          border: "1px solid",
+          borderWidth: "1px",
+          borderStyle: "solid",
           borderImageSource:
             "linear-gradient(144.59deg, #666666 0%, #000000 99.55%)",
           borderImageSlice: 1,
         }}
       >
-        <div className="bg-[#1a1a1a] rounded-2xl p-6 md:p-10 flex flex-col lg:flex-row justify-between items-center gap-10">
+        <div
+          className="bg-[#121117] rounded-[20px] p-6 md:p-10 flex flex-col lg:flex-row justify-between items-center gap-10"
+        >
           {/* Left Column */}
           <div className="flex-1 space-y-6 text-sm md:text-base">
             <FeatureBlock
               title="Tradable Products:"
-              items={["Forex, Metals, Shares, Indices, Commodities, Cryptocurrencies"]}
+              items={[
+                "Forex, Metals, Shares, Indices, Commodities, Cryptocurrencies",
+              ]}
             />
             <FeatureBlock
               title="Execution Type:"
@@ -61,7 +66,7 @@ const MT4FeaturesSection = () => {
             <img
               src={mt4Image}
               alt="MT4 Phones"
-              className="w-full max-w-[300px] mx-auto"
+              className="w-full max-w-[280px] mx-auto"
             />
           </div>
 
@@ -93,7 +98,6 @@ const MT4FeaturesSection = () => {
   );
 };
 
-// ✅ Custom bullet with circle gradient
 const FeatureBlock = ({ title, items }) => {
   return (
     <div>

@@ -5,6 +5,7 @@ import MT4FeaturesSection from "./MT4FeaturesSection";
 import EliteTradingTeamSection from "../about/EliteTradingTeamSection ";
 import DownloadMT4Section from "./DownloadMT4Section";
 import FeatureSection from "../homepage/FeatureSection";
+import FAQSection from "./FAQSection";
 
 
 export default function Platform() {
@@ -16,7 +17,9 @@ export default function Platform() {
         <MT4FeaturesSection/>
         <EliteTradingTeamSection/>
         <DownloadMT4Section/>
+        <FAQSection/>
         <FeatureSection/>
+
       </div>
     </div>
   );
