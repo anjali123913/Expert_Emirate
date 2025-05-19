@@ -18,6 +18,7 @@ import WorldMapLabels from "../homepage/WorldMapWithMarkers";
 import Reviews from "../homepage/Reviews";
 import FeatureSection from "../homepage/FeatureSection";
 import CurrencyMarket from "../forex/CurrencyMarket";
+import StockMarcketChart from "../homepage/StockMarcketChart";
 const HomePage = () => {
   return (
     <div className="bg-dark text-white font-sans">
@@ -26,7 +27,9 @@ const HomePage = () => {
       <MarketSection />
       <ButtonTabs/>
       <ForexSection/>
+    <StockMarcketChart/>
       <CurrencyMarket/>
+      {/* <ScrollingCards/> */}
       <TrustSection />
       <PricingSection />
       <BrochureSection/>
