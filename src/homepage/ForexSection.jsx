@@ -41,8 +41,8 @@ const ForexSection = () => {
             <span
               className={`text-transparent bg-clip-text ${
                 activeCategory === "forex"
-                  ? "bg-[linear-gradient(177.83deg,#281000_50%,#C0971C_64.99%,#FFE976_79.09%,#C0971C_93.79%,#281000_108.77%)]"
-                  : "bg-gradient-to-r from-[#FFD700] to-[#B8860B]"
+                  ? "bg-gradient-to-t from-[#FFD700] to-[#B8860B]"
+                  : "bg-gradient-to-t from-[#FFD700] to-[#B8860B]"
               }`}
             >
               {activeCategory === "forex" ? "Forex Signals" : "Gold"}

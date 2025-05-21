@@ -57,23 +57,29 @@ export default function FeatureSection() {
 
 
       {/* CTA Section */}
-      <div className="mt-16 bg-[#1D1B25] rounded-[20px] flex flex-col md:flex-row items-center justify-between px-6 md:px-10 py-10 gap-8">
-        <div className="text-center md:text-left">
-          <p className=" bg-gradient-to-t from-transparent via-[#e7c74b] to-transparent bg-clip-text text-transparent  mb-4 text-center font-bold text-[30px] leading-[42px] tracking-[0.12em] font-sans">
-            Want to get started?
-          </p>
-          <button className="bg-gradient-to-l from-[#452e06] via-[#d1bf5a] via-50% to-[#452e06] text-black font-semibold px-6 py-2 rounded-full shadow-lg hover:scale-105 transition">
-            Join Expert Emirates
-          </button>
-        </div>
-        <div className="relative -mt-20 h-64 z-50">
-          <img
-            src={rocket}
-            alt="rocket image "
-            className=" w-full h-full sm:h-full"
-          />
-        </div>
-      </div>
+      <div className="mt-16 bg-[#1D1B25] rounded-[20px] flex flex-col md:flex-row items-center justify-between px-4 sm:px-6 md:px-10 py-10 gap-8">
+  {/* TEXT SECTION */}
+  <div className="text-center md:text-left w-full md:w-1/2">
+    <p className="bg-gradient-to-t from-transparent via-[#e7c74b] to-transparent bg-clip-text text-transparent mb-6 text-[24px] sm:text-[28px] md:text-[30px] leading-[1.4] tracking-[0.12em] font-bold font-sans">
+      Want to get started?
+    </p>
+    <div className="flex justify-center md:justify-start">
+      <button className="bg-gradient-to-l from-[#452e06] via-[#d1bf5a] via-50% to-[#452e06] text-black font-semibold px-6 py-2 rounded-full shadow-lg hover:scale-105 transition">
+        Join Expert Emirates
+      </button>
+    </div>
+  </div>
+
+  {/* IMAGE SECTION */}
+  <div className="relative mt-8 md:-mt-20 h-72 md:h-64 w-full max-w-[250px] md:max-w-none z-10 flex justify-center">
+    <img
+      src={rocket}
+      alt="rocket image"
+      className="w-full h-full object-contain"
+    />
+  </div>
+</div>
+
     </div>
   );
 }
