@@ -18,12 +18,14 @@ import FundedAccounts from "./funded-accounts/FundedAccounts";
 import TradingBot from "./tradingBot/TradingBot";
 import Platform from "./platformMT4/Platform";
 import PlatformMt5 from "./PlatformMT5/PlatformMt5";
+import ScrollToTop from "./utils/ScrollToTop";
 
 function App() {
   return (
     <div className="">
       <Router>
         <Navbar />
+          <ScrollToTop />
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/careers" element={<Career />} />
@@ -32,19 +34,18 @@ function App() {
              <Route path="/Forecasts" element={<AwardsSection/>} />
               <Route path="/Support" element={<Support/>} />
                 <Route path="/about-us" element={<AboutUs/>} />
-                 <Route path="/profile-management" element={<Portfolio/>} />
+                 <Route path="/Portfolio Management" element={<Portfolio/>} />
                <Route path="/company-news" element={<CompanyNews/>} />
                 <Route path="/forex" element={<Forex/>} />
                  <Route path="/gold" element={<Gold/>} />
                   <Route path="/cryptocurrency" element={<CryptoCurrency/>} />
-                  <Route path="/FundedAccounts" element={<FundedAccounts/>} />
-                  <Route path="/TradingBot" element={<TradingBot/>} />
+                  <Route path="/Funded Accounts" element={<FundedAccounts/>} />
+                  <Route path="/Trading Bot" element={<TradingBot/>} />
                   <Route path="/MT4 Platform" element={<Platform/>} />
                   <Route path="/MT5 Platform" element={<PlatformMt5/>} />
-
-
-
-
+                  {/* <Route path="/Pro" element={<Pro/>} /> */}
+                  {/* <Route path="/Ultra" element={<Ultra/>} /> */}
+                  {/* <Route path="/Standard" element={<Standard/>} /> */}
 
         </Routes>
         <Footer />

@@ -25,10 +25,10 @@ const EliteTradingTeam = () => {
           <div
             className="mt-6 space-y-6"
             style={{
-              fontFamily: "Poppins, sans-serif",
+              fontFamily: "Poppins",
               fontWeight: 400,
               fontSize: "18px",
-              lineHeight: "30px",
+              lineHeight: "32px",
               letterSpacing: "0px",
               background: "linear-gradient(90deg, #FFFFFF 0%, #999999 100%)",
               WebkitBackgroundClip: "text",

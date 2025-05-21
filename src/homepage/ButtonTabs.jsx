@@ -1,39 +1,38 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState } from "react";
+
+const categories = [
+  "Forex + Gold",
+  "Crypto Currency",
+  "Portfolio Management",
+  "Funded Accounts",
+  "Trading Bot",
+];
 
 const ButtonTabs = () => {
-  const tabs = [
-    'Forex + Gold',
-    'Crypto',
-    'Portfolio Management',
-    'Copy Trading',
-    'Bot Trading',
-  ];
-
-  const [activeIndex, setActiveIndex] = useState(0);
+  const [activeTab, setActiveTab] = useState("Forex + Gold");
 
   return (
-    <div className="w-full bg-black py-6 px-4">
-      <div className="max-w-[1136px] mx-auto overflow-x-auto">
-        <div className="flex items-center gap-4 sm:gap-6 md:gap-[20px] w-max min-w-full">
-          {tabs.map((tab, index) => (
-           <Link to={tab}>
-            <button
-              key={index}
-              onClick={() => setActiveIndex(index)}
-              className={`whitespace-nowrap min-w-[140px] sm:min-w-[160px] px-5 py-2 rounded-full text-[14px] sm:text-[16px] md:text-[18px] font-medium tracking-[0.12em] leading-[29px] text-center transition duration-300
+    <div className="w-full bg-black flex justify-center px-4">
+      <div className="flex flex-wrap justify-center gap-4 md:gap-6 lg:gap-8 w-full max-w-[1240px] py-8">
+        {categories.map((cat) => (
+          <button
+            key={cat}
+            onClick={() => setActiveTab(cat)}
+            className={`
+              min-w-[140px] md:min-w-[165px] h-[39px] px-[10px] py-[5px]
+              rounded-[90px] text-sm font-semibold font-poppins
+              transition duration-300 text-center
               ${
-                activeIndex === index
-                  ? 'bg-gradient-to-r from-[#FFD700] to-[#B8860B] text-black shadow-lg'
-                  : 'bg-[#1C1B23] text-white hover:bg-gradient-to-r hover:from-[#D4AF37] hover:to-[#B8860B] hover:text-black'
-              }`}
-              style={{ fontFamily: 'Inter' }}
-            >
-              {tab}
-            </button>
-           </Link>
-          ))}
-        </div>
+                activeTab === cat
+                  ? "text-black bg-[linear-gradient(86.31deg,#281000_0%,#C0971C_25%,#FFE976_50.5%,#C0971C_74.5%,#281000_100%)]"
+                  : "text-white bg-[var(--Dark-grey,#121117)]"
+              }
+              hover:bg-[linear-gradient(86.31deg,#281000_0%,#C0971C_25%,#FFE976_50.5%,#C0971C_74.5%,#281000_100%)] hover:text-black
+            `}
+          >
+            {cat}
+          </button>
+        ))}
       </div>
     </div>
   );

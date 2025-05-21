@@ -18,15 +18,12 @@ const CategoryTabs = () => {
           <button
             key={cat}
             onClick={() => setActiveTab(cat)}
-            className={`min-w-[140px] md:min-w-[165px] h-[39px] px-[10px] py-[5px] rounded-[90px] text-sm font-semibold font-poppins transition duration-300
-              border text-center
+            className={`min-w-[140px] md:min-w-[165px] h-[39px] px-[10px] py-[5px] rounded-[90px] text-sm font-semibold font-poppins transition duration-300 text-center
               ${
                 activeTab === cat
                   ? "text-black bg-[linear-gradient(86.31deg,#281000_0%,#C0971C_25%,#FFE976_50.5%,#C0971C_74.5%,#281000_100%)]"
                   : "text-white bg-black"
               }
-              border-[1px] border-solid border-[rgba(200,161,39,0.5)]
-              shadow-[inset_0_0_25px_0px_#FFD70033,0_0_20px_2px_#FED60033]
               hover:bg-[linear-gradient(86.31deg,#281000_0%,#C0971C_25%,#FFE976_50.5%,#C0971C_74.5%,#281000_100%)] hover:text-black
             `}
           >

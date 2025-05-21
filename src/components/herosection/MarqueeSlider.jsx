@@ -7,7 +7,8 @@ import companies from '../../assets/companies.png'; // Replace with your image p
 //   { icon: <FaCloud />, label: "application" },
 //   { icon: <FaBriefcase />, label: "business" },
 //   { icon: <FaCogs />, label: "enterprise" },
-//   { icon: <FaRegBuilding />, label: "agency" },
+//   { icon: <FaRegBuild
+// ing />, label: "agency" },
 //   { icon: <FaBuilding />, label: "company" },
 // ];
 

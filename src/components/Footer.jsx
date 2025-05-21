@@ -1,14 +1,18 @@
 import React from "react";
 import SocialIcons from "../assets/social-icons.png"; // Update path if needed
 import { Link } from "react-router-dom";
-import logo from "../assets/navlogo.png"
+import logo from "../assets/navlogo.png";
 const Footer = () => {
   return (
     <footer className="bg-black text-white px-6 py-10 relative font-poppins text-lg leading-4 font-normal">
       {/* Top Section: Border + Go to Top */}
       <div className="flex justify-between items-center mb-6  border-gray-700 pb-4">
         <div className="w-48 h-full">
-          <img src={logo} alt="logo expert emirates" className="w-full h-full"/>
+          <img
+            src={logo}
+            alt="logo expert emirates"
+            className="w-full h-full"
+          />
         </div>
         <a
           href="#top"
@@ -17,7 +21,7 @@ const Footer = () => {
           Go to Top
         </a>
       </div>
-<div className="bg-gradient-to-r from-[#070707] via-[#474646] via-50% to-[#1f1e1e] w-5/6 mx-auto my-5 h-[0.5px] rounded-l-full rounded-r-full"/>
+      <div className="bg-gradient-to-r from-[#070707] via-[#474646] via-50% to-[#1f1e1e] w-5/6 mx-auto my-5 h-[0.5px] rounded-l-full rounded-r-full" />
 
       {/* Grid Section */}
       <div className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-5   gap-6">
@@ -62,8 +66,11 @@ const Footer = () => {
             <ul className="space-y-1">
               {items.map((item) => (
                 <li key={item}>
-                <Link to={`/${item}` }>{item}</Link>
-
+                  {item == "Home" || item == "home"||item=="Comex" ? (
+                    <Link to={`/`}>{item}</Link>
+                  ) : (
+                    <Link to={`/${item}`}>{item}</Link>
+                  )}
                 </li>
               ))}
             </ul>
@@ -71,7 +78,7 @@ const Footer = () => {
         ))}
       </div>
 
-<div className=" bg-[#2a2929] w-5/6 mx-auto mt-5 h-[0.5px] rounded-l-full rounded-r-full"/>
+      <div className=" bg-[#2a2929] w-5/6 mx-auto mt-5 h-[0.5px] rounded-l-full rounded-r-full" />
       {/* Bottom Section: Email left + Social icons right */}
       <div className="flex justify-between items-center mt-8 ">
         <div className="text-sm font-medium flex items-center gap-2">
@@ -92,7 +99,9 @@ const Footer = () => {
           reserved.
         </p>
         <div className="flex items-center justify-center gap-1 font-medium text-[14px] leading-[100%] tracking-[0%] font-[Poppins]">
-          <Link to={"/privacy-policy"} className="">Privacy Policy</Link>
+          <Link to={"/privacy-policy"} className="">
+            Privacy Policy
+          </Link>
           <span>|</span>
           <Link to={"/terms-and-condition"}>Terms & Conditions</Link>
         </div>
