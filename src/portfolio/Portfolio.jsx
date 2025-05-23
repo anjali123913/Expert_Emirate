@@ -1,16 +1,16 @@
 import React from "react";
 import HeroSection from "./HeroSection";
-import PortfolioInfoSection from "./PortfolioInfoSection";
 import FeatureSection from "../homepage/FeatureSection";
 import WhyTradersTrustUs from "./WhyTradersTrustUs";
 import TutorialVideo from "./TutorialVideo";
+import Managment from "./Managment";
 
 
 export default function Portfolio() {
   return (
     <div>
      <HeroSection/>
-     <PortfolioInfoSection/>
+     <Managment/>
 <TutorialVideo/>
 
      <WhyTradersTrustUs/>

@@ -60,13 +60,13 @@ const HeroSection = () => {
           </div>
 
           {/* Heading */}
-          <h1 className="text-white font-poppins font-extrabold text-[32px] leading-[42px] tracking-[0.05em] my-3">
+          <h1 className="text-white font-poppins font-extrabold text-[32px] leading-[42px] tracking-wider my-3">
             Elevate Your{" "}
-            <span className="bg-[linear-gradient(86.31deg,#281000_0%,#C0971C_25%,#FFE976_50.5%,#C0971C_74.5%,#281000_100%)] bg-clip-text text-transparent">
+            <span className="  bg-gradient-to-b from-yellow-900 via-yellow-300 to-yellow-900 bg-clip-text text-transparent">
               Trading Game
             </span>{" "}
             with Our{" "}
-            <span className="bg-[linear-gradient(86.31deg,#281000_0%,#C0971C_25%,#FFE976_50.5%,#C0971C_74.5%,#281000_100%)] bg-clip-text text-transparent">
+            <span className="bg-gradient-to-b from-yellow-900 via-yellow-300 to-yellow-900 bg-clip-text text-transparent">
               Forex Signals
             </span>{" "}
             and Services

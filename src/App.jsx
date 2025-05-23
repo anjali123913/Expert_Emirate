@@ -33,16 +33,16 @@ function App() {
             <Route path="/Education" element={<EducationData/>} />
              <Route path="/Forecasts" element={<AwardsSection/>} />
               <Route path="/Support" element={<Support/>} />
-                <Route path="/about-us" element={<AboutUs/>} />
-                 <Route path="/Portfolio Management" element={<Portfolio/>} />
+                <Route path="/about" element={<AboutUs/>} />
+                 <Route path="/portfolio-management" element={<Portfolio/>} />
                <Route path="/company-news" element={<CompanyNews/>} />
                 <Route path="/forex" element={<Forex/>} />
                  <Route path="/gold" element={<Gold/>} />
                   <Route path="/cryptocurrency" element={<CryptoCurrency/>} />
-                  <Route path="/Funded Accounts" element={<FundedAccounts/>} />
-                  <Route path="/Trading Bot" element={<TradingBot/>} />
-                  <Route path="/MT4 Platform" element={<Platform/>} />
-                  <Route path="/MT5 Platform" element={<PlatformMt5/>} />
+                  <Route path="/funded-accounts" element={<FundedAccounts/>} />
+                  <Route path="/trading-bot" element={<TradingBot/>} />
+                  <Route path="/mt4-platform" element={<Platform/>} />
+                  <Route path="/mt5-platform" element={<PlatformMt5/>} />
                   {/* <Route path="/Pro" element={<Pro/>} /> */}
                   {/* <Route path="/Ultra" element={<Ultra/>} /> */}
                   {/* <Route path="/Standard" element={<Standard/>} /> */}

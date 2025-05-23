@@ -5,18 +5,24 @@ import YouTubeIcon from '../assets/support/youtube.png';
 
 const FollowUsSection = () => {
   return (
-    // Outer black background with safe padding and responsive center
     <div className="bg-black px-4 py-6 sm:py-8 md:py-10 flex justify-center">
-      {/* Inner box with original color and responsive spacing */}
-      <div className="bg-[#1b181f] rounded-2xl px-4 sm:px-6 md:px-8 py-8 sm:py-10 text-center w-full max-w-4xl">
+      <div
+        className="rounded-3xl px-4 sm:px-6 md:px-10 py-8 sm:py-10 md:py-12 w-full max-w-5xl text-center"
+        style={{
+          background: 'var(--Dark-grey, #121117)',
+          border: '1px solid',
+          borderImageSource: 'linear-gradient(144.59deg, #666666 0%, #000000 99.55%)',
+          borderImageSlice: 1,
+        }}
+      >
         {/* Gradient Heading */}
         <h2 className="text-transparent bg-clip-text bg-gradient-to-t from-[#281000] via-[#FFE976] to-[#281000]
-                       text-[28px] sm:text-[36px] md:text-[44px] font-semibold leading-tight tracking-[0.12em] font-[Poppins]">
+                       text-[24px] sm:text-[32px] md:text-[40px] font-semibold leading-tight tracking-wider font-[Poppins]">
           Follow us
         </h2>
 
         {/* Subtext */}
-        <p className="text-sm sm:text-base text-gray-300 mt-3 sm:mt-4">
+        <p className="text-xs sm:text-sm md:text-base text-gray-300 mt-3 sm:mt-4">
           Get market updates and exclusive trading tips on our <br className="hidden sm:inline" />
           social channels
         </p>
@@ -27,21 +33,21 @@ const FollowUsSection = () => {
             <img
               src={FacebookIcon}
               alt="Facebook"
-              className="w-7 h-7 sm:w-8 sm:h-8 hover:scale-110 transition-transform"
+              className="w-6 h-6 sm:w-8 sm:h-8 hover:scale-110 transition-transform"
             />
           </a>
           <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
             <img
               src={InstagramIcon}
               alt="Instagram"
-              className="w-7 h-7 sm:w-8 sm:h-8 hover:scale-110 transition-transform"
+              className="w-6 h-6 sm:w-8 sm:h-8 hover:scale-110 transition-transform"
             />
           </a>
           <a href="https://youtube.com" target="_blank" rel="noopener noreferrer">
             <img
               src={YouTubeIcon}
               alt="YouTube"
-              className="w-7 h-7 sm:w-8 sm:h-8 hover:scale-110 transition-transform"
+              className="w-6 h-6 sm:w-8 sm:h-8 hover:scale-110 transition-transform"
             />
           </a>
         </div>

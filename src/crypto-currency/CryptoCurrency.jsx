@@ -1,7 +1,6 @@
 import React from "react";
 import CryptoHeroSection from "./CryptoHeroSection";
 import CategoryTabs from "../forex/categories";
-import ForexInfo from "../forex/ForexInfo";
 import ComexFeatures from "../gold/ComexFeatures";
 import TutorialVideo from "../portfolio/TutorialVideo";
 import ExpertTrade from "../forex/ExpertTrade";
@@ -10,13 +9,14 @@ import PopularSharesTable from "../forex/PopularSharesTable";
 import MetalsTable from "../forex/MetalsData";
 import WhyTradersTrustUs from "../portfolio/WhyTradersTrustUs";
 import FeatureSection from "../homepage/FeatureSection";
+import WhatisCrypto from "./WhatisCrypto";
 
 export default function CryptoCurrency() {
   return (
     <div>
       <CryptoHeroSection/>
      <CategoryTabs/>
-     <ForexInfo/>
+     <WhatisCrypto/>
      <ComexFeatures/>
      <TutorialVideo/>
      <ExpertTrade/>
