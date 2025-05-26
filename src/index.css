@@ -45,3 +45,9 @@ body{
   color: transparent;
   font-family: Arial, sans-serif;
 }
+
+:root{
+  
+--Dark-grey: #121117;
+
+}

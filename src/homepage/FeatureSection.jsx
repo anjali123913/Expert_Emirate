@@ -59,8 +59,8 @@ export default function FeatureSection() {
       {/* CTA Section */}
       <div className="mt-16 bg-[#1D1B25] rounded-[20px] flex flex-col md:flex-row items-center justify-between px-4 sm:px-6 md:px-10 py-10 gap-8">
   {/* TEXT SECTION */}
-  <div className="text-center md:text-left w-full md:w-1/2">
-    <p className="bg-gradient-to-t from-transparent via-[#e7c74b] to-transparent bg-clip-text text-transparent mb-6 text-[24px] sm:text-[28px] md:text-[30px] leading-[1.4] tracking-[0.12em] font-bold font-sans">
+  <div className="text-center md:text-left w-full md:w-5/6">
+    <p className="bg-gradient-to-b from-yellow-900 via-yellow-300 to-yellow-900 bg-clip-text text-transparent mb-6 text-[24px] sm:text-[28px] md:text-[30px] leading-[1.4] tracking-[0.12em] font-bold font-sans">
       Want to get started?
     </p>
     <div className="flex justify-center md:justify-start">
@@ -71,7 +71,7 @@ export default function FeatureSection() {
   </div>
 
   {/* IMAGE SECTION */}
-  <div className="relative mt-8 md:-mt-20 h-72 md:h-64 w-full max-w-[250px] md:max-w-none z-10 flex justify-center">
+  <div className="relative mt-8 md:-mt-20 h-72 md:h-64 w-full max-w-[250px] md:max-w-none z-10 flex items-end justify-end right-10">
     <img
       src={rocket}
       alt="rocket image"

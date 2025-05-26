@@ -14,8 +14,8 @@ const TopAwardsSection = () => {
       </div>
 
       {/* Heading */}
-      <h2 className="text-center text-2xl sm:text-3xl md:text-4xl font-bold text-yellow-400 mb-4 animate-fadeIn">
-        Stay Updated with the Latest from <br className="hidden sm:block" />
+      <h2 className="text-center text-2xl sm:text-3xl md:text-4xl font-bold bg-gradient-to-t from-yellow-900 via-yellow-300 to-yellow-900 bg-clip-text text-transparent mb-4">
+        Stay Updated with the Latest from 
         Expert Emirates.
       </h2>
 

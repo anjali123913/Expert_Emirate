@@ -8,7 +8,7 @@ const WorldMapLabels = () => {
     <div className="bg-black p-2 md:p-10 lg:p-12 flex flex-col items-center justify-center">
 
 <h1
-          className="text-center text-3xl font-bold bg-gradient-to-t from-transparent via-yellow-300 to-transparent bg-clip-text text-transparent"
+          className="text-center text-3xl font-bold bg-gradient-to-b from-yellow-900 via-yellow-300 to-yellow-900 bg-clip-text text-transparent"
         >
          Over 25+ Offices Worldwide
         </h1>

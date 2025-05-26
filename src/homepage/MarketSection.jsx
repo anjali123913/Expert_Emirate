@@ -11,7 +11,7 @@ export default function MarketSection() {
       {/* Main Heading */}
       <h1 className="text-[32px] leading-[42px] font-medium text-white mb-6 tracking-[0.05em]">
         Your Gateway to{" "}
-        <span className="text-[32px] leading-[42px] font-bold tracking-[0.05em] bg-gradient-to-r from-[#e3c66d] to-[#c59e28] bg-clip-text text-transparent font-[Poppins]">
+        <span className="text-[32px] leading-[42px] font-bold tracking-[0.05em] bg-gradient-to-b from-yellow-900 via-yellow-300 to-yellow-900 bg-clip-text text-transparent font-[Poppins]">
           Global Financial Markets
         </span>
       </h1>

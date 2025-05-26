@@ -9,7 +9,7 @@ const IndustryAwardsSection = () => {
       </div>
 
       {/* Heading */}
-      <h2 className="text-center text-2xl sm:text-3xl md:text-4xl font-bold text-yellow-400 mb-4 animate-fadeIn">
+      <h2 className="text-center text-2xl sm:text-3xl md:text-4xl font-bold bg-gradient-to-t from-yellow-900 via-yellow-300 to-yellow-900 bg-clip-text text-transparent mb-4 ">
         Celebrating Excellence with 70+ <br className="hidden sm:block" />{" "}
         <span className="inline-block animate-pulseSlow">Industry Awards</span>
       </h2>
@@ -27,7 +27,7 @@ const IndustryAwardsSection = () => {
         {/* Award 1 - Right Aligned */}
         <div className="flex justify-end">
           <div className="flex flex-col sm:flex-row sm:items-center bg-[#2A2A3F] rounded-xl px-4 py-3 max-w-2xl w-full hover:bg-[#3A3A4F] transition-all duration-300 hover:shadow-md hover:shadow-yellow-500/20">
-            <h3 className="text-yellow-400 font-bold text-base sm:text-lg group-hover:text-yellow-300 transition-colors duration-200">
+            <h3 className="bg-gradient-to-t from-yellow-900 via-yellow-300 to-yellow-900 bg-clip-text text-transparent font-bold text-base sm:text-lg group-hover:bg-gradient-to-t group-hover:from-yellow-900 group-hover:via-yellow-300 group-hover:to-yellow-900 group-hover:bg-clip-text group-hover:text-transparent transition-colors duration-200">
               Best Mobile Trading App
             </h3>
             <div className="h-[50px] mx-5 w-[2px] bg-gradient-to-b from-yellow-600 via-yellow-400 to-yellow-600 rounded-full hidden sm:block"></div>
@@ -40,7 +40,7 @@ const IndustryAwardsSection = () => {
         {/* Award 2 - Left Aligned */}
         <div className="flex justify-start animate-marqueeRight">
           <div className="flex flex-col sm:flex-row sm:items-center bg-[#2A2A3F] rounded-xl px-4 py-3 max-w-2xl w-full hover:bg-[#3A3A4F] transition-all duration-300 hover:shadow-md hover:shadow-yellow-500/20">
-            <h3 className="text-yellow-400 font-bold text-base sm:text-lg group-hover:text-yellow-300 transition-colors duration-200">
+            <h3 className="bg-gradient-to-t from-yellow-900 via-yellow-300 to-yellow-900 bg-clip-text text-transparent font-bold text-base sm:text-lg group-hover:bg-gradient-to-t group-hover:from-yellow-900 group-hover:via-yellow-300 group-hover:to-yellow-900 group-hover:bg-clip-text group-hover:text-transparent transition-colors duration-200">
               Best Prime Trading Broker
             </h3>
             <div className="h-[50px] mx-5 w-[2px] bg-gradient-to-b from-yellow-600 via-yellow-400 to-yellow-600 rounded-full hidden sm:block"></div>
@@ -53,7 +53,7 @@ const IndustryAwardsSection = () => {
         {/* Award 3 - Right Aligned */}
         <div className="flex justify-end">
           <div className="flex flex-col sm:flex-row sm:items-center bg-[#2A2A3F] rounded-xl px-4 py-3 max-w-2xl w-full hover:bg-[#3A3A4F] transition-all duration-300 hover:shadow-md hover:shadow-yellow-500/20">
-            <h3 className="text-yellow-400 font-bold text-base sm:text-lg group-hover:text-yellow-300 transition-colors duration-200">
+            <h3 className="bg-gradient-to-t from-yellow-900 via-yellow-300 to-yellow-900 bg-clip-text text-transparent font-bold text-base sm:text-lg group-hover:bg-gradient-to-t group-hover:from-yellow-900 group-hover:via-yellow-300 group-hover:to-yellow-900 group-hover:bg-clip-text group-hover:text-transparent transition-colors duration-200">
               Best Global Regulated Broker
             </h3>
             <div className="h-[50px] mx-5 w-[2px] bg-gradient-to-b from-yellow-600 via-yellow-400 to-yellow-600 rounded-full hidden sm:block"></div>
