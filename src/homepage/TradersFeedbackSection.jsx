@@ -13,7 +13,7 @@ const TradersFeedbackSection = () => {
         </button>
 
         {/* Gradient Heading */}
-        <h2 className="text-3xl font-bold leading-[100%] bg-gradient-to-b from-[#f18137]  via-[#f3d57b] to-[#f18137] text-transparent bg-clip-text">
+        <h2 className="text-3xl font-bold leading-[100%] bg-gradient-to-b from-yellow-900 via-yellow-300 to-yellow-900 bg-clip-text text-transparent tracking-widest">
           Our Traders <span className="text-red-500">L❤️ve</span> Us
         </h2>
 

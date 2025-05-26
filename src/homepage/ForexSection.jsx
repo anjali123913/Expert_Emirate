@@ -11,8 +11,10 @@ const ForexSection = () => {
   ];
 
   return (
-    <section className="w-full bg-black text-white py-14 px-6">
-      <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-12 font-[Poppins]">
+    <section className="w-full bg-black text-white py-14 px-12 sm:px-16 md:px-20 lg:px-24 xl:px-28 2xl:px-32" style={{
+            fontFamily: "sans-serif",
+          }}>
+      <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-12 ">
         {/* Left Content */}
         <div className="max-w-[500px] flex flex-col gap-10">
           {/* Toggle Buttons */}
@@ -36,13 +38,13 @@ const ForexSection = () => {
           </div>
 
           {/* Heading */}
-          <h2 className="text-[36px] sm:text-[42px] leading-[50px] font-bold tracking-wide">
+          <h2 className="text-6xl  font-bold tracking-wider " >
             Invest in <br />
             <span
               className={`text-transparent bg-clip-text ${
                 activeCategory === "forex"
-                  ? "bg-gradient-to-t from-[#FFD700] to-[#B8860B]"
-                  : "bg-gradient-to-t from-[#FFD700] to-[#B8860B]"
+                  ? "bg-gradient-to-b from-yellow-900 via-yellow-300 to-yellow-900 bg-clip-text text-transparent"
+                  : "bg-gradient-to-b from-yellow-900 via-yellow-300 to-yellow-900 bg-clip-text text-transparent"
               }`}
             >
               {activeCategory === "forex" ? "Forex Signals" : "Gold"}
@@ -50,7 +52,7 @@ const ForexSection = () => {
           </h2>
 
           {/* Description */}
-          <p className="text-sm text-[#C8C8C8] leading-6 max-w-[420px]">
+          <p className="text-[20px] text-gray-200 leading-relaxed max-w-[500px] tracking-widest">
             {activeCategory === "forex"
               ? "Discover the power of our Forex signals, which boast an 85% accuracy rate. Our expert analysis and market insights help you make informed trading decisions."
               : "Gold (XAU/USD) offers top liquidity, tight spreads, and clear trends, attracting millions of traders daily. With $200B+ in daily volume, it’s a smart, strategic choice in any market."}

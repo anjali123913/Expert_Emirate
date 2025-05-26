@@ -17,15 +17,18 @@ const FollowUsSection = () => {
       >
         {/* Gradient Heading */}
         <h2 className="text-transparent bg-clip-text bg-gradient-to-t from-[#281000] via-[#FFE976] to-[#281000]
-                       text-[24px] sm:text-[32px] md:text-[40px] font-semibold leading-tight tracking-wider font-[Poppins]">
+                       text-[28px] sm:text-[36px] md:text-[44px] font-semibold leading-tight tracking-[0.12em] font-[Poppins]">
           Follow us
         </h2>
 
         {/* Subtext */}
-        <p className="text-xs sm:text-sm md:text-base text-gray-300 mt-3 sm:mt-4">
+        <p className="text-sm sm:text-base text-gray-300 mt-3 sm:mt-4">
           Get market updates and exclusive trading tips on our <br className="hidden sm:inline" />
           social channels
         </p>
+
+
+
 
         {/* Social Icons */}
         <div className="flex justify-center items-center space-x-6 mt-5 sm:mt-6">
@@ -33,21 +36,21 @@ const FollowUsSection = () => {
             <img
               src={FacebookIcon}
               alt="Facebook"
-              className="w-6 h-6 sm:w-8 sm:h-8 hover:scale-110 transition-transform"
+              className="w-7 h-7 sm:w-8 sm:h-8 hover:scale-110 transition-transform"
             />
           </a>
           <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
             <img
               src={InstagramIcon}
               alt="Instagram"
-              className="w-6 h-6 sm:w-8 sm:h-8 hover:scale-110 transition-transform"
+              className="w-7 h-7 sm:w-8 sm:h-8 hover:scale-110 transition-transform"
             />
           </a>
           <a href="https://youtube.com" target="_blank" rel="noopener noreferrer">
             <img
               src={YouTubeIcon}
               alt="YouTube"
-              className="w-6 h-6 sm:w-8 sm:h-8 hover:scale-110 transition-transform"
+              className="w-7 h-7 sm:w-8 sm:h-8 hover:scale-110 transition-transform"
             />
           </a>
         </div>

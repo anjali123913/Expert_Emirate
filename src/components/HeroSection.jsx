@@ -60,7 +60,7 @@ const HeroSection = () => {
           </div>
 
           {/* Heading */}
-          <h1 className="text-white font-poppins font-extrabold text-[32px] leading-[42px] tracking-wider my-3">
+          <h1 className="text-white font-poppins font-bold text-[32px] leading-[42px] tracking-wider my-3">
             Elevate Your{" "}
             <span className="  bg-gradient-to-b from-yellow-900 via-yellow-300 to-yellow-900 bg-clip-text text-transparent">
               Trading Game

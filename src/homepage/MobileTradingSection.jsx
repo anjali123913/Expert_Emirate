@@ -9,7 +9,7 @@ export default function MobileTradingSection() {
         <div>
           <h2 className="text-3xl md:text-4xl font-semibold mb-4">
             Explore Our <br />
-            <span className="text-4xl font-bold bg-gradient-to-b from-transparent via-yellow-400 to-transparent bg-clip-text text-transparent">
+            <span className="text-4xl font-bold bg-gradient-to-b from-yellow-900 via-yellow-300 to-yellow-900 bg-clip-text text-transparent">
               Mobile Trading Platforms
             </span>
           </h2>
@@ -20,7 +20,7 @@ export default function MobileTradingSection() {
 
           <h3 className="text-2xl md:text-3xl font-semibold mb-4">
             Trade with Confidence on <br />
-            <span className="font-semibold bg-gradient-to-b from-transparent via-yellow-400 to-transparent bg-clip-text text-transparent">MT4 & MT5</span>
+            <span className="font-semibold bg-gradient-to-b from-yellow-900 via-yellow-300 to-yellow-900 bg-clip-text text-transparent">MT4 & MT5</span>
           </h3>
           <p className=" text-gray-300 my-5 font-poppins font-medium text-[16px] leading-[29px] tracking-[0.12em]">
             Access over 20,000 trading instruments—including Forex, metals,

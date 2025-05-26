@@ -26,16 +26,16 @@ export default function MarqueeSlider() {
   const marqueeClass = direction === 'left' ? 'marquee-left' : 'marquee-right';
 
   return (
-    <div className="w-full mt-10 border border-gray-700 rounded-md bg-gradient-to-r from-black via-[#0f0f0f] to-black overflow-hidden">
+    <div className="w-full mt-10 border bg-black overflow-hidden rounded-lg border-gray-700">
       <div className={`flex whitespace-nowrap ${marqueeClass}`}>
         {/* {[...items, ...items].map((item, index) => ( */}
           <div
             // key={index}
-            className=" w-full h-full transition-opacity duration-300"
+            className=" w-full h-full rounded-full transition-opacity duration-300"
           >
             {/* <span className="text-lg sm:text-xl">{item.icon}</span>
             <span className="tracking-wide">{item.label}</span> */}
-            <img src={companies} alt="companies" className='w-full h-full'/>
+            <img src={companies} alt="companies" className='w-full h-full object-cover rounded-full'/>
           </div>
         {/* ))} */}
       </div>
