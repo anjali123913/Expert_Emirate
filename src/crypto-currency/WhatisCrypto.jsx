@@ -1,7 +1,7 @@
 import React from "react";
 import chartImg from "../assets/forex/chart-image.png";
 
-const ExpertAdvisor = () => {
+const WhatisCrypto = () => {
   return (
     <div className="bg-black w-full px-4 py-10">
       <div className="max-w-[1240px] mx-auto flex flex-col lg:flex-row items-center lg:items-start gap-10">
@@ -39,4 +39,4 @@ const ExpertAdvisor = () => {
   );
 };
 
-export default ExpertAdvisor;
+export default WhatisCrypto;

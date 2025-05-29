@@ -1,8 +1,5 @@
 import React from "react";
-import standardIcon from "../assets/Price/image1.png";
-import proIcon from "../assets/Price/image2.png";
-import ultraIcon from "../assets/Price/image3.png";
-import { MdDiscount } from "react-icons/md";
+import { MdDiscount, MdDiamond } from "react-icons/md";
 import { BiSolidCrown } from "react-icons/bi";
 
 const plans = [
@@ -10,9 +7,7 @@ const plans = [
     name: "Standard Plan",
     price: "$199",
     duration: "/MONTHLY",
-    icon: (
-      <MdDiscount className="group-hover:text-yellow-500 text-xl rotate-90 " />
-    ),
+    icon: <MdDiscount className="text-xl rotate-90 text-yellow-500" />,
     features: [
       "Premium Trade Signals (12–15/Week)",
       "Risk Reward Ratio - 1:2 , 1:3, 1:4",
@@ -29,7 +24,7 @@ const plans = [
     name: "Pro Plan",
     price: "$499",
     duration: "/QUARTERLY",
-    icon: <BiSolidCrown className="group-hover:text-yellow-500 text-2xl  " />,
+    icon: <BiSolidCrown className="text-2xl text-yellow-500" />,
     features: [
       "Premium Trade Signals (12–15/Week)",
       "Risk Reward Ratio - 1:2 , 1:3, 1:4",
@@ -47,7 +42,7 @@ const plans = [
     name: "Ultra Plan",
     price: "$999",
     duration: "/HALF–YEARLY",
-    icon: ultraIcon,
+    icon: <MdDiamond className="text-2xl text-yellow-500" />,
     features: [
       "Premium Trade Signals (12–15/Week)",
       "Risk Reward Ratio - 1:2 , 1:3, 1:4",
@@ -65,67 +60,62 @@ const plans = [
 
 export default function PricingSection() {
   return (
-    <div className="bg-black text-white pb-20 p-3 px-4 md:px-10 font-[Poppins]">
-      <div className="max-w-7xl mx-auto flex flex-col md:flex-row gap-8 justify-center items-stretch">
+    <div className="bg-black text-white py-16 px-4 sm:px-6 lg:px-12 font-[Poppins]">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 px-2 sm:px-4 md:px-8">
         {plans.map((plan, idx) => (
           <div
             key={idx}
-            className="group bg-[#121117] border hover:border-yellow-500 rounded-2xl p-8 w-full max-w-sm mx-auto shadow-lg flex flex-col justify-between"
+            className="group bg-[#121117] rounded-2xl p-6 sm:p-8 shadow-lg flex flex-col justify-between transition-all"
+            style={{
+              border: "1px solid",
+              borderImageSource: "linear-gradient(180deg, #292929 0%, #000000 100%)",
+              borderImageSlice: 1,
+            }}
           >
-            <div className="group flex items-center gap-2 bg-[#1F1E25] rounded-full px-4 py-2 w-max mb-6 text-white">
-              <span className="text-lg p-2 rounded-full bg-gray-800">
+            {/* Plan Badge */}
+            <div className="flex items-center gap-2 bg-[#1F1E25] rounded-full px-4 py-2 w-max mb-6 text-white">
+              <span className="text-lg p-2 rounded-full bg-gray-800 -mt-1">
                 {plan.icon}
               </span>
-              <span
-                className="text-lg font-semibold transition-all duration-300 group-hover:bg-gradient-to-b group-hover:from-yellow-900 group-hover:via-yellow-300 group-hover:to-yellow-900 group-hover:bg-clip-text group-hover:text-transparent"
-                style={{ fontFamily: "sans-serif" }}
-              >
+              <span className="text-lg font-semibold transition-all duration-300 group-hover:bg-gradient-to-b group-hover:from-yellow-900 group-hover:via-yellow-300 group-hover:to-yellow-900 group-hover:bg-clip-text group-hover:text-transparent">
                 {plan.name}
               </span>
             </div>
 
+            {/* Price */}
             <h2 className="text-4xl font-bold text-white group-hover:text-yellow-500">
               {plan.price}
-              <span className="text-base font-normal ml-1">
-                {plan.duration}
-              </span>
+              <span className="text-base font-normal ml-1">{plan.duration}</span>
             </h2>
 
-            <p
-              className="text-md font-semibold  text-gray-200 my-4"
-              style={{
-                fontFamily: "sans-serif",
-                fontWeight: "500",
-              }}
-            >
+            {/* Description */}
+            <p className="text-sm sm:text-md font-medium text-gray-300 my-4 leading-relaxed">
               {plan.description}
             </p>
 
+            {/* Buy Now Button */}
             <button
-              className="w-[147px] h-[48px]  text-yellow-500 font-bold text-sm bg-transparent mb-6 transition-all duration-300 group-hover:bg-gradient-to-l group-hover:from-[#452e06] group-hover:via-[#d1bf5a] group-hover:via-50% group-hover:to-[#452e06]  rounded-full px-6 py-2 group-hover:text-black sm:text-base border border-t-yellow-600 border-b-yellow-600 group-hover:border-black font-sans hover:bg-yellow-500  hover:text-black border-yellow-800 hover:border-yellow-600"
-              
+              className="w-full sm:w-[147px] h-[48px] text-sm font-bold rounded-full px-6 py-2 mb-6
+              bg-black text-white hover:bg-gradient-to-l from-[#452e06] via-[#d1bf5a] via-50% to-[#452e06] hover:text-black rounded-full px-10 py-3 font-bold transition tracking-tighter border border-l-yellow-900 border-r-yellow-900 border-b-yellow-500 border-t-yellow-950
+              bg-transparent 
+              hover:text-black 
+              hover:bg-[linear-gradient(86.31deg,#281000_0%,#C0971C_25%,#FFE976_50.5%,#C0971C_74.5%,#281000_100%)] 
+              shadow-[0_0_6px_#FFD70066]
+              transition-all duration-300"
             >
-              
               Buy Now
             </button>
 
+            {/* Features */}
             <ul className="space-y-3 text-sm text-gray-300">
               {plan.features.map((feature, i) => (
-                <li key={i} className="flex items-center gap-2">
-                  <div className="feature-circle  w-5 h-5 rounded-full  group-hover:border-black  group-hover:bg-gradient-to-t group-hover:from-[#452e06] group-hover:via-[#d1bf5a] group-hover:via-50% group-hover:to-[#452e06] flex items-center justify-center transition-all duration-300 bg-gray-300 p-2">
-                    <span className="text-xs font-bold text-gray-800 group-hover:text-black transition-all duration-300">
+                <li key={i} className="flex items-start gap-3">
+                  <div className="w-5 h-5 rounded-full bg-gray-300 group-hover:bg-gradient-to-t group-hover:from-[#452e06] group-hover:via-[#d1bf5a] group-hover:to-[#452e06] flex items-center justify-center transition-all duration-300">
+                    <span className="text-xs font-bold text-gray-800 group-hover:text-black">
                       ✓
                     </span>
                   </div>
-                  <span
-                    className="text-md font-semibold  text-gray-300 "
-                    style={{
-                      fontFamily: "sans-serif",
-                      fontWeight: "500",
-                    }}
-                  >
-                    {feature}
-                  </span>
+                  <span className="font-medium text-gray-300">{feature}</span>
                 </li>
               ))}
             </ul>

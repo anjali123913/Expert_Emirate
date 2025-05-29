@@ -35,56 +35,55 @@ const cardData = [
 
 const CareersSection = () => {
   return (
-    <section className="bg-black text-white font-poppins py-12 px-4 md:px-20">
+    <section className="bg-black text-white font-poppins py-14 px-4 md:px-20">
       {/* Header */}
       <div className="text-center mb-12">
-        <h2 className="text-2xl md:text-4xl font-semibold mb-2">
-          Join Our Elite Team at
-          <br />
-          <span className="text-4xl font-bold bg-gradient-to-t from-transparent via-yellow-300 to-transparent bg-clip-text text-transparent">Expert Emirates!</span>
+        <h2 className="text-2xl md:text-4xl font-semibold leading-tight">
+          Join Our Elite Team at <br />
+          <span className="bg-gradient-to-b from-[#fff1b0] via-[#e7c151] to-[#cfa021] bg-clip-text text-transparent">
+            Expert Emirates!
+          </span>
         </h2>
-        <p className=" w-1/2 text-center font-poppins font-normal text-[18px] leading-[100%] tracking-[0.12em] mx-auto my-5">
+        <p className="text-gray-300 text-sm sm:text-base max-w-2xl mx-auto mt-4 leading-relaxed tracking-wide">
           Your success starts with the right career path. Be part of a leading global trading firm that values innovation, talent, and growth.
         </p>
       </div>
 
-      {/* Top Row - First 2 Cards */}
+      {/* Top Row - 2 Cards */}
       <div className="flex flex-col md:flex-row gap-6 mb-6">
         {cardData.slice(0, 2).map((card, index) => (
           <div
             key={index}
-            className="flex flex-col sm:flex-row bg-[#1a1a1a] border border-yellow-400 rounded-xl py-7 px-5 gap-4 w-full md:w-1/2"
+            className="flex bg-[#1a1a1a] border border-yellow-500 rounded-xl py-6 px-5 gap-4 w-full md:w-1/2 items-center"
           >
-            <div className="w-24 h-24 flex-shrink-0 mx-auto sm:mx-0">
+            <div className="w-20 h-20 flex-shrink-0">
               <img src={card.img} alt={card.title} className="w-full h-full object-contain" />
             </div>
             <div>
-              <h3 className="text-lg font-semibold">{card.title}</h3>
-              <p className="text-sm text-gray-300 mt-1">{card.text}</p>
+              <h3 className="text-white text-[16px] font-semibold mb-1">{card.title}</h3>
+              <p className="text-gray-300 text-sm">{card.text}</p>
             </div>
           </div>
         ))}
       </div>
 
-      {/* Bottom Row - Last 3 Cards */}
+      {/* Bottom Row - 3 Cards */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {cardData.slice(2).map((card, index) => (
           <div
             key={index}
-            className="bg-[#1a1a1a] border border-yellow-400 rounded-xl p-5 flex flex-col items-center gap-4"
+            className="bg-[#1a1a1a] border border-yellow-500 rounded-xl p-6 flex flex-col items-center text-center"
           >
-            <div className="w-28 h-28">
-              <img src={card.img} alt={card.title} className="w-full h-full object-contain" />
-            </div>
-            <h3 className="text-lg font-semibold text-center">{card.title}</h3>
-            <p className="text-sm text-gray-300 text-center">{card.text}</p>
+            <img src={card.img} alt={card.title} className="w-20 h-20 mb-4 object-contain" />
+            <h3 className="text-white text-[16px] font-semibold mb-2">{card.title}</h3>
+            <p className="text-gray-300 text-sm">{card.text}</p>
           </div>
         ))}
       </div>
 
       {/* Apply Button */}
-      <div className="text-center mt-10">
-        <button className="bg-gradient-to-r from-[#e67529] via-[#e3b220] via-50% to-[#ea7b32] text-black rounded-full px-12 py-4 font-bold text-xl transition">
+      <div className="text-center mt-12">
+        <button className="bg-gradient-to-r from-yellow-400 via-yellow-300 to-yellow-500 text-black font-semibold px-8 py-3 rounded-full shadow-md text-lg hover:scale-105 transition">
           Apply Now
         </button>
       </div>

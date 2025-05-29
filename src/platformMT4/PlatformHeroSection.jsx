@@ -13,7 +13,7 @@ const PlatformHeroSection = () => {
       {/* Left Content */}
       <div className="w-full md:w-1/2 space-y-6 text-center md:text-left">
         {/* ✅ Proper Visible Gradient Heading */}
-        <h2 className="text-[32px] sm:text-[40px] md:text-[46px] lg:text-[52px] font-semibold leading-[110%] bg-gradient-to-b from-[#FFE976] via-[#C0971C] to-[#281000] text-transparent bg-clip-text">
+        <h2 className="text-[20px] sm:text-[20px] md:text-[20px] lg:text-[52px] font-semibold leading-[110%] bg-gradient-to-b from-[#FFE976] via-[#C0971C] to-[#281000] text-transparent bg-clip-text">
           Trade with Confidence<br />on MT4 & MT5
         </h2>
 
