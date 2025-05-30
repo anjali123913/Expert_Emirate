@@ -38,7 +38,7 @@ const CareersSection = () => {
     <section className="bg-black text-white font-poppins py-12 px-4 md:px-20">
       {/* Heading */}
       <div className="text-center mb-12">
-        <h2 className="text-2xl md:text-4xl font-bold mb-2">
+        <h2 className="text-2xl md:text-4xl font-bold bg-gradient-to-b from-transparent via-yellow-400 to-transparent bg-clip-text text-transparent">
           Join Our Elite Team at Expert Emirates!
         </h2>
         <p className="w-full sm:w-3/4 lg:w-1/2 text-center font-normal text-[18px] leading-[140%] tracking-[0.12em] mx-auto my-5">
@@ -83,7 +83,7 @@ const CareersSection = () => {
       {/* Apply Button */}
       <div className="text-center mt-10">
         <button
-          className="bg-[linear-gradient(90deg,#E67529_0%,#E3B220_50%,#EA7B32_100%)] text-black rounded-full px-12 py-4 font-bold text-xl transition-all hover:scale-105 shadow-[0_0_8px_#F9E26D]"
+          className="bg-gradient-to-l from-[#452e06] via-[#d1bf5a] via-50% to-[#452e06] text-black rounded-full px-12 py-3 font-bold text-xl transition-all hover:scale-105 "
         >
           Apply Now
         </button>

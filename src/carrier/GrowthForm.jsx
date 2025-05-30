@@ -79,7 +79,7 @@ const GrowthForm = () => {
           <div className="flex justify-center mt-6">
             <button
               type="submit"
-              className="bg-gradient-to-b from-[#FFE976] via-[#C0971C] to-[#281000] text-black font-semibold px-8 py-3 rounded-full shadow-[0_0_20px_#C0971C] hover:scale-105 transition duration-300"
+              className="bg-gradient-to-l from-[#452e06] via-[#d1bf5a] via-50% to-[#452e06] text-black rounded-full px-12 py-3 font-bold text-xl transition-all hover:scale-105"
             >
               Send Message
             </button>

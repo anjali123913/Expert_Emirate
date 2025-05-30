@@ -9,10 +9,10 @@ const BenefitsGlassCard = () => {
       className="relative bg-cover bg-center min-h-[400px] flex items-center justify-center px-4 md:px-10"
       style={{ backgroundImage: `url(${bgImage})` }}
     >
-      <div className="bg-black bg-opacity-60  rounded-2xl p-12 md:p-12 max-w-3xl w-full text-center text-white">
+      <div className="bg-gray-900 bg-opacity-75  rounded-2xl p-12 md:p-12 max-w-5xl w-full text-center text-white">
         <h2 className="text-xl md:text-3xl font-semibold mb-4">
           Employee Benefits at <br/>
-          <span className="text-4xl font-bold bg-gradient-to-t from-transparent via-yellow-300 to-transparent bg-clip-text text-transparent">
+          <span className="text-4xl font-bold bg-gradient-to-t from-transparent via-yellow-400 to-transparent bg-clip-text text-transparent">
             Expert Emirates
           </span>
         </h2>

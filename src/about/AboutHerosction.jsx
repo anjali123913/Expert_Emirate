@@ -11,12 +11,13 @@ const AboutHerosction = () => {
     >
       {/* Heading */}
       <h1
-        className="text-center font-[600] mb-12"
+        className="text-center font-bold mb-12"
         style={{
           fontFamily: "Poppins",
           fontSize: "clamp(2rem, 6vw, 52px)",
           lineHeight: "62px",
           letterSpacing: "0.43em",
+
           background:
             "linear-gradient(180deg, #281000 5.95%, #C0971C 29.93%, #FFE976 52.51%, #C0971C 76.02%, #281000 100%)",
           WebkitBackgroundClip: "text",
@@ -27,7 +28,9 @@ const AboutHerosction = () => {
       </h1>
 
       {/* Responsive Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-3 w-full max-w-7xl mx-auto">
+      <div className="grid grid-cols-1 md:grid-cols-3 w-full max-w-7xl mx-auto" style={{
+        fontFamily:"Poppins tracking-widest"
+      }}>
         {/* Left Block */}
         <div className="flex flex-col items-start">
           <img src={About1} alt="Chart Left" className="w-full h-auto" />
