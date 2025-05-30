@@ -20,16 +20,12 @@ const SmartTradeSection = () => {
       {/* Right Side - Heading + Text */}
       <div className="w-full md:w-1/2">
         <h2
-          className="mb-4"
+          className="mb-4 text-3xl font-bold bg-gradient-to-t from-transparent via-yellow-300 to-transparent bg-clip-text text-transparent"
           style={{
             fontFamily: "Poppins",
-            fontWeight: 600,
-            fontSize: "32px",
-            lineHeight: "55px",
-            background:
-              "linear-gradient(180deg, #281000 3.18%, #C0971C 14.77%, #FFE976 25.68%, #C0971C 37.05%, #281000 48.64%)",
-            WebkitBackgroundClip: "text",
-            WebkitTextFillColor: "transparent",
+            // fontWeight: 600,
+            // fontSize: "32px",
+        
           }}
         >
           Master the Markets with Expert Emirates – Your Path to Financial Success

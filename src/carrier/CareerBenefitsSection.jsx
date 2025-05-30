@@ -54,10 +54,10 @@ const CareerBenefitsSection = () => {
               className="w-16 h-16 object-contain"
             />
             <div>
-              <h3 className="text-sm font-semibold text-yellow-400 mb-1 leading-snug">
+              <h3 className="text-sm bg-gradient-to-b from-yellow-800 via-yellow-300 to-yellow-800 bg-clip-text text-transparent font-semibold tracking-wider leading-relaxed">
                 {benefit.title}
               </h3>
-              <p className="text-sm text-gray-300 leading-normal">
+              <p className="text-sm text-gray-200 leading-normal">
                 {benefit.text}
               </p>
             </div>
@@ -72,8 +72,8 @@ const CareerBenefitsSection = () => {
 
       {/* Gradient Text Button */}
       <div className="text-center mt-6">
-        <button className="text-xl font-bold px-12 py-4 rounded-full bg-white/10 border border-white/20 hover:bg-white/20 transition">
-          <span className="bg-gradient-to-r from-[#de6a1c] via-[#e5b329] to-[#c25e1c] bg-clip-text text-transparent">
+        <button className="text-xl font-bold px-7 py-2 rounded-full bg-white/10 border border-t-yellow-500 transition border-b-yellow-500 border-l-yellow-700 border-r-yellow-700 hover:bg-gradient-to-l hover:from-[#452e06] hover:via-[#d1bf5a] hover:via-50% hover:to-[#452e06]">
+          <span className="    text-white-300 font-semibold    hover:text-black transition duration-300">
             Submit Your CV
           </span>
         </button>

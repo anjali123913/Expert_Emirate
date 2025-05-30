@@ -1,21 +1,11 @@
-import React from 'react';
-import binanceImage from '../assets/awards/binance.png';
+import React from "react";
+import binanceImage from "../assets/awards/binance.png";
 
 const KeyBenefits = () => {
   return (
     <section className="bg-black text-white py-12 px-4 sm:px-6 md:px-16">
       {/* Gradient Heading */}
-      <h2
-        className="text-3xl md:text-4xl font-bold mb-8"
-        style={{
-          fontFamily: 'Poppins, sans-serif',
-          fontSize: '32px',
-          lineHeight: '100%',
-          background: 'linear-gradient(180deg, #281000 -22.5%, #C0971C -5.93%, #FFE976 9.67%, #C0971C 25.92%, #281000 42.5%)',
-          WebkitBackgroundClip: 'text',
-          WebkitTextFillColor: 'transparent',
-        }}
-      >
+      <h2 className="text-3xl md:text-4xl font-bold mb-8 bg-gradient-to-b from-yellow-900 via-yellow-300 to-yellow-900 bg-clip-text text-transparent">
         Key Benefits
       </h2>
 
@@ -23,31 +13,35 @@ const KeyBenefits = () => {
         {/* Left: List */}
         <ul
           className="space-y-6 text-[18px] text-white leading-[100%]"
-          style={{ fontFamily: 'Poppins, sans-serif' }}
+          style={{ fontFamily: "Poppins, sans-serif" }}
         >
           {[
             {
-              title: 'Expert Advice',
-              desc: 'Regular consultations with our financial advisors to ensure your portfolio stays aligned with your goals.',
+              title: "Expert Advice",
+              desc: "Regular consultations with our financial advisors to ensure your portfolio stays aligned with your goals.",
             },
             {
-              title: 'Educational Resources',
-              desc: 'Access to a wealth of educational materials to enhance your financial literacy.',
+              title: "Educational Resources",
+              desc: "Access to a wealth of educational materials to enhance your financial literacy.",
             },
             {
-              title: 'Community Support',
-              desc: 'Engage with a community of like-minded investors for insights and support.',
+              title: "Community Support",
+              desc: "Engage with a community of like-minded investors for insights and support.",
             },
             {
-              title: 'Cutting-edge Technology',
-              desc: 'Use our advanced tools and platforms to monitor and manage your investments effectively.',
+              title: "Cutting-edge Technology",
+              desc: "Use our advanced tools and platforms to monitor and manage your investments effectively.",
             },
           ].map((item, index) => (
             <li key={index} className="flex items-start gap-3">
               <span className="text-yellow-400 text-lg mt-1">●</span>
               <p>
-                <strong className="text-yellow-400">{item.title}:</strong>{' '}
-                <span className="text-white">{item.desc}</span>
+                <strong className=" bg-gradient-to-b from-yellow-900 via-yellow-300 to-yellow-900 bg-clip-text text-transparent font-semibold tracking-wider leading-relaxed">
+                  {item.title}:
+                </strong>{" "}
+                <span className="text-sm font-semibold tracking-wider leading-relaxed text-gray-200 px-2">
+                  {item.desc}
+                </span>
               </p>
             </li>
           ))}

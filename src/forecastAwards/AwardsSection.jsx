@@ -61,12 +61,12 @@ const AwardsSection = () => {
       {/* Heading */}
       <div className="text-center max-w-4xl mx-auto">
         <h2
-          className="text-[28px] sm:text-[36px] md:text-[48px] lg:text-[52px] font-semibold leading-tight mb-4 bg-gradient-to-b from-[#281000] via-[#FFE976] to-[#281000] text-transparent bg-clip-text"
+          className="text-[28px] sm:text-[36px] md:text-[48px] lg:text-[52px] font-semibold leading-tight mb-4 bg-gradient-to-b from-yellow-900 via-yellow-300 to-yellow-900 bg-clip-text text-transparent"
           style={{ fontFamily: "Poppins, sans-serif" }}
         >
           Awards and Recognition
         </h2>
-        <p className="text-sm md:text-base text-gray-400 px-2">
+        <p className="text-md font-semibold tracking-wider leading-relaxed text-gray-200 px-2">
           At Expert Emirates, we are committed to providing the highest level of service and
           innovation in the forex trading industry. Over the past 7+ years, our dedication has been
           recognized by leading financial institutions, media organizations, and industry
@@ -97,8 +97,8 @@ const AwardsSection = () => {
                 onClick={() => setSelectedYear(year)}
                 className={`px-4 py-1 rounded-full text-sm font-semibold whitespace-nowrap transition duration-300 ${
                   selectedYear === year
-                    ? "text-black bg-gradient-to-r from-[#F4CE65] via-[#FFE976] to-[#F4CE65]"
-                    : "bg-[#2C2B30] text-white hover:bg-yellow-600 hover:text-black"
+                    ? "bg-gradient-to-l from-[#452e06] via-[#d1bf5a] via-50% to-[#452e06] text-black rounded-full px-6 py-1 text-sm sm:text-base font-bold transition"
+                    : "bg-[#2C2B30] text-white hover:bg-gradient-to-l hover:from-[#452e06] hover:via-[#d1bf5a] hover:via-50% hover:to-[#452e06]  rounded-full  text-sm sm:text-base font-bold transition hover:text-black"
                 }`}
               >
                 {year}
@@ -129,7 +129,7 @@ const AwardsSection = () => {
               className="w-full h-auto mb-4 mx-auto object-contain max-h-48"
             />
             <h3 className="text-lg font-semibold mb-2">{award.title}</h3>
-            <span className="inline-block mt-2 text-xs font-medium text-black bg-gradient-to-r from-yellow-600 via-yellow-300 to-yellow-600 px-4 py-1 rounded-full">
+            <span className="inline-block mt-2 text-xs font-bold text-black bg-gradient-to-l from-[#452e06] via-[#d1bf5a] via-50% to-[#452e06]  sm:text-base transition px-4 py-2 rounded-full">
               {award.subtitle}
             </span>
           </div>
@@ -140,7 +140,7 @@ const AwardsSection = () => {
       <div className="text-center mt-10">
         <Link to="/company-news">
           <button
-            className="px-8 py-4 text-lg font-semibold rounded-full text-black hover:scale-105 transition"
+            className="px-8 py-3 text-lg font-semibold rounded-full bg-gradient-to-l from-[#452e06] via-[#d1bf5a] via-50% to-[#452e06] text-black hover:scale-105 transition"
             style={{
               background:
                 "linear-gradient(86.31deg, #281000 0%, #C0971C 25%, #FFE976 50.5%, #C0971C 74.5%, #281000 100%)",

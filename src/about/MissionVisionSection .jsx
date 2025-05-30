@@ -33,16 +33,8 @@ const MissionVisionSection = () => {
       {/* Heading Section */}
       <div className="text-center mb-12">
         <h2
-          style={{
-            fontFamily: "Poppins",
-            fontWeight: 600,
-            fontSize: "32px",
-            lineHeight: "45px",
-            background:
-              "linear-gradient(180deg, #281000 0%, #C0971C 10.9%, #FFE976 21.15%, #C0971C 31.83%, #281000 42.73%)",
-            WebkitBackgroundClip: "text",
-            WebkitTextFillColor: "transparent",
-          }}
+        className="text-4xl font-bold bg-gradient-to-b from-transparent via-yellow-400 to-transparent bg-clip-text text-transparent"
+     
         >
           Our Mission & Vision:
         </h2>
@@ -64,16 +56,18 @@ const MissionVisionSection = () => {
         {cardData.map((card, idx) => (
           <div
             key={idx}
-            className="bg-[#0D0D0D] p-6 rounded-xl border border-[#C0971C] flex flex-col items-center text-center"
-            style={{ borderBottom: "2px solid #FFE976" }}
+            className="bg-[#0D0D0D] p-6 rounded-xl border border-t-[#C0971C] border-gray-900 flex flex-col items-center text-center"
+            style={{ borderBottom: "1px solid #C0971C" }}
           >
-            <img
+            <div className="-mt-16">
+              <img
               src={card.icon}
               alt={card.title}
-              className="w-[60px] h-[60px] mb-4"
+              className="w-[100px] h-[100px] mb-4 -top-48"
             />
-            <h4 className="text-lg font-semibold mb-2">{card.title}</h4>
-            <p className="text-sm text-[#CCCCCC]">{card.text}</p>
+            </div>
+            <h4 className="text-md font-semibold mb-2">{card.title}</h4>
+            <p className="text-xs text-[#CCCCCC]">{card.text}</p>
           </div>
         ))}
       </div>
