@@ -1,5 +1,5 @@
 import React from "react";
-import img1 from "../assets/carrers/benefit/benefit1.png"; // Replace with your actual icons
+import img1 from "../assets/carrers/benefit/benefit1.png";
 import img2 from "../assets/carrers/benefit/benefit2.png";
 import img3 from "../assets/carrers/benefit/benefit3.png";
 import img4 from "../assets/carrers/benefit/benefit4.png";
@@ -65,9 +65,17 @@ const CareerBenefitsSection = () => {
         ))}
       </div>
 
-      <div className="text-center mt-10">
-        <button className="bg-gradient-to-r from-[#de6a1c] via-[#e5b329] via-50% to-[#c25e1c] text-black rounded-full px-12 py-4 font-bold text-xl transition">
-          Submit Your CV
+      {/* Custom Paragraph Text */}
+      <p className="text-center text-gray-300 text-lg mt-12 max-w-xl mx-auto">
+        Ready to take your career to the next level? Join us and be part of an innovative, supportive, and rewarding work environment.
+      </p>
+
+      {/* Gradient Text Button */}
+      <div className="text-center mt-6">
+        <button className="text-xl font-bold px-12 py-4 rounded-full bg-white/10 border border-white/20 hover:bg-white/20 transition">
+          <span className="bg-gradient-to-r from-[#de6a1c] via-[#e5b329] to-[#c25e1c] bg-clip-text text-transparent">
+            Submit Your CV
+          </span>
         </button>
       </div>
     </section>

@@ -55,7 +55,7 @@ export default function Education() {
   };
 
   return (
-    <section className="bg-black py-20 px-4 sm:px-6 md:px-12 lg:px-24 text-white font-[Poppins]">
+    <section className="bg-black py-20 px-4 sm:px-6 md:px-12 lg:px-10 text-white font-[Poppins]">
       <h2
         className="text-[32px] leading-[42px] font-semibold text-center mb-4"
         style={{

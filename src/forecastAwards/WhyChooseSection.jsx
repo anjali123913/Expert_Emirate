@@ -3,7 +3,7 @@ import mobileImage from "../assets/awards/mobile-ui.png";
 
 const WhyChooseSection = () => {
   return (
-    <section className="bg-black text-white px-4 py-16 md:py-24 font-[Poppins]">
+    <section className="bg-black text-white px-4 py-12 md:py-16 font-[Poppins]">
       <div className="max-w-7xl mx-auto">
         {/* Heading */}
         <h2 className="text-[40px] sm:text-[52px] font-bold text-center mb-12 bg-gradient-to-br from-[#281000] via-[#FFE976] to-[#281000] text-transparent bg-clip-text leading-none">
@@ -11,16 +11,24 @@ const WhyChooseSection = () => {
         </h2>
 
         {/* Proven Track Record */}
-        <div className="flex flex-col lg:flex-row bg-[#1A1A1A] rounded-xl p-6 lg:p-10 items-center justify-between gap-8">
+        <div
+          className="flex flex-col lg:flex-row bg-[#1A1A1A] rounded-xl p-6 lg:p-10 items-center justify-between gap-8"
+          style={{
+            border: "1px solid",
+            borderImageSource:
+              "linear-gradient(281.33deg, #000000 0%, #3C3A44 100%)",
+            borderImageSlice: 1,
+          }}
+        >
           {/* Text */}
           <div className="flex-1">
-            <h3 className="text-2xl sm:text-3xl font-bold text-left bg-gradient-to-r from-yellow-600 via-yellow-300 to-yellow-600 text-transparent bg-clip-text mb-4">
+            <h3 className="text-2xl sm:text-3xl font-bold text-left mb-4 bg-gradient-to-r from-[#281000] via-[#FFE976] to-[#281000] text-transparent bg-clip-text">
               Proven Track Record:
             </h3>
-            <p className="text-gray-300 text-sm sm:text-base">
-              With over 7 years of experience, our consistent recognition by
-              leading industry awards is a testament to our commitment to
-              excellence.
+            <p className="text-gray-300 text-sm sm:text-base whitespace-pre-line">
+              With over 7 years of experience,\n
+              our consistent recognition by leading industry awards\n
+              is a testament to our commitment to excellence.
             </p>
           </div>
 
@@ -33,7 +41,7 @@ const WhyChooseSection = () => {
         {/* 3 Feature Cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-8">
           {/* Feature 1 */}
-          <div className="bg-[#141414] rounded-xl p-6 text-center hover:shadow-lg hover:shadow-yellow-500/10 transition">
+          <div className="bg-[#121117] rounded-xl p-6 text-center hover:shadow-lg hover:shadow-yellow-500/10 transition">
             <h4 className="font-bold text-lg bg-gradient-to-r from-yellow-600 via-yellow-300 to-yellow-600 text-transparent bg-clip-text mb-2">
               Innovative Technology
             </h4>
@@ -44,7 +52,7 @@ const WhyChooseSection = () => {
           </div>
 
           {/* Feature 2 */}
-          <div className="bg-[#141414] rounded-xl p-6 text-center hover:shadow-lg hover:shadow-yellow-500/10 transition">
+          <div className="bg-[#121117] rounded-xl p-6 text-center hover:shadow-lg hover:shadow-yellow-500/10 transition">
             <h4 className="font-bold text-lg bg-gradient-to-r from-yellow-600 via-yellow-300 to-yellow-600 text-transparent bg-clip-text mb-2">
               Customer-Centric Approach
             </h4>
@@ -55,7 +63,7 @@ const WhyChooseSection = () => {
           </div>
 
           {/* Feature 3 */}
-          <div className="bg-[#141414] rounded-xl p-6 text-center hover:shadow-lg hover:shadow-yellow-500/10 transition">
+          <div className="bg-[#121117] rounded-xl p-6 text-center hover:shadow-lg hover:shadow-yellow-500/10 transition">
             <h4 className="font-bold text-lg bg-gradient-to-r from-yellow-600 via-yellow-300 to-yellow-600 text-transparent bg-clip-text mb-2">
               Regulatory Compliance
             </h4>

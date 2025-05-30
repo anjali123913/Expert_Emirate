@@ -27,7 +27,7 @@ export default function FaqSection() {
   };
 
   return (
-    <section className="w-full bg-black text-white px-4 sm:px-6 lg:px-20 py-16 pt-20">
+    <section className="w-full bg-black text-white px-4 sm:px-6 lg:px-0 py-16 pt-20">
       <div className="max-w-7xl mx-auto">
         {/* Heading */}
         <h2

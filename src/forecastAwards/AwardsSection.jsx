@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import React from "react";
+import React, { useState, useRef } from "react";
 import trophy1 from "../assets/awards/trofy1.png";
 import trophy2 from "../assets/awards/trofy2.png";
 import trophy3 from "../assets/awards/trofy3.png";
@@ -8,27 +8,54 @@ import WhyChooseSection from "./WhyChooseSection";
 import KeyBenefits from "./KeyBenefits ";
 import FeatureSection from "../homepage/FeatureSection";
 
-const awards = [
-  {
-    title: "Best Mobile FX Trading App",
-    subtitle: "Smart Vision Summit Oman 2025",
-    image: trophy1,
-  },
-  {
-    title: "Best Prime Trading Broker",
-    subtitle: "Qatar Financial Expo 2025",
-    image: trophy2,
-  },
-  {
-    title: "Best Global Regulated Broker",
-    subtitle: "IWMFIF Hong Kong 2025",
-    image: trophy3,
-  },
-];
+const allAwards = {
+  2025: [
+    {
+      title: "Best Mobile FX Trading App",
+      subtitle: "Smart Vision Summit Oman 2025",
+      image: trophy1,
+    },
+    {
+      title: "Best Prime Trading Broker",
+      subtitle: "Qatar Financial Expo 2025",
+      image: trophy2,
+    },
+    {
+      title: "Best Global Regulated Broker",
+      subtitle: "IWMFIF Hong Kong 2025",
+      image: trophy3,
+    },
+  ],
+  2024: [
+    {
+      title: "Top FX Broker",
+      subtitle: "UAE Global Awards 2024",
+      image: trophy1,
+    },
+  ],
+  2023: [
+    {
+      title: "Innovation in Trading Technology",
+      subtitle: "Asia Fintech Awards 2023",
+      image: trophy2,
+    },
+  ],
+};
 
 const years = ["2025", "2024", "2023", "2022", "2021", "2020", "2019"];
 
 const AwardsSection = () => {
+  const [selectedYear, setSelectedYear] = useState("2025");
+  const scrollRef = useRef(null);
+
+  const scrollLeft = () => {
+    scrollRef.current.scrollBy({ left: -100, behavior: "smooth" });
+  };
+
+  const scrollRight = () => {
+    scrollRef.current.scrollBy({ left: 100, behavior: "smooth" });
+  };
+
   return (
     <section className="bg-black text-white pt-24 pb-16 px-4 md:px-10">
       {/* Heading */}
@@ -48,30 +75,53 @@ const AwardsSection = () => {
       </div>
 
       {/* Year Tabs */}
-      <div className="flex flex-wrap justify-center gap-2 mt-8">
-        {years.map((year, idx) => (
+      <div className="flex justify-center mt-10">
+        <div className="flex items-center bg-[#121117] rounded-full px-3 py-2">
+          {/* Left Arrow */}
           <button
-            key={year}
-            className={`px-4 py-2 rounded-xl text-sm font-medium transition ${
-              idx === 0
-                ? "bg-gradient-to-r from-yellow-500 via-yellow-200 to-yellow-500 text-black"
-                : "bg-neutral-800 text-white hover:bg-yellow-600 hover:text-black"
-            }`}
+            onClick={scrollLeft}
+            className="text-white hover:text-yellow-400 px-2 text-lg"
           >
-            {year}
+            &#171;
           </button>
-        ))}
-        <button className="px-4 py-2 bg-neutral-800 text-white rounded-xl text-sm hover:bg-yellow-600 hover:text-black">
-          ›
-        </button>
+
+          {/* Scrollable Year Tabs */}
+          <div
+            ref={scrollRef}
+            className="flex gap-2 overflow-x-auto scroll-smooth px-2"
+            style={{ scrollbarWidth: "none" }}
+          >
+            {years.map((year) => (
+              <button
+                key={year}
+                onClick={() => setSelectedYear(year)}
+                className={`px-4 py-1 rounded-full text-sm font-semibold whitespace-nowrap transition duration-300 ${
+                  selectedYear === year
+                    ? "text-black bg-gradient-to-r from-[#F4CE65] via-[#FFE976] to-[#F4CE65]"
+                    : "bg-[#2C2B30] text-white hover:bg-yellow-600 hover:text-black"
+                }`}
+              >
+                {year}
+              </button>
+            ))}
+          </div>
+
+          {/* Right Arrow */}
+          <button
+            onClick={scrollRight}
+            className="text-white hover:text-yellow-400 px-2 text-lg"
+          >
+            &#187;
+          </button>
+        </div>
       </div>
 
       {/* Awards Cards */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-10 max-w-7xl mx-auto px-2">
-        {awards.map((award, index) => (
+        {(allAwards[selectedYear] || []).map((award, index) => (
           <div
             key={index}
-            className="bg-[#141414] rounded-2xl p-5 text-center shadow-lg hover:shadow-yellow-500/10 transition-shadow"
+            className="bg-[#121117] rounded-2xl p-5 text-center shadow-lg hover:shadow-yellow-500/10 transition-shadow"
           >
             <img
               src={award.image}
@@ -89,7 +139,13 @@ const AwardsSection = () => {
       {/* View More Button */}
       <div className="text-center mt-10">
         <Link to="/company-news">
-          <button className="px-6 py-3 font-semibold rounded-full bg-gradient-to-r from-yellow-600 via-yellow-300 to-yellow-600 text-black hover:scale-105 transition">
+          <button
+            className="px-8 py-4 text-lg font-semibold rounded-full text-black hover:scale-105 transition"
+            style={{
+              background:
+                "linear-gradient(86.31deg, #281000 0%, #C0971C 25%, #FFE976 50.5%, #C0971C 74.5%, #281000 100%)",
+            }}
+          >
             View More
           </button>
         </Link>
