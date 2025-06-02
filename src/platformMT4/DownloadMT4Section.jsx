@@ -11,7 +11,7 @@ const DownloadMT4Section = () => {
             className="text-[32px] md:text-[42px] font-semibold leading-[100%]"
             style={{
               background:
-                "linear-gradient(270deg, #281000 -4.65%, #C0971C 23.29%, #FFE976 49.59%, #C0971C 76.98%, #281000 104.92%)",
+                "linear-gradient(180deg, #281000 0%, #C0971C 25.5%, #FFE976 49.5%, #C0971C 74.5%, #281000 100%)",
               WebkitBackgroundClip: "text",
               WebkitTextFillColor: "transparent",
             }}
@@ -20,7 +20,8 @@ const DownloadMT4Section = () => {
           </h2>
 
           <p className="text-sm md:text-base text-gray-300">
-            Select a Download Type as per your Device Operating System and Your Account regulations.
+            Select a Download Type as per your Device<br/> Operating System and 
+            Your Account regulations.
           </p>
 
           {/* Button */}

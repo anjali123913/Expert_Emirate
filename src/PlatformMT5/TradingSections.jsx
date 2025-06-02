@@ -11,7 +11,7 @@ const TradingSections = () => {
           <h2
             className="text-[28px] sm:text-[32px] font-semibold leading-[40px]"
             style={{
-              background: "linear-gradient(90deg, #FFFFFF 0%, #999999 100%)",
+              background:  "linear-gradient(180deg, #281000 0%, #C0971C 25.5%, #FFE976 49.5%, #C0971C 74.5%, #281000 100%)",
               WebkitBackgroundClip: "text",
               WebkitTextFillColor: "transparent",
             }}

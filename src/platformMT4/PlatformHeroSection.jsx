@@ -5,7 +5,7 @@ import phonesImage from '../assets/platformMT4/mobile.png';
 
 const PlatformHeroSection = () => {
   const buttonGradient = {
-    background: 'linear-gradient(180deg, #FFE976 0%, #C0971C 100%)',
+    background: "linear-gradient(180deg, #281000 0%, #C0971C 25.5%, #FFE976 49.5%, #C0971C 74.5%, #281000 100%)",
   };
 
   return (

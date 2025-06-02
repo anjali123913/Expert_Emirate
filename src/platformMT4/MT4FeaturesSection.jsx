@@ -12,7 +12,7 @@ const MT4FeaturesSection = () => {
         className="text-center text-[32px] md:text-[42px] font-semibold leading-[100%] mb-12"
         style={{
           background:
-            "linear-gradient(180deg, #281000 -40.54%, #C0971C 15.28%, #FFE976 67.82%, #C0971C 122.55%, #281000 178.38%)",
+            "linear-gradient(180deg, #281000 0%, #C0971C 25.5%, #FFE976 49.5%, #C0971C 74.5%, #281000 100%)",
           WebkitBackgroundClip: "text",
           WebkitTextFillColor: "transparent",
         }}

@@ -1,9 +1,9 @@
 import React from "react";
 import AboutHerosction from "./AboutHerosction";
 import SmartTradeSection from "./SmartTradeSection";
-import EliteTradingTeamSection from "./EliteTradingTeamSection ";
 import MissionVisionSection from "./MissionVisionSection ";
 import FeatureSection from "../homepage/FeatureSection";
+import EliteTradingTeamSection from "./EliteTradingTeamSection  copy";
 
 
 export default function  AboutUs() {

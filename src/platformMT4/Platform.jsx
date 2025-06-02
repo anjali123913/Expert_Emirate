@@ -2,10 +2,10 @@ import React from "react";
 import PlatformHeroSection from "./PlatformHeroSection";
 import MTPlatformsSection from "./MTPlatformsSection";
 import MT4FeaturesSection from "./MT4FeaturesSection";
-import EliteTradingTeamSection from "../about/EliteTradingTeamSection ";
 import DownloadMT4Section from "./DownloadMT4Section";
 import FeatureSection from "../homepage/FeatureSection";
 import FAQSection from "./FAQSection";
+import MT4TradingSections from "./MT4TradingSections";
 
 
 export default function Platform() {
@@ -15,7 +15,7 @@ export default function Platform() {
         <PlatformHeroSection/>
         <MTPlatformsSection/>
         <MT4FeaturesSection/>
-        <EliteTradingTeamSection/>
+        <MT4TradingSections/>
         <DownloadMT4Section/>
         <FAQSection/>
         <FeatureSection/>

@@ -1,5 +1,5 @@
 import React from "react";
-import Image5 from "../assets/aboutus/image5.png"; // Replace with your actual image path
+import Image5 from "../assets/platformMT4/image6.png"; // Replace with your actual image path
 
 const EliteTradingTeamSection = () => {
   return (
@@ -51,12 +51,12 @@ const EliteTradingTeamSection = () => {
         </p>
       </div>
 
-      {/* Right - Image */}
+      Right - Image
       <div className="w-full md:w-1/2 max-w-md">
         <img
           src={Image5}
           alt="Elite Trading Team"
-          className="w-full h-auto rounded-xl object-cover"
+          className="w-full h-auto rounded-xl object-cover"                         
         />
       </div>
     </div>
