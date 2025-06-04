@@ -5,27 +5,24 @@ import { motion } from "framer-motion";
 const HeroSection = () => {
   const [hoveredBtn, setHoveredBtn] = useState(null); // null or "btn1" or "btn2"
 
-  // Helper function to get classes based on button and hover state
   const getButtonClass = (btn) => {
     const isHovered = hoveredBtn === btn;
     if (!hoveredBtn) {
-      // No hover: btn1 black, btn2 golden
+      // Default state: btn1 is gradient, btn2 is black with golden border
       if (btn === "btn1")
-        return `bg-black text-white border border-black`;
-      else
         return `bg-[linear-gradient(86.31deg,#281000_0%,#C0971C_25%,#FFE976_50.5%,#C0971C_74.5%,#281000_100%)] text-black border border-yellow-700`;
+      else
+        return `bg-black text-white border border-yellow-700`;
     } else {
-      // Hovering one button: invert colors
+      // Hover state: swap styles
       if (isHovered) {
-        // hovered button inverted
         return btn === "btn1"
-          ? `bg-[linear-gradient(86.31deg,#281000_0%,#C0971C_25%,#FFE976_50.5%,#C0971C_74.5%,#281000_100%)] text-black border border-yellow-700 shadow-lg`
-          : `bg-black text-white border border-black`;
+          ? `bg-black text-white border border-black shadow-lg`
+          : `bg-[linear-gradient(86.31deg,#281000_0%,#C0971C_25%,#FFE976_50.5%,#C0971C_74.5%,#281000_100%)] text-black border border-yellow-700 shadow-lg`;
       } else {
-        // non-hovered button normal
         return btn === "btn1"
-          ? `bg-black text-white border border-black`
-          : `bg-[linear-gradient(86.31deg,#281000_0%,#C0971C_25%,#FFE976_50.5%,#C0971C_74.5%,#281000_100%)] text-black border border-yellow-700`;
+          ? `bg-[linear-gradient(86.31deg,#281000_0%,#C0971C_25%,#FFE976_50.5%,#C0971C_74.5%,#281000_100%)] text-black border border-yellow-700`
+          : `bg-black text-white border border-yellow-700`;
       }
     }
   };
@@ -52,17 +49,21 @@ const HeroSection = () => {
           transition={{ duration: 1 }}
           className="max-w-4xl text-left"
         >
-          {/* Gradient Badge */}
-          <div className="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-yellow-900 via-yellow-800 to-yellow-500 p-[2px] shadow-md my-2">
-            <button className="rounded-full bg-[#0f0f0f] px-6 py-3 text-white font-medium w-full font-poppins text-base leading-[100%] tracking-[0.12em]">
-              Turning Hopes Into Reality
-            </button>
-          </div>
+      <div className="inline-flex items-center justify-center my-9">
+  <div className="p-[1.5px] rounded-full bg-gradient-to-b from-[#7C4B00] to-[#FFE9A0]">
+    <button className="rounded-full bg-[#0F0F0F] px-6 py-[10px] text-white font-poppins font-medium text-base leading-[100%] tracking-[0.12em]">
+      Turning Hopes Into Reality
+    </button>
+  </div>
+</div>
+
+
+
 
           {/* Heading */}
           <h1 className="text-white font-poppins font-bold text-[32px] leading-[42px] tracking-wider my-3">
             Elevate Your{" "}
-            <span className="  bg-gradient-to-b from-yellow-900 via-yellow-300 to-yellow-900 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-b from-yellow-900 via-yellow-300 to-yellow-900 bg-clip-text text-transparent">
               Trading Game
             </span>{" "}
             with Our{" "}
@@ -82,7 +83,7 @@ const HeroSection = () => {
             <button
               onMouseEnter={() => setHoveredBtn("btn1")}
               onMouseLeave={() => setHoveredBtn(null)}
-              className={`min-w-[140px] md:min-w-[165px] h-[39px] px-[10px] py-[5px] rounded-full text-sm font-semibold font-poppins transition duration-300 ${getButtonClass(
+              className={`min-w-[140px] md:min-w-[165px] h-[39px] px-[10px] py-[5px] rounded-full text-sm font-bold font-poppins transition duration-300 ${getButtonClass(
                 "btn1"
               )}`}
             >
@@ -92,7 +93,7 @@ const HeroSection = () => {
             <button
               onMouseEnter={() => setHoveredBtn("btn2")}
               onMouseLeave={() => setHoveredBtn(null)}
-              className={`min-w-[140px] md:min-w-[165px] h-[39px] px-[10px] py-[5px] rounded-full text-sm font-semibold font-poppins transition duration-300 ${getButtonClass(
+              className={`min-w-[140px] md:min-w-[165px] h-[39px] px-[10px] py-[5px] rounded-full text-sm font-bold font-poppins transition duration-300 ${getButtonClass(
                 "btn2"
               )}`}
             >

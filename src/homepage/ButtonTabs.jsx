@@ -1,5 +1,8 @@
 import React, { useState } from "react";
-
+import ForexSection from "./ForexSection";
+import CryptoSection from "../buttonview/CryptoSection";
+import Portfolio from "../viewbuttonPorfolio/Portfolio";
+import CpoyTrading from "../copytrading/CopyTrading";
 const categories = [
   "Forex + Gold",
   "Crypto Currency",
@@ -12,13 +15,14 @@ const ButtonTabs = () => {
   const [activeTab, setActiveTab] = useState("Forex + Gold");
 
   return (
-    <div className="w-full bg-black flex justify-center px-4">
-      <div className="flex flex-wrap justify-center gap-4 md:gap-6 lg:gap-8 w-full max-w-[1240px] py-8">
-        {categories.map((cat) => (
-          <button
-            key={cat}
-            onClick={() => setActiveTab(cat)}
-            className={`
+    <div className="bg-black">
+      <div className="w-full bg-black flex justify-center px-4">
+        <div className="flex flex-wrap justify-center gap-4 md:gap-6 lg:gap-8 w-full max-w-[1240px] py-8">
+          {categories.map((cat) => (
+            <button
+              key={cat}
+              onClick={() => setActiveTab(cat)}
+              className={`
               min-w-[140px] md:min-w-[165px] h-[39px] px-[10px] py-[5px]
               rounded-[90px] text-sm font-semibold font-poppins
               transition duration-300 text-center
@@ -29,11 +33,18 @@ const ButtonTabs = () => {
               }
               hover:bg-[linear-gradient(86.31deg,#281000_0%,#C0971C_25%,#FFE976_50.5%,#C0971C_74.5%,#281000_100%)] hover:text-black
             `}
-          >
-            {cat}
-          </button>
-        ))}
+            >
+              {cat}
+            </button>
+          ))}
+        </div>
       </div>
+
+      {activeTab == "Forex + Gold" && <ForexSection />}
+      {activeTab == "Crypto Currency" && <p>  <CryptoSection/> </p>}
+      {activeTab == "Portfolio Management" && <p><Portfolio/></p>}
+      {activeTab == "Funded Accounts" && <p><CpoyTrading/></p>}
+      {activeTab == "Trading Bot" && <p>Trading Bot</p>}
     </div>
   );
 };

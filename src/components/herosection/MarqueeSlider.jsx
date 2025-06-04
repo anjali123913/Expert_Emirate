@@ -1,16 +1,6 @@
-// MarqueeFull.jsx
 import React, { useEffect, useState } from 'react';
-// import { FaCloud, FaCogs, FaIndustry, FaRegBuilding, FaBuilding } from 'react-icons/fa';
-// import { FaBriefcase } from 'react-icons/fa6';
 import companies from '../../assets/companies.png'; // Replace with your image path
-// const items = [
-//   { icon: <FaCloud />, label: "application" },
-//   { icon: <FaBriefcase />, label: "business" },
-//   { icon: <FaCogs />, label: "enterprise" },
-//   { icon: <FaRegBuild
-// ing />, label: "agency" },
-//   { icon: <FaBuilding />, label: "company" },
-// ];
+
 
 export default function MarqueeSlider() {
   const [direction, setDirection] = useState('left');
@@ -39,6 +29,7 @@ export default function MarqueeSlider() {
           </div>
         {/* ))} */}
       </div>
+      
     </div>
   );
 }

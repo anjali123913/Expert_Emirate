@@ -26,7 +26,7 @@ const HomePage = () => {
       <SecondHero />
       <MarketSection />
       <ButtonTabs/>
-      <ForexSection/>
+      {/* <ForexSection/> */}
     <StockMarcketChart/>
       <CurrencyMarket/>
       {/* <ScrollingCards/> */}

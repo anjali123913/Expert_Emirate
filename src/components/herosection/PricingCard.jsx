@@ -2,7 +2,6 @@ import React from "react";
 import icon3 from "../../assets/heroSectionImages/image 10.png";
 import icon2 from "../../assets/heroSectionImages/image 11.png";
 import icon1 from "../../assets/heroSectionImages/image 12.png";
-import { Link } from "react-router-dom";
 
 const PricingCard = () => {
   return (
@@ -43,11 +42,7 @@ const PricingCard = () => {
 
           {/* Buttons */}
           <div className="flex flex-col sm:flex-row gap-4">
-            <Link to="/about-us">
-              <button className="w-full sm:w-40 py-2 tracking-wider rounded-full border-2 border-t-yellow-500 border-l-yellow-700 border-r-yellow-700 border-b-yellow-500 transition-all duration-500 font-medium text-black bg-gradient-to-l from-[#452e06] via-[#d1bf5a] via-50% to-[#452e06] hover:bg-black hover:border-l-yellow-700 hover:border-t-yellow-600 hover:border-b-yellow-600 hover:border-r-yellow-700">
-                Contact Us
-              </button>
-            </Link>
+        
             <button className="w-full sm:w-40 py-2 tracking-wider rounded-full border-2 border-t-yellow-500 border-l-yellow-700 border-r-yellow-700 border-b-yellow-500 bg-black text-white transition-all duration-500 hover:text-black hover:bg-gradient-to-l hover:from-[#452e06] hover:via-[#d1bf5a] hover:via-50% hover:to-[#452e06] hover:border-l-yellow-700 hover:border-t-yellow-600 hover:border-b-yellow-600 hover:border-r-yellow-700 font-medium">
               Pricing
             </button>
