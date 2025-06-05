@@ -1,5 +1,5 @@
 import React from "react";
-import moneyBagImg from "../assets/buttonImage/image2.png"; // ✅ Replace with your actual path
+import moneyBagImg from "../assets/copyimage/dollar.png"; // ✅ Replace with your actual path
 
 const WhatIsCopyTrading = () => {
   return (

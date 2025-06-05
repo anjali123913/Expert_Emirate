@@ -44,7 +44,7 @@ const PricingCard = () => {
           <div className="flex flex-col sm:flex-row gap-4">
         
             <button className="w-full sm:w-40 py-2 tracking-wider rounded-full border-2 border-t-yellow-500 border-l-yellow-700 border-r-yellow-700 border-b-yellow-500 bg-black text-white transition-all duration-500 hover:text-black hover:bg-gradient-to-l hover:from-[#452e06] hover:via-[#d1bf5a] hover:via-50% hover:to-[#452e06] hover:border-l-yellow-700 hover:border-t-yellow-600 hover:border-b-yellow-600 hover:border-r-yellow-700 font-medium">
-              Pricing
+              Plan
             </button>
           </div>
         </div>

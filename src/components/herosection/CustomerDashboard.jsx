@@ -1,46 +1,44 @@
+import React from "react";
 import arrowImg from "../../assets/arrow.png";
+import bgImg from "../../assets/Rectanglecutomer.png";
 
 export default function CustomerDashboard() {
   return (
     <div
-      className="group w-full max-w-6xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-8 px-4 sm:px-6 py-8 border border-gray-900 rounded-3xl transition-all duration-500 relative hover:border-t-yellow-600 hover:border-l-yellow-700 hover:border-b-yellow-600 hover:border-r-yellow-700"
+      className="group flex flex-col md:flex-row items-center justify-between gap-4 px-6 py-4 border border-gray-900 rounded-3xl transition-all duration-500 hover:border-yellow-500
+        max-w-[90vw] md:max-w-[3300px] mx-auto"
       style={{
-        background:
-          "linear-gradient(283.02deg, rgba(243, 205, 1, 0.07) 0.62%, rgba(13, 12, 19, 0.2) 99.27%)",
+        height: "388px",
+        marginLeft: "-40px", // Left side shift
+        backgroundImage: `url(${bgImg})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
       }}
     >
       {/* LEFT CONTENT */}
-      <div className="w-full lg:w-2/3">
-        {/* HEADING */}
-        <h1 className="text-2xl sm:text-3xl font-bold text-start group-hover:bg-gradient-to-b group-hover:from-transparent group-hover:via-yellow-400 group-hover:to-transparent group-hover:bg-clip-text group-hover:text-transparent">
-          CUSTOMER DASHBOARD
+      <div className="w-full md:w-[60%]">
+        <h1 className="text-2xl md:text-3xl font-bold text-white transition-all duration-500 group-hover:bg-gradient-to-r group-hover:from-[#FFE976] group-hover:via-[#C0971C] group-hover:to-[#FFE976] group-hover:bg-clip-text group-hover:text-transparent">
+          ABOUT US
         </h1>
 
-        {/* DESCRIPTION */}
-        <p className="text-sm sm:text-base md:text-lg text-start my-4 text-white">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, enim
-          debitis adipisci repellat vitae voluptatem, atque est magni rerum
-          earum repudiandae pariatur dolor consectetur veniam eum amet incidunt
-          omnis laboriosam.
+        <p className="text-sm md:text-base mt-4 text-white leading-relaxed">
+          AT EXPERT EMIRATES, WE DON’T JUST PROVIDE FOREX AND CRYPTO SIGNALS—
+          WE UNLOCK PROFITABLE OPPORTUNITIES TAILORED FOR EVERY TRADER. BACKED
+          BY CUTTING-EDGE AI, EXPERT ANALYSIS, AND MARKET PRECISION, OUR SIGNALS
+          TURN UNCERTAINTY INTO CALCULATED SUCCESS.
         </p>
 
-        {/* BUTTONS */}
-        <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6 mt-6">
-          <button className="w-full sm:w-40 py-2 tracking-wider rounded-full border-2 border-t-yellow-500 border-l-yellow-700 border-r-yellow-700 border-b-yellow-500 text-white transition-all duration-500 hover:text-black hover:border-l-yellow-700 hover:border-t-yellow-600 hover:border-b-yellow-600 hover:border-r-yellow-700 bg-gradient-to-l from-[#452e06] via-[#d1bf5a] via-50% to-[#452e06] hover:bg-black font-semibold">
-            Contact Us
-          </button>
-
-          <button className="w-full sm:w-40 py-2 tracking-wider rounded-full border-2 border-t-yellow-500 border-l-yellow-700 border-r-yellow-700 border-b-yellow-500 bg-black text-white transition-all duration-500 hover:text-black hover:bg-gradient-to-l hover:from-[#452e06] hover:via-[#d1bf5a] hover:via-50% hover:to-[#452e06] hover:border-l-yellow-700 hover:border-t-yellow-600 hover:border-b-yellow-600 hover:border-r-yellow-700 font-semibold">
-            Pricing
-          </button>
-        </div>
+        <button className="mt-6 w-40 py-2 text-sm tracking-wide rounded-full text-black font-semibold bg-gradient-to-r from-[#FFE976] via-[#C0971C] to-[#FFE976] transition-all duration-500 hover:scale-105 hover:shadow-lg border-2 border-transparent group-hover:border-yellow-400">
+          About Us
+        </button>
       </div>
 
       {/* IMAGE */}
-      <div className="hidden w-full sm:w-[300px] md:w-[370px] h-auto lg:flex justify-center">
+      <div className="w-full md:w-[320px] mt-6 md:mt-0">
         <img
           src={arrowImg}
-          alt="Arrow image"
+          alt="Arrow"
           className="w-full h-auto transform transition-transform duration-700 ease-in-out group-hover:scale-110"
         />
       </div>
