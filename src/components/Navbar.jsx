@@ -22,7 +22,7 @@ const Navbar = () => {
         { name: "Crypto", path: "/cryptocurrency" },
         { name: "Portfolio Management", path: "/portfolio-management" },
         { name: "Crpto Trading", path: "/cryptocurrency" },
-        { name: "Bot Trading", path: "/trading-bot" },
+        // { name: "Bot Trading", path: "/trading-bot" },
       ],
     },
     {

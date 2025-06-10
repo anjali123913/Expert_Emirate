@@ -1,7 +1,7 @@
 import React from "react";
-import TrustedIcon from "../assets/portfolio/trust/trusted.png";
-import GlobalIcon from "../assets/portfolio/trust/global.png";
-import PerformanceIcon from "../assets/portfolio/trust/performance.png";
+import TrustedIcon from "../assets/portfolio/trusted.png";
+import GlobalIcon from "../assets/portfolio/global.png";
+import PerformanceIcon from "../assets/portfolio/performance.png";
 
 const WhyTradersTrustUs = () => {
   const data = [
