@@ -2,13 +2,12 @@ import React, { useState } from "react";
 import ForexSection from "./ForexSection";
 import CryptoSection from "../buttonview/CryptoSection";
 import Portfolio from "../viewbuttonPorfolio/Portfolio";
-import CpoyTrading from "../copytrading/CopyTrading";
+import CopyTrading from "../copytrading/CopyTrading";
 const categories = [
   "Forex + Gold",
   "Crypto Currency",
   "Portfolio Management",
-  "Funded Accounts",
-  "Trading Bot",
+  "CpoyTrading",
 ];
 
 const ButtonTabs = () => {
@@ -43,8 +42,7 @@ const ButtonTabs = () => {
       {activeTab == "Forex + Gold" && <ForexSection />}
       {activeTab == "Crypto Currency" && <p>  <CryptoSection/> </p>}
       {activeTab == "Portfolio Management" && <p><Portfolio/></p>}
-      {activeTab == "Funded Accounts" && <p><CpoyTrading/></p>}
-      {activeTab == "Trading Bot" && <p>Trading Bot</p>}
+      {activeTab == "CpoyTrading" && <p><CopyTrading/></p>}
     </div>
   );
 };

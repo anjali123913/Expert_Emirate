@@ -1,26 +1,35 @@
 import React from "react";
-import shield from "../assets/copyimage/image1.png"; // ✅ Ensure path is correct
+import shield1 from "../assets/copyimage/card1.png";
+import shield2 from "../assets/copyimage/card2.png";
+import shield3 from "../assets/copyimage/card3.png";
+import shield4 from "../assets/copyimage/card4.png";
+import shield5 from "../assets/copyimage/card5.png";
 
 const features = [
   {
     title: "Follow the Pros",
     desc: "Our expert traders are like the rock stars of the trading world. Pick your favorite and copy their every move. It’s like air-guitar, but with real money!",
+    img: shield1,
   },
   {
     title: "Hands-Free Trading",
     desc: "Forget stress. Our automated system copies the trades of your chosen expert, so you can spend more time binge-watching your favorite shows.",
+    img: shield2,
   },
   {
     title: "Simple Platform",
     desc: "Our interface is as easy as ordering pizza online. No complicated setups—just quick, tasty results.",
+    img: shield3,
   },
   {
     title: "Real-Time Thrills",
     desc: "Get live updates on your trades. It’s like having a front-row seat to the greatest show in finance.",
+    img: shield4,
   },
   {
     title: "Learn and Laugh",
     desc: "With our Forex education resources, you’ll be trading-savvy in no time. It’s learning with a dash of fun!",
+    img: shield5,
   },
 ];
 
@@ -32,12 +41,12 @@ const Cards = () => {
         {features.slice(0, 2).map((item, index) => (
           <div
             key={index}
-            className="group relative bg-[#121117] border border-yellow-500 rounded-xl p-6 text-center flex flex-col items-center min-h-[180px] transition-transform duration-300 hover:shadow-yellow-500/20"
+            className="group relative bg-[#121117] border-y border-yellow-500 rounded-xl p-6 text-center flex flex-col items-center min-h-[200px] transition-transform duration-300 hover:shadow-yellow-500/20"
           >
             <img
-              src={shield}
+              src={item.img}
               alt="shield"
-              className="w-24 transition-all duration-300 group-hover:animate-bounce -mt-12 mb-2"
+              className="w-32 transition-all duration-300 group-hover:animate-bounce -mt-16 mb-4"
             />
             <h3 className="text-lg font-semibold mb-2 mt-2">{item.title}</h3>
             <p className="text-sm text-gray-300">{item.desc}</p>
@@ -46,16 +55,16 @@ const Cards = () => {
       </div>
 
       {/* Bottom 3 Cards */}
-      <div className="grid md:grid-cols-3 gap-6 mt-8">
+      <div className="grid md:grid-cols-3 gap-6 mt-16">
         {features.slice(2).map((item, index) => (
           <div
             key={index}
-            className="group relative bg-[#121117] border border-yellow-500 rounded-xl p-6 text-center flex flex-col items-center min-h-[180px] transition-transform duration-300 hover:shadow-yellow-500/20"
+            className="group relative bg-[#121117] border-y border-yellow-500 rounded-xl p-6 text-center flex flex-col items-center min-h-[200px] transition-transform duration-300 hover:shadow-yellow-500/20"
           >
             <img
-              src={shield}
+              src={item.img}
               alt="shield"
-              className="w-24 transition-all duration-300 group-hover:animate-bounce -mt-12 mb-2"
+              className={`transition-all duration-300 group-hover:animate-bounce -mt-16 mb-4 ${index === 2 ? 'w-36' : 'w-32'}`}
             />
             <h3 className="text-lg font-semibold mb-2 mt-2">{item.title}</h3>
             <p className="text-sm text-gray-300">{item.desc}</p>

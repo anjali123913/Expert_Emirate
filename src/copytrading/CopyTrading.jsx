@@ -4,7 +4,7 @@ import WhatIsCopyTrading from "./WhatIsCopyTrading";
 import CopyTradingIntro from "./CopyTradingIntro";
 import Cards from "./cards";
 
-export default function Career() {
+export default function CopyTrading() {
   return (
     <div>
       <CopyTradingSection/>

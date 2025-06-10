@@ -1,43 +1,49 @@
-import React from "react";
+import React from 'react';
+import copyTradingImg from '../assets/copyimage/dollar.png';
+import toggleImg from '../assets/copyimage/toggle.png';
 
 const CopyTradingSection = () => {
   return (
-    <section className="bg-black text-white w-full px-4 md:px-0 py-16">
-      {/* Container Centered */}
-      <div className="max-w-4xl mx-auto flex flex-col items-center text-center space-y-8">
-        {/* Heading */}
-        <div>
-          <h2 className="text-4xl md:text-5xl font-extrabold leading-snug">
-            Invest in <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-b from-yellow-300 to-yellow-700 drop-shadow-lg">
-              Copy Trading
-            </span>
-          </h2>
-        </div>
-
-        {/* Description */}
-        <p className="text-gray-300 text-base md:text-lg max-w-2xl leading-relaxed">
-          We specialize in clearing clients' funded accounts from partnered
-          firms, allowing you to trade with confidence and minimal risk.
+    <div className="relative min-h-screen bg-black flex flex-col md:flex-row items-start justify-between px-6 md:px-20 py-28 font-sans overflow-hidden">
+      {/* Left Text Section */}
+      <div className="text-white max-w-2xl z-10 text-left">
+        <h1 className="text-5xl md:text-7xl font-bold leading-snug">
+          Invest in{' '}
+          <span className="bg-gradient-to-r from-[#FFD700] to-[#B8860B] bg-clip-text text-transparent">
+            Copy Trading
+          </span>
+        </h1>
+        <p className="mt-8 text-base md:text-xl text-gray-300 max-w-lg">
+          We specialize in clearing clients' funded accounts from partnered firms, allowing you to trade with confidence and minimal risk.
         </p>
 
-        {/* Toggle Block */}
-        <div className="flex items-center justify-center space-x-6 pt-8">
-          <span className="text-white text-lg font-bold">
+        {/* Toggle Section */}
+        <div className="w-full flex flex-col md:flex-row justify-start items-center gap-6 mt-10 z-10">
+          <h3 className="text-white text-lg md:text-xl font-bold text-center md:text-left">
             What is Copy Trading ?
-          </span>
+          </h3>
 
-          {/* Toggle Switch */}
-          <div className="w-16 h-8 bg-[#1a1a1a] rounded-full flex items-center px-1 shadow-inner">
-            <div className="w-6 h-6 rounded-full bg-gradient-to-b from-yellow-300 to-yellow-700 shadow-md"></div>
-          </div>
+          <img
+            src={toggleImg}
+            alt="Toggle Switch"
+            className="w-20 md:w-28"
+          />
 
-          <span className="text-white text-lg font-bold">
+          <h3 className="text-white text-lg md:text-xl font-bold text-center md:text-left">
             What is Copy Trading ?
-          </span>
+          </h3>
         </div>
       </div>
-    </section>
+
+      {/* Image Section */}
+      <div className="w-full md:w-[50%] flex justify-end items-end mt-10 md:mt-0">
+        <img
+          src={copyTradingImg}
+          alt="Copy Trading 3D Illustration"
+          className="w-[250px] md:w-[350px] lg:w-[450px] xl:w-[500px]"
+        />
+      </div>
+    </div>
   );
 };
 

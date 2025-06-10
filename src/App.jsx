@@ -19,6 +19,7 @@ import TradingBot from "./tradingBot/TradingBot";
 import Platform from "./platformMT4/Platform";
 import PlatformMt5 from "./PlatformMT5/PlatformMt5";
 import ScrollToTop from "./utils/ScrollToTop";
+import CopyTrading from "./copytrading/CopyTrading";
 
 function App() {
   return (
@@ -28,9 +29,9 @@ function App() {
           <ScrollToTop />
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/careers" element={<Career />} />
+          {/* <Route path="/careers" element={<Career />} /> */}
            <Route path="/FAQ" element={<FaqSection/>} />
-            <Route path="/Education" element={<EducationData/>} />
+            {/* <Route path="/Education" element={<EducationData/>} /> */}
              <Route path="/Forecasts" element={<AwardsSection/>} />
               <Route path="/Support" element={<Support/>} />
                 <Route path="/about" element={<AboutUs/>} />

@@ -32,65 +32,73 @@ const Navbar = () => {
         { name: "Award", path: "/Forecasts" },
       ],
     },
-    { name: "Education", path: "/education" },
     { name: "FAQ", path: "/faq" },
-    { name: "Careers", path: "/careers" },
     { name: "Support", path: "/support" },
+    { name: "About us", path: "/about" },
+    { name: "Blog", path: "/blog" },
   ];
 
   return (
-    <nav className="absolute top-0 left-0 w-full z-20 bg-black text-white font-poppins  text-base tracking-[0.12em]" style={{ fontFamily: 'Poppins' }}>
+    <nav className="absolute top-0 left-0 w-full z-20 bg-black text-white font-poppins text-base tracking-[0.12em]">
       <div className="flex justify-between items-center p-4 md:px-16 px-4">
+        {/* Logo */}
         <Link to="/" className="flex items-center gap-2">
           <img src={logo} alt="logo" className="h-10 w-auto" />
         </Link>
 
         {/* Desktop Menu */}
-        <ul className="hidden group hover:border-yellow-800 md:flex gap-6 text-md font-semibold relative">
-          {navLinks.map((link, idx) => (
-            <li key={idx} className="relative">
-              {link.sublinks ? (
-                <>
-                  <button
-                    onClick={() => toggleDropdown(link.name)}
-                    className="flex items-center gap-1 hover:text-yellow-400"
+        <div className="hidden md:flex items-center gap-8">
+          <ul className="flex gap-6 text-md font-semibold">
+            {navLinks.map((link, idx) => (
+              <li key={idx} className="relative">
+                {link.sublinks ? (
+                  <>
+                    <button
+                      onClick={() => toggleDropdown(link.name)}
+                      className="flex items-center gap-1 hover:text-yellow-400"
+                    >
+                      {link.name}
+                      <ChevronDown size={16} />
+                    </button>
+                    {activeDropdown === link.name && (
+                      <ul className="absolute text-md py-3 rounded-xl font-normal left-0 mt-2 bg-black border-2 border-black z-30 w-56 tracking-normal border-l-yellow-600 border-r-yellow-600">
+                        {link.sublinks.map((sublink, subIdx) => (
+                          <li key={subIdx}>
+                            <Link
+                              to={sublink.path}
+                              className="block px-4 py-2 hover:bg-[#121117] rounded-xl hover:text-yellow-400"
+                              onClick={() => setActiveDropdown(null)}
+                            >
+                              {sublink.name}
+                            </Link>
+                          </li>
+                        ))}
+                      </ul>
+                    )}
+                  </>
+                ) : (
+                  <Link
+                    to={link.path}
+                    className="hover:text-yellow-400"
                   >
                     {link.name}
-                    <ChevronDown size={16} />
-                  </button>
-                  {activeDropdown === link.name && (
-                    <ul className="absolute text-md py-3 rounded-xl font-normal left-0 mt-2 bg-[#000] border-2 border-black group-hover:border-l-yellow-600 z-30 w-56 group-hover:border-r-yellow-600 tracking-normal" 
-                    style={{fontFamily: 'Poppins'}}>
-                      {link.sublinks.map((sublink, subIdx) => (
-                        <li
-                          key={subIdx}
-                          className="hover:border-yellow-800 transition"
-                        >
-                          <Link
-                            to={sublink.path}
-                            className="block px-4 py-2 hover:bg-[#121117] rounded-xl  hover:text-yellow-400"
-                            onClick={() => setActiveDropdown(null)}
-                          >
-                            {sublink.name}
-                          </Link>
-                        </li>
-                      ))}
-                    </ul>
-                  )}
-                </>
-              ) : (
-                <Link
-                  to={link.path}
-                  className="hover:text-yellow-400"
-                >
-                  {link.name}
-                </Link>
-              )}
-            </li>
-          ))}
-        </ul>
+                  </Link>
+                )}
+              </li>
+            ))}
+          </ul>
 
-        {/* Mobile Toggle */}
+          {/* Login Button */}
+          <Link
+            to="/login"
+            className="ml-4 px-6 py-1.5 rounded-full font-semibold text-sm text-black
+            bg-gradient-to-r from-yellow-900 via-yellow-400 to-yellow-900 shadow-[0_0_20px_rgba(255,222,89,0.6)] transition"
+          >
+            LOGIN
+          </Link>
+        </div>
+
+        {/* Mobile Menu Toggle */}
         <div className="md:hidden">
           <button onClick={toggleMenu} className="focus:outline-none">
             <Menu size={24} />
@@ -136,15 +144,24 @@ const Navbar = () => {
                 <Link
                   to={link.path}
                   onClick={() => setIsOpen(false)}
-                  className={`block hover:text-yellow-400 transition ${
-                    link.name === "Home" ? "text-yellow-400" : "text-white"
-                  }`}
+                  className={`block hover:text-yellow-400 transition`}
                 >
                   {link.name}
                 </Link>
               )}
             </li>
           ))}
+
+          {/* Login for mobile */}
+          <li>
+            <Link
+              to="/login"
+              onClick={() => setIsOpen(false)}
+              className="mt-4 inline-block w-full text-center px-4 py-2 rounded-full bg-gradient-to-r from-yellow-900 via-yellow-400 to-yellow-900 text-black font-bold shadow-[0_0_20px_rgba(255,222,89,0.6)]"
+            >
+              LOGIN
+            </Link>
+          </li>
         </ul>
       </div>
 

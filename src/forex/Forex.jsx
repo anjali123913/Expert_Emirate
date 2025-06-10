@@ -9,6 +9,7 @@ import ExpertTrade from "./ExpertTrade";
 import CurrencyMarket from "./CurrencyMarket";
 import PopularSharesTable from "./PopularSharesTable";
 import MetalsTable from "./MetalsData";
+import ForexGoldInfo from "./ForexGoldInfo";
 
 export default function Forex() {
   return (
@@ -16,6 +17,7 @@ export default function Forex() {
       <div className="w-full">
         <ForexHeroSection />
         <CategoryTabs />
+        <ForexGoldInfo/>
         <ForexInfo />
         <TutorialVideo />
         <ExpertTrade />
