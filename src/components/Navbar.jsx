@@ -22,7 +22,6 @@ const Navbar = () => {
         { name: "Crypto", path: "/cryptocurrency" },
         { name: "Portfolio Management", path: "/portfolio-management" },
         { name: "Crpto Trading", path: "/cryptocurrency" },
-        // { name: "Bot Trading", path: "/trading-bot" },
       ],
     },
     {
@@ -39,16 +38,16 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="absolute top-0 left-0 w-full z-20 bg-black text-white font-poppins text-base tracking-[0.12em]">
-      <div className="flex justify-between items-center p-4 md:px-16 px-4">
+    <nav className="absolute top-0 right-0 w-full z-20 text-white font-poppins text-base tracking-[0.12em]">
+      <div className="flex justify-between items-center p-2 md:px-15 px-3">
         {/* Logo */}
         <Link to="/" className="flex items-center gap-2">
           <img src={logo} alt="logo" className="h-10 w-auto" />
         </Link>
 
         {/* Desktop Menu */}
-        <div className="hidden md:flex items-center gap-8">
-          <ul className="flex gap-6 text-md font-semibold">
+        <div className="hidden md:flex justify-between items-center w-full">
+          <ul className="flex gap-6 text-md font-semibold justify-center text-center w-full">
             {navLinks.map((link, idx) => (
               <li key={idx} className="relative">
                 {link.sublinks ? (
@@ -89,13 +88,14 @@ const Navbar = () => {
           </ul>
 
           {/* Login Button */}
-          <Link
-            to="/login"
-            className="ml-4 px-6 py-1.5 rounded-full font-semibold text-sm text-black
-            bg-gradient-to-r from-yellow-900 via-yellow-400 to-yellow-900 shadow-[0_0_20px_rgba(255,222,89,0.6)] transition"
-          >
-            LOGIN
-          </Link>
+          <div className="ml-auto pl-6">
+            <Link
+              to="/login"
+              className="px-6 py-1.5 rounded-full font-semibold text-sm text-black bg-gradient-to-r from-yellow-900 via-yellow-400 to-yellow-900 shadow-[0_0_20px_rgba(255,222,89,0.6)] transition"
+            >
+              LOGIN
+            </Link>
+          </div>
         </div>
 
         {/* Mobile Menu Toggle */}
@@ -118,7 +118,7 @@ const Navbar = () => {
             <X size={24} />
           </button>
         </div>
-        <ul className="flex flex-col px-6 py-4 space-y-4 text-sm font-medium">
+        <ul className="flex flex-col px-6 py-4 space-y-4 text-sm font-medium text-center">
           {navLinks.map((link, idx) => (
             <li key={idx}>
               {link.sublinks ? (
@@ -126,7 +126,7 @@ const Navbar = () => {
                   <summary className="cursor-pointer hover:text-yellow-400">
                     {link.name}
                   </summary>
-                  <ul className="ml-4 mt-2 border-l-2 border-yellow-400 pl-2 space-y-2">
+                  <ul className="ml-4 mt-2 border-l-2 border-yellow-400 pl-2 space-y-2 text-left">
                     {link.sublinks.map((sublink, subIdx) => (
                       <li key={subIdx}>
                         <Link
@@ -144,7 +144,7 @@ const Navbar = () => {
                 <Link
                   to={link.path}
                   onClick={() => setIsOpen(false)}
-                  className={`block hover:text-yellow-400 transition`}
+                  className="block hover:text-yellow-400 transition"
                 >
                   {link.name}
                 </Link>

@@ -3,9 +3,9 @@ import Navbar from "./components/Navbar";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import HomePage from "./pages/Home";
 import Footer from "./components/Footer";
-import Career from "./carrier/Career";
+// import Career from "./carrier/Career";
 import FaqSection from "./faq/FaqSection";
-import EducationData from "./education/EducationData";
+// import EducationData from "./education/EducationData";
 import AwardsSection from "./forecastAwards/AwardsSection";
 import Support from "./support/Support";
 import AboutUs from "./about/AboutUs";
@@ -20,6 +20,8 @@ import Platform from "./platformMT4/Platform";
 import PlatformMt5 from "./PlatformMT5/PlatformMt5";
 import ScrollToTop from "./utils/ScrollToTop";
 import CopyTrading from "./copytrading/CopyTrading";
+// import SignIn from "./userpanel/SignIn";
+import Blog from "./blog/Blog";
 
 function App() {
   return (
@@ -44,12 +46,13 @@ function App() {
                   <Route path="/trading-bot" element={<TradingBot/>} />
                   <Route path="/mt4-platform" element={<Platform/>} />
                   <Route path="/mt5-platform" element={<PlatformMt5/>} />
-                  {/* <Route path="/Pro" element={<Pro/>} /> */}
+                  <Route path="/blog" element={<Blog/>} />
                   {/* <Route path="/Ultra" element={<Ultra/>} /> */}
                   {/* <Route path="/Standard" element={<Standard/>} /> */}
 
         </Routes>
         <Footer />
+        {/* <SignIn/> */}
       </Router>
     </div>
   );

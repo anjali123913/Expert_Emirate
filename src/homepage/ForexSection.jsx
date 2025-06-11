@@ -14,7 +14,7 @@ const ForexSection = () => {
     <section className="w-full bg-black text-white py-14 px-12 sm:px-16 md:px-20 lg:px-24 xl:px-28 2xl:px-32" style={{
             fontFamily: "sans-serif",
           }}>
-      <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-12 ">
+      <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-12 border-[#c8A127.50%]-[#666666.0%]">
         {/* Left Content */}
         <div className="max-w-[500px] flex flex-col gap-10">
           {/* Toggle Buttons */}

@@ -81,12 +81,14 @@ const HeroSection = () => {
           {/* Buttons */}
           <div className="flex gap-4 mt-10 flex-wrap">
             <button
-              onMouseEnter={() => setHoveredBtn("btn1")}
-              onMouseLeave={() => setHoveredBtn(null)}
-              className={`min-w-[140px] md:min-w-[165px] h-[39px] px-[10px] py-[5px] rounded-full text-sm font-bold font-poppins transition duration-300 ${getButtonClass(
-                "btn1"
+              // onMouseEnter={() => setHoveredBtn("btn1")}
+              // onMouseLeave={() => setHoveredBtn(null)}
+              className={`   // <div class="text-center justify-start text-black text-sm font-semibold font-[Poppins] uppercase leading-relaxed tracking-widest">Start Free Trial</div>
+</div><div data-property-1="Frame 33" class="w-[165] h-[39px] px-9 py-2.5 bg-gradient-to-l from-stone-900 via-yellow-600 to-stone-900 rounded-[77.61px] shadow-[0px_0px_17.24637794494629px_1.724637746810913px_rgba(254,214,0,0.20)] shadow-[inset_0px_0px_21.557971954345703px_0px_rgba(255,215,0,0.20)] outline outline-[0.86px] outline-offset-[-0.86px] outline-yellow-600/50 inline-flex justify-center items-center gap-2.5">
+ 
               )}`}
             >
+            
               START FREE TRIAL
             </button>
 
