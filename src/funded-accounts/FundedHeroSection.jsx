@@ -5,12 +5,12 @@ import overlay from "../assets/FundedAccounts/image2.png";
 const FundedHeroSection = () => {
   return (
     <div className="w-full bg-black flex justify-center px-4 mt-14">
-      <div className="relative w-full max-w-[1240px] h-[251px] rounded-[20px] overflow-hidden">
+      <div className="group relative w-full max-w-[1240px] h-[251px] rounded-[20px] overflow-hidden">
         {/* Background Image */}
         <img
           src={bg}
           alt="Background"
-          className="absolute inset-0 w-full h-full object-cover"
+          className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-all duration-300 ease-in"
         />
 
         {/* Optional semi-dark overlay */}

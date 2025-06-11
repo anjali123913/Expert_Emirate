@@ -20,6 +20,11 @@ import Platform from "./platformMT4/Platform";
 import PlatformMt5 from "./PlatformMT5/PlatformMt5";
 import ScrollToTop from "./utils/ScrollToTop";
 import CopyTrading from "./copytrading/CopyTrading";
+import LoginPage from "./authPages/Login";
+import SignUp from "./authPages/SignUp";
+import ForgotPassword from "./authPages/ForgetPassword";
+import OtpVerificationPage from "./authPages/OtpVerificationPage";
+import ResetPasswordPage from "./authPages/ResetPasswordPage";
 
 function App() {
   return (
@@ -44,6 +49,11 @@ function App() {
                   <Route path="/trading-bot" element={<TradingBot/>} />
                   <Route path="/mt4-platform" element={<Platform/>} />
                   <Route path="/mt5-platform" element={<PlatformMt5/>} />
+                  <Route path="/login" element={<LoginPage/>} />
+                  <Route path="/sign-up" element={<SignUp/>} />
+                  <Route path="/forgot-password" element={<ForgotPassword/>} />
+                  <Route path="/otp-verification" element={<OtpVerificationPage/>} />
+                  <Route path="/reset-password" element={<ResetPasswordPage/>} />
                   {/* <Route path="/Pro" element={<Pro/>} /> */}
                   {/* <Route path="/Ultra" element={<Ultra/>} /> */}
                   {/* <Route path="/Standard" element={<Standard/>} /> */}
