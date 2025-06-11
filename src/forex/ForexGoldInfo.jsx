@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const ForexGoldInfo = () => {
   const [activeTab, setActiveTab] = React.useState("forex");
@@ -30,7 +31,11 @@ const ForexGoldInfo = () => {
                     : "bg-[#1a1a1a] text-white"
                 }`}
             >
-              {tab.toUpperCase()}
+              {tab != "gold" ? (
+                tab.toUpperCase()
+              ) : (
+                <Link to={"/gold"}>{tab.toUpperCase()}</Link>
+              )}
             </button>
           ))}
         </div>
