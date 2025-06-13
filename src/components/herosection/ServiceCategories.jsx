@@ -1,14 +1,14 @@
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 import React from "react";
-import wave from "../../assets/wave.png";
+import wave from "../../assets/stayar.png";
 
 const ServicesCard = () => {
   return (
-    <div className="bg-black rounded-xl p-6 h-96 w-full max-w-xl text-white relative overflow-hidden">
+    <div className="bg-black rounded-xl p-6 min-h-[400px] w-full max-w-xl text-white relative overflow-hidden">
       {/* Background effect */}
       <div className="absolute inset-0 z-0">
         <img
-          src={wave} // use the wave-style image you uploaded
+          src={wave}
           alt="background"
           className="w-full h-full object-cover"
         />
@@ -16,42 +16,36 @@ const ServicesCard = () => {
       </div>
 
       {/* Button container */}
-      <div className="z-10 relative flex flex-wrap justify-center gap-3 pt-24">
-        <button className="relative overflow-hidden bg-black text-white border border-yellow-400 rounded-full px-4 py-2 text-sm transition hover:text-black z-0 group">
-          <span className="relative z-10"> FOREX + GOLD</span>
-          <span className="absolute inset-0 z-0 bg-gradient-to-r from-yellow-800 via-transparent to-yellow-800 bg-yellow-500 opacity-0 group-hover:opacity-100 transition duration-300"></span>
-        </button>
-<Link to="/CryptoCurrency">
+      <div className="z-10 relative flex flex-col items-center gap-4 pt-44 w-full px-4">
+        {/* Forex + Crypto in same row and same size */}
+        <div className="flex justify-between gap-4 w-full">
+          <Link to="/forex-gold" className="flex-1">
+            <button className="w-full h-12 bg-black/40 rounded-full border border-yellow-400 text-white text-sm font-medium uppercase transition-all duration-300 hover:bg-yellow-500 hover:text-black">
+              FOREX + GOLD
+            </button>
+          </Link>
 
-        <button className="relative overflow-hidden bg-black text-white border border-yellow-400 rounded-full px-4 py-2 text-sm transition hover:text-black z-0 group">
-          <span className="relative z-10"> CRYPTOCURRENCY</span>
-          <span className="absolute inset-0 z-0 bg-gradient-to-r from-yellow-800 via-transparent to-yellow-800 bg-yellow-500 opacity-0 group-hover:opacity-100 transition duration-300"></span>
-        </button>
-</Link>
+          <Link to="/CryptoCurrency" className="flex-1">
+            <button className="w-full h-12 bg-black/40 rounded-full border border-yellow-400 text-white text-sm font-medium uppercase transition-all duration-300 hover:bg-yellow-500 hover:text-black">
+              CRYPTOCURRENCY
+            </button>
+          </Link>
+        </div>
 
-        <Link to="/FundedAccounts">
-        <button className="relative overflow-hidden bg-black text-white border border-yellow-400 rounded-full px-4 py-2 text-sm transition hover:text-black z-0 group">
-          <span className="relative z-10"> FNDED ACCOUNTS</span>
-          <span className="absolute inset-0 z-0 bg-gradient-to-r from-yellow-800 via-transparent to-yellow-800 bg-yellow-500 opacity-0 group-hover:opacity-100 transition duration-300"></span>
-        </button>
+        {/* Funded Accounts (full width) */}
+        <Link to="/FundedAccounts" className="w-full">
+          <button className="w-full h-12 bg-black/40 rounded-full border border-yellow-400 text-white text-sm font-medium uppercase transition-all duration-300 hover:bg-yellow-500 hover:text-black">
+            FUNDED ACCOUNTS
+          </button>
         </Link>
-<Link to="/TradingBot">
 
-        <button className="relative overflow-hidden bg-black text-white border border-yellow-400 rounded-full px-4 py-2 text-sm transition hover:text-black z-0 group">
-          <span className="relative z-10"> ROBOT TRADING</span>
-          <span className="absolute inset-0 z-0 bg-gradient-to-r from-yellow-800 via-transparent to-yellow-800 bg-yellow-500 opacity-0 group-hover:opacity-100 transition duration-300"></span>
-        </button>
-</Link>
-      
-      <Link to="profile-management
-  ">
-        <button className="relative overflow-hidden bg-black text-white border border-yellow-400 rounded-full px-4 py-2 text-sm transition hover:text-black z-0 group">
-          <span className="relative z-10">PORTFOLIO MANAGEMENT</span>
-          <span className="absolute inset-0 z-0 bg-gradient-to-r from-yellow-800 via-transparent to-yellow-800 bg-yellow-400 opacity-0 group-hover:opacity-100 transition duration-300"></span>
-        </button>
-      </Link>
+        {/* Portfolio Management (full width) */}
+        <Link to="/profile-management" className="w-full">
+          <button className="w-full h-12 bg-black/40 rounded-full border border-yellow-400 text-white text-sm font-medium uppercase transition-all duration-300 hover:bg-yellow-500 hover:text-black">
+            PORTFOLIO MANAGEMENT
+          </button>
+        </Link>
       </div>
-      
     </div>
   );
 };

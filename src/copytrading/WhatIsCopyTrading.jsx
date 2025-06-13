@@ -8,7 +8,7 @@ const WhatIsCopyTrading = () => {
         {/* LEFT: TEXT */}
         <div className="flex-1 text-left">
           <h2 className="text-[32px] md:text-[40px] font-extrabold leading-snug mb-6">
-            <span className="bg-gradient-to-b from-[#FFD700] to-[#A26F00] bg-clip-text text-transparent drop-shadow-[0_2px_2px_rgba(255,215,0,0.5)]">
+            <span className="bg-gradient-to-b from-yellow-900 via-yellow-300 to-yellow-900 bg-clip-text text-transparent ">
               What is Copy Trading
             </span>
           </h2>

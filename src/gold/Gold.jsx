@@ -10,13 +10,17 @@ import MetalsTable from "../forex/MetalsData";
 import WhyTradersTrustUs from "../portfolio/WhyTradersTrustUs";
 import FeatureSection from "../homepage/FeatureSection";
 import ComexFeatures from "./ComexFeatures";
+import ForexGoldInfo from "../forex/ForexGoldInfo";
+import WhatIsComex from "./WhatIsComex";
 
 export default function Gold() {
   return (
     <div>
       <GoldCard/>
       <CategoryTabs/>
-      <ForexInfo/>
+      <ForexGoldInfo/>
+      <WhatIsComex/>
+      {/* <ForexInfo/> */}
       <ComexFeatures/>
       <TutorialVideo/>
       <ExpertTrade/>

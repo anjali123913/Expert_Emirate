@@ -1,10 +1,11 @@
 import React from "react";
 import img1 from "../assets/blog/image1.png";
-import img3 from "../assets/blog/image3.png";
-import img4 from "../assets/blog/image4.png";
-import img5 from "../assets/blog/image5.png";
-import img6 from "../assets/blog/image6.png";
-import img7 from "../assets/blog/image7.png";
+import img3 from "../assets/blog/image2.png";
+// import img4 from "../assets/blog/image4.png";
+// import img5 from "../assets/blog/image5.png";
+// import img6 from "../assets/blog/image6.png";
+
+// import img7 from "../assets/blog/image7.png";
 
 const posts = [
   {
@@ -23,38 +24,38 @@ const posts = [
     excerpt: "The professor delivered a captivating lecture, engaging the students with thought-provoking ideas.",
     image: img3,
   },
-  {
-    id: 4,
-    title: "Mental Health in the Digital Age: Navigating Social Media and Well-being",
-    date: "12 Aug 2023 10:00 PM",
-    status: "Draft",
-    excerpt: "The concert was a mesmerizing experience, with the music filling the venue and the crowd cheering.",
-    image: img4,
-  },
-  {
-    id: 5,
-    title: "The Gig Economy: Opportunities Risks and the Future of Work",
-    date: "12 Aug 2023 10:00 PM",
-    status: "Published",
-    excerpt: "The book transported me to a magical world, where imagination knew no bounds.",
-    image: img5,
-  },
-  {
-    id: 6,
-    title: "Smart Cities: Integrating Technology for Sustainable Urban Living",
-    date: "12 Aug 2023 10:00 PM",
-    status: "Draft",
-    excerpt: "The artist dipped the brush into vibrant paint, bringing the canvas to life with bold strokes and wild energy.",
-    image: img6,
-  },
-  {
-    id: 7,
-    title: "The Future of Renewable Energy: Innovations and Challenges Ahead",
-    date: "12 Aug 2023 10:00 PM",
-    status: "Published",
-    excerpt: "The hiker trekked through the dense forest, guided by the soft glow of sunlight filtering through the trees.",
-    image: img7,
-  },
+  // {
+  //   id: 4,
+  //   title: "Mental Health in the Digital Age: Navigating Social Media and Well-being",
+  //   date: "12 Aug 2023 10:00 PM",
+  //   status: "Draft",
+  //   excerpt: "The concert was a mesmerizing experience, with the music filling the venue and the crowd cheering.",
+  //   image: img4,
+  // },
+  // {
+  //   id: 5,
+  //   title: "The Gig Economy: Opportunities Risks and the Future of Work",
+  //   date: "12 Aug 2023 10:00 PM",
+  //   status: "Published",
+  //   excerpt: "The book transported me to a magical world, where imagination knew no bounds.",
+  //   image: img5,
+  // },
+  // {
+  //   id: 6,
+  //   title: "Smart Cities: Integrating Technology for Sustainable Urban Living",
+  //   date: "12 Aug 2023 10:00 PM",
+  //   status: "Draft",
+  //   excerpt: "The artist dipped the brush into vibrant paint, bringing the canvas to life with bold strokes and wild energy.",
+  //   image: img6,
+  // },
+  // {
+  //   id: 7,
+  //   title: "The Future of Renewable Energy: Innovations and Challenges Ahead",
+  //   date: "12 Aug 2023 10:00 PM",
+  //   status: "Published",
+  //   excerpt: "The hiker trekked through the dense forest, guided by the soft glow of sunlight filtering through the trees.",
+  //   image: img7,
+  // },
 ];
 
 const BlogCard = ({ post }) => {

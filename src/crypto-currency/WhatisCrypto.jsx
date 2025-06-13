@@ -1,5 +1,5 @@
 import React from "react";
-import chartImg from "../assets/forex/chart-image.png";
+import chartImg from "../assets/cryptoCurrency/coin.png";
 
 const WhatisCrypto = () => {
   return (

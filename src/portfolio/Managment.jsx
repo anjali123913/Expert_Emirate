@@ -1,5 +1,5 @@
 import React from "react";
-import chartImg from "../assets/forex/chart-image.png"; // Update if needed
+import chartImg from "../assets/FundedAccounts/grouthcoin.png"; // Update if needed
 
 const Managment = () => {
   return (

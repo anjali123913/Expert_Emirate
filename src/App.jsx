@@ -26,6 +26,15 @@ import SignUp from "./authPages/SignUp";
 import ForgotPassword from "./authPages/ForgetPassword";
 import OtpVerificationPage from "./authPages/OtpVerificationPage";
 import ResetPasswordPage from "./authPages/ResetPasswordPage";
+import PasswordChanged from "./authPages/PasswordChanged";
+import TopBar from "./dashboard/TopBar";
+import WelcomeCard from "./dashboard/WelcomeCard";
+import BuyPlanForm from "./buyplan/BuyPlanForm";
+import CurrentPlans from "./buyplan/CurrentPlans";
+import MoneyCard from "./buyplan/MoneyCard";
+import TransactionHistory from "./transaction/TransactionHistory";
+import SettingsPage from "./setting/SettingsPage";
+import SupportSection from "./dashboard/SupportSection";
 
 function App() {
   return (
@@ -56,11 +65,19 @@ function App() {
                   <Route path="/forgot-password" element={<ForgotPassword/>} />
                   <Route path="/otp-verification" element={<OtpVerificationPage/>} />
                   <Route path="/reset-password" element={<ResetPasswordPage/>} />
-                  {/* <Route path="/Pro" element={<Pro/>} /> */}
+                  <Route path="/PasswordChanged" element={<PasswordChanged/>} />
                   {/* <Route path="/Ultra" element={<Ultra/>} /> */}
                   {/* <Route path="/Standard" element={<Standard/>} /> */}
 
         </Routes>
+        <TopBar/>
+        <WelcomeCard/>
+        <BuyPlanForm/>
+        <CurrentPlans/>
+        <MoneyCard/>
+        <TransactionHistory/>
+        <SettingsPage/>
+        <SupportSection/>
         <Footer />
       </Router>
     </div>

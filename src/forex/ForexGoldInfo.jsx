@@ -1,54 +1,39 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 
 const ForexGoldInfo = () => {
-  const [activeTab, setActiveTab] = React.useState("forex");
-
-  const content = {
-    forex: {
-      heading: "What is Forex?",
-      description: `Forex (Foreign Exchange) is the global marketplace where currencies are bought and sold. With a daily trading volume of over $7 trillion, it is the largest and most liquid financial market in the world. Traders profit by speculating on currency price movements, leveraging economic trends, and global events. Unlike stock markets, Forex operates 24 hours a day, 5 days a week, offering endless trading opportunities. Whether you're a beginner or a pro, mastering Forex can unlock financial growth and independence.`,
-    },
-    gold: {
-      heading: "What is COMEX?",
-      description: `COMEX (Commodity Exchange) is the world’s leading market for trading precious metals such as gold, silver, copper, and other commodities. As a division of the Chicago Mercantile Exchange (CME Group), COMEX provides a highly liquid marketplace for traders, investors, and institutions to buy and sell metal futures and options with transparency and efficiency.`,
-    },
-  };
+  const navigate = useNavigate();
+  const location = useLocation();
+  const currentPath = location.pathname;
 
   return (
-    <section className="bg-black text-white py-16 px-6 sm:px-12 md:px-20 font-sans">
-      <div className="max-w-4xl mx-auto">
+    <section className="bg-black text-white py-12 px-4 sm:px-6 md:px-12 lg:px-20 font-sans">
+      <div className="w-full max-w-7xl mx-auto">
         {/* Toggle Buttons */}
-        <div className="flex gap-4 mb-10">
-          {["forex", "gold"].map((tab) => (
-            <button
-              key={tab}
-              onClick={() => setActiveTab(tab)}
-              className={`px-6 py-2 rounded-full font-semibold text-sm transition-all duration-300
-                ${
-                  activeTab === tab
-                    ? "bg-gradient-to-r from-yellow-900 via-yellow-400 to-yellow-900 text-black"
-                    : "bg-[#1a1a1a] text-white"
-                }`}
-            >
-              {tab != "gold" ? (
-                tab.toUpperCase()
-              ) : (
-                <Link to={"/gold"}>{tab.toUpperCase()}</Link>
-              )}
-            </button>
-          ))}
+        <div className="flex flex-wrap justify-start items-start gap-3 sm:gap-4 md:gap-6">
+          {[{ label: "FOREX", path: "/forex" }, { label: "GOLD", path: "/gold" }].map(
+            (tab) => {
+              const isActive = currentPath === tab.path;
+              return (
+                <button
+                  key={tab.path}
+                  onClick={() => navigate(tab.path)}
+                  className={`min-w-[140px] sm:min-w-[160px] md:min-w-[180px] h-[50px] px-5 py-[10px] rounded-[90px]
+                    text-sm sm:text-base font-semibold font-poppins transition duration-300 text-center
+                    ${
+                      isActive
+                        ? "text-black bg-[linear-gradient(86.31deg,#281000_0%,#C0971C_25%,#FFE976_50.5%,#C0971C_74.5%,#281000_100%)] shadow-[0_4px_15px_rgba(255,215,0,0.3)]"
+                        : "text-white bg-[#1a1a1a]"
+                    }
+                    hover:bg-[linear-gradient(86.31deg,#281000_0%,#C0971C_25%,#FFE976_50.5%,#C0971C_74.5%,#281000_100%)] hover:text-black
+                  `}
+                >
+                  {tab.label}
+                </button>
+              );
+            }
+          )}
         </div>
-
-        {/* Heading */}
-        <h2 className="text-3xl sm:text-4xl font-bold text-yellow-400 mb-4">
-          {content[activeTab].heading}
-        </h2>
-
-        {/* Description */}
-        <p className="text-gray-300 leading-relaxed tracking-wide text-[17px]">
-          {content[activeTab].description}
-        </p>
       </div>
     </section>
   );
