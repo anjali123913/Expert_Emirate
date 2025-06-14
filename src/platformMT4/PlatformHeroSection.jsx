@@ -12,8 +12,15 @@ const PlatformHeroSection = () => {
     <div className="bg-black text-white px-4 md:px-8 lg:px-20 py-14 flex flex-col-reverse md:flex-row items-center justify-between gap-10 font-[Poppins]">
       {/* Left Content */}
       <div className="w-full md:w-1/2 space-y-6 text-center md:text-left">
-        {/* ✅ Proper Visible Gradient Heading */}
-        <h2 className="text-[20px] sm:text-[20px] md:text-[20px] lg:text-[52px] font-semibold leading-[110%] bg-gradient-to-b from-[#FFE976] via-[#C0971C] to-[#281000] text-transparent bg-clip-text">
+        {/* ✅ Gradient Heading - Same as MT4TradingSections */}
+        <h2
+          className="text-[20px] sm:text-[20px] md:text-[20px] lg:text-[52px] font-semibold leading-[110%]"
+          style={{
+            background: "linear-gradient(180deg, #281000 0%, #C0971C 25.5%, #FFE976 49.5%, #C0971C 74.5%, #281000 100%)",
+            WebkitBackgroundClip: "text",
+            WebkitTextFillColor: "transparent",
+          }}
+        >
           Trade with Confidence<br />on MT4 & MT5
         </h2>
 
@@ -45,12 +52,12 @@ const PlatformHeroSection = () => {
         </div>
       </div>
 
-      {/* Right Image */}
+      {/* Right Image with Bounce Animation */}
       <div className="w-full md:w-1/2 flex justify-center">
         <img
           src={phonesImage}
           alt="Mobile Trading View"
-          className="w-[80%] max-w-[320px] md:max-w-[400px] lg:max-w-[450px]"
+          className="w-[80%] max-w-[320px] md:max-w-[400px] lg:max-w-[450px] animate-smoothBounce"
         />
       </div>
     </div>

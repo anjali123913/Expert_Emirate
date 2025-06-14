@@ -56,7 +56,7 @@ function App() {
                  <Route path="/gold" element={<Gold/>} />
                   <Route path="/cryptocurrency" element={<CryptoCurrency/>} />
                   <Route path="/funded-accounts" element={<FundedAccounts/>} />
-                  <Route path="/trading-bot" element={<TradingBot/>} />
+                  {/* <Route path="/trading-bot" element={<TradingBot/>} /> */}
                   <Route path="/mt4-platform" element={<Platform/>} />
                   <Route path="/mt5-platform" element={<PlatformMt5/>} />
                   <Route path="/blog" element={<Blog/>} />

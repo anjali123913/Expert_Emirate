@@ -7,25 +7,28 @@ const SmartTradeSection = () => {
       className="w-full flex flex-col md:flex-row items-center justify-center px-4 md:px-12 py-16 gap-10"
       style={{ background: "#000000" }}
     >
-      {/* Left Side - Image with Gradient Text Overlay */}
-      <div className="relative w-full md:w-1/2 max-w-md">
+      {/* Left Side - Slightly Smaller Image with Hover Zoom */}
+      <div className="relative w-full md:w-[45%] group">
         <img
           src={Image4}
           alt="Smart Trading"
-          className="w-full h-auto rounded-xl object-cover"
+          className="w-full h-auto rounded-xl object-cover transition-transform duration-500 group-hover:scale-105"
         />
-       
       </div>
 
       {/* Right Side - Heading + Text */}
-      <div className="w-full md:w-1/2">
+      <div className="w-full md:w-[55%]">
         <h2
-          className="mb-4 text-3xl font-bold bg-gradient-to-t from-transparent via-yellow-300 to-transparent bg-clip-text text-transparent"
+          className="mb-4"
           style={{
             fontFamily: "Poppins",
-            // fontWeight: 600,
-            // fontSize: "32px",
-        
+            fontWeight: 600,
+            fontSize: "32px",
+            lineHeight: "55px",
+            background:
+              "linear-gradient(180deg, #281000 0%, #C0971C 25.5%, #FFE976 49.5%, #C0971C 74.5%, #281000 100%)",
+            WebkitBackgroundClip: "text",
+            WebkitTextFillColor: "transparent",
           }}
         >
           Master the Markets with Expert Emirates – Your Path to Financial Success

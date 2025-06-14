@@ -1,17 +1,20 @@
-import React from "react";
-import mt5Image from "../assets/platformMT4/image6.png"; // Update with your actual path
+import React, { useState } from "react";
+import mt5Image from "../assets/platformMT4/image6.png";
+import mt5ImageHover from "../assets/platformMT4/image6-hover.png"; // Hover image
 
 const TradingSections = () => {
-  
+  const [isHovered, setIsHovered] = useState(false);
+
   return (
     <section className="bg-black text-white py-12 px-4 sm:px-6 md:px-12 lg:px-20 font-[Poppins]">
-      {/* ========== What is MT5? (Updated Text) ========== */}
+      {/* ========== What is MT5? ========== */}
       <div className="flex flex-col md:flex-row items-start gap-10 mb-16">
         <div className="w-full md:w-[70%]">
           <h2
             className="text-[28px] sm:text-[32px] font-semibold leading-[40px]"
             style={{
-              background:  "linear-gradient(180deg, #281000 0%, #C0971C 25.5%, #FFE976 49.5%, #C0971C 74.5%, #281000 100%)",
+              background:
+                "linear-gradient(180deg, #281000 0%, #C0971C 25.5%, #FFE976 49.5%, #C0971C 74.5%, #281000 100%)",
               WebkitBackgroundClip: "text",
               WebkitTextFillColor: "transparent",
             }}
@@ -38,16 +41,21 @@ const TradingSections = () => {
           </div>
         </div>
 
-        {/* Image */}
-        <div className="w-full md:w-1/3">
+        {/* Hover Image */}
+        <div
+          className="w-full md:w-1/3"
+          onMouseEnter={() => setIsHovered(true)}
+          onMouseLeave={() => setIsHovered(false)}
+        >
           <img
-            src={mt5Image}
+            src={isHovered ? mt5ImageHover : mt5Image}
             alt="MT5"
-            className="w-full h-full object-cover rounded-xl"
+            className="w-full h-full object-cover rounded-xl transition duration-300 ease-in-out"
           />
         </div>
       </div>
 
+      {/* Bottom Paragraphs */}
       <div className="space-y-6 text-[16px] sm:text-[18px] leading-[28px]">
         <p>
           Unlike its predecessor MT4, MT5 includes an economic calendar,

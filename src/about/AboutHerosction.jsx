@@ -5,19 +5,15 @@ import About3 from "../assets/aboutus/image 3.png"; // Abstract
 
 const AboutHerosction = () => {
   return (
-    <div
-      className="w-full px-4 py-20"
-      style={{ background: "var(--background-color-pure-black, #000000)" }}
-    >
+    <div className="w-full px-4 py-20 bg-black">
       {/* Heading */}
       <h1
-        className="text-center font-bold mb-12"
+        className="text-center font-bold mb-16"
         style={{
           fontFamily: "Poppins",
           fontSize: "clamp(2rem, 6vw, 52px)",
           lineHeight: "62px",
           letterSpacing: "0.43em",
-
           background:
             "linear-gradient(180deg, #281000 5.95%, #C0971C 29.93%, #FFE976 52.51%, #C0971C 76.02%, #281000 100%)",
           WebkitBackgroundClip: "text",
@@ -27,62 +23,59 @@ const AboutHerosction = () => {
         Welcome to Expert Emirates
       </h1>
 
-      {/* Responsive Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-3 w-full max-w-7xl mx-auto" style={{
-        fontFamily:"Poppins tracking-widest"
-      }}>
+      {/* Grid */}
+      <div className="flex flex-col md:flex-row justify-center items-start gap-6 max-w-7xl mx-auto font-[Poppins]">
         {/* Left Block */}
-        <div className="flex flex-col items-start">
-          <img src={About1} alt="Chart Left" className="w-full h-auto" />
+        <div className="flex-1 max-w-sm group">
+          <img
+            src={About1}
+            alt="Left Chart"
+            className="w-full h-[260px] object-cover rounded-xl transition-transform duration-500 group-hover:scale-105"
+          />
           <p
-            className="mt-4 px-2 md:px-0 text-left"
+            className="mt-4 text-left text-[15px] leading-relaxed"
             style={{
-              fontFamily: "Poppins",
-              fontWeight: 400,
-              fontSize: "clamp(14px, 2.5vw, 16px)",
-              lineHeight: "150%",
               background: "linear-gradient(90deg, #FFFFFF 0%, #999999 100%)",
               WebkitBackgroundClip: "text",
               WebkitTextFillColor: "transparent",
             }}
           >
-            Expert Emirates is a leading force in the financial markets,
-            empowering traders with cutting-edge insights and AI-driven
-            strategies. Our goal is to turn market uncertainties into profitable
-            opportunities for our clients worldwide.
+            <strong>Expert Emirates</strong> is a leading force in the financial
+            markets, empowering traders with cutting-edge insights and
+            AI-driven strategies. Our goal is to turn market uncertainties into
+            profitable opportunities for our clients worldwide.
           </p>
         </div>
 
-        {/* Center Image (Slightly Emphasized) */}
-        <div className="flex items-start justify-center my-6 md:my-0 px-2">
+        {/* Center Image Block */}
+        <div className="flex-1 group flex items-center justify-center">
           <img
             src={About2}
-            alt="Center Image"
-            className="w-full h-auto scale-[1.05] md:scale-100"
+            alt="Gold Bars Center"
+            className="w-full h-[360px] object-cover rounded-xl transition-transform duration-500 group-hover:scale-105"
           />
         </div>
 
         {/* Right Block */}
-        <div className="flex flex-col items-start">
+        <div className="flex-1 max-w-sm flex flex-col justify-between group">
           <p
-            className="mb-4 px-2 md:px-0 text-left"
+            className="mb-4 text-left italic text-[15px] leading-relaxed"
             style={{
-              fontFamily: "Poppins",
-              fontStyle: "italic",
-              fontWeight: 400,
-              fontSize: "clamp(14px, 2.5vw, 16px)",
-              lineHeight: "150%",
               background: "linear-gradient(90deg, #FFFFFF 0%, #999999 100%)",
               WebkitBackgroundClip: "text",
               WebkitTextFillColor: "transparent",
             }}
           >
             <span style={{ fontStyle: "italic" }}>At Expert Emirates</span>, we
-            combine expertise, innovation, and dedication to help traders at
-            all levels succeed in the forex world. Join us and take your trading
+            combine expertise, innovation, and dedication to help traders at all
+            levels succeed in the forex world. Join us and take your trading
             journey to the next level.
           </p>
-          <img src={About3} alt="Right Image" className="w-full h-auto" />
+          <img
+            src={About3}
+            alt="Right Image"
+            className="w-full h-[260px] object-cover rounded-xl transition-transform duration-500 group-hover:scale-105"
+          />
         </div>
       </div>
     </div>

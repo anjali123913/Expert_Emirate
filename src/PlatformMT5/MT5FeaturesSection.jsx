@@ -31,9 +31,7 @@ const MT5FeaturesSection = () => {
           borderImageSlice: 1,
         }}
       >
-        <div
-          className="bg-[#121117] rounded-[20px] p-6 md:p-10 flex flex-col lg:flex-row justify-between items-center gap-10"
-        >
+        <div className="bg-[#121117] rounded-[20px] p-6 md:p-10 flex flex-col lg:flex-row justify-between items-center gap-10">
           {/* Left Column */}
           <div className="flex-1 space-y-6 text-sm md:text-base">
             <FeatureBlock
@@ -61,12 +59,12 @@ const MT5FeaturesSection = () => {
             />
           </div>
 
-          {/* Center Image */}
+          {/* Center Image with Bounce Animation */}
           <div className="flex-1 text-center">
             <img
               src={mt4Image}
-              alt="MT4 Phones"
-              className="w-full max-w-[280px] mx-auto"
+              alt="MT5 Phones"
+              className="w-full max-w-[280px] mx-auto animate-smoothBounce"
             />
           </div>
 

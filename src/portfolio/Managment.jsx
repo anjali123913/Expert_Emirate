@@ -1,13 +1,15 @@
-import React from "react";
-import chartImg from "../assets/FundedAccounts/grouthcoin.png"; // Update if needed
+import React, { useState } from "react";
+import chartImg from "../assets/FundedAccounts/grouthcoin.png";
+import chartImgHover from "../assets/portfolio/image1.png"; // Hover image
 
 const Managment = () => {
+  const [isHovered, setIsHovered] = useState(false);
+
   return (
     <div className="bg-black w-full px-4 py-10">
       <div className="max-w-[1240px] mx-auto flex flex-col lg:flex-row items-center lg:items-start gap-10">
         {/* Left: Text Section */}
         <div className="w-full lg:w-1/2">
-          {/* Gradient Heading */}
           <h2
             className="text-[28px] sm:text-[32px] font-semibold leading-[36px] sm:leading-[40px] mb-2 font-poppins bg-clip-text text-transparent"
             style={{
@@ -18,12 +20,10 @@ const Managment = () => {
             What is Portfolio Management?
           </h2>
 
-          {/* White Subheading */}
           <h3 className="text-lg sm:text-xl text-white mb-4 font-medium font-poppins">
             Balancing Your Investments for Optimal Growth
           </h3>
 
-          {/* Description */}
           <p className="text-[#CCCCCC] text-base sm:text-lg font-poppins leading-relaxed">
             Portfolio management is the process of selecting and managing a mix of investments (like
             stocks, bonds, and cryptocurrencies) to achieve your financial goals. It involves
@@ -34,12 +34,16 @@ const Managment = () => {
           </p>
         </div>
 
-        {/* Right: Image Section */}
-        <div className="w-full lg:w-1/2 max-w-[500px] mx-auto">
+        {/* Right: Image Section with Hover */}
+        <div
+          className="w-full lg:w-1/2 max-w-[500px] mx-auto"
+          onMouseEnter={() => setIsHovered(true)}
+          onMouseLeave={() => setIsHovered(false)}
+        >
           <img
-            src={chartImg}
+            src={isHovered ? chartImgHover : chartImg}
             alt="Portfolio Chart"
-            className="w-full h-auto rounded-[16px] object-cover shadow-md"
+            className="w-full h-auto rounded-[16px] object-cover shadow-md transition duration-300 ease-in-out"
           />
         </div>
       </div>

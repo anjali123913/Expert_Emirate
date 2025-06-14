@@ -1,13 +1,16 @@
-import React from "react";
-import Image5 from "../assets/platformMT4/image6.png"; // Replace with your actual image path
+import React, { useState } from "react";
+import Image5 from "../assets/platformMT4/image6.png"; // Default image
+import Image5Hover from "../assets/platformMT4/image6-hover.png"; // Hover image
 
 const EliteTradingTeamSection = () => {
+  const [isHovered, setIsHovered] = useState(false);
+
   return (
     <div
       className="w-full flex flex-col md:flex-row items-center justify-between px-4 md:px-12 py-16 gap-10"
       style={{ background: "#000000" }}
     >
-      {/* Left - Heading + Text */}
+      {/* Left - Text */}
       <div className="w-full md:w-1/2">
         <h2
           className="mb-4"
@@ -37,10 +40,9 @@ const EliteTradingTeamSection = () => {
             WebkitTextFillColor: "transparent",
           }}
         >
-          At Expert Emirates, we're more than just a team—we're a powerhouse of market strategists, analysts,
-          and innovators dedicated to helping traders thrive in the fast-paced world of forex and commodities.
-          <br />
-          <br />
+          At Expert Emirates, we're more than just a team—we're a powerhouse of market strategists,
+          analysts, and innovators dedicated to helping traders thrive in the fast-paced world of forex and commodities.
+          <br /><br />
           <strong>Proven Expertise:</strong> Our seasoned professionals bring years of experience in financial markets, ensuring precision-driven insights.
           <br />
           <strong>AI & Data-Backed Strategies:</strong> We combine cutting-edge technology with deep market analysis to deliver high-accuracy signals.
@@ -51,12 +53,16 @@ const EliteTradingTeamSection = () => {
         </p>
       </div>
 
-      Right - Image
-      <div className="w-full md:w-1/2 max-w-md">
+      {/* Right - Hover Image */}
+      <div
+        className="w-full md:w-1/2 max-w-md"
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
+      >
         <img
-          src={Image5}
+          src={isHovered ? Image5Hover : Image5}
           alt="Elite Trading Team"
-          className="w-full h-auto rounded-xl object-cover"                         
+          className="w-full h-auto rounded-xl object-cover transition duration-300 ease-in-out"
         />
       </div>
     </div>

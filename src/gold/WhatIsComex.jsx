@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import comexImg from "../assets/gold/comex-chest.png";
+import comexImgHover from "../assets/portfolio/image1.png"; // Add hover image
 
 const WhatIsComex = () => {
+  const [isHovered, setIsHovered] = useState(false);
+
   return (
     <section className="bg-black text-white px-4 sm:px-6 pt-0 pb-6 font-poppins">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-2">
@@ -30,12 +33,16 @@ const WhatIsComex = () => {
           </p>
         </div>
 
-        {/* Image Section */}
-        <div className="w-full md:w-1/2 max-w-[400px] mx-auto">
+        {/* Image Section with Hover Effect */}
+        <div
+          className="w-full md:w-1/2 max-w-[400px] mx-auto"
+          onMouseEnter={() => setIsHovered(true)}
+          onMouseLeave={() => setIsHovered(false)}
+        >
           <img
-            src={comexImg}
+            src={isHovered ? comexImgHover : comexImg}
             alt="Comex Chest"
-            className="w-full h-auto object-contain rounded-[10px]"
+            className="w-full h-auto object-contain rounded-[10px] transition duration-300 ease-in-out"
           />
         </div>
       </div>
