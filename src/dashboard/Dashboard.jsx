@@ -1,8 +1,9 @@
-import React from 'react';
-import DashboardHeader from './components/DashboardHeader';
-import Sidebar from './components/Sidebar';
-import DashHome from './components/DashHome';
-import WelcomeBanner from './WelcomeBanner';
+import React from "react";
+import DashboardHeader from "./components/DashboardHeader";
+import Sidebar from "./components/Sidebar";
+import WelcomeBanner from "./WelcomeBanner";
+import ButtonGroupSection from "./components/ButtonGroupSection";
+import PricingPage from "./PricingPage";
 
 export default function Dashboard() {
   return (
@@ -16,7 +17,9 @@ export default function Dashboard() {
       <div className="flex-1 flex flex-col">
         <DashboardHeader />
         <main className="p-4">
-          <WelcomeBanner/>
+          <WelcomeBanner />
+          <ButtonGroupSection />
+        <PricingPage/>
         </main>
       </div>
     </div>
