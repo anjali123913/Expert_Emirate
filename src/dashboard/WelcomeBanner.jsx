@@ -26,7 +26,9 @@ export default function WelcomeBanner() {
 
           {/* Plan Info */}
           <div className="flex items-center gap-3 text-sm flex-wrap">
-            <span className="bg-gradient-to-b from-yellow-900 via-yellow-300 to-yellow-900 bg-clip-text text-transparent">• Plan Active</span>
+            <span className="bg-gradient-to-b from-yellow-900 via-yellow-300 to-yellow-900 bg-clip-text text-transparent">
+              • Plan Active
+            </span>
             <span className="hidden sm:inline-block bg-gradient-to-l from-[#452e06] via-[#d1bf5a] via-50% to-[#452e06] text-black  px-6 py-1 text-sm sm:text-base   rounded-full shadow-md hover:brightness-110 transition-all duration-300">
               Expire: 28-Oct-2025
             </span>
