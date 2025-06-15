@@ -35,8 +35,10 @@ import MoneyCard from "./buyplan/MoneyCard";
 import TransactionHistory from "./transaction/TransactionHistory";
 import SettingsPage from "./setting/SettingsPage";
 import SupportSection from "./dashboard/SupportSection";
+import { BrowserRouter as Router } from "react-router-dom";
+import AppRoutes from "./AppRoutes";
 
-function App() {
+export default function App() {
   return (
     <div className="">
       <Router>
@@ -81,7 +83,9 @@ function App() {
         <Footer />
       </Router>
     </div>
+
+    <Router>
+      <AppRoutes />
+    </Router>
   );
 }
-
-export default App;
