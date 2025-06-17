@@ -18,3 +18,7 @@ const SupportSection = () => {
 };
 
 export default SupportSection;
+<<<<<<< HEAD
+=======
+ 
+>>>>>>> 0794325 (dashboard pages)

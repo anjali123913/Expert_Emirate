@@ -6,7 +6,11 @@ const categories = [
   { label: "Crypto Currency", path: "/crypto" },
   { label: "Portfolio Management", path: "/portfolio" },
   { label: "Funded Accounts", path: "/funded" },
+<<<<<<< HEAD
   // { label: "Trading Bot", path: "/bot" },
+=======
+  { label: "Trading Bot", path: "/bot" },
+>>>>>>> 0794325 (dashboard pages)
 ];
 
 const CategoryTabs = () => {
