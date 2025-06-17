@@ -16,11 +16,23 @@ export default function Sidebar() {
   const [activeIndex, setActiveIndex] = useState(0); // Default: first item active
 
   const menuItems = [
-    { icon: <FiLayout size={20} />, label: "Overview" },
-    { icon: <BiSolidDashboard size={20} />, label: "Dashboard" },
-    { icon: <FiRepeat size={20} />, label: "Sync" },
-    { icon: <FiSettings size={20} />, label: "Settings" },
-    { icon: <FiLogOut size={20} />, label: "Logout" },
+    { icon: <FiLayout size={20} />, label: "Overview", url: "/dashboard" },
+    {
+      icon: <BiSolidDashboard size={20} />,
+      label: "Dashboard",
+      url: "/dashboard",
+    },
+    {
+      icon: <FiRepeat size={20} />,
+      label: "Sync",
+      url: "/dashboard/transaction-history",
+    },
+    {
+      icon: <FiSettings size={20} />,
+      label: "Settings",
+      url: "/dashboard/setting",
+    },
+    { icon: <FiLogOut size={20} />, label: "Logout", url: "/dashboard/logout" },
   ];
 
   return (
@@ -42,14 +54,19 @@ export default function Sidebar() {
             className="bg-[#1a1921] hover:bg-gradient-to-l hover:from-[#452e06] hover:via-[#d1bf5a] hover:via-50% hover:to-[#452e06] text-white text-sm sm:text-base font-bold rounded-full hover:text-black p-2 transition"
             onClick={() => setIsCollapsed(!isCollapsed)}
           >
-            {isCollapsed ? <FiArrowRight size={16} /> : <FiArrowLeft size={16} />}
+            {isCollapsed ? (
+              <FiArrowRight size={16} />
+            ) : (
+              <FiArrowLeft size={16} />
+            )}
           </button>
         </div>
 
         {/* Menu Items */}
         <div className="space-y-2">
           {menuItems.map((item, index) => (
-            <div
+            <Link
+              to={item.url}
               key={index}
               onClick={() => setActiveIndex(index)}
               className={`flex items-center gap-3 px-4 py-2 cursor-pointer transition rounded-lg group ${
@@ -63,7 +80,7 @@ export default function Sidebar() {
               {!isCollapsed && (
                 <span className="text-sm font-medium">{item.label}</span>
               )}
-            </div>
+            </Link>
           ))}
         </div>
       </div>

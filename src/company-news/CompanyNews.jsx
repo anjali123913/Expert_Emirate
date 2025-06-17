@@ -3,8 +3,8 @@ import CompanyNewsBanner from "./CompanyNewsBanner";
 import LatestNews from "./LatestNews";
 import CommunitySection from "../forecastAwards/CommunitySection";
 import FeatureSection from "../homepage/FeatureSection";
-import SearchSection from "../blog/SearchSection";
-import BlogGrid from "../blog/BlogGrid";
+import BlogFilters from "./BlogFilters";
+import BlogSection from "./BlogSection";
 
 export default function CompanyNews() {
   return (
@@ -12,8 +12,9 @@ export default function CompanyNews() {
      <CompanyNewsBanner/>
      <LatestNews/>
      <CommunitySection/>
-     <SearchSection/>
-     <BlogGrid/>
+     {/* <SearchSection/> */}
+     <BlogFilters/>
+     <BlogSection/>
      <FeatureSection/>
     </div>
   );

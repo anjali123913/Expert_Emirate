@@ -5,11 +5,8 @@ import bgImg from "../../assets/Rectanglecutomer.png";
 export default function CustomerDashboard() {
   return (
     <div
-      className="group flex flex-col md:flex-row items-center justify-between gap-4 px-6 py-4 border border-gray-900 rounded-3xl transition-all duration-500 hover:border-yellow-500
-        max-w-[90vw] md:max-w-[3300px] mx-auto"
+      className="group flex flex-col md:flex-row items-center justify-between gap-6 px-4 sm:px-6 md:px-10 py-10 border border-gray-900 rounded-3xl transition-all duration-500 hover:border-yellow-500 max-w-[95vw] md:max-w-[1300px] mx-auto"
       style={{
-        height: "388px",
-        marginLeft: "-40px", // Left side shift
         backgroundImage: `url(${bgImg})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
@@ -18,12 +15,12 @@ export default function CustomerDashboard() {
     >
       {/* LEFT CONTENT */}
       <div className="w-full md:w-[60%]">
-        <h1 className="text-2xl md:text-3xl font-bold text-white transition-all duration-500 group-hover:bg-gradient-to-r group-hover:from-[#FFE976] group-hover:via-[#C0971C] group-hover:to-[#FFE976] group-hover:bg-clip-text group-hover:text-transparent">
+        <h1 className="text-2xl sm:text-3xl font-bold text-white transition-all duration-500 group-hover:bg-gradient-to-r group-hover:from-[#FFE976] group-hover:via-[#C0971C] group-hover:to-[#FFE976] group-hover:bg-clip-text group-hover:text-transparent">
           ABOUT US
         </h1>
 
-        <p className="text-sm md:text-base mt-4 text-white leading-relaxed">
-          AT EXPERT EMIRATES, WE DON’T JUST PROVIDE FOREX AND CRYPTO SIGNALS—
+        <p className="text-sm sm:text-base mt-4 text-white leading-relaxed">
+          AT EXPERT EMIRATES, WE DON’T JUST PROVIDE FOREX AND CRYPTO SIGNALS —
           WE UNLOCK PROFITABLE OPPORTUNITIES TAILORED FOR EVERY TRADER. BACKED
           BY CUTTING-EDGE AI, EXPERT ANALYSIS, AND MARKET PRECISION, OUR SIGNALS
           TURN UNCERTAINTY INTO CALCULATED SUCCESS.
@@ -35,7 +32,7 @@ export default function CustomerDashboard() {
       </div>
 
       {/* IMAGE */}
-      <div className="w-full md:w-[320px] mt-6 md:mt-0">
+      <div className="w-full max-w-[300px] md:w-[320px] mt-8 md:mt-0">
         <img
           src={arrowImg}
           alt="Arrow"

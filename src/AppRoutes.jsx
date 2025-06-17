@@ -3,6 +3,9 @@ import { Routes, Route, useLocation } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import ScrollToTop from "./utils/ScrollToTop";
+import BuyPlan from "./dashboard/BuyPlan";
+import UserSettings from "./dashboard/UserSettings";
+import TransactionHistory from "./dashboard/TransactionHistory";
 
 // Lazy-loaded components
 const HomePage = lazy(() => import("./pages/Home"));
@@ -63,6 +66,11 @@ export default function AppRoutes() {
           <Route path="/otp-verification" element={<OtpVerificationPage />} />
           <Route path="/reset-password" element={<ResetPasswordPage />} />
           <Route path="/dashboard" element={<Dashboard />} />
+         
+          <Route path="/dashboard/buy-plan" element={<BuyPlan />} />
+          <Route path="/dashboard/setting" element={<UserSettings />} />
+          <Route path="/dashboard/transaction-history" element={<TransactionHistory />} />
+
         </Routes>
       </Suspense>
 

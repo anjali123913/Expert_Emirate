@@ -7,8 +7,6 @@ import CommunitySection from "./CommunitySection";
 import WhyChooseSection from "./WhyChooseSection";
 import KeyBenefits from "./KeyBenefits ";
 import FeatureSection from "../homepage/FeatureSection";
-import SearchSection from "../blog/SearchSection";
-import BlogGrid from "../blog/BlogGrid";
 
 const allAwards = {
   2025: [
@@ -158,7 +156,7 @@ const AwardsSection = () => {
         <WhyChooseSection />
         <CommunitySection />
         <KeyBenefits />
-        <SearchSection/>
+        <BlogFilters/>
         <BlogGrid/>
         <FeatureSection />
       </div>

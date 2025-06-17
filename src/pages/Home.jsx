@@ -19,6 +19,7 @@ import Reviews from "../homepage/Reviews";
 import FeatureSection from "../homepage/FeatureSection";
 import CurrencyMarket from "../forex/CurrencyMarket";
 import StockMarcketChart from "../homepage/StockMarcketChart";
+import StatsCards from "../homepage/StatsCards";
 const HomePage = () => {
   return (
     <div className="bg-dark text-white font-sans">
@@ -38,6 +39,7 @@ const HomePage = () => {
       <InsightSection/>
       <ExpertMotion/>
       <WorldMapLabels/>
+      <StatsCards/>
       <AwardsSection/>
       <TradersFeedbackSection/>
       <Reviews/>
