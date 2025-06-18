@@ -35,35 +35,30 @@ const supportData = [
 
 const SupportOptions = () => {
   return (
-    <section
-      className="bg-black text-white py-16 px-4 font-poppins"
-      style={{
-        fontFamily: "Poppins",
-      }}
-    >
+    <section className="bg-black text-white py-16 px-4 font-poppins">
       <div className="max-w-7xl mx-auto flex flex-col gap-10 items-center">
         {/* First Row - 2 Cards */}
         <div className="flex flex-col md:flex-row justify-center gap-6 w-full mb-20">
           {supportData.slice(0, 2).map((item, index) => (
             <div
               key={index}
-              className="relative  text-center rounded-3xl px-5 py-10 border border-l-yellow-500 border-t-yellow-500 border-r-yellow-500 border-b-black  shadow-md w-full md:w-[calc(50%-5rem)]"
-              style={{
-                background: `rgba(29, 27, 37, 1)`,
-              }}
+              className="relative group text-center rounded-3xl pt-20 px-5 pb-10 border-l-yellow-500 border-t-yellow-500 border-r-yellow-500 border-b-black border shadow-md w-full md:w-[calc(50%-1rem)] transition-all duration-300 hover:scale-[1.02] bg-[#1D1B25] hover:bg-gradient-to-b hover:from-[#e4a020] hover:via-yellow-300 hover:to-[#e4a020]"
             >
-              <div className="w-28 h-28 mx-auto -mt-28 mb-4">
+              {/* Floating Image */}
+              <div className="absolute -top-14 left-1/2 transform -translate-x-1/2 w-28 h-28 transition-all duration-300 group-hover:-translate-y-2">
                 <img
                   src={item.icon}
                   alt="support-icon"
-                  className="object-cover"
+                  className="w-full h-full object-contain"
                   style={{ filter: "drop-shadow(2px 4px 6px rgba(0,0,0,0.4))" }}
                 />
               </div>
-              <h3 className="text-xl font-sans font-normal leading-tight tracking-wide text-center mb-2">
+
+              {/* Text */}
+              <h3 className="text-xl font-bold font-sans mb-2 group-hover:text-black transition-colors duration-300">
                 {item.title}
               </h3>
-              <p className="mt-3 text-md font-sans font-normal leading- tracking-widest text-gray-300 text-[14px]  text-center w-5/6 mx-auto">
+              <p className="text-sm text-gray-300 w-5/6 mx-auto group-hover:text-black transition-colors duration-300">
                 {item.desc}
               </p>
             </div>
@@ -71,27 +66,27 @@ const SupportOptions = () => {
         </div>
 
         {/* Second Row - 3 Cards */}
-        <div className="flex flex-col md:flex-row md:flex-wrap justify-center gap-6 w-full my-12">
+        <div className="flex flex-col md:flex-row md:flex-wrap justify-center gap-6 w-full">
           {supportData.slice(2).map((item, index) => (
             <div
               key={index + 2}
-              className="relative  text-center rounded-xl px-2 py-4 border border-yellow-500 shadow-md w-full md:w-[calc(33.333%-1rem)]"
-              style={{
-                background: `rgba(29, 27, 37, 1)`,
-              }}
+              className="relative group text-center rounded-2xl pt-20 px-5 pb-10 border-l-yellow-500 border-t-yellow-500 border-r-yellow-500 border-b-black border shadow-md w-full md:w-[calc(33.333%-1rem)] transition-all duration-300 hover:scale-[1.02] bg-[#1D1B25] hover:bg-gradient-to-b hover:from-[#e4a020] hover:via-yellow-300 hover:to-[#e4a020]"
             >
-              <div className="w-28 h-28 mx-auto -mt-24 mb-4">
+              {/* Floating Image */}
+              <div className="absolute -top-14 left-1/2 transform -translate-x-1/2 w-28 h-28 transition-all duration-300 group-hover:-translate-y-2">
                 <img
                   src={item.icon}
                   alt="support-icon"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-contain"
                   style={{ filter: "drop-shadow(2px 4px 6px rgba(0,0,0,0.4))" }}
                 />
               </div>
-              <h3 className="text-xl font-sans font-normal leading-tight tracking-wide text-center mb-2">
+
+              {/* Text */}
+              <h3 className="text-xl font-bold font-sans mb-2 group-hover:text-black transition-colors duration-300">
                 {item.title}
               </h3>
-              <p className="mt-3 text-md font-sans font-normal leading-relaxed tracking-widest text-gray-300 text-[14px]  text-center mx-auto">
+              <p className="text-sm text-gray-300 w-5/6 mx-auto group-hover:text-black transition-colors duration-300">
                 {item.desc}
               </p>
             </div>

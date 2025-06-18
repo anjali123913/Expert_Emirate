@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 import Icon1 from "../assets/aboutus/image6.png";
 import Icon2 from "../assets/aboutus/image7.png";
 import Icon3 from "../assets/aboutus/image8.png";
@@ -30,26 +31,35 @@ const cardData = [
 const MissionVisionSection = () => {
   return (
     <div className="w-full px-4 md:px-12 py-20 bg-black text-white font-[Poppins]">
-      {/* Heading Section */}
-      <div className="text-center mb-24 mt-14">
-        <h2 
-          className="text-4xl font-bold bg-gradient-to-t from-transparent via-yellow-300 to-transparent bg-clip-text text-transparent">
+      {/* Heading Section with animation */}
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.7 }}
+        viewport={{ once: true }}
+        className="text-center mb-24 mt-14"
+      >
+        <h2 className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-t from-[#281000] via-[#FFE976] to-[#281000]">
           Our Mission & Vision:
         </h2>
         <h3 className="text-[28px] sm:text-[32px] font-semibold text-white mt-5">
           Leading the Future of Trading
         </h3>
-      </div>
+      </motion.div>
 
       {/* Cards Section */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 mt-10">
         {cardData.map((card, idx) => (
-          <div
+          <motion.div
             key={idx}
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: idx * 0.15 }}
+            viewport={{ once: true }}
             className="relative group bg-[#0D0D0D] border border-t-[#C0971C] border-gray-900 p-6 pt-32 pb-12 rounded-xl text-center hover:shadow-lg transition-transform duration-300 hover:-translate-y-2"
             style={{ borderBottom: "1px solid #C0971C" }}
           >
-            {/* Image: Bigger size and overlapping the card */}
+            {/* Icon Image */}
             <div className="absolute -top-[50px] left-1/2 -translate-x-1/2 w-[140px] h-[140px] transition-all duration-300 group-hover:-translate-y-2">
               <img
                 src={card.icon}
@@ -58,16 +68,18 @@ const MissionVisionSection = () => {
               />
             </div>
 
-            {/* Title with hover gradient effect */}
-            <h4 className="text-md font-semibold mt-12 mb-2 text-white transition-all duration-300 
-              group-hover:bg-gradient-to-t group-hover:from-yellow-300 group-hover:to-transparent 
+            {/* Title with gradient hover */}
+            <h4
+              className="text-lg font-semibold mt-12 mb-2 text-white transition-all duration-300
+              group-hover:bg-gradient-to-t group-hover:from-yellow-300 group-hover:to-white
               group-hover:bg-clip-text group-hover:text-transparent"
             >
               {card.title}
             </h4>
 
+            {/* Description */}
             <p className="text-sm text-[#CCCCCC]">{card.text}</p>
-          </div>
+          </motion.div>
         ))}
       </div>
     </div>

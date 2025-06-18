@@ -13,14 +13,14 @@ const EliteTradingTeamSection = () => {
       {/* Left - Text */}
       <div className="w-full md:w-1/2">
         <h2
-          className="mb-4"
+          className="mb-2"
           style={{
             fontFamily: "Poppins",
             fontWeight: 600,
             fontSize: "32px",
-            lineHeight: "55px",
+            lineHeight: "48px",
             background:
-              "linear-gradient(180deg, #281000 0%, #C0971C 25.5%, #FFE976 49.5%, #C0971C 74.5%, #281000 100%)",
+              "linear-gradient(180deg, #281000 5.95%, #C0971C 29.93%, #FFE976 52.51%, #C0971C 76.02%, #281000 100%)",
             WebkitBackgroundClip: "text",
             WebkitTextFillColor: "transparent",
           }}
@@ -29,20 +29,20 @@ const EliteTradingTeamSection = () => {
         </h2>
 
         <p
+          className="space-y-1"
           style={{
             fontFamily: "Poppins",
             fontWeight: 400,
-            fontSize: "18px",
-            lineHeight: "100%",
-            letterSpacing: "0.12em",
+            fontSize: "16px",
+            lineHeight: "1.5",
+            letterSpacing: "0.04em",
             background: "linear-gradient(90deg, #FFFFFF 0%, #999999 100%)",
             WebkitBackgroundClip: "text",
             WebkitTextFillColor: "transparent",
           }}
         >
-          At Expert Emirates, we're more than just a team—we're a powerhouse of market strategists,
-          analysts, and innovators dedicated to helping traders thrive in the fast-paced world of forex and commodities.
-          <br /><br />
+          At Expert Emirates, we're more than just a team—we're a powerhouse of market strategists, analysts, and innovators dedicated to helping traders thrive in the fast-paced world of forex and commodities.
+          <br />
           <strong>Proven Expertise:</strong> Our seasoned professionals bring years of experience in financial markets, ensuring precision-driven insights.
           <br />
           <strong>AI & Data-Backed Strategies:</strong> We combine cutting-edge technology with deep market analysis to deliver high-accuracy signals.

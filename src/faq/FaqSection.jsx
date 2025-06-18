@@ -27,7 +27,7 @@ export default function FaqSection() {
   };
 
   return (
-    <section className="w-full bg-black text-white px-4 sm:px-6 lg:px-0 py-16 pt-20">
+    <section className="w-full bg-black text-white px-4 sm:px-6 lg:px-10 py-16">
       <div className="max-w-7xl mx-auto">
         {/* Heading */}
         <h2
@@ -50,9 +50,9 @@ export default function FaqSection() {
           {faqData.map((question, index) => (
             <div
               key={index}
-              className={`rounded-xl ${
+              className={`rounded-full sm:rounded-3xl md:rounded-[30px] ${
                 openIndex === index ? "bg-gray-800" : "bg-[#121117]"
-              } px-5 sm:px-6 py-4 border border-[#333] overflow-hidden transition-all duration-500 ${
+              } px-5 sm:px-6 py-4 border border-[#2c2b30] overflow-hidden transition-all duration-500 ${
                 openIndex === index ? "max-h-96" : "max-h-[60px]"
               }`}
             >
@@ -61,9 +61,12 @@ export default function FaqSection() {
                 onClick={() => toggleFAQ(index)}
                 className="w-full text-left flex justify-between items-center"
               >
-                <span className="text-sm sm:text-base font-medium">
+                <span className="flex items-center text-sm sm:text-base font-medium">
+                  {/* Diamond Icon */}
+                  <span className="w-2.5 h-2.5 rotate-45 bg-gradient-to-br from-[#0ea5e9] to-[#2563eb] mr-3 rounded-sm"></span>
                   {question}
                 </span>
+                {/* Arrow Icon */}
                 <span
                   className={`ml-4 transform transition-transform duration-300 w-2.5 h-2.5 border-t-2 border-r-2 border-gray-500 ${
                     openIndex === index ? "rotate-135" : "rotate-45"

@@ -31,10 +31,3 @@ const SupportSection = () => {
 };
 
 export default SupportSection;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
- 
->>>>>>> 0794325 (dashboard pages)
-=======
->>>>>>> 4a713d2 (this is expert emirate)
