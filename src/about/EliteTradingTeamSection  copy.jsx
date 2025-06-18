@@ -1,19 +1,16 @@
 import React, { useState } from "react";
-import Image5 from "../assets/platformMT4/image6.png"; // Default image
-import Image5Hover from "../assets/platformMT4/image6-hover.png"; // Hover image
+import Image5 from "../assets/platformMT4/image6.png";
+import Image5Hover from "../assets/platformMT4/image6-hover.png";
 
 const EliteTradingTeamSection = () => {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
-    <div
-      className="w-full flex flex-col md:flex-row items-center justify-between px-4 md:px-12 py-16 gap-10"
-      style={{ background: "#000000" }}
-    >
+    <div className="w-full flex flex-col md:flex-row items-center justify-between px-4 md:px-12 py-16 gap-10 bg-black">
       {/* Left - Text */}
       <div className="w-full md:w-1/2">
         <h2
-          className="mb-2"
+          className="mb-4"
           style={{
             fontFamily: "Poppins",
             fontWeight: 600,
@@ -29,12 +26,11 @@ const EliteTradingTeamSection = () => {
         </h2>
 
         <p
-          className="space-y-1"
           style={{
             fontFamily: "Poppins",
             fontWeight: 400,
             fontSize: "16px",
-            lineHeight: "1.5",
+            lineHeight: "1.7",
             letterSpacing: "0.04em",
             background: "linear-gradient(90deg, #FFFFFF 0%, #999999 100%)",
             WebkitBackgroundClip: "text",
@@ -42,7 +38,7 @@ const EliteTradingTeamSection = () => {
           }}
         >
           At Expert Emirates, we're more than just a team—we're a powerhouse of market strategists, analysts, and innovators dedicated to helping traders thrive in the fast-paced world of forex and commodities.
-          <br />
+          <br /><br />
           <strong>Proven Expertise:</strong> Our seasoned professionals bring years of experience in financial markets, ensuring precision-driven insights.
           <br />
           <strong>AI & Data-Backed Strategies:</strong> We combine cutting-edge technology with deep market analysis to deliver high-accuracy signals.
@@ -55,7 +51,7 @@ const EliteTradingTeamSection = () => {
 
       {/* Right - Hover Image */}
       <div
-        className="w-full md:w-1/2 max-w-md"
+        className="w-full md:w-1/2 max-w-md cursor-pointer"
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
       >

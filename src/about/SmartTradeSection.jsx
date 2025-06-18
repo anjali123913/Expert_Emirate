@@ -31,7 +31,7 @@ const SmartTradeSection = () => {
             WebkitTextFillColor: "transparent",
           }}
         >
-          Master the Markets with Expert Emirates – Your Path to Financial Success
+          Master the Markets with Expert Emirates–Your Path to Financial Success
         </h2>
 
         <p

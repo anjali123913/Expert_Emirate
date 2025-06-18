@@ -15,13 +15,17 @@ export default {
           "0%": { transform: "translateX(100%)" },
           "100%": { transform: "translateX(-100%)" },
         },
+        scrollPingPong: {
+          "0%": { transform: "translateX(0%)" },
+          "100%": { transform: "translateX(-50%)" },
+        },
       },
       animation: {
         smoothBounce: "smoothBounce 3s ease-in-out infinite",
-        marqueeLeft: "marqueeLeft 20s linear infinite",
+        marqueeLeft: "marqueeLeft 60s linear infinite",
+        scrollPingPong: "scrollPingPong 30s linear infinite alternate", // 👈 this is for back-and-forth
       },
     },
   },
   plugins: [],
 };
-

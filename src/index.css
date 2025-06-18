@@ -43,7 +43,7 @@ body{
   -webkit-text-fill-color: transparent;
   background-clip: text;
   color: transparent;
-  font-family: Arial, sans-serif;
+  /* font-family: Arial, sans-serif; */
 }
 
 :root{
