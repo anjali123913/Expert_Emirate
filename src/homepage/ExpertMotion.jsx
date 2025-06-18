@@ -9,7 +9,7 @@ const ExpertMotion = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setReverse((prev) => !prev);
-    }, 8000); // Change direction every 8 seconds
+    }, 3000); // Change direction every 8 seconds
     return () => clearInterval(interval);
   }, []);
 

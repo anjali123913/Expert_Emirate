@@ -1,4 +1,6 @@
 import React from 'react';
+import VerifyIcon from '../assets/review/Verify.png';
+
 
 const reviews = [
   {
@@ -56,7 +58,11 @@ const StarRating = () => (
     {"★★★★★".split("").map((_, i) => (
       <span key={i} className="text-yellow-400">★</span>
     ))}
-    <span className="ml-2 text-sm text-gray-400">✔ Verified</span>
+    <span className="ml-2 flex items-center text-sm text-gray-400">
+  <img src={VerifyIcon} alt="Verified" className="w-4 h-4 mr-1" />
+  Verified
+</span>
+
   </div>
 );
 

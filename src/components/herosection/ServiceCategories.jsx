@@ -4,7 +4,7 @@ import wave from "../../assets/stayar.png";
 
 const ServicesCard = () => {
   return (
-    <div className="bg-black rounded-xl p-6 min-h-[400px] w-full max-w-xl text-white relative overflow-hidden">
+    <div className="bg-black rounded-xl p-6 min-h-[400px] h-full w-full max-w-xl text-white relative overflow-hidden">
       {/* Background effect */}
       <div className="absolute inset-0 z-0">
         <img

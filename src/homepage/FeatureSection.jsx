@@ -60,9 +60,15 @@ export default function FeatureSection() {
             Want to get started?
           </p>
           <div className="flex justify-center md:justify-start">
-            <button className="bg-gradient-to-l from-[#452e06] via-[#d1bf5a] via-50% to-[#452e06] text-black font-semibold px-6 py-2 rounded-full hover:scale-105 transition-all duration-300">
-              Join Expert Emirates
-            </button>
+            <button
+  className="text-black font-semibold px-6 py-2 rounded-full hover:scale-105 transition-all duration-300"
+  style={{
+    background: 'linear-gradient(86.31deg, #281000 0%, #C0971C 25%, #FFE976 50.5%, #C0971C 74.5%, #281000 100%)'
+  }}
+>
+  Join Expert Emirates
+</button>
+
           </div>
         </div>
 

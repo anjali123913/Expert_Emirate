@@ -49,13 +49,14 @@ const HeroSection = () => {
           transition={{ duration: 1 }}
           className="max-w-4xl text-left"
         >
-      <div className="inline-flex items-center justify-center my-9">
-  <div className="p-[1.5px] rounded-full bg-gradient-to-b from-[#7C4B00] to-[#FFE9A0]">
+        <div className="inline-flex items-center justify-center my-9">
+  <div className="pt-[1px] pr-[0px] pb-[1px] pl-[0px] rounded-b-full rounded-l-full rounded-r-full bg-gradient-to-b from-[#7C4B00] to-[#FFE9A0]">
     <button className="rounded-full bg-[#0F0F0F] px-6 py-[10px] text-white font-poppins font-medium text-base leading-[100%] tracking-[0.12em]">
       Turning Hopes Into Reality
     </button>
   </div>
 </div>
+
 
 
 

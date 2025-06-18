@@ -26,10 +26,19 @@ const SecondHero = () => {
 
 
         {/* Dashboard & Service Category */}
-        <div className="flex flex-col lg:flex-row justify-between items-center lg:items-start gap-6">
+        {/* <div className="flex flex-col lg:flex-row justify-between items-center lg:items-start gap-6">
           <CustomerDashboard />
           <ServiceCategories />
-        </div>
+        </div> */}
+        <div className="flex flex-col lg:flex-row justify-between items-stretch gap-6">
+  <div className="w-full lg:w-[60%] h-full">
+    <CustomerDashboard />
+  </div>
+  <div className="w-full lg:w-[40%] h-full">
+    <ServiceCategories />
+  </div>
+</div>
+
 
         {/* Marquee Slider */}
         <div>

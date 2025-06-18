@@ -5,18 +5,22 @@ import logo from "../assets/navlogo.png";
 
 const Footer = () => {
   return (
-    <footer className="bg-black text-white px-4 sm:px-6 py-10 font-poppins text-base leading-4 font-normal">
+    <footer className=" text-white px-4 sm:px-6 py-10 font-poppins text-base leading-4 font-normal" style={{background: "rgba(10,9,13,1"}}>
       {/* Top Section */}
       <div className="flex flex-col sm:flex-row justify-between items-center mb-6 border-b border-gray-700 pb-4 gap-4 sm:gap-0">
         <div className="w-40 sm:w-48">
           <img src={logo} alt="logo expert emirates" className="w-full h-auto" />
         </div>
         <a
-          href="#top"
-          className="bg-gradient-to-l from-[#452e06] via-[#d1bf5a] via-50% to-[#452e06] text-black rounded-full px-6 py-2 text-sm sm:text-base font-bold transition"
-        >
-          Go to Top
-        </a>
+  href="#top"
+  className="text-black rounded-full px-6 py-2 text-sm sm:text-base font-bold transition"
+  style={{
+    background: 'linear-gradient(86.31deg, #281000 0%, #C0971C 25%, #FFE976 50.5%, #C0971C 74.5%, #281000 100%)'
+  }}
+>
+  Go to Top
+</a>
+
       </div>
 
       {/* Divider */}
