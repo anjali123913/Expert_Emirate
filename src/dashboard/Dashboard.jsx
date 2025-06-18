@@ -4,6 +4,7 @@ import Sidebar from "./components/Sidebar";
 import WelcomeBanner from "./WelcomeBanner";
 import ButtonGroupSection from "./components/ButtonGroupSection";
 import PricingPage from "./PricingPage";
+import SupportSection from "./SupportSection";
 
 export default function Dashboard() {
   return (
@@ -20,6 +21,7 @@ export default function Dashboard() {
           <WelcomeBanner />
           <ButtonGroupSection />
         <PricingPage/>
+        <SupportSection/>
         </main>
       </div>
     </div>
