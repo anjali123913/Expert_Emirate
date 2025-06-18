@@ -1,21 +1,13 @@
-<<<<<<< HEAD
 import React, { useState } from "react";
 import comexImg from "../assets/gold/comex-chest.png";
-import comexImgHover from "../assets/portfolio/image1.png"; // Add hover image
+import comexImgHover from "../assets/portfolio/image1.png"; // Hover image
 
 const WhatIsComex = () => {
   const [isHovered, setIsHovered] = useState(false);
 
-=======
-import React from "react";
-import comexImg from "../assets/gold/comex-chest.png";
-
-const WhatIsComex = () => {
->>>>>>> 0794325 (dashboard pages)
   return (
     <section className="bg-black text-white px-4 sm:px-6 pt-0 pb-6 font-poppins">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-2">
-        
         {/* Text Section */}
         <div className="w-full md:w-1/2">
           <h2
@@ -36,11 +28,15 @@ const WhatIsComex = () => {
               fontWeight: 400,
             }}
           >
-            COMEX (Commodity Exchange) is the world's leading market for trading precious metals such as gold, silver, copper, and other commodities. As a division of the Chicago Mercantile Exchange (CME Group), COMEX provides a highly liquid marketplace for traders, investors, and institutions to buy and sell metal futures and options with transparency and efficiency.
+            COMEX (Commodity Exchange) is the world's leading market for trading
+            precious metals such as gold, silver, copper, and other commodities.
+            As a division of the Chicago Mercantile Exchange (CME Group), COMEX
+            provides a highly liquid marketplace for traders, investors, and
+            institutions to buy and sell metal futures and options with
+            transparency and efficiency.
           </p>
         </div>
 
-<<<<<<< HEAD
         {/* Image Section with Hover Effect */}
         <div
           className="w-full md:w-1/2 max-w-[400px] mx-auto"
@@ -51,14 +47,6 @@ const WhatIsComex = () => {
             src={isHovered ? comexImgHover : comexImg}
             alt="Comex Chest"
             className="w-full h-auto object-contain rounded-[10px] transition duration-300 ease-in-out"
-=======
-        {/* Image Section */}
-        <div className="w-full md:w-1/2 max-w-[400px] mx-auto">
-          <img
-            src={comexImg}
-            alt="Comex Chest"
-            className="w-full h-auto object-contain rounded-[10px]"
->>>>>>> 0794325 (dashboard pages)
           />
         </div>
       </div>

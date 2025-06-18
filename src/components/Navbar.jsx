@@ -38,7 +38,7 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="absolute top-0 right-0 w-full z-20 text-white font-poppins text-base tracking-[0.12em]">
+    <nav className="absolute bg-black top-0 right-0 w-full z-20 text-white font-poppins text-base tracking-[0.12em]">
       <div className="flex justify-between items-center p-2 md:px-15 px-3">
         {/* Logo */}
         <Link to="/" className="flex items-center gap-2">
@@ -176,4 +176,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default Navbar;

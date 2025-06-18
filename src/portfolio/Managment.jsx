@@ -1,11 +1,6 @@
-<<<<<<< HEAD
 import React, { useState } from "react";
 import chartImg from "../assets/FundedAccounts/grouthcoin.png";
 import chartImgHover from "../assets/portfolio/image1.png"; // Hover image
-=======
-import React from "react";
-import chartImg from "../assets/FundedAccounts/grouthcoin.png"; // Update if needed
->>>>>>> 0794325 (dashboard pages)
 
 const Managment = () => {
   const [isHovered, setIsHovered] = useState(false);
