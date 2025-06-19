@@ -40,7 +40,7 @@ export default function SignUp() {
   };
 
   return (
-    <div className="flex pt-12">
+    <div className="flex">
       {/* Left Side - Form */}
       <div className="w-1/2 bg-black text-white flex items-center justify-center">
         <div className="w-full max-w-md p-8">

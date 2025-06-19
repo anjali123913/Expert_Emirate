@@ -28,19 +28,33 @@ const CopyTrading = lazy(() => import("./copytrading/CopyTrading"));
 const LoginPage = lazy(() => import("./authPages/Login"));
 const SignUp = lazy(() => import("./authPages/SignUp"));
 const ForgotPassword = lazy(() => import("./authPages/ForgetPassword"));
-const OtpVerificationPage = lazy(() => import("./authPages/OtpVerificationPage"));
-const ResetPasswordPage = lazy(() => import("./authPages/ResetPasswordPage"));
+const OtpVerificationPage = lazy(() =>
+  import("./authPages/OtpVerificationPage")
+);
+const ResetPasswordPage = lazy(() =>
+  import("./authPages/ResetPasswordPage")
+);
 const Dashboard = lazy(() => import("./dashboard/Dashboard"));
 
 export default function AppRoutes() {
   const location = useLocation();
-  const hideNavbarFooter = location.pathname.startsWith("/dashboard");
+
+  const authRoutes = [
+    "/login",
+    "/sign-up",
+    "/forgot-password",
+    "/otp-verification",
+    "/reset-password",
+  ];
+
+  const hideNavbarFooter =
+    location.pathname.startsWith("/dashboard") ||
+    authRoutes.includes(location.pathname);
 
   return (
     <>
       {!hideNavbarFooter && <Navbar />}
       <ScrollToTop />
-
       <Suspense fallback={<div className="text-center text-white py-10">Loading...</div>}>
         <Routes>
           <Route path="/" element={<HomePage />} />
@@ -66,14 +80,11 @@ export default function AppRoutes() {
           <Route path="/otp-verification" element={<OtpVerificationPage />} />
           <Route path="/reset-password" element={<ResetPasswordPage />} />
           <Route path="/dashboard" element={<Dashboard />} />
-         
           <Route path="/dashboard/buy-plan" element={<BuyPlan />} />
           <Route path="/dashboard/setting" element={<UserSettings />} />
           <Route path="/dashboard/transaction-history" element={<TransactionHistory />} />
-
         </Routes>
       </Suspense>
-
       {!hideNavbarFooter && <Footer />}
     </>
   );

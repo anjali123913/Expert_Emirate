@@ -1,10 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import binanceImage from "../assets/awards/binance.png";
+import binanceHover from "../assets/awards/binance-hover.png"; // Hover image
 
 const KeyBenefits = () => {
+  const [isHovered, setIsHovered] = useState(false);
+
   return (
     <section className="bg-black text-white py-12 px-4 sm:px-6 md:px-16">
-      {/* Gradient Heading */}
+      {/* Heading */}
       <h2 className="text-3xl md:text-4xl font-bold mb-8 bg-gradient-to-b from-yellow-900 via-yellow-300 to-yellow-900 bg-clip-text text-transparent">
         Key Benefits
       </h2>
@@ -36,7 +39,7 @@ const KeyBenefits = () => {
             <li key={index} className="flex items-start gap-3">
               <span className="text-yellow-400 text-lg mt-1">●</span>
               <p>
-                <strong className=" bg-gradient-to-b from-yellow-900 via-yellow-300 to-yellow-900 bg-clip-text text-transparent font-semibold tracking-wider leading-relaxed">
+                <strong className="bg-gradient-to-b from-yellow-900 via-yellow-300 to-yellow-900 bg-clip-text text-transparent font-semibold tracking-wider leading-relaxed">
                   {item.title}:
                 </strong>{" "}
                 <span className="text-sm font-semibold tracking-wider leading-relaxed text-gray-200 px-2">
@@ -47,12 +50,14 @@ const KeyBenefits = () => {
           ))}
         </ul>
 
-        {/* Right Image */}
+        {/* Right: Hoverable Image */}
         <div className="w-full max-w-md hidden md:block rounded-lg overflow-hidden">
           <img
-            src={binanceImage}
+            src={isHovered ? binanceHover : binanceImage}
             alt="Benefits Visual"
-            className="w-full h-auto object-cover rounded-lg shadow-lg"
+            className="w-full h-auto object-cover rounded-lg shadow-lg transition duration-300"
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
           />
         </div>
       </div>
