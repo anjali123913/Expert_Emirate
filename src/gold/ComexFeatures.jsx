@@ -43,7 +43,7 @@ const ComexFeatures = () => {
         {features.map(({ icon, title, desc }) => (
           <div
             key={title}
-            className="bg-[#121117] rounded-xl px-6 py-10 text-center relative overflow-hidden min-h-[300px] flex flex-col justify-start"
+            className="rounded-xl px-6 py-10 text-center relative overflow-hidden min-h-[300px] flex flex-col justify-start" style={{background:"rgba(18,17,23,1)"}}
           >
             {/* Top thin gold border */}
             <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-[#C0971C] via-[#FFE976] to-[#C0971C]" />

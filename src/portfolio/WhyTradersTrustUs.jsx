@@ -47,7 +47,8 @@ const WhyTradersTrustUs = () => {
           {data.map((item, index) => (
             <div
               key={index}
-              className="bg-[#1E1D24] border border-yellow-200 border-t border-b rounded-3xl px-6 py-6 flex flex-col md:flex-row items-start md:items-center gap-6"
+              className="border-l-0 border-r-0 border border-yellow-200 border-t border-b rounded-3xl px-6 py-6 flex flex-col md:flex-row items-start md:items-center gap-6"
+              style={{background:"rgba(18,17,23,1)"}}
             >
               {/* Icon */}
               <div className="w-[60px] h-[60px] md:w-[80px] md:h-[80px] flex-shrink-0">

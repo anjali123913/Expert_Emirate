@@ -2,11 +2,11 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 
 const categories = [
-  { label: "Forex + Gold", path: "/forex-gold" },
-  { label: "Crypto Currency", path: "/crypto" },
-  { label: "Portfolio Management", path: "/portfolio" },
-  { label: "Funded Accounts", path: "/funded" },
-  { label: "Trading Bot", path: "/bot" }, // kept this line
+  { label: "Forex + Gold", path: "/forex" },
+  { label: "Crypto Currency", path: "/cryptocurrency" },
+  { label: "Portfolio Management", path: "/portfolio-management" },
+  { label: "Funded Accounts", path: "/funded-accounts" },
+  // { label: "Trading Bot", path: "/bot" }, // kept this line
 ];
 
 const CategoryTabs = () => {

@@ -16,7 +16,7 @@ export default function CustomerDashboard() {
     >
       {/* LEFT CONTENT */}
 
-      <div className="w-full md:w-[60%] text-center md:text-left">
+      <div className="w-full md:w-[60%]  text-center md:text-left">
         <h1 className="text-2xl md:text-3xl font-bold text-white transition-all duration-500 group-hover:bg-gradient-to-r group-hover:from-[#FFE976] group-hover:via-[#C0971C] group-hover:to-[#FFE976] group-hover:bg-clip-text group-hover:text-transparent">
           ABOUT US
         </h1>
