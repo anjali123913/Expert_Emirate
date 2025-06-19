@@ -1,6 +1,6 @@
 const IndustryAwardsSection = () => {
   return (
-    <section className="bg-[#111111] text-white px-4 py-11 rounded-3xl max-w-4xl mx-auto border shadow-lg shadow-gray-900 border-gray-600">
+    <section className=" text-white pt-7 px-4 py-11 rounded-3xl max-w-4xl mx-auto border shadow-lg shadow-gray-900 border-gray-600" style={{background:"rgba(18,17,20,1"}}>
       {/* Tag */}
       <div className="flex justify-center mb-6 animate-fadeIn">
         <span className="bg-[#1E1E2F] text-sm text-white px-6 py-2 rounded-full font-semibold tracking-widest hover:bg-[#2A2A3F] transition-colors duration-300">
@@ -23,10 +23,10 @@ const IndustryAwardsSection = () => {
       </p>
 
       {/* Award Highlights */}
-      <div className="bg-[#1A1A2F] rounded-2xl p-6 space-y-6 mb-10 animate-fadeIn">
+      <div className=" rounded-2xl p-6 space-y-6 mb-10 animate-fadeIn" style={{background:"rgba(29,27,37,1"}}>
         {/* Award 1 - Right Aligned */}
         <div className="flex justify-end">
-          <div className="flex flex-col sm:flex-row sm:items-center bg-[#2A2A3F] rounded-xl px-4 py-3 max-w-2xl w-full hover:bg-[#3A3A4F] transition-all duration-300 hover:shadow-md hover:shadow-yellow-500/20">
+          <div className="flex flex-col sm:flex-row sm:items-center rounded-xl px-4 py-3 max-w-2xl w-full hover:bg-[#3A3A4F] transition-all duration-300 hover:shadow-md hover:shadow-yellow-500/20" style={{background:"rgba(40,37,50,1)"}}>
             <h3 className="bg-gradient-to-t from-yellow-900 via-yellow-300 to-yellow-900 bg-clip-text text-transparent font-bold text-base sm:text-lg group-hover:bg-gradient-to-t group-hover:from-yellow-900 group-hover:via-yellow-300 group-hover:to-yellow-900 group-hover:bg-clip-text group-hover:text-transparent transition-colors duration-200">
               Best Mobile Trading App
             </h3>
@@ -39,7 +39,7 @@ const IndustryAwardsSection = () => {
 
         {/* Award 2 - Left Aligned */}
         <div className="flex justify-start animate-marqueeRight">
-          <div className="flex flex-col sm:flex-row sm:items-center bg-[#2A2A3F] rounded-xl px-4 py-3 max-w-2xl w-full hover:bg-[#3A3A4F] transition-all duration-300 hover:shadow-md hover:shadow-yellow-500/20">
+          <div className="flex flex-col sm:flex-row sm:items-center rounded-xl px-4 py-3 max-w-2xl w-full hover:bg-[#3A3A4F] transition-all duration-300 hover:shadow-md hover:shadow-yellow-500/20" style={{background:"rgba(40,37,50,1)"}}>
             <h3 className="bg-gradient-to-t from-yellow-900 via-yellow-300 to-yellow-900 bg-clip-text text-transparent font-bold text-base sm:text-lg group-hover:bg-gradient-to-t group-hover:from-yellow-900 group-hover:via-yellow-300 group-hover:to-yellow-900 group-hover:bg-clip-text group-hover:text-transparent transition-colors duration-200">
               Best Prime Trading Broker
             </h3>
@@ -52,7 +52,7 @@ const IndustryAwardsSection = () => {
 
         {/* Award 3 - Right Aligned */}
         <div className="flex justify-end">
-          <div className="flex flex-col sm:flex-row sm:items-center bg-[#2A2A3F] rounded-xl px-4 py-3 max-w-2xl w-full hover:bg-[#3A3A4F] transition-all duration-300 hover:shadow-md hover:shadow-yellow-500/20">
+          <div className="flex flex-col sm:flex-row sm:items-center  rounded-xl px-4 py-3 max-w-2xl w-full hover:bg-[#3A3A4F] transition-all duration-300 hover:shadow-md hover:shadow-yellow-500/20" style={{background:"rgba(40,37,50,1)"}}>
             <h3 className="bg-gradient-to-t from-yellow-900 via-yellow-300 to-yellow-900 bg-clip-text text-transparent font-bold text-base sm:text-lg group-hover:bg-gradient-to-t group-hover:from-yellow-900 group-hover:via-yellow-300 group-hover:to-yellow-900 group-hover:bg-clip-text group-hover:text-transparent transition-colors duration-200">
               Best Global Regulated Broker
             </h3>
@@ -73,11 +73,39 @@ const IndustryAwardsSection = () => {
 
       {/* Button */}
       <div className="flex justify-center animate-fadeIn">
-      <button className="bg-gradient-to-l from-[#452e06] via-[#d1bf5a] via-50% to-[#452e06] text-black rounded-full px-7 py-3 font-bold shadow-md transition-all duration-300 
-  group-hover:bg-black group-hover:text-white hover:scale-105 hover:shadow-yellow-500/30">
-  Explore Awards
-</button>
-
+        <button
+        className="relative text-black font-bold px-7 py-3 rounded-full shadow-md transition-all duration-300 overflow-hidden"
+        style={{
+          background: "linear-gradient(86.31deg, #281000 0%, #C0971C 25%, #FFE976 50.5%, #C0971C 74.5%, #281000 100%)",
+        }}
+        onMouseEnter={(e) => {
+          e.currentTarget.style.background = "black";
+          e.currentTarget.style.color = "white";
+        }}
+        onMouseLeave={(e) => {
+          e.currentTarget.style.background = "linear-gradient(86.31deg, #281000 0%, #C0971C 25%, #FFE976 50.5%, #C0971C 74.5%, #281000 100%)";
+          e.currentTarget.style.color = "black";
+        }}
+      >
+        {/* Gradient border using pseudo-element */}
+        <span 
+          className="absolute inset-0 rounded-full opacity-100 transition-opacity duration-300"
+          style={{
+            background: "linear-gradient(266.31deg, rgba(200,161,39,0.8), rgba(102,102,102,0.3))",
+            padding: "1px",
+            zIndex: -1
+          }}
+        >
+          <span 
+            className="block w-full h-full rounded-full"
+            style={{
+              background: "linear-gradient(86.31deg, #281000 0%, #C0971C 25%, #FFE976 50.5%, #C0971C 74.5%, #281000 100%)",
+            }}
+          />
+        </span>
+        
+        Explore Awards
+      </button>
       </div>
     </section>
   );

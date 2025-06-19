@@ -1,10 +1,37 @@
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import React from "react";
 import wave from "../../assets/stayar.png";
 
 const ServicesCard = () => {
+  const wrapperStyle = {
+    background:
+      "linear-gradient(90deg, #281000 0%, #C0971C 25.5%, #FFE976 49.5%, #C0971C 74.5%, #281000 100%)",
+    padding: "2px", // border thickness
+    borderRadius: "9999px",
+  };
+
+  const GradientButton = ({ text }) => {
+    const [hover, setHover] = useState(false);
+
+    return (
+      <button
+        className="w-full h-12 rounded-full text-sm font-medium uppercase transition-all duration-300"
+        style={{
+          background: hover
+            ? "linear-gradient(86.31deg, #281000 0%, #C0971C 25%, #FFE976 50.5%, #C0971C 74.5%, #281000 100%)"
+            : "black",
+          color: hover ? "black" : "white",
+        }}
+        onMouseEnter={() => setHover(true)}
+        onMouseLeave={() => setHover(false)}
+      >
+        {text}
+      </button>
+    );
+  };
+
   return (
-    <div className="bg-black rounded-xl p-6 min-h-[400px] w-full max-w-xl text-white relative overflow-hidden">
+    <div className="bg-black rounded-xl p-6 min-h-[400px] h-full w-full max-w-xl text-white relative overflow-hidden">
       {/* Background effect */}
       <div className="absolute inset-0 z-0">
         <img
@@ -17,33 +44,33 @@ const ServicesCard = () => {
 
       {/* Button container */}
       <div className="z-10 relative flex flex-col items-center gap-4 pt-44 w-full px-4">
-        {/* Forex + Crypto in same row and same size */}
+        {/* Forex + Crypto in same row */}
         <div className="flex justify-between gap-4 w-full">
-          <Link to="/forex-gold" className="flex-1">
-            <button className="w-full h-12 bg-black/40 rounded-full border border-yellow-400 text-white text-sm font-medium uppercase transition-all duration-300 hover:bg-yellow-500 hover:text-black">
-              FOREX + GOLD
-            </button>
+          <Link to="/forex" className="flex-1">
+            <div style={wrapperStyle}>
+              <GradientButton text="FOREX + GOLD" />
+            </div>
           </Link>
 
           <Link to="/CryptoCurrency" className="flex-1">
-            <button className="w-full h-12 bg-black/40 rounded-full border border-yellow-400 text-white text-sm font-medium uppercase transition-all duration-300 hover:bg-yellow-500 hover:text-black">
-              CRYPTOCURRENCY
-            </button>
+            <div style={wrapperStyle}>
+              <GradientButton text="CRYPTOCURRENCY" />
+            </div>
           </Link>
         </div>
 
-        {/* Funded Accounts (full width) */}
-        <Link to="/FundedAccounts" className="w-full">
-          <button className="w-full h-12 bg-black/40 rounded-full border border-yellow-400 text-white text-sm font-medium uppercase transition-all duration-300 hover:bg-yellow-500 hover:text-black">
-            FUNDED ACCOUNTS
-          </button>
+        {/* Funded Accounts */}
+        <Link to="/funded-accounts" className="w-full">
+          <div style={wrapperStyle}>
+            <GradientButton text="FUNDED ACCOUNTS" />
+          </div>
         </Link>
 
-        {/* Portfolio Management (full width) */}
-        <Link to="/profile-management" className="w-full">
-          <button className="w-full h-12 bg-black/40 rounded-full border border-yellow-400 text-white text-sm font-medium uppercase transition-all duration-300 hover:bg-yellow-500 hover:text-black">
-            PORTFOLIO MANAGEMENT
-          </button>
+        {/* Portfolio Management */}
+        <Link to="/portfolio-management" className="w-full">
+          <div style={wrapperStyle}>
+            <GradientButton text="PORTFOLIO MANAGEMENT" />
+          </div>
         </Link>
       </div>
     </div>

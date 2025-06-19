@@ -24,7 +24,6 @@ const ForexInfo = () => {
             style={{
               fontWeight: 400,
               fontSize: "18px",
-              lineHeight: "100%",
               letterSpacing: "0%",
             }}
           >

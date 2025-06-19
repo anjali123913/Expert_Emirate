@@ -21,10 +21,10 @@ const WhatIsComex = () => {
           </h2>
 
           <p
-            className="text-[#CCCCCC] mt-1"
+            className="text-[#CCCCCC] mt-1 leading-relaxed"
             style={{
-              fontSize: "14px",
-              lineHeight: "120%",
+              fontSize: "16px",
+            
               fontWeight: 400,
             }}
           >

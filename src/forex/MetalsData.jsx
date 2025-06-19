@@ -1,5 +1,7 @@
 
 import React, { useState } from "react";
+import SearchIcon from "../assets/review/SearchIcon.png";
+import ArrowIcon from "../assets/review/arrow.png"
 
 const metalsData = [
   {
@@ -56,28 +58,32 @@ const MetalsTable = () => {
       </h2>
 
       {/* Table Section */}
-      <div className="w-full max-w-6xl bg-[#1e1e2f] rounded-xl p-8 shadow-xl">
+      <div className="w-full max-w-6xl  rounded-xl p-8 shadow-xl" style={{background:"rgba(29,27,37,1)"}}>
         {/* Search */}
         <div className="mb-4">
-          <input
-            type="text"
-            placeholder="Search..."
-            className="w-full px-4 py-3 rounded-md bg-[#2c2c3e] text-white border border-gray-600 focus:outline-none focus:ring focus:ring-yellow-500"
-            value={search}
-            onChange={(e) => setSearch(e.target.value)}
-          />
-        </div>
+  <div className="flex items-center bg-[#2c2c3e] border border-gray-600 rounded-md px-3">
+    <img src={SearchIcon} alt="Search" className="w-5 h-5 mr-2" />
+    <input
+      type="text"
+      placeholder="Search..."
+      className="w-full py-3 bg-[#2c2c3e] text-white focus:outline-none focus:border-yellow-500 "
+      value={search}
+      onChange={(e) => setSearch(e.target.value)}
+    />
+  </div>
+</div>
+
 
         {/* Table */}
         <div className="overflow-x-auto">
           <table className="w-full text-left text-sm">
-            <thead className="bg-[#2b2b3d] text-gray-400 uppercase text-sm">
+            <thead className=" text-gray-400 uppercase text-sm" style={{background:"rgba(36,35,44,1)"}}>
               <tr>
-                <th className="px-5 py-3">Instruments ↓</th>
-                <th className="px-5 py-3">Description ↓</th>
-                <th className="px-5 py-3">Bid Price ↓</th>
-                <th className="px-5 py-3">Ask Price ↓</th>
-                <th className="px-5 py-3">Spread ↓</th>
+                <th className="px-5 py-3"><span style={{color:'white'}} class="font-light">Instruments</span> ↓</th>
+                <th className="px-5 py-3"><span style={{color:'white'}} class="font-light">Description</span> ↓</th>
+                <th className="px-5 py-3"><span style={{color:'white'}} class="font-light">Bid Price</span> ↓</th>
+                <th className="px-5 py-3"><span style={{color:'white'}} class="font-light">Ask Price ↓</span></th>
+                <th className="px-5 py-3"><span style={{color:'white'}} class="font-light">Spread </span>↓</th>
               </tr>
             </thead>
             <tbody>
@@ -100,16 +106,15 @@ const MetalsTable = () => {
 
       {/* Button */}
       <div className="mt-8">
-        <button
-          className="px-8 py-3 rounded-full font-semibold text-black hover:scale-105 transition-all duration-300 shadow-lg"
-          style={{
-            background:
-              "linear-gradient(180deg, #281000 -6.52%, #C0971C 20.64%, #FFE976 46.21%, #C0971C 72.84%, #281000 100%)",
-          }}
-        >
-          View Full Contract Specifications →
-        </button>
-      </div>
+              <button
+              className="px-8 py-3 font-inter font-normal text-base flex items-center gap-2 rounded-full text-black hover:scale-105 transition-all duration-300"
+              style={{
+                background:"linear-gradient(180deg, #281000 -6.52%, #C0971C 20.64%, #FFE976 46.21%, #C0971C 72.84%, #281000 100%)",
+                }}>
+                  View Full Contract Specifications
+                  <img src={ArrowIcon} alt="Arrow" className="w-4 h-4 mt-[1px]" />
+              </button>
+              </div>
     </div>
   );
 };

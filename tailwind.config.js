@@ -6,6 +6,10 @@ export default {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        inter: ["Inter", "sans-serif"],
+        poppins: ["Poppins", "sans-serif"],
+      },
       keyframes: {
         smoothBounce: {
           "0%, 100%": { transform: "translateY(0)" },

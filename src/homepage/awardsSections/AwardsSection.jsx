@@ -4,7 +4,7 @@ import TopAwardsSection from "./TopAwardsSection";
 
 const AwardsSection = () => {
   return (
-    <section className="bg-[#111111] text-white px-4 py-16 flex items-start justify-center gap-5 mx-auto flex-wrap lg:flex-nowrap">
+    <section className="bg-black text-white px-4 py-16 flex items-stretch justify-center gap-5 mx-auto flex-wrap lg:flex-nowrap">
       
       <div className="w-full lg:w-1/2">
         <TopAwardsSection />

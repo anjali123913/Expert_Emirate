@@ -7,7 +7,7 @@ const categories = [
   "Forex + Gold",
   "Crypto Currency",
   "Portfolio Management",
-  "CpoyTrading",
+  "Copy Trading",
 ];
 
 const ButtonTabs = () => {
@@ -42,7 +42,7 @@ const ButtonTabs = () => {
       {activeTab == "Forex + Gold" && <ForexSection />}
       {activeTab == "Crypto Currency" && <p>  <CryptoSection/> </p>}
       {activeTab == "Portfolio Management" && <p><Portfolio/></p>}
-      {activeTab == "CpoyTrading" && <p><CopyTrading/></p>}
+      {activeTab == "Copy Trading" && <p><CopyTrading/></p>}
     </div>
   );
 };

@@ -5,7 +5,7 @@ import { FaArrowDown } from "react-icons/fa6";
 
 const TopAwardsSection = () => {
   return (
-    <section className="bg-[#111111] text-white px-4 rounded-3xl max-w-4xl mx-auto border shadow-lg py-5 h-full shadow-gray-900 border-gray-600">
+    <section className=" text-white px-4 rounded-3xl max-w-4xl mx-auto border shadow-lg py-5 h-full shadow-gray-900 border-gray-600" style={{background:"rgba(18,17,20,1"}}>
       {/* Tag */}
       <div className="flex justify-center mb-6 animate-fadeIn">
         <span className="bg-[#1E1E2F] text-sm text-white px-6 py-2 rounded-full font-semibold">
@@ -68,7 +68,7 @@ const TopAwardsSection = () => {
               Learn how we're influencing the financial industry worldwide.
             </p>
             <button className="hidden group-hover/card2:flex items-center text-blue-400 hover:text-blue-300 text-xl mt-3 font-semibold transition-colors duration-200">
-              <span className="pr-3">Explore Awards</span>
+              <span className="pr-3">Read more</span>
               <span className="rotate-[225deg] transition-transform duration-300 group-hover/card2:translate-x-1">
                 <FaArrowDown />
               </span>
@@ -80,11 +80,38 @@ const TopAwardsSection = () => {
       {/* Button */}
       <div className="flex justify-center animate-fadeIn">
         <button
-          className="bg-gradient-to-l from-[#452e06] via-[#d1bf5a] via-50% to-[#452e06] text-black rounded-full px-7 py-3 font-bold shadow-md transition-all duration-300 
-  group-hover:bg-black group-hover:text-white hover:scale-105 hover:shadow-yellow-500/30"
+        className="relative text-black font-bold px-7 py-3 rounded-full shadow-md transition-all duration-300 overflow-hidden"
+        style={{
+          background: "linear-gradient(86.31deg, #281000 0%, #C0971C 25%, #FFE976 50.5%, #C0971C 74.5%, #281000 100%)",
+        }}
+        onMouseEnter={(e) => {
+          e.currentTarget.style.background = "black";
+          e.currentTarget.style.color = "white";
+        }}
+        onMouseLeave={(e) => {
+          e.currentTarget.style.background = "linear-gradient(86.31deg, #281000 0%, #C0971C 25%, #FFE976 50.5%, #C0971C 74.5%, #281000 100%)";
+          e.currentTarget.style.color = "black";
+        }}
+      >
+        {/* Gradient border using pseudo-element */}
+        <span 
+          className="absolute inset-0 rounded-full opacity-100 transition-opacity duration-300"
+          style={{
+            background: "linear-gradient(266.31deg, rgba(200,161,39,0.8), rgba(102,102,102,0.3))",
+            padding: "1px",
+            zIndex: -1
+          }}
         >
-          Explore Awards
-        </button>
+          <span 
+            className="block w-full h-full rounded-full"
+            style={{
+              background: "linear-gradient(86.31deg, #281000 0%, #C0971C 25%, #FFE976 50.5%, #C0971C 74.5%, #281000 100%)",
+            }}
+          />
+        </span>
+        
+        Explore News
+      </button>
       </div>
     </section>
   );
