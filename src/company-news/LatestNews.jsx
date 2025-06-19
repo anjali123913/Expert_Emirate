@@ -65,55 +65,53 @@ const newsData = [
 
 const NewsCard = ({ item, isHorizontal }) => (
   <div
-    className={`bg-[#111] rounded-md overflow-hidden shadow-md ${
+    className={`h-full rounded-xl overflow-hidden shadow-md transition-all duration-300 hover:scale-[1.02] ${
       isHorizontal ? "flex flex-col md:flex-row" : "flex flex-col"
     }`}
+    style={{ backgroundColor: "#3C3A44", minHeight: "100%" }}
   >
-    {!isHorizontal ? (
-      <div className="relative w-full h-[200px]">
-        <img
-          src={item.image}
-          alt="news"
-          className="w-full h-full object-cover"
-        />
-        <p className="absolute top-2 left-2 bg-black bg-opacity-70 text-white text-xs px-2 py-1 rounded font-poppins">
-          {item.date}
-        </p>
-      </div>
-    ) : (
+    {/* IMAGE */}
+    <div
+      className={`relative ${
+        isHorizontal ? "w-full md:w-[40%]" : "w-full"
+      } ${isHorizontal ? "h-[260px]" : "h-[200px]"}`}
+    >
       <img
         src={item.image}
         alt="news"
-        className="w-full md:w-[40%] h-[200px] object-cover"
+        className="w-full h-full object-cover"
       />
-    )}
-
-    <div className="p-5 flex-1">
-      {isHorizontal && (
-        <p className="text-xs text-[#CCCCCC] mb-2 font-poppins">Date: {item.date}</p>
-      )}
-      <h2 className="text-[20px] font-bold text-white leading-[30px] font-poppins">
-        {item.title}
-        <span
-          className="bg-clip-text text-transparent"
-          style={{
-            backgroundImage:
-              "linear-gradient(180deg, #281000 26.34%, #C0971C 37.31%, #FFE976 47.63%, #C0971C 58.39%, #281000 69.35%)",
-          }}
-        >
-          {item.highlight}
-        </span>
-      </h2>
-      <p className="text-sm text-[#CCCCCC] mt-3 font-poppins">{item.desc}</p>
+      <p className="absolute top-2 left-2 bg-black bg-opacity-70 text-white text-xs px-2 py-1 rounded font-poppins">
+        Date: {item.date}
+      </p>
       {item.tag && (
-        <div className="mt-4 inline-block bg-gradient-to-r from-[#ffe976] to-[#c0971c] text-black text-xs font-medium px-3 py-1 rounded-[6px] font-poppins">
+        <div className="absolute bottom-2 left-2 bg-gradient-to-r from-[#ffe976] to-[#c0971c] text-black text-xs font-semibold px-3 py-1 rounded-full font-poppins">
           {item.tag}
         </div>
       )}
+    </div>
+
+    {/* CONTENT */}
+    <div className="p-5 flex flex-col justify-between flex-1">
+      <div>
+        <h2 className="text-[20px] font-bold text-white leading-[30px] font-poppins">
+          {item.title}
+          <span
+            className="bg-clip-text text-transparent"
+            style={{
+              backgroundImage:
+                "linear-gradient(180deg, #281000 5.95%, #C0971C 29.93%, #FFE976 52.51%, #C0971C 76.02%, #281000 100%)",
+            }}
+          >
+            {item.highlight}
+          </span>
+        </h2>
+        <p className="text-sm text-[#CCCCCC] mt-3 font-poppins">{item.desc}</p>
+      </div>
       <div className="mt-4">
         <a
           href="#"
-          className="text-[#6494FF] text-sm font-medium hover:underline flex items-center gap-1 font-poppins"
+          className="text-[#5A8FFF] text-sm font-medium hover:underline font-poppins"
         >
           Read More →
         </a>
@@ -124,12 +122,12 @@ const NewsCard = ({ item, isHorizontal }) => (
 
 const LatestNews = () => {
   return (
-    <div className="w-full min-h-screen bg-black py-12 px-4 overflow-hidden">
-      <h1 className="text-center text-[36px] font-bold text-white mb-12 font-poppins">
+    <div className="w-full bg-black py-12 px-4 overflow-hidden">
+      <h1 className="text-center text-[28px] md:text-[36px] font-bold text-white mb-12 font-poppins">
         Latest News
       </h1>
 
-      {/* First two items as horizontal cards */}
+      {/* Top two cards */}
       <div className="flex flex-col md:flex-row justify-center gap-8 max-w-[1300px] mx-auto mb-12">
         {newsData.slice(0, 2).map((item) => (
           <div key={item.id} className="w-full md:w-1/2">
@@ -138,15 +136,25 @@ const LatestNews = () => {
         ))}
       </div>
 
-      {/* Remaining items - auto-scroll right to left */}
-      <div className="relative overflow-hidden w-full max-w-[1300px] mx-auto">
-        <div className="flex gap-6 w-max animate-marqueeLeft">
+      {/* Scrolling Cards */}
+      <div className="relative max-w-[1300px] mx-auto overflow-hidden group">
+        <div className="flex gap-6 w-max animate-scrollX group-hover:pause items-stretch">
           {[...newsData.slice(2), ...newsData.slice(2)].map((item, idx) => (
-            <div key={idx} className="min-w-[300px] max-w-[300px]">
+            <div
+              key={idx}
+              className="min-w-[300px] max-w-[300px] h-[500px] flex flex-col"
+            >
               <NewsCard item={item} isHorizontal={false} />
             </div>
           ))}
         </div>
+      </div>
+
+      {/* View More Button */}
+      <div className="mt-10 flex justify-center">
+        <button className="bg-gradient-to-r from-[#ffe976] to-[#c0971c] text-black font-semibold px-6 py-2 rounded-full text-sm hover:brightness-105 transition font-poppins">
+          View More →
+        </button>
       </div>
     </div>
   );

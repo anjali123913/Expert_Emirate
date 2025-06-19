@@ -46,6 +46,20 @@ body{
   /* font-family: Arial, sans-serif; */
 }
 
+
+@keyframes scrollX {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-scrollX {
+  animation: scrollX 30s linear infinite;
+}
+
 :root{
   
 --Dark-grey: #121117;
