@@ -1,14 +1,16 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import logo from "../assets/navlogo.png";
 import { Menu, X, ChevronDown } from "lucide-react";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState(null);
+  const location = useLocation();
+
+  const isHomePage = location.pathname === "/";
 
   const toggleMenu = () => setIsOpen(!isOpen);
-
   const toggleDropdown = (name) => {
     setActiveDropdown((prev) => (prev === name ? null : name));
   };
@@ -34,11 +36,14 @@ const Navbar = () => {
     { name: "FAQ", path: "/faq" },
     { name: "Support", path: "/support" },
     { name: "About us", path: "/about" },
-    // { name: "Blog", path: "/blog" },
   ];
 
   return (
-    <nav className="absolute bg-black top-0 right-0 w-full z-20 text-white font-poppins text-base tracking-[0.12em]">
+    <nav
+      className={`${
+        isHomePage ? "bg-black/30 backdrop-blur-sm" : "bg-black"
+      } absolute top-0 right-0 w-full z-20 text-white font-poppins text-base tracking-[0.12em] transition-all duration-300`}
+    >
       <div className="flex justify-between items-center p-2 md:px-15 px-3">
         {/* Logo */}
         <Link to="/" className="flex items-center gap-2">
@@ -98,7 +103,7 @@ const Navbar = () => {
           </div>
         </div>
 
-        {/* Mobile Menu Toggle */}
+        {/* Mobile Toggle */}
         <div className="md:hidden">
           <button onClick={toggleMenu} className="focus:outline-none">
             <Menu size={24} />
@@ -106,7 +111,7 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Mobile Menu Drawer */}
+      {/* Mobile Menu */}
       <div
         className={`fixed top-0 left-0 h-full w-64 bg-black bg-opacity-95 text-white z-50 transform transition-transform duration-300 ease-in-out ${
           isOpen ? "translate-x-0" : "-translate-x-full"
@@ -152,7 +157,7 @@ const Navbar = () => {
             </li>
           ))}
 
-          {/* Login for mobile */}
+          {/* Login */}
           <li>
             <Link
               to="/login"
@@ -176,4 +181,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default Navbar;
