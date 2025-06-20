@@ -1,12 +1,14 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import logo from "../assets/navlogo.png";
+import bgVideo from "../assets/auth/bgVideo.mp4";
 
 export default function ResetPasswordPage() {
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [message, setMessage] = useState("");
   const navigate = useNavigate();
+  const videoRef = useRef(null);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -24,14 +26,49 @@ export default function ResetPasswordPage() {
     navigate("/login");
   };
 
+  useEffect(() => {
+    const playVideo = () => {
+      if (videoRef.current) {
+        videoRef.current.play().catch((err) => {
+          console.warn("Autoplay blocked:", err);
+        });
+      }
+    };
+    playVideo();
+
+    document.addEventListener("visibilitychange", () => {
+      if (document.visibilityState === "visible") playVideo();
+    });
+
+    return () => {
+      document.removeEventListener("visibilitychange", playVideo);
+    };
+  }, []);
+
   return (
-    <div className="min-h-screen flex">
-      {/* Left Side - Form */}
-      <div className="w-1/2 bg-black text-white flex items-center justify-center">
-        <div className="w-full max-w-md p-8">
+    <div className="relative min-h-screen w-full flex flex-col md:flex-row overflow-hidden">
+      {/* ✅ Right Side Video */}
+      <div className="absolute right-0 top-0 w-1/2 h-full -z-10">
+        <video
+          ref={videoRef}
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="w-full h-full object-cover rotate-180 pointer-events-none"
+        >
+          <source src={bgVideo} type="video/mp4" />
+          Your browser does not support HTML5 video.
+        </video>
+        <div className="absolute inset-0 bg-black/40" />
+      </div>
+
+      {/* ✅ Left Side - Form */}
+      <div className="w-full md:w-1/2 bg-black text-white flex items-center justify-center p-6 z-10">
+        <div className="w-full max-w-md p-8 bg-black/80 backdrop-blur-sm rounded-xl">
           <button
             onClick={() => navigate(-1)}
-            className="text-sm text-gray-400 mb-6 hover:underline"
+            className="text-sm text-gray-400 mb-4 hover:underline"
           >
             ← Back
           </button>
@@ -51,7 +88,7 @@ export default function ResetPasswordPage() {
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 placeholder="••••••••"
-                className="w-full px-3 py-2 mt-1 bg-zinc-900 text-white border border-zinc-700 placeholder:text-zinc-500 rounded"
+                className="w-full px-4 py-3 mt-1 bg-zinc-900 text-white border border-zinc-700 placeholder:text-zinc-500 rounded-full"
               />
             </div>
 
@@ -62,7 +99,7 @@ export default function ResetPasswordPage() {
                 value={confirmPassword}
                 onChange={(e) => setConfirmPassword(e.target.value)}
                 placeholder="••••••••"
-                className="w-full px-3 py-2 mt-1 bg-zinc-900 text-white border border-zinc-700 placeholder:text-zinc-500 rounded"
+                className="w-full px-4 py-3 mt-1 bg-zinc-900 text-white border border-zinc-700 placeholder:text-zinc-500 rounded-full"
               />
             </div>
 
@@ -70,22 +107,21 @@ export default function ResetPasswordPage() {
 
             <button
               type="submit"
-              className="bg-gradient-to-l from-[#452e06] via-[#d1bf5a] via-50% to-[#452e06] text-black rounded-full w-full px-3 py-3 font-bold   transition-colors"
-              onClick={()=>navigate("/login")}
+              className="bg-gradient-to-l from-[#452e06] via-[#d1bf5a] to-[#452e06] text-black rounded-full w-full px-4 py-3 font-bold transition-colors"
             >
-              Sign in
+              Reset Password
             </button>
           </form>
         </div>
       </div>
 
-      {/* Right Side - Logo */}
-      <div className="w-1/2 bg-black text-yellow-500 flex items-center justify-center">
-        <div className="text-center w-96 h-auto">
+      {/* ✅ Right Side Logo with video background */}
+      <div className="w-full md:w-1/2 flex items-center justify-center z-10 p-4">
+        <div className="text-center w-96 h-auto bg-black/80 backdrop-blur-sm rounded-xl p-4">
           <img
             src={logo}
             alt="Expert Emirates Logo"
-            className="w-full h-full mx-auto mb-4 object-center"
+            className="w-full h-full mx-auto mb-4 object-contain"
           />
         </div>
       </div>
