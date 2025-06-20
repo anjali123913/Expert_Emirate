@@ -10,8 +10,9 @@ const SupportHeroSection = () => {
         src={goldenCircle}
         alt="Golden Circle"
         className="object-cover mb-6"
-      />
+      />                                                                                                                                                    
      </div>
+ 
  
       {/* Heading with gradient and bold white */}
       <h2 className="text-3xl md:text-3xl font-bold font-sans tracking-widest leading-loose -mt-16">
