@@ -1,5 +1,6 @@
 import React from "react";
 import mt4Image from "../assets/platformMT4/image4.png";
+import checkIcon from "../assets/review/check-icon.png"; // ✅ import your bullet image
 
 const MT4FeaturesSection = () => {
   return (
@@ -20,17 +21,14 @@ const MT4FeaturesSection = () => {
         MT4 Platform Features
       </h2>
 
-      {/* Gradient Border Box */}
+      {/* Gradient Border Wrapper with Rounded Corners */}
       <div
-        className="max-w-[1300px] mx-auto rounded-[20px] p-[1px]"
+        className="max-w-[1300px] mx-auto p-[2px] rounded-[20px]"
         style={{
-          borderWidth: "1px",
-          borderStyle: "solid",
-          borderImageSource:
-            "linear-gradient(144.59deg, #666666 0%, #000000 99.55%)",
-          borderImageSlice: 1,
+          background: "linear-gradient(144.59deg, #666666 0%, #000000 99.55%)",
         }}
       >
+        {/* Inner Content Box */}
         <div className="bg-[#121117] rounded-[20px] p-6 md:p-10 flex flex-col lg:flex-row justify-between items-center gap-10">
           {/* Left Column */}
           <div className="flex-1 space-y-6 text-sm md:text-base">
@@ -59,7 +57,7 @@ const MT4FeaturesSection = () => {
             />
           </div>
 
-          {/* Center Image with Animation */}
+          {/* Center Image */}
           <div className="flex-1 text-center">
             <img
               src={mt4Image}
@@ -96,20 +94,19 @@ const MT4FeaturesSection = () => {
   );
 };
 
+// ✅ Updated FeatureBlock with image icon
 const FeatureBlock = ({ title, items }) => {
   return (
     <div>
       <h3 className="text-white font-semibold mb-2">{title}</h3>
       <ul className="space-y-2">
         {items.map((item, index) => (
-          <li key={index} className="flex items-start gap-2">
-            <span
-              className="min-w-[10px] h-[10px] mt-[6px] rounded-full"
-              style={{
-                background:
-                  "linear-gradient(154.98deg, #281000 0%, #C0971C 26.08%, #FFE976 50.62%, #C0971C 76.19%, #281000 102.27%)",
-              }}
-            ></span>
+          <li key={index} className="flex items-start gap-3">
+            <img
+              src={checkIcon}
+              alt="icon"
+              className="w-[16px] h-[16px] mt-[5px]"
+            />
             <span>{item}</span>
           </li>
         ))}

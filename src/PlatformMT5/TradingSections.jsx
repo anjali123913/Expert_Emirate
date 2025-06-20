@@ -5,6 +5,18 @@ import mt5ImageHover from "../assets/platformMT4/image6-hover.png"; // Hover ima
 const TradingSections = () => {
   const [isHovered, setIsHovered] = useState(false);
 
+  // Gradient text style for paragraphs
+  const gradientTextStyle = {
+    background: "linear-gradient(90deg, #FFFFFF 0%, #999999 100%)",
+    WebkitBackgroundClip: "text",
+    WebkitTextFillColor: "transparent",
+    fontFamily: "Poppins, sans-serif",
+    fontWeight: 400,
+    fontSize: "18px",
+    lineHeight: "30px",
+    letterSpacing: "0%",
+  };
+
   return (
     <section className="bg-black text-white py-12 px-4 sm:px-6 md:px-12 lg:px-20 font-[Poppins]">
       {/* ========== What is MT5? ========== */}
@@ -22,8 +34,8 @@ const TradingSections = () => {
             What is MT5?
           </h2>
 
-          <div className="mt-6 space-y-6 text-[16px] sm:text-[18px] leading-[28px]">
-            <p>
+          <div className="mt-6 space-y-6">
+            <p style={gradientTextStyle}>
               MetaTrader 5 (MT5) is a powerful, multi-asset trading platform
               designed for Forex, stocks, commodities, indices, and
               cryptocurrency trading. Developed by MetaQuotes, it offers
@@ -31,12 +43,12 @@ const TradingSections = () => {
               and professional traders.
             </p>
 
-            <p>
+            <p style={gradientTextStyle}>
               MT5 provides enhanced charting tools, over 80 built-in technical
               indicators, multiple timeframes, and a depth-of-market (DOM)
               feature for better price transparency. It supports algorithmic
-              trading through the MQL5 programming language, allowing traders
-              to automate strategies using Expert Advisors (EAs).
+              trading through the MQL5 programming language, allowing traders to
+              automate strategies using Expert Advisors (EAs).
             </p>
           </div>
         </div>
@@ -56,17 +68,18 @@ const TradingSections = () => {
       </div>
 
       {/* Bottom Paragraphs */}
-      <div className="space-y-6 text-[16px] sm:text-[18px] leading-[28px]">
-        <p>
+      <div className="space-y-6">
+        <p style={gradientTextStyle}>
           Unlike its predecessor MT4, MT5 includes an economic calendar,
           integrated news, and improved order execution speeds. It also allows
-          hedging and netting, giving traders more flexibility in risk management.
+          hedging and netting, giving traders more flexibility in risk
+          management.
         </p>
 
-        <p>
-          With VPS hosting, one-click trading, and a user-friendly interface, MT5
-          is a top choice for modern traders seeking efficiency, automation, and
-          real-time market insights. Whether you're a scalper or long-term
+        <p style={gradientTextStyle}>
+          With VPS hosting, one-click trading, and a user-friendly interface,
+          MT5 is a top choice for modern traders seeking efficiency, automation,
+          and real-time market insights. Whether you're a scalper or long-term
           investor, MT5 delivers a seamless trading experience.
         </p>
       </div>

@@ -60,15 +60,16 @@ const FAQSection = () => {
               onClick={() => toggle(index)}
               className="w-full px-5 md:px-6 py-5 flex justify-between items-center text-white text-left font-medium text-sm sm:text-base"
             >
-              <span className="flex items-start gap-2 text-left">
-                <span className="text-blue-400 text-sm pt-1">◆</span>
+              {/* Perfectly aligned diamond + question */}
+              <span className="flex items-center gap-2 text-left">
+                <span className="text-blue-400 text-sm">◆</span>
                 {faq.question}
               </span>
 
-              {/* Custom Arrow using Div */}
+              {/* Arrow rotating up/down */}
               <span
-                className={`ml-4 transition-transform duration-300 w-2.5 h-2.5 border-t-2 border-r-2 border-white rotate-45 ${
-                  openIndex === index ? "rotate-[225deg]" : "rotate-45"
+                className={`ml-4 transition-transform duration-300 w-2.5 h-2.5 border-b-2 border-r-2 border-white transform ${
+                  openIndex === index ? "rotate-[-135deg]" : "rotate-45"
                 }`}
               ></span>
             </button>

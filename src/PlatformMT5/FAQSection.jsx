@@ -1,6 +1,7 @@
+
 import React, { useState } from "react";
 
-const faqData = [
+const faqs = [
   {
     question: "Do you offer the MT5 Trading Platform?",
     answer:
@@ -36,27 +37,46 @@ const FAQSection = () => {
   };
 
   return (
-    <section className="bg-black text-white py-16 px-4 md:px-20 font-[Poppins]">
-      <h2 className="text-center text-2xl md:text-3xl font-semibold mb-10">
+    <section
+      className="py-16 px-4 font-[Poppins] text-white"
+      style={{ backgroundColor: "#000000" }}
+    >
+      <h2 className="text-center font-semibold text-[28px] md:text-[32px] leading-[42px] tracking-[0.12em] mb-10">
         Frequently Asked Questions (FAQ)
       </h2>
 
       <div className="max-w-4xl mx-auto space-y-4">
-        {faqData.map((item, index) => (
+        {faqs.map((faq, index) => (
           <div
             key={index}
-            onClick={() => toggle(index)}
-            className="cursor-pointer bg-[#121117] rounded-xl p-4 transition-all duration-300"
+            className="rounded-[35px] transition-all duration-300"
+            style={{ backgroundColor: "#121117" }}
           >
-            <p className="text-sm md:text-base text-white mb-2">
-              <span className="text-blue-400 mr-2">◆</span>
-              {item.question}
-            </p>
-            {openIndex === index && (
-              <p className="text-sm md:text-base text-gray-300 leading-[30px] mt-2 pl-6">
-                {item.answer}
-              </p>
-            )}
+            <button
+              onClick={() => toggle(index)}
+              className="w-full px-5 md:px-6 py-5 flex justify-between items-center text-white text-left font-medium text-sm sm:text-base"
+            >
+              {/* Perfectly aligned diamond + question */}
+              <span className="flex items-center gap-2 text-left">
+                <span className="text-blue-400 text-sm">◆</span>
+                {faq.question}
+              </span>
+
+              {/* Arrow rotating up/down */}
+              <span
+                className={`ml-4 transition-transform duration-300 w-2.5 h-2.5 border-b-2 border-r-2 border-white transform ${
+                  openIndex === index ? "rotate-[-135deg]" : "rotate-45"
+                }`}
+              ></span>
+            </button>
+
+            <div
+              className={`transition-all duration-300 px-5 md:px-6 text-gray-300 text-sm overflow-hidden ${
+                openIndex === index ? "max-h-[500px] py-3" : "max-h-0"
+              }`}
+            >
+              {faq.answer}
+            </div>
           </div>
         ))}
       </div>

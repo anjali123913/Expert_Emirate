@@ -1,8 +1,8 @@
 import React from "react";
 import PlatfromMt5HeroSection from "./PlatfromMt5HeroSection";
-import MTPlatformsSection from "../platformMT4/MTPlatformsSection";
+import MTPlatformsSection1 from "./MTPlatformsSection1";
 // import EliteTradingTeamSection from "../about/EliteTradingTeamSection ";
-import DownloadMT4Section from "../platformMT4/DownloadMT4Section";
+import DownloadMT5Section from "./DownloadMT5Section";
 import FeatureSection from "../homepage/FeatureSection";
 import FAQSection from "./FAQSection";
 import TradingSections from "./TradingSections";
@@ -14,11 +14,11 @@ export default function PlatformMt5() {
     <div className="bg-black w-full h-full">
       <div className="w-full">
         <PlatfromMt5HeroSection/>
-        <MTPlatformsSection/>
+        <MTPlatformsSection1/>
         <MT5FeaturesSection/>
         <TradingSections/>
         {/* <EliteTradingTeamSection/> */}
-        <DownloadMT4Section/>
+        <DownloadMT5Section/>
         <FAQSection/>
         <FeatureSection/>
       </div>

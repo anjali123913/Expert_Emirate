@@ -1,5 +1,6 @@
-import React from "react";
+  import React from "react";
 import mt4Image from "../assets/platformMT4/image4.png";
+import checkIcon from "../assets/review/check-icon.png"; // ✅ import your bullet image
 
 const MT5FeaturesSection = () => {
   return (
@@ -12,29 +13,28 @@ const MT5FeaturesSection = () => {
         className="text-center text-[32px] md:text-[42px] font-semibold leading-[100%] mb-12"
         style={{
           background:
-            "linear-gradient(180deg, #281000 -40.54%, #C0971C 15.28%, #FFE976 67.82%, #C0971C 122.55%, #281000 178.38%)",
+            "linear-gradient(180deg, #281000 0%, #C0971C 25.5%, #FFE976 49.5%, #C0971C 74.5%, #281000 100%)",
           WebkitBackgroundClip: "text",
           WebkitTextFillColor: "transparent",
+          display: "inline-block",
         }}
       >
         MT5 Platform Features
       </h2>
 
-      {/* Gradient Border Box */}
+      {/* Gradient Border Wrapper with Rounded Corners */}
       <div
-        className="max-w-[1300px] mx-auto rounded-[20px] p-[1px]"
+        className="max-w-[1300px] mx-auto p-[2px] rounded-[20px]"
         style={{
-          borderWidth: "1px",
-          borderStyle: "solid",
-          borderImageSource:
-            "linear-gradient(144.59deg, #666666 0%, #000000 99.55%)",
-          borderImageSlice: 1,
+          background: "linear-gradient(144.59deg, #666666 0%, #000000 99.55%)",
         }}
       >
+        {/* Inner Content Box */}
         <div className="bg-[#121117] rounded-[20px] p-6 md:p-10 flex flex-col lg:flex-row justify-between items-center gap-10">
           {/* Left Column */}
-          <div className="flex-1 space-y-6 text-sm md:text-base">
+          <div className="flex-1  space-y-6 text-sm md:text-base ">
             <FeatureBlock
+
               title="Tradable Products:"
               items={[
                 "Forex, Metals, Shares, Indices, Commodities, Cryptocurrencies",
@@ -43,27 +43,46 @@ const MT5FeaturesSection = () => {
             <FeatureBlock
               title="Execution Type:"
               items={[
-                "Market Order",
-                "Market depth of the latest price quotes",
-                "Alert notifications to track important market events",
-                "80+ technical analysis indicators and analytical tools",
+                "Market Order"
+              ]}
+            />
+            <FeatureBlock
+              title="Market Depth:"
+              items={[
+                "Real-time access to the latest price quotes"
+              ]}
+            />
+            <FeatureBlock
+              title="Alert Notifications:"
+              items={[
+                "Stay updated with important market events"
+              ]}
+            />
+            <FeatureBlock
+              title="Advanced Charting & Technical Analysis::"
+              items={[
+                "80+ built-in indicators and analytical tools"
               ]}
             />
             <FeatureBlock
               title="Maximum Lots per Click:"
               items={[
-                "30 for Forex",
-                "10 for Metals",
-                "5 for Shares, Indices, Commodities, and Cryptocurrencies",
+                "30 for FX, 10 for Metals, 5 for Shares, Indices, Commodities, and Cryptocurrencies"
+              ]}
+            />
+            <FeatureBlock
+              title="One-Click Trading:"
+              items={[
+                "Faster and more efficient execution"
               ]}
             />
           </div>
 
-          {/* Center Image with Bounce Animation */}
+          {/* Center Image */}
           <div className="flex-1 text-center">
             <img
               src={mt4Image}
-              alt="MT5 Phones"
+              alt="MT4 Phones"
               className="w-full max-w-[280px] mx-auto animate-smoothBounce"
             />
           </div>
@@ -73,8 +92,7 @@ const MT5FeaturesSection = () => {
             <FeatureBlock
               title="Minimum Lots per Click:"
               items={[
-                "0.01 for Forex & Metals",
-                "0.1 for Shares, Indices, Commodities, and Cryptocurrencies",
+                "0.01 for FX & Metals, 0.1 for Shares, Indices, Commodities, and Cryptocurrencies",
                 "Powerful Algorithmic Trading with Built-in MQL5 Development Environment",
               ]}
             />
@@ -82,13 +100,33 @@ const MT5FeaturesSection = () => {
               title="Stop Out Level:"
               items={[
                 "50%",
-                "One-Click Trading for faster execution",
-                "VPS Hosting for seamless trading",
-                "Full EA (Expert Advisor) Functionality",
-                "Advanced Fundamental Analysis including financial news & economic calendar",
-                "Social Trading Functionality to follow expert traders",
               ]}
             />
+            <FeatureBlock
+              title="VPS Hosting:"
+              items={[
+                "Trade with ultra-low latency",
+              ]}
+            />
+            <FeatureBlock
+              title="Full EA (Expert Advisor) Functionality:"
+              items={[
+                "More powerful automation features",
+              ]}
+            />
+            <FeatureBlock
+              title="Fundamental Analysis Tools::"
+              items={[
+                "Integrated financial news, reports, and economic calendar",
+              ]}
+            />
+            <FeatureBlock
+              title="Social Trading Support::"
+              items={[
+                "Follow, copy, and engage with top traders",
+              ]}
+            />
+           
           </div>
         </div>
       </div>
@@ -96,20 +134,19 @@ const MT5FeaturesSection = () => {
   );
 };
 
+// ✅ Updated FeatureBlock with image icon
 const FeatureBlock = ({ title, items }) => {
   return (
     <div>
       <h3 className="text-white font-semibold mb-2">{title}</h3>
       <ul className="space-y-2">
         {items.map((item, index) => (
-          <li key={index} className="flex items-start gap-2">
-            <span
-              className="min-w-[10px] h-[10px] mt-[6px] rounded-full"
-              style={{
-                background:
-                  "linear-gradient(154.98deg, #281000 0%, #C0971C 26.08%, #FFE976 50.62%, #C0971C 76.19%, #281000 102.27%)",
-              }}
-            ></span>
+          <li key={index} className="flex items-start gap-3">
+            <img
+              src={checkIcon}
+              alt="icon"
+              className="w-[16px] h-[16px] mt-[5px]"
+            />
             <span>{item}</span>
           </li>
         ))}
@@ -119,3 +156,4 @@ const FeatureBlock = ({ title, items }) => {
 };
 
 export default MT5FeaturesSection;
+          

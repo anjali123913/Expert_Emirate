@@ -1,8 +1,8 @@
 import React from "react";
 import mtImage from "../assets/platformMT4/image3.png";
-import platformIcon from "../assets/platformMT4/image1.png"; // Icon for the button
+import platformIcon from "../assets/platformMT4/image2.png"; // Icon for the button
 
-const MTPlatformsSection = () => {
+const MTPlatformsSection1 = () => {
   const buttonStyle = {
     background:
       "linear-gradient(270deg, #281000 -4.65%, #C0971C 23.29%, #FFE976 49.59%, #C0971C 76.98%, #281000 104.92%)",
@@ -42,21 +42,21 @@ const MTPlatformsSection = () => {
             WebkitTextFillColor: "transparent",
           }}
         >
-          MT4 Trading Platform
+          MT5 Trading Platform
         </h2>
-        <p className="font-poppins font-[600] text-[24px]" style={{ color: "rgba(255,255,255,1)" }}>
-          Leading Trading and Analytical Technologies
-        </p>
+    
 
         <p className="text-gray-300 mt-4 text-sm sm:text-base leading-relaxed">
-          MT4 has become one of the most popular trading platforms, offering cutting-edge trading and analytical tools. It is designed to provide traders with a robust and userfriendly environment for executing trades and analyzing financial markets.
+          The growing demands of brokers and traders are met by the MetaTrader 5 (MT5) trading platform.
+Next-Generation Trading: MT5 is the latest and most advanced version of the MetaTrader platform, designed to meet the needs of modern traders. It builds upon the success of MT4 with enhanced features and improved performance.
+
         </p>
 
         {/* ✅ Single Button with Icon */}
         <div className="mt-6 flex justify-center md:justify-start">
           <button style={buttonStyle}>
             <img src={platformIcon} alt="Platform Icon" className="w-5 h-5" />
-            MT4 Platform
+            MT5 Platform
           </button>
         </div>
       </div>
@@ -64,4 +64,4 @@ const MTPlatformsSection = () => {
   );
 };
 
-export default MTPlatformsSection;
+export default MTPlatformsSection1;

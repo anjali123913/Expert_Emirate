@@ -3,7 +3,7 @@ import mt4DownloadImage from "../assets/platformMT4/image5.png";
 import mt4DownloadImage1 from "../assets/platformMT4/image1.png"
  // Use your image from Screenshot (298)
 
-const DownloadMT4Section = () => {
+const DownloadMT5Section = () => {
   return (
     <section className="bg-black text-white py-16 px-4 md:px-20 font-[Poppins]">
       <div className="flex flex-col-reverse lg:flex-row items-center justify-between gap-10">
@@ -18,7 +18,7 @@ const DownloadMT4Section = () => {
               WebkitTextFillColor: "transparent",
             }}
           >
-            Download MT4 <br /> Trading Platform
+            Download MT5 <br /> Trading Platform
           </h2>
 
           <p className="text-sm md:text-base text-gray-300">
@@ -37,7 +37,7 @@ const DownloadMT4Section = () => {
             <img
             src={mt4DownloadImage1}
             />
-            Download MT4 Platform
+            Download MT5 Platform
           </button>
         </div>
 
@@ -54,4 +54,4 @@ const DownloadMT4Section = () => {
   );
 };
 
-export default DownloadMT4Section;
+export default DownloadMT5Section;
