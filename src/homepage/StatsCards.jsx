@@ -14,7 +14,7 @@ const stats = [
     icon: servedClientsIcon,
     number: "12000+",
     label: "Served Clients",
-    isLarge: true, // Middle card icon bigger
+    isLarge: true,
   },
   {
     icon: copyTradingIcon,
@@ -30,21 +30,50 @@ const StatsCards = () => {
       {stats.map((item, idx) => (
         <div
           key={idx}
-          className="flex items-center bg-[#141217] rounded-xl px-6 py-5 w-[280px] sm:w-[300px] md:w-[320px] shadow-md transition-all duration-300"
+          className="flex items-center justify-start rounded-[20px] border border-[#1D1B25] shadow-sm"
+          style={{
+            background: "rgba(18, 17, 23, 1)",
+            padding: "20px 24px",
+            gap: "10px",
+            width: "100%",
+            maxWidth: "370px",
+            height: "auto",
+          }}
         >
-          {/* Image size adjusted for middle card */}
           <img
             src={item.icon}
             alt={item.label}
-            className={`object-contain ${
-              item.isLarge ? "w-[72px] h-[72px] sm:w-[80px] sm:h-[80px]" : "w-14 h-14 sm:w-16 sm:h-16"
+            className={`object-contain flex-shrink-0 ${
+              item.isLarge
+                ? "w-[72px] h-[72px] sm:w-[80px] sm:h-[80px]"
+                : "w-[56px] h-[56px] sm:w-[64px] sm:h-[64px]"
             }`}
           />
-
-          {/* Text Section */}
           <div className="pl-4">
-            <h3 className="text-white text-xl sm:text-2xl font-bold">{item.number}</h3>
-            <p className="text-white text-sm sm:text-base">{item.label}</p>
+            <h3
+              className="text-white"
+              style={{
+                fontFamily: "Poppins",
+                fontWeight: 500,
+                fontSize: "36px",
+                lineHeight: "100%",
+                letterSpacing: "0%",
+              }}
+            >
+              {item.number}
+            </h3>
+            <p
+              className="text-white"
+              style={{
+                fontFamily: "Poppins",
+                fontWeight: 400,
+                fontSize: "20px",
+                lineHeight: "100%",
+                letterSpacing: "0%",
+              }}
+            >
+              {item.label}
+            </p>
           </div>
         </div>
       ))}

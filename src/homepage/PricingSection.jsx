@@ -60,65 +60,61 @@ const plans = [
 
 export default function PricingSection() {
   return (
-    <div className="bg-black text-white py-16 px-4 sm:px-6 lg:px-12 font-[Poppins]">
+    <div className="bg-black text-white  py-16 px-4 sm:px-6 lg:px-12 font-[Poppins]">
       <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 px-2 sm:px-4 md:px-8">
         {plans.map((plan, idx) => (
           <div
             key={idx}
-            className="group bg-[#121117] rounded-2xl p-6 sm:p-8 shadow-lg flex flex-col justify-between transition-all"
-            style={{
-              border: "1px solid",
-              borderImageSource: "linear-gradient(180deg, #292929 0%, #000000 100%)",
-              borderImageSlice: 1,
-            }}
+            className="group rounded-2xl p-[2px] bg-gradient-to-b from-[#292929] to-[#000000] shadow-lg transition-all"
           >
-            {/* Plan Badge */}
-            <div className="flex items-center gap-2 bg-[#1F1E25] rounded-full px-4 py-2 w-max mb-6 text-white">
-              <span className="text-lg p-2 rounded-full bg-gray-800 -mt-1">
-                {plan.icon}
-              </span>
-              <span className="text-lg font-semibold transition-all duration-300 group-hover:bg-gradient-to-b group-hover:from-yellow-900 group-hover:via-yellow-300 group-hover:to-yellow-900 group-hover:bg-clip-text group-hover:text-transparent">
-                {plan.name}
-              </span>
+            <div className="bg-[#121117] rounded-2xl p-6 sm:p-8 flex flex-col justify-between h-full">
+              {/* Plan Badge */}
+              <div className="flex items-center gap-2 bg-[#1F1E25] rounded-full px-4 py-2 w-max mb-6 text-white">
+                <span className="text-lg p-2 rounded-full bg-gray-800 -mt-1">
+                  {plan.icon}
+                </span>
+                <span className="text-lg font-semibold transition-all duration-300 group-hover:bg-gradient-to-b group-hover:from-yellow-900 group-hover:via-yellow-300 group-hover:to-yellow-900 group-hover:bg-clip-text group-hover:text-transparent">
+                  {plan.name}
+                </span>
+              </div>
+
+              {/* Price */}
+              <h2 className="text-4xl font-medium text-white group-hover:text-yellow-500">
+                {plan.price}
+                <span className="text-base font-normal ml-1">{plan.duration}</span>
+              </h2>
+
+              {/* Description */}
+              <p className="text-sm sm:text-md font-medium text-gray-300 my-4 leading-relaxed">
+                {plan.description}
+              </p>
+
+              {/* Buy Now Button */}
+              <button
+                className="w-full sm:w-[147px] h-[48px] text-sm font-bold rounded-full px-6 py-2 mb-6
+                bg-black text-white hover:bg-gradient-to-l from-[#452e06] via-[#d1bf5a] via-50% to-[#452e06] hover:text-black 
+                bg-transparent 
+                hover:bg-[linear-gradient(86.31deg,#281000_0%,#C0971C_25%,#FFE976_50.5%,#C0971C_74.5%,#281000_100%)] 
+                shadow-[0_0_6px_#FFD70066]
+                transition-all duration-300"
+              >
+                Buy Now
+              </button>
+
+              {/* Features */}
+              <ul className="space-y-3 text-sm text-gray-300">
+                {plan.features.map((feature, i) => (
+                  <li key={i} className="flex items-start gap-3">
+                    <div className="w-5 h-5 rounded-full bg-gray-300 group-hover:bg-gradient-to-t group-hover:from-[#452e06] group-hover:via-[#d1bf5a] group-hover:to-[#452e06] flex items-center justify-center transition-all duration-300">
+                      <span className="text-xs font-bold text-gray-800 group-hover:text-black">
+                        ✓
+                      </span>
+                    </div>
+                    <span className="font-medium text-gray-300">{feature}</span>
+                  </li>
+                ))}
+              </ul>
             </div>
-
-            {/* Price */}
-            <h2 className="text-4xl font-bold text-white group-hover:text-yellow-500">
-              {plan.price}
-              <span className="text-base font-normal ml-1">{plan.duration}</span>
-            </h2>
-
-            {/* Description */}
-            <p className="text-sm sm:text-md font-medium text-gray-300 my-4 leading-relaxed">
-              {plan.description}
-            </p>
-
-            {/* Buy Now Button */}
-            <button
-              className="w-full sm:w-[147px] h-[48px] text-sm font-bold rounded-full px-6 py-2 mb-6
-              bg-black text-white hover:bg-gradient-to-l from-[#452e06] via-[#d1bf5a] via-50% to-[#452e06] hover:text-black rounded-full px-10 py-3 font-bold transition tracking-tighter border border-l-yellow-900 border-r-yellow-900 border-b-yellow-500 border-t-yellow-950
-              bg-transparent 
-              hover:text-black 
-              hover:bg-[linear-gradient(86.31deg,#281000_0%,#C0971C_25%,#FFE976_50.5%,#C0971C_74.5%,#281000_100%)] 
-              shadow-[0_0_6px_#FFD70066]
-              transition-all duration-300"
-            >
-              Buy Now
-            </button>
-
-            {/* Features */}
-            <ul className="space-y-3 text-sm text-gray-300">
-              {plan.features.map((feature, i) => (
-                <li key={i} className="flex items-start gap-3">
-                  <div className="w-5 h-5 rounded-full bg-gray-300 group-hover:bg-gradient-to-t group-hover:from-[#452e06] group-hover:via-[#d1bf5a] group-hover:to-[#452e06] flex items-center justify-center transition-all duration-300">
-                    <span className="text-xs font-bold text-gray-800 group-hover:text-black">
-                      ✓
-                    </span>
-                  </div>
-                  <span className="font-medium text-gray-300">{feature}</span>
-                </li>
-              ))}
-            </ul>
           </div>
         ))}
       </div>

@@ -4,6 +4,25 @@ import { Link } from "react-router-dom";
 import logo from "../assets/navlogo.png";
 
 const Footer = () => {
+  const TopDefaultStyle = {
+    background: "linear-gradient(86.31deg, #281000 0%, #C0971C 25%, #FFE976 50.5%, #C0971C 74.5%, #281000 100%)",
+    border: "1px solid #C0971C",
+    fontFamily: "Poppins",
+    fontWeight: 400,
+    fontSize: "18.63px",
+    color: "black",
+    borderRadius: "9999px"
+  };
+
+  const TopHoverStyle = {
+    background: "rgba(0, 0, 0, 1)",
+    border: "1px solid #FFE976",
+    fontFamily: "Poppins",
+    fontWeight: 400,
+    fontSize: "18.63px",
+    color: "white",
+    borderRadius: "9999px"
+  };
   return (
     <footer
       className="text-white px-4 sm:px-6 py-10 font-poppins text-base leading-4 font-normal"
@@ -14,7 +33,7 @@ const Footer = () => {
         <div className="w-40 sm:w-48">
           <img src={logo} alt="logo expert emirates" className="w-full h-auto" />
         </div>
-        <a
+        {/* <a
           href="#top"
           className="text-black rounded-full px-6 py-2 text-sm sm:text-base font-bold transition"
           style={{
@@ -23,11 +42,25 @@ const Footer = () => {
           }}
         >
           Go to Top
-        </a>
+        </a> */}
+        <a
+  href="#top"
+  className="text-black rounded-full px-6 py-2 text-sm sm:text-base font-bold shadow-[0px_0px_17px_1.7px_rgba(254,214,0,0.20)] shadow-[inset_0px_0px_21px_0px_rgba(255,215,0,0.20)] outline outline-[0.86px] outline-offset-[-0.86px] outline-yellow-600/50"
+  style={{
+    background:
+      "linear-gradient(270deg, #281000 -4.65%, #C0971C 23.29%, #FFE976 49.59%, #C0971C 76.98%, #281000 104.92%)",
+    border: "1px solid",
+    borderImageSource:
+      "linear-gradient(266.31deg, rgba(200, 161, 39, 0.5) 0%, rgba(102, 102, 102, 0) 100%)",
+  }}
+>
+  Go to Top
+</a>
+
       </div>
 
       {/* Divider */}
-      <div className="bg-gradient-to-r from-[#070707] via-[#474646] to-[#1f1e1e] w-full sm:w-5/6 mx-auto my-5 h-[1px] rounded-full" />
+      {/* <div className="bg-gradient-to-r from-[#070707] via-[#474646] to-[#1f1e1e] w-full sm:w-5/6 mx-auto my-5 h-[1px] rounded-full" /> */}
 
       {/* Grid Section */}
       <div className="max-w-7xl mx-auto grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6 text-sm sm:text-base">
@@ -45,7 +78,7 @@ const Footer = () => {
               "Cryptocurrency",
               "Portfolio Management",
               "Trading Bot",
-              "Funded Accounts",
+              "Copy Trading",
             ],
           },
           {

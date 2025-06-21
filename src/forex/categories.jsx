@@ -5,7 +5,7 @@ const categories = [
   { label: "Forex + Gold", path: "/forex" },
   { label: "Crypto Currency", path: "/cryptocurrency" },
   { label: "Portfolio Management", path: "/portfolio-management" },
-  { label: "Funded Accounts", path: "/funded-accounts" },
+  { label: "Copy Trading", path: "/funded-accounts" },
   // { label: "Trading Bot", path: "/bot" }, // kept this line
 ];
 

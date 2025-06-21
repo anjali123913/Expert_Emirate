@@ -16,25 +16,50 @@ const BrochureSection = () => {
               Expert Emirates Brochure
             </h2>
 
-            <div className="mt-8">
-              <button className="relative rounded-full group transition-all duration-300 bg-gradient-to-l from-[#452e06] via-[#d1bf5a] to-[#452e06] hover:bg-black">
-                <div className="border border-transparent hover:border-t-yellow-500 hover:border-b-yellow-500 hover:border-l-yellow-700 hover:border-r-yellow-700 rounded-full py-4 px-8 text-black text-base font-poppins font-bold flex items-center justify-center gap-3 tracking-wide hover:bg-black hover:text-white transition-all duration-300">
-                  Download Now
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="h-5 w-5 group-hover:translate-y-1 transition-transform duration-300"
-                    viewBox="0 0 20 20"
-                    fill="currentColor"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z"
-                      clipRule="evenodd"
-                    />
-                  </svg>
-                </div>
-              </button>
-            </div>
+            <div className="flex justify-center md:justify-start">
+  <button
+    className="rounded-full px-8 py-4 text-base font-bold font-poppins tracking-wide flex items-center justify-center gap-3 transition-all duration-300 text-black border-none"
+    style={{
+      background:
+        "linear-gradient(270deg, #281000 -4.65%, #C0971C 23.29%, #FFE976 49.59%, #C0971C 76.98%, #281000 104.92%)",
+      borderRadius: "9999px",
+    }}
+    onMouseEnter={(e) => {
+      e.currentTarget.style.background = "rgba(0, 0, 0, 1)";
+      e.currentTarget.style.color = "white";
+      e.currentTarget.style.borderWidth = "0.78px";
+      e.currentTarget.style.borderStyle = "solid";
+      e.currentTarget.style.borderImage =
+        "linear-gradient(90deg, #281000 0%, #C0971C 25.5%, #FFE976 49.5%, #C0971C 74.5%, #281000 100%) 1";
+      e.currentTarget.style.borderRadius = "9999px"; // ensures pill shape stays
+    }}
+    onMouseLeave={(e) => {
+      e.currentTarget.style.background =
+        "linear-gradient(270deg, #281000 -4.65%, #C0971C 23.29%, #FFE976 49.59%, #C0971C 76.98%, #281000 104.92%)";
+      e.currentTarget.style.color = "black";
+      e.currentTarget.style.border = "none";
+      e.currentTarget.style.borderRadius = "9999px";
+    }}
+  >
+    Download Now
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      className="h-5 w-5 transition-transform duration-300 group-hover:translate-y-1"
+      viewBox="0 0 20 20"
+      fill="currentColor"
+    >
+      <path
+        fillRule="evenodd"
+        d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z"
+        clipRule="evenodd"
+      />
+    </svg>
+  </button>
+</div>
+
+
+
+
           </div>
 
           {/* Image Section */}
@@ -42,7 +67,7 @@ const BrochureSection = () => {
             <img
               src={brochureImage}
               alt="Brochure"
-              className="w-[85%] sm:w-[70%] md:w-[90%] lg:w-[100%] max-w-[400px] h-auto object-contain -mt-6 sm:-mt-10 md:-mt-16"
+              className="w-[85%] sm:w-[120%] md:w-[90%] lg:w-[100%] max-w-[400px] h-auto object-contain -mt-6 sm:-mt-10 md:-mt-16"
             />
           </div>
         </div>

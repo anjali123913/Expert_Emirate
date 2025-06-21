@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Navbar from "./Navbar1";
 import video from "../assets/Expert_Emirates.mp4";
 import { motion } from "framer-motion";
 
@@ -29,6 +30,7 @@ const HeroSection = () => {
 
   return (
     <section className="relative w-full min-h-screen pt-24 overflow-hidden">
+      
       {/* Video Background */}
       <div className="absolute inset-0 -z-10">
         <video

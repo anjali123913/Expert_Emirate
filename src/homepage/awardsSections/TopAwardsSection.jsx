@@ -93,7 +93,7 @@ const TopAwardsSection = () => {
           e.currentTarget.style.color = "black";
         }}
       >
-        {/* Gradient border using pseudo-element */}
+        
         <span 
           className="absolute inset-0 rounded-full opacity-100 transition-opacity duration-300"
           style={{

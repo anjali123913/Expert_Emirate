@@ -53,7 +53,7 @@ export default function AppRoutes() {
 
   return (
     <>
-      {!hideNavbarFooter && <Navbar />}
+      {!hideNavbarFooter && <Navbar/>}
       <ScrollToTop />
       <Suspense fallback={<div className="text-center text-white py-10">Loading...</div>}>
         <Routes>

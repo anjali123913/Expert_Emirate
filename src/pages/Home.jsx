@@ -1,5 +1,5 @@
 import React from "react";
-import Navbar from "../components/Navbar";
+import Navbar1 from "../components/Navbar1";
 import HeroSection from "../components/HeroSection";
 import MobileTradingSection from "../homepage/MobileTradingSection";
 import SecondHero from "../components/SecondHero";

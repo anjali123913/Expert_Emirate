@@ -9,7 +9,7 @@ const ExpertMotion = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setReverse((prev) => !prev);
-    }, 3000); // Change direction every 8 seconds
+    }, 8000); // Change direction every 8 seconds
     return () => clearInterval(interval);
   }, []);
 
@@ -26,12 +26,13 @@ const ExpertMotion = () => {
   };
 
   return (
-    <div className="w-full min-h-[50vh] bg-black relative flex items-center justify-center px-4 py-8 sm:py-12 overflow-hidden">
+    <div className="w-full min-h-[50vh] bg-black relative flex items-center justify-center px-4 py-16 sm:py-24 overflow-hidden">
+
       {/* Top Coin */}
       <motion.img
         src={coinsTop}
         alt="coins top"
-        className="absolute top-4 right-96 left-96 w-full opacity-30 z-0 pointer-events-none"
+        className="absolute top-9 right-96 left-96 w-full opacity-30 z-0 pointer-events-none"
         {...createMotionProps(true)}
       />
 
@@ -39,12 +40,12 @@ const ExpertMotion = () => {
       <motion.img
         src={coinsBottom}
         alt="coins bottom"
-        className="absolute bottom-4 left-96 right-96 w-full opacity-30 z-0 pointer-events-none"
+        className="absolute bottom-7 left-96 right-96 w-full opacity-30 z-0 pointer-events-none"
         {...createMotionProps(false)}
       />
 
       {/* Text */}
-      <div className="relative z-10 flex flex-col items-center justify-center text-center px-2">
+      <div className="bg-black/50 relative z-10 flex flex-col items-center justify-center text-center px-2">
         <h1
           className="text-7xl font-bold bg-gradient-to-t from-transparent via-yellow-300 to-transparent bg-clip-text text-transparent"
         >
