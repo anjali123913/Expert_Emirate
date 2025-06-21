@@ -52,7 +52,7 @@ const reviews = [
     content: "From account creation to funding – everything is intuitive and professional."
   }
 ];
-
+ 
 const StarRating = () => (
   <div className="flex items-center mb-2">
     {"★★★★★".split("").map((_, i) => (
