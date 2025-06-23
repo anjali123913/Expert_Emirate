@@ -1,12 +1,12 @@
 // components/ToggleButton.jsx
 import React from "react";
 
-export default function ToggleButton({ text, clicked, setClicked, eText, setEText }) {
+export default function ToggleButton({ text, clicked, setClicked, eText }) {
   const isActive = clicked === eText;
 
   const handleClick = () => {
     setClicked(eText);
-    setEText?.(text); // optional
+    // setEText?.(text); // optional
   };
 
   return (

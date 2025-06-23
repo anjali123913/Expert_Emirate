@@ -6,6 +6,8 @@ import ScrollToTop from "./utils/ScrollToTop";
 import BuyPlan from "./dashboard/BuyPlan";
 import UserSettings from "./dashboard/UserSettings";
 import TransactionHistory from "./dashboard/TransactionHistory";
+import BlogBitcoinConsolidation from "./blogdetail/BlogBitcoinConsolidation";
+import ReadBlog from "./blogdetail/ReadBlog";
 
 // Lazy-loaded components
 const HomePage = lazy(() => import("./pages/Home"));
@@ -58,7 +60,7 @@ export default function AppRoutes() {
       <Suspense fallback={<div className="text-center text-white py-10">Loading...</div>}>
         <Routes>
           <Route path="/" element={<HomePage />} />
-          {/* <Route path="/careers" element={<Career />} /> */}
+          {/* <Route path="/careers" element={<Career />} /> */}                                                                                                                                                                                                                                                      
           <Route path="/FAQ" element={<FaqSection />} />
           {/* <Route path="/Education" element={<EducationData />} /> */}
           <Route path="/Forecasts" element={<AwardsSection />} />
@@ -83,6 +85,7 @@ export default function AppRoutes() {
           <Route path="/dashboard/buy-plan" element={<BuyPlan />} />
           <Route path="/dashboard/setting" element={<UserSettings />} />
           <Route path="/dashboard/transaction-history" element={<TransactionHistory />} />
+          <Route path="/blog/read-blog/:blogId" element={<ReadBlog />} />
         </Routes>
       </Suspense>
       {!hideNavbarFooter && <Footer />}

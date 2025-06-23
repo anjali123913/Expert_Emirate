@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import DashboardHeader from "./components/DashboardHeader";
 import Sidebar from "./components/Sidebar";
 import WelcomeBanner from "./WelcomeBanner";
@@ -7,6 +7,8 @@ import PricingPage from "./PricingPage";
 import SupportSection from "./SupportSection";
 
 export default function Dashboard() {
+  const [clicked, setClicked] = useState("forex");
+
   return (
     <div className="flex min-h-screen  bg-[#121117]">
       {/* Sidebar */}
@@ -19,9 +21,9 @@ export default function Dashboard() {
         <DashboardHeader />
         <main className="p-4">
           <WelcomeBanner />
-          <ButtonGroupSection />
-        <PricingPage/>
-        <SupportSection/>
+          <ButtonGroupSection clicked={clicked} setClicked={setClicked} />
+          <PricingPage clicked={clicked} setClicked={setClicked} />
+          <SupportSection />
         </main>
       </div>
     </div>

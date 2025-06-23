@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { FiSearch } from "react-icons/fi"; // ✅ Google-style search icon
 
-export default function BlogHeader() {
+export default function BlogHeader({setBlogType}) {
   const [activeTab, setActiveTab] = useState("all");
   const [activeForecast, setActiveForecast] = useState("Forex Forecast");
   const navigate = useNavigate();
@@ -24,8 +25,10 @@ export default function BlogHeader() {
   };
 
   const handleForecastClick = (forecast) => {
+    console.log(forecast)
+    setBlogType(forecast)
     setActiveForecast(forecast.label);
-    navigate(forecast.path);
+    // navigate(forecast.path);
   };
 
   return (
@@ -74,14 +77,17 @@ export default function BlogHeader() {
         {/* Right Side: Search + Sort + Forecast Buttons */}
         <div className="flex flex-col items-end gap-4">
           <div className="flex items-center gap-4 w-full justify-end">
+            {/* Search Input */}
             <div className="relative w-full max-w-[300px]">
               <input
                 type="text"
                 placeholder="Search..."
                 className="w-full bg-transparent border border-[#444] text-white text-sm px-10 py-2 rounded-md placeholder-white focus:outline-none"
               />
-              <span className="absolute left-3 top-2.5 text-white">🔍</span>
+              <FiSearch className="absolute left-3 top-2.5 text-white text-lg" />
             </div>
+
+            {/* Sort By */}
             <div className="text-white text-sm flex items-center gap-1 whitespace-nowrap">
               <span className="opacity-70">Sort By:</span>
               <span className="font-semibold">Featured</span>
@@ -94,7 +100,7 @@ export default function BlogHeader() {
             {forecasts.map((forecast) => (
               <button
                 key={forecast.label}
-                onClick={() => handleForecastClick(forecast)}
+                onClick={() => handleForecastClick(forecast.label)}
                 className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
                   activeForecast === forecast.label
                     ? "text-black shadow-md"
