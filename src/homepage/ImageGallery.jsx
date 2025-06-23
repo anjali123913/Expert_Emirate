@@ -12,7 +12,7 @@ import user9 from "../assets/imageGallery/user9.jpg";
 const images = [user1, user2, user3, user4, user5, user6, user7, user8, user9];
 
 const ImageGallery = () => {
-  const [activeIndex, setActiveIndex] = useState(null);
+  const [activeIndex, setActiveIndex] = useState(0); // ✅ First image open by default
 
   const handleClick = (index) => {
     setActiveIndex(index === activeIndex ? null : index); // toggle selection
@@ -20,7 +20,7 @@ const ImageGallery = () => {
 
   return (
     <div className="relative bg-black py-10 flex items-center justify-center mx-auto">
-      <div className="flex  overflow-x-auto space-x-4 px-4 overflow-auto scrollbar-none  no-scrollbar">
+      <div className="flex overflow-x-auto space-x-4 px-4 scrollbar-none no-scrollbar">
         {images.map((src, idx) => (
           <img
             key={idx}

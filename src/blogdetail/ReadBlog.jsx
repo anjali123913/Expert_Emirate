@@ -2,6 +2,7 @@ import React from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { cardsData } from "./data";
 import { GoArrowLeft } from "react-icons/go";
+import FeatureSection from "../homepage/FeatureSection";
 
 const ReadBlog = () => {
   const { blogId } = useParams();
@@ -10,41 +11,62 @@ const ReadBlog = () => {
 
   if (!blog) {
     return (
-      <div className="text-center py-20 text-gray-500 text-xl">
+      <div className="text-center py-20 text-gray-500 text-xl bg-black min-h-screen">
         Blog not found.
       </div>
     );
   }
 
   return (
-    <div className="bg-white text-black py-10 px-4 mt-10">
-     <div className="flex items-start justify-start mx-auto">
-  <GoArrowLeft onClick={() => navigate(-1)} className="text-red-900 cursor-pointer text-4xl" />
-  <div> {""}</div>
-</div>
+    <div className="bg-black text-white py-10 px-4 min-h-screen">
+      {/* Top Back Icon */}
+      <div className="flex items-start justify-start mb-6">
+        <GoArrowLeft
+          onClick={() => navigate(-1)}
+          className="text-white cursor-pointer text-3xl"
+        />
+      </div>
 
-      <div className="max-w-[768px] mx-auto">
+      <div className="max-w-3xl mx-auto">
         {/* Title */}
-        <h1 className="text-2xl md:text-3xl font-semibold text-center mb-2">
+        <h1 className="text-2xl md:text-3xl font-semibold text-center mb-2 leading-snug">
           {blog.title}
         </h1>
 
-        {/* Date and Badge */}
-        <div className="text-center text-sm text-gray-500 mb-6">
+        {/* Date & Badge */}
+        <div className="text-center text-sm text-gray-500 mb-4">
           {blog.date} · {blog.badge}
         </div>
 
-        {/* Image */}
-        <div className="mb-6">
+        {/* Image with button */}
+        <div className="relative mb-3">
           <img
             src={blog.image}
-            alt="Blog Preview"
-            className="w-full h-[200px] object-cover rounded shadow-md"
+            alt="Blog Visual"
+            className="w-full h-[250px] sm:h-[350px] object-cover rounded-xl"
           />
+
+          {/* Forex Button */}
+          <div className="absolute bottom-4 right-4">
+            <button className="px-4 py-1.5 text-sm font-medium rounded-full text-white bg-black border border-yellow-400 hover:bg-gradient-to-b from-[#C0971C] to-[#FFE976] transition-all duration-300">
+              Forex Forecast
+            </button>
+          </div>
         </div>
 
-        {/* Static Demo Description */}
-        <div className="text-sm md:text-base text-gray-800 leading-relaxed space-y-4">
+        {/* Just below image: Back button */}
+        <div className="mb-6">
+          <button
+            onClick={() => navigate(-1)}
+            className="flex items-center text-sm text-white-bold px-4 py-1.5 rounded-full  transition"
+          >
+            <GoArrowLeft className="mr-2 text-lg" />
+            Back
+          </button>
+        </div>
+
+        {/* Blog Content */}
+        <div className="text-sm md:text-base leading-relaxed space-y-4">
           <p>
             BTCUSDT held up quite strongly during the market fall and largely
             weathered the storm, while the stock market and indices were in free
@@ -74,7 +96,7 @@ const ReadBlog = () => {
             important support that could become the basis for continuation.
           </p>
 
-          {/* Levels */}
+          {/* Resistance & Support Levels */}
           <p className="font-semibold">Resistance levels: 95K, 100K, 102.5K</p>
           <p className="font-semibold">Support levels: 93.5, 93.2, 92, 91K</p>
 
@@ -90,12 +112,13 @@ const ReadBlog = () => {
           </p>
         </div>
 
-        {/* Author */}
-        <div className="text-sm text-gray-600 mt-8 text-left">
+        {/* Author Footer */}
+        <div className="text-sm text-gray-500 mt-8 text-left">
           Best regards, <br />
-          <strong>R. Linda</strong>
+          <strong className="text-white">R. Linda</strong>
         </div>
       </div>
+      <FeatureSection/>
     </div>
   );
 };

@@ -53,7 +53,7 @@ const ExpertMotion = () => {
         </h1>
         <p className="text-white mt-2 text-3xl">Empowering Smart Traders, Every <br/>Step of the Way</p>
       </div>
-    </div>
+        </div>
   );
 };
 
