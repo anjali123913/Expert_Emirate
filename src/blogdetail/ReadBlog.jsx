@@ -19,7 +19,7 @@ const ReadBlog = () => {
 
   return (
     <div className="bg-black text-white py-10 px-4 min-h-screen">
-      {/* Top Back Icon */}
+      {/* Back Icon */}
       <div className="flex items-start justify-start mb-6">
         <GoArrowLeft
           onClick={() => navigate(-1)}
@@ -38,7 +38,7 @@ const ReadBlog = () => {
           {blog.date} · {blog.badge}
         </div>
 
-        {/* Image with button */}
+        {/* Image with Updated Badge Button */}
         <div className="relative mb-3">
           <img
             src={blog.image}
@@ -46,19 +46,21 @@ const ReadBlog = () => {
             className="w-full h-[250px] sm:h-[350px] object-cover rounded-xl"
           />
 
-          {/* Forex Button */}
+          {/* Gradient Hover Styled Button */}
           <div className="absolute bottom-4 right-4">
-            <button className="px-4 py-1.5 text-sm font-medium rounded-full text-white bg-black border border-yellow-400 hover:bg-gradient-to-b from-[#C0971C] to-[#FFE976] transition-all duration-300">
-              Forex Forecast
+            <button
+              className="text-white text-[10px] sm:text-sm font-bold px-4 py-1.5 rounded-full bg-black border border-yellow-400 transition-all duration-300 hover:bg-gradient-to-b hover:from-[#C0971C] hover:to-[#FFE976]"
+            >
+              {blog.badge}
             </button>
           </div>
         </div>
 
-        {/* Just below image: Back button */}
+        {/* Back Button */}
         <div className="mb-6">
           <button
             onClick={() => navigate(-1)}
-            className="flex items-center text-sm text-white-bold px-4 py-1.5 rounded-full  transition"
+            className="flex items-center text-sm text-white px-4 py-1.5 rounded-full transition"
           >
             <GoArrowLeft className="mr-2 text-lg" />
             Back
@@ -96,7 +98,6 @@ const ReadBlog = () => {
             important support that could become the basis for continuation.
           </p>
 
-          {/* Resistance & Support Levels */}
           <p className="font-semibold">Resistance levels: 95K, 100K, 102.5K</p>
           <p className="font-semibold">Support levels: 93.5, 93.2, 92, 91K</p>
 
@@ -118,7 +119,9 @@ const ReadBlog = () => {
           <strong className="text-white">R. Linda</strong>
         </div>
       </div>
-      <FeatureSection/>
+
+      {/* Feature Section */}
+      <FeatureSection />
     </div>
   );
 };

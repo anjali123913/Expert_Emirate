@@ -48,56 +48,93 @@ export const cardsData = [
   },
   {
     image: image5,
-    badge: "CRYPTO FORECAST",
-    title: "USDJPY - Consolidation of price in the sell zone",
-    desc: "USDJPY reaches a strong resistance at 153.87 within an uptrend. Will this direction continue, as the Fed rate meeting is ahead...",
+    badge: "Gold Forecast",
+    title: "GOLD → Short squeeze before a drop to 3150?",
+    desc: "XAUUSD is consolidating. The market needs a driver, but due to the unstable fundamental background, traders have switched to a wait-and-see mode. Consolidation could turn into strong movement at any moment",
     date: "18.12.2024",
     type: "Gold Forecast",
     blogId:5
   },
   {
     image: image6,
-    badge: "CRYPTO FORECAST",
-    title: "USDCHF - Breakout of wedge resistance. CPI ahead",
-    desc: "USDCHF is showing positive signs of willingness to continue the uptrend. The dollar is consolidating in the meantime in anticipation of CPI, which creates risks for us",
+    badge: "Gold Forecast",
+    title: "GOLD → Retest resistance before falling",
+    desc: "GOLD is forming a correction and retesting a strong resistance and liquidity zone within a downtrend. The global trend is one step away from a reversal...",
     date: "08.05.2025",
     type: "Gold Forecast",
     blogId:6
   },
   {
     image: image7,
-    badge: "CRYPTO FORECAST",
-    title: "EURUSD - False breakout of resistance. Downtrend.",
-    desc: "EURUSD is testing resistance in the downtrend phase. The maneuver ends with a false breakout of resistance at 1.0607",
+    badge: "Gold Forecast",
+    title: "GOLD → Consolidation ahead of news. What to expect?",
+    desc: "XAUUSD is consolidating. Focus on 3370 - 3269. Economic data is expected tomorrow, and gold is likely to trade within the consolidation range for several days",
     date: "06.05.2025",
     type: "Gold Forecast",
     blogId:7
   },
   {
     image: image8,
-    badge: "CRYPTO FORECAST",
-    title: "GBPUSD - Channel breakout. Attempt to change the trend support after recent dip",
-    desc: "GBPUSD finds an opportunity to grow. A breakout of the local trend resistance is forming amid the dollar correction. Zones of interest: 1.300",
+    badge: "Gold Forecast",
+    title: "GOLD → False breakdown and change of mood...",
+    desc: "XAUUSD is strengthening after a false breakdown of support at 3288, with the change in fundamental sentiment due to US statements on the tariff war also providing support for the price",
     date: "04.05.2025",
     type: "Gold Forecast",
     blogId:8
   },
   {
     image: image9,
-    badge: "CRYPTO FORECAST",
-    title: "EURUSD - Consolidating before the news....",
-    desc: "EURUSD is in a current downtrend, but there is news ahead and traders are waiting for hints about the US monetary policy. The currency pair has not yet reached the local target...",
+    badge: "Gold Forecast",
+    title: "GOLD → A U-turn? Medium-term targets. Up ahead, 2790",
+    desc: "GOLD on Thursday tests 0.5 fibo, which I outlined to you on April 17, forms a false breakdown and recovers amid unstable geopolitical relations in the world. Price may continue its northward run.",
     date: "02.05.2025",
     type: "Gold Forecast",
     blogId:9
   },
   {
     image: image10,
-    badge: "CRYPTO FORECAST",
+    badge: "Gold Forecast",
     title: "GBPUSD - Counter-trend correction before further decline",
     desc: "GBPUSD within the correction reaches a zone of interest and resistance from which the decline may resume as the dollar returns to a northbound rut",
     date: "30.04.2025",
     type: "Gold Forecast",
     blogId:10
+  },
+   {
+    image: image10,
+    badge: "Forex Forecast",
+    title: "GBPUSD - Counter-trend correction before further decline",
+    desc: "GBPUSD within the correction reaches a zone of interest and resistance from which the decline may resume as the dollar returns to a northbound rut",
+    date: "30.04.2025",
+    type: "Forex Forecast",
+    blogId:11
+  },
+   {
+    image: image7
+    ,
+    badge: "Forex Forecast",
+    title: "GBPUSD - Counter-trend correction before further decline",
+    desc: "GBPUSD within the correction reaches a zone of interest and resistance from which the decline may resume as the dollar returns to a northbound rut",
+    date: "30.04.2025",
+    type: "Forex Forecast",
+    blogId:12
+  },
+   {
+    image: image5,
+    badge: "Forex Forecast",
+    title: "GBPUSD - Counter-trend correction before further decline",
+    desc: "GBPUSD within the correction reaches a zone of interest and resistance from which the decline may resume as the dollar returns to a northbound rut",
+    date: "30.04.2025",
+    type: "Forex Forecast",
+    blogId:13
+  },
+   {
+    image: image8,
+    badge: "Forex Forecast",
+    title: "GBPUSD - Counter-trend correction before further decline",
+    desc: "GBPUSD within the correction reaches a zone of interest and resistance from which the decline may resume as the dollar returns to a northbound rut",
+    date: "30.04.2025",
+    type: "Forex Forecast",
+    blogId:14
   }
 ];

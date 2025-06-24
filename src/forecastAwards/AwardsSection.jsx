@@ -158,7 +158,7 @@ const AwardsSection = () => {
         <WhyChooseSection />
         <CommunitySection />
         <KeyBenefits />
-        <BlogFilters/>
+        <BlogFilters />
         <BlogSection/>
         <FeatureSection />
       </div>

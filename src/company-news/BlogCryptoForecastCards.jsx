@@ -4,7 +4,6 @@ import { cardsData } from "../blogdetail/data";
 
 const BlogCryptoForecastCards = ({ blogType }) => {
   const filteredCards = cardsData.filter((blog) => blog.type === blogType);
-
   if (filteredCards.length === 0) {
     return (
       <div className="bg-black py-10 px-4">
@@ -14,6 +13,7 @@ const BlogCryptoForecastCards = ({ blogType }) => {
       </div>
     );
   }
+
 
   return (
     <div className="bg-black py-10 px-4">
@@ -26,13 +26,16 @@ const BlogCryptoForecastCards = ({ blogType }) => {
             >
               {/* Text Section */}
               <div className="p-5 flex flex-col justify-between md:w-1/2 relative">
-                {/* Badge Button - top left */}
+                {/* Badge Button - Golden Styled */}
                 <div className="absolute left-4 top-4">
                   <div
-                    className="text-[9px] px-2 py-[2px] rounded-full font-medium text-black"
+                    className="text-[9px] px-3 py-[2px] rounded-full font-bold text-black shadow-[0px_0px_10px_rgba(254,214,0,0.25)] shadow-[inset_0px_0px_10px_rgba(255,215,0,0.25)] outline outline-[0.6px] outline-yellow-600/50"
                     style={{
                       background:
-                        "linear-gradient(180deg, #281000 -39.11%, #C0971C 3.81%, #FFE976 44.21%, #C0971C 86.29%, #281000 129.21%)",
+                        "linear-gradient(270deg, #281000 -4.65%, #C0971C 23.29%, #FFE976 49.59%, #C0971C 76.98%, #281000 104.92%)",
+                      border: "1px solid",
+                      borderImageSource:
+                        "linear-gradient(266.31deg, rgba(200, 161, 39, 0.5) 0%, rgba(102, 102, 102, 0) 100%)",
                     }}
                   >
                     {card.badge}

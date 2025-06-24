@@ -82,7 +82,7 @@ export default function TransactionHistory() {
         <main className="p-4">
           <div className="min-h-screen bg-[#121117] text-white p-6">
             <div className="flex justify-between items-center mb-4">
-              <h2 className="text-2xl font-semibold text-yellow-400">
+              <h2 className="text-xl bg-gradient-to-b from-yellow-900 via-yellow-300 to-yellow-900 bg-clip-text text-transparent">
                 Transaction History
               </h2>
               <button className="bg-[#26242f] px-4 py-2 rounded text-white">

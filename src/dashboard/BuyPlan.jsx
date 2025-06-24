@@ -55,7 +55,7 @@ export default function BuyPlan() {
                   <p className="text-gray-400 text-xs">or drag and drop (max. 800x400px)</p>
                 </div>
 
-                <button className="w-full bg-yellow-400 text-black font-semibold py-2 rounded">
+                <button className="w-full bg-gradient-to-l from-[#452e06] via-[#d1bf5a] via-50% to-[#452e06] text-black px-6 py-1 text-sm sm:text-base rounded-full shadow-md hover:brightness-110 transition-all duration-300 py-3">
                   PROCEED TO PAYMENT
                 </button>
               </div>
@@ -81,8 +81,9 @@ export default function BuyPlan() {
                     <p className="text-xs text-gray-400">Purchase Date: 25-11-2024</p>
                   </div>
                   <div className="text-right">
-                    <p className="text-sm text-green-500">Plan Active</p>
-                    <p className="text-xs bg-yellow-400 text-black inline-block px-2 py-1 mt-1 rounded">
+                    <p className="text-sm text-green-500 text-center">Plan Active</p>
+                    <p className="text-sm text-gray-10 my-1">Purchase Date : 20/05/2003</p>
+                    <p className="bg-gradient-to-l from-[#452e06] via-[#d1bf5a] via-50% to-[#452e06] text-black px-6 py-1 text-sm sm:text-base rounded-full shadow-md hover:brightness-110 transition-all duration-300">
                       Expires: 25-11-2025
                     </p>
                   </div>

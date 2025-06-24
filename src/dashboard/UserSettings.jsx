@@ -147,7 +147,7 @@ export default function UserSettings() {
                 <div className="col-span-1 sm:col-span-2 text-right">
                   <button
                     onClick={handleSubmit}
-                    className="bg-gradient-to-r from-yellow-500 to-yellow-700 px-6 py-2 rounded text-black font-semibold"
+                    className="bg-gradient-to-l from-[#452e06] via-[#d1bf5a] via-50% to-[#452e06] text-black px-6 py-1 text-sm sm:text-base rounded-full shadow-md hover:brightness-110 transition-all duration-300"
                   >
                     Save changes
                   </button>

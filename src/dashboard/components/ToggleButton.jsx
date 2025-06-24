@@ -6,16 +6,16 @@ export default function ToggleButton({ text, clicked, setClicked, eText }) {
 
   const handleClick = () => {
     setClicked(eText);
-    // setEText?.(text); // optional
   };
 
   return (
     <button
       onClick={handleClick}
       className={`px-4 py-1.5 rounded-full text-sm font-medium transition-all duration-300
-        ${isActive
-          ? "bg-gradient-to-r from-yellow-600 to-yellow-300 text-black shadow-md"
-          : "bg-[#0f0e13] text-gray-300 hover:bg-[#1a191f]"
+        ${
+          isActive
+            ? "bg-gradient-to-l from-[#452e06] via-[#d1bf5a] via-50% to-[#452e06] text-black px-6 py-1 text-sm sm:text-base rounded-full shadow-md hover:brightness-110 transition-all duration-300"
+            : " text-white px-6 py-1 text-sm sm:text-base rounded-full shadow-md hover:brightness-110 transition-all duration-300"
         }`}
     >
       {text}

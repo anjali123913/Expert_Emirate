@@ -20,7 +20,7 @@ import BitcoinArticle from "../blogdetail/BitcoinArticle";
 export default function CompanyNews() {
 
   const [blogId,setBlogId]=useState("");
-  const [blogType,setBlogType]=useState("Gold Forecast");
+  const [blogType,setBlogType]=useState("Forex Forecast");
 
   // const [blogId,setBlogId]=useState("");
 
@@ -43,6 +43,7 @@ export default function CompanyNews() {
      {/* <AptusdtArticle/> */}
      {/* <BitcoinArticle/> */}
      {/* <FeatureSection/> */}
+     {/* <GoldBlogGrid/> */}
     </div>
   );
 }
