@@ -10,6 +10,7 @@ import MetalsTable from "../forex/MetalsData";
 import WhyTradersTrustUs from "../portfolio/WhyTradersTrustUs";
 import FeatureSection from "../homepage/FeatureSection";
 import WhatisCrypto from "./WhatisCrypto";
+import CriptoTrading from "./CriptoTrading";
 
 export default function CryptoCurrency() {
   return (
@@ -17,7 +18,8 @@ export default function CryptoCurrency() {
       <CryptoHeroSection/>
      <CategoryTabs/>
      <WhatisCrypto/>
-     <ComexFeatures/>
+     <CriptoTrading/>
+     {/* <ComexFeatures/> */}
      <TutorialVideo/>
      <ExpertTrade/>
      <CurrencyMarket/>

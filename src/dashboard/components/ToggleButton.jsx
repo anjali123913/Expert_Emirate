@@ -1,4 +1,3 @@
-// components/ToggleButton.jsx
 import React from "react";
 
 export default function ToggleButton({ text, clicked, setClicked, eText }) {
@@ -11,11 +10,11 @@ export default function ToggleButton({ text, clicked, setClicked, eText }) {
   return (
     <button
       onClick={handleClick}
-      className={`px-4 py-1.5 rounded-full text-sm font-medium transition-all duration-300
+      className={`px-6 py-2 text-sm sm:text-base font-medium rounded-full transition-all duration-300
         ${
           isActive
-            ? "bg-gradient-to-l from-[#452e06] via-[#d1bf5a] via-50% to-[#452e06] text-black px-6 py-1 text-sm sm:text-base rounded-full shadow-md hover:brightness-110 transition-all duration-300"
-            : " text-white px-6 py-1 text-sm sm:text-base rounded-full shadow-md hover:brightness-110 transition-all duration-300"
+            ? "bg-gradient-to-r from-[#2c1e00] via-[#e7c65b] to-[#2c1e00] text-black shadow-[0_0_10px_rgba(255,215,0,0.5)]"
+            : "bg-[#1a1921] text-white"
         }`}
     >
       {text}

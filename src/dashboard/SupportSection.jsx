@@ -4,7 +4,7 @@ const SupportSection = () => {
   return (
     <div className="w-full bg-black px-4 pt-4 pb-10">
       <div
-        className="w-full bg-[#1D1B25] text-white rounded-xl p-6 md:p-10 shadow-md flex flex-col items-center justify-center gap-5 max-w-7xl mx-auto -mt-24"
+        className="w-full bg-[#1D1B25] text-white rounded-xl p-6 md:p-10 shadow-md flex flex-col items-center justify-center gap-5 max-w-7xl mx-auto mt-10"
         role="region"
         aria-label="Support Section"
       >

@@ -17,7 +17,7 @@ const WhatIsComex = () => {
                 "linear-gradient(180deg, #281000 -17.24%, #C0971C 16.61%, #FFE976 48.47%, #C0971C 81.66%, #281000 115.52%)",
             }}
           >
-            What is COMEX?
+            What is Glod
           </h2>
 
           <p
@@ -25,15 +25,14 @@ const WhatIsComex = () => {
             style={{
               fontSize: "16px",
             
-              fontWeight: 400,
+              fontWeight:50,
             }}
           >
-            COMEX (Commodity Exchange) is the world's leading market for trading
-            precious metals such as gold, silver, copper, and other commodities.
-            As a division of the Chicago Mercantile Exchange (CME Group), COMEX
-            provides a highly liquid marketplace for traders, investors, and
-            institutions to buy and sell metal futures and options with
-            transparency and efficiency.
+            Gold (XAU/USD) offers top liquidity, 
+            tight spreads, and clear trends, 
+            attracting millions of traders daily. 
+            With $200B+ in daily volume, it’s a smart, 
+            strategic choice in any market.
           </p>
         </div>
 

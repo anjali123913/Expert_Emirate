@@ -1,83 +1,101 @@
-import React from 'react';
-import VerifyIcon from '../assets/review/Verify.png';
-
+import React from "react";
+import VerifyIcon from "../assets/review/Verify.png"; // make sure this icon exists
 
 const reviews = [
   {
-    name: "Abdirisak faysal", time: "1 hour ago", title: "Firstly I'm loving this propfirm…",
-    content: "Firstly I'm loving this propfirm activities, since it provide convenience tools that helped me pass phase one. Tools like journaling helped me most. And I hope to pass phase 2 and become funded trader. Thank you"
+    name: "Abdirisak faysal",
+    time: "1 hour ago",
+    content:
+      "I joined EXPERT EMIRATES VIP after checking out their free group for a bit. They were super transparent with their results and posted real-time signals, so I felt confident upgrading. Big respect to the team! I also started their account management service in March after my account crossed $7,000. Since then, my growth has been steady and low-risk. Definitely a big step up from random signal groups! 📈",
   },
   {
-    name: "Joe T", time: "1 hour ago", title: "Honestly the company did very well",
-    content: "The company has done an excellent job helping small traders like me. I heard about it from my brother. Once I complete Phase 2, I’ll be sure to rate again 😄."
+    name: "Joe T.",
+    time: "1 hour ago",
+    content:
+      "I'm only using their account management service now and it’s been smooth sailing. I had about $2,500 and didn’t want the stress of trading by myself anymore. Since EXPERT EMIRATES took over, my account has been growing consistently, not crazy gambling like other places — real professionals handling my trades. I can finally relax! 😌",
   },
   {
-    name: "Ali Abolhosseini", time: "1 hour ago", title: "Come to see your dream house",
-    content: "Bullionfunded has truly transformed my trading experience. The evaluation is transparent. Quick support too. Profit split could improve."
+    name: "Ali Abolhosseini",
+    time: "1 hour ago",
+    content:
+      "For anyone new to trading, EXPERT EMIRATES is a great place to start. I first tried their free signals, then moved to VIP, and after a couple of weeks, joined the account management service too. I like that they don’t push you to buy anything — it’s all at your own pace. Loving the experience so far.✨",
   },
   {
-    name: "Aqib Siddiquee", time: "4 hours ago", title: "Bullionfunded is awesome",
-    content: "Speedy support and credentials. I passed my 6k evaluation. Excited for my first payout!"
+    name: "Marvin McKinney",
+    time: "1 hour ago",
+    content:
+      "Their signals are really good, but you definitely need to follow their risk management method. In the beginning, I was risking too much and it didn’t go well. But after a chat with Adeeb from their team (thank you!), he explained how to size my lots properly. Since then, my trading results have improved a lot. Great support and very helpful!",
   },
   {
-    name: "Tariq Boudjella", time: "3 hours ago", title: "Support is amazing",
-    content: "Had an issue with money. Support responded fast and refunded in 2 hours. Amazing!"
+    name: "Aqib Siddiquee",
+    time: "4 hours ago",
+    content:
+      "Their forex signals — especially GOLD — are absolutely on fire! 🔥 I’ve been following them for about a month and already had around 13 winning trades and only 3 losses. I started with a small amount and now my account is slowly but surely growing. Good energy all around!✌️",
   },
   {
-    name: "Gaele Lepron", time: "2 hours ago", title: "A fair player, quite recommendable",
-    content: "I believe this is a truly transparent prop firm. Strong support system. Everything is easy to understand."
+    name: "Gaele Lepron",
+    time: "2 hours ago",
+    content:
+      "I joined EXPERT EMIRATES VIP two months ago and the signals have been accurate overall. There have been some losses, but that’s part of the game. What I really like is that they’re very open and honest in their reporting — good and bad. Only reason for 4 stars is I’d like a few more educational posts.",
   },
   {
-    name: "Mustafa Muzamil", time: "5 hours ago", title: "Very transparent prop firm",
-    content: "They offer a strong system and good evaluation models. Payouts are on time."
+    name: "Tariq Boudjella",
+    time: "3 hour ago",
+    content:
+      "I’ve tried a bunch of other signal services before (not going to name them lol), but EXPERT EMIRATES has been the most reliable. They actually teach proper strategy if you ask, and I noticed their accuracy after a few weeks, and it really helped me understand setups and avoid overtrading. Still figuring my entries, but now I trade with more confidence!",
   },
   {
-    name: "Mohamud Muktar", time: "7 hours ago", title: "Solid prop firm experience",
-    content: "No delays. Smooth account setup. Loved the speed and communication."
+    name: "Ronald Richards",
+    time: "2 hours ago",
+    content:
+      "Really professional service and strong forex signals. Most traders work out well if you stick to their risk management. I just wish they posted more crypto trades too — that would make it even better!",
   },
   {
-    name: "bi", time: "4 hours ago", title: "Great service",
-    content: "Fast support and clean dashboard. Passed evaluation phase quickly."
+    name: "Mustafa Muzamil",
+    time: "5 hours ago",
+    content:
+      "EXPERT EMIRATES signals are very reliable. I’ve had my wins and losses but it always comes back to growing nicely. I’m giving 4 stars only because sometimes the signals come when it’s late for me. Otherwise, no complaints!",
   },
   {
-    name: "Ahmed S", time: "6 hours ago", title: "Highly recommend!",
-    content: "Really like the tools and trader dashboard. Makes trading stress-free."
+    name: "Mohamud Muktar",
+    time: "7 hours ago",
+    content:
+      "I’ve been using EXPERT EMIRATES signals for about 6 weeks. So far, it’s been way better than other groups I tried. My only complaint is that during big news events, I wish they gave earlier warnings. But otherwise, very professional!👍",
   },
   {
-    name: "Sami R", time: "5 hours ago", title: "Wonderful team",
-    content: "Customer support is friendly and helpful. Smooth payout process."
+    name: "Eleanor Pena",
+    time: "7 hours ago",
+    content:
+      "Great service with real results. I started with $300 and after a month I’m up by about 15%. Their support team responds quickly and the signal explanations are clear. Only reason for 4 stars is that the VIP chat can get a bit quiet on weekends, but during the week it’s super active!",
   },
-  {
-    name: "Fatima N", time: "2 hours ago", title: "User-friendly and helpful",
-    content: "From account creation to funding – everything is intuitive and professional."
-  }
 ];
- 
+
 const StarRating = () => (
   <div className="flex items-center mb-2">
     {"★★★★★".split("").map((_, i) => (
-      <span key={i} className="text-yellow-400">★</span>
+      <span key={i} className="text-yellow-400 text-sm">★</span>
     ))}
     <span className="ml-2 flex items-center text-sm text-gray-400">
-  <img src={VerifyIcon} alt="Verified" className="w-4 h-4 mr-1" />
-  Verified
-</span>
-
+      <img src={VerifyIcon} alt="Verified" className="w-4 h-4 mr-1" />
+      Verified
+    </span>
   </div>
 );
 
 const ReviewCard = ({ review }) => (
   <div className="bg-[#1C1B2A] text-white p-4 rounded-xl shadow hover:shadow-xl transition-all duration-300">
     <StarRating />
-    <h2 className="text-sm font-semibold">{review.name}, <span className="text-gray-400">{review.time}</span></h2>
-    <h3 className="mt-2 font-bold text-md">{review.title}</h3>
-    <p className="mt-1 text-sm text-gray-300">{review.content}</p>
+    <h2 className="text-sm font-semibold">
+      {review.name},{" "}
+      <span className="text-gray-400 font-normal">{review.time}</span>
+    </h2>
+    <p className="mt-2 text-sm text-gray-300">{review.content}</p>
   </div>
 );
 
-export default function App() {
+export default function ReviewSection() {
   return (
-    <div className="min-h-screen bg-black p-6">
+    <div className="min-h-screen bg-black py-10 px-4">
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-6 max-w-7xl mx-auto">
         {reviews.map((review, index) => (
           <ReviewCard key={index} review={review} />
@@ -86,3 +104,23 @@ export default function App() {
     </div>
   );
 }
+.0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

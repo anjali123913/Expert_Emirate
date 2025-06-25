@@ -113,8 +113,8 @@ export const cardsData = [
     image: image7
     ,
     badge: "Forex Forecast",
-    title: "GBPUSD - Counter-trend correction before further decline",
-    desc: "GBPUSD within the correction reaches a zone of interest and resistance from which the decline may resume as the dollar returns to a northbound rut",
+    title: "USDJPY - Japan's central bank is about to raise rates",
+    desc: "USDJPY cannot continue its uptrend yet. Rumors about possible actions from the central bank of Japan will appear. The dollar in the meantime continues to rise..",
     date: "30.04.2025",
     type: "Forex Forecast",
     blogId:12
@@ -122,8 +122,8 @@ export const cardsData = [
    {
     image: image5,
     badge: "Forex Forecast",
-    title: "GBPUSD - Counter-trend correction before further decline",
-    desc: "GBPUSD within the correction reaches a zone of interest and resistance from which the decline may resume as the dollar returns to a northbound rut",
+    title: "NZDUSD - The bearish trend may get its continuation",
+    desc: "NZDUSD failed to realize the chance when the dollar went into correction. Buyers do not believe in the realization of the bullish scenario at the moment. The price continues to",
     date: "30.04.2025",
     type: "Forex Forecast",
     blogId:13
@@ -131,8 +131,26 @@ export const cardsData = [
    {
     image: image8,
     badge: "Forex Forecast",
-    title: "GBPUSD - Counter-trend correction before further decline",
-    desc: "GBPUSD within the correction reaches a zone of interest and resistance from which the decline may resume as the dollar returns to a northbound rut",
+    title: "GBPUSD - False breakdown can cause growth",
+    desc: "GBPUSD is bumping into the support of the local descending channel after a rather strong fall. The fundamental background has changed a bit, which in general gives a chance to the forex market",
+    date: "30.04.2025",
+    type: "Forex Forecast",
+    blogId:14
+  },
+   {
+    image: image8,
+    badge: "Forex Forecast",
+    title: "GBPUSD - One step away from breaking support and falling away",
+    desc: "GBPUSD is facing difficulties. Negative fundamental background, strong dollar and price entry into the selling zone gives a bunch of preconditions hinting at the continuation of the fall",
+    date: "30.04.2025",
+    type: "Forex Forecast",
+    blogId:14
+  },
+   {
+    image: image8,
+    badge: "Forex Forecast",
+    title: "USDJPY - Consolidation of price in the sell zone",
+    desc: "USDJPY reaches a strong resistance at 153.87 within an uptrend. Will this direction continue, as the Fed rate meeting is ahead...",
     date: "30.04.2025",
     type: "Forex Forecast",
     blogId:14

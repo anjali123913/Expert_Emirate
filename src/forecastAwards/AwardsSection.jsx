@@ -9,6 +9,7 @@ import KeyBenefits from "./KeyBenefits ";
 import FeatureSection from "../homepage/FeatureSection";
 import BlogFilters from "../company-news/BlogFilters";
 import BlogSection from "../company-news/BlogSection";
+import BlogCryptoForecastCards from "../company-news/BlogCryptoForecastCards";
 
 const allAwards = {
   2025: [
@@ -49,6 +50,8 @@ const years = ["2025", "2024", "2023", "2022", "2021", "2020", "2019"];
 const AwardsSection = () => {
   const [selectedYear, setSelectedYear] = useState("2025");
   const scrollRef = useRef(null);
+    const [blogId,setBlogId]=useState("");
+    const [blogType,setBlogType]=useState("Forex Forecast");
 
   const scrollLeft = () => {
     scrollRef.current.scrollBy({ left: -100, behavior: "smooth" });
@@ -158,8 +161,12 @@ const AwardsSection = () => {
         <WhyChooseSection />
         <CommunitySection />
         <KeyBenefits />
-        <BlogFilters />
-        <BlogSection/>
+        {/* <BlogFilters/>
+        <BlogSection/> */}
+        
+             <BlogFilters blogType={blogType} setBlogType={setBlogType}/>
+             {/* <BlogSection/> */}
+             <BlogCryptoForecastCards  blogType={blogType} setBlogId={blogId}/>
         <FeatureSection />
       </div>
     </section>

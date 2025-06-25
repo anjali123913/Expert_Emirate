@@ -22,7 +22,7 @@ const features = [
   },
 ];
 
-const ComexFeatures = () => {
+const CriptoTrading = () => {
   return (
     <div className="bg-black text-white font-poppins py-12 px-4">
       {/* Gradient Heading */}
@@ -35,7 +35,7 @@ const ComexFeatures = () => {
           WebkitTextFillColor: "transparent",
         }}
       >
-        With Gold trading, you can:
+        With cripto trading, you can:
       </h2>
 
       {/* Cards */}
@@ -83,4 +83,4 @@ const ComexFeatures = () => {
   );
 };
 
-export default ComexFeatures;
+export default CriptoTrading;
