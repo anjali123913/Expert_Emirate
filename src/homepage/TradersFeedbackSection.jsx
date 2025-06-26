@@ -18,10 +18,10 @@ const TradersFeedbackSection = () => {
         </h2>
 
         {/* Description */}
-        <p className="text-[18px] font-normal leading-[100%]">
+        {/* <p className="text-[18px] font-normal leading-[100%]">
           Treasure Funded shines with traders like you! See what real traders<br />
           have to say about our best-in-class prop trading firm.
-        </p>
+        </p> */}
 
         {/* Rating */}
         <div className="text-xl leading-[100%] my-4">

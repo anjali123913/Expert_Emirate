@@ -9,6 +9,7 @@ import TransactionHistory from "./dashboard/TransactionHistory";
 import BlogBitcoinConsolidation from "./blogdetail/BlogBitcoinConsolidation";
 import ReadBlog from "./blogdetail/ReadBlog";
 import Image from "./forex/Image";
+import StatusByProcessChart from "./admindashboad/StatusByProcessChart";
 
 // Lazy-loaded components
 const HomePage = lazy(() => import("./pages/Home"));
@@ -88,6 +89,7 @@ export default function AppRoutes() {
           <Route path="/dashboard/transaction-history" element={<TransactionHistory />} />
           <Route path="/blog/read-blog/:blogId" element={<ReadBlog />} />
           <Route path="/image" element={<Image/>}/>
+          <Route path="/admin" element={<StatusByProcessChart/>}/>
         </Routes>
       </Suspense>
       {!hideNavbarFooter && <Footer />}

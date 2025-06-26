@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { FaSearch, FaDownload } from "react-icons/fa";
 import Sidebar from "./components/Sidebar";
 import DashboardHeader from "./components/DashboardHeader";
 
@@ -79,57 +80,52 @@ export default function TransactionHistory() {
         <DashboardHeader />
 
         <main className="p-6 bg-black min-h-screen">
-          {/* 🔺 Title + Button OUTSIDE Card */}
-          <div className="flex justify-between items-center mb-4">
+          <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-4 gap-4">
             <h2 className="text-xl font-semibold">Transaction History</h2>
-            <button className="bg-[#0D0F1C] hover:bg-[#ffffff1f] text-white font-medium px-4 py-2 rounded border border-[#ffffff22]">
+            <button className="bg-[#121117] hover:bg-[#ffffff1f] text-white font-medium px-4 py-2 rounded border border-[#ffffff22]">
               + Add Payment
             </button>
           </div>
 
-          {/* 📦 Card Starts */}
           <div className="bg-[#121117] rounded-xl shadow-md p-6 border border-[#1c1c24]">
-            {/* Tabs */}
             <div className="flex gap-2 flex-wrap mb-4 text-sm">
-              {[
-                ["All", 80],
-                ["Active", 18],
-                ["Pending", 22],
-                ["Banner", 11],
-                ["Rejected", 32],
-              ].map(([label, count], idx) => (
-                <button
-                  key={idx}
-                  className="bg-[#1E1D24] px-4 py-1 rounded text-gray-300 flex items-center gap-2"
-                >
-                  {label}
-                  <span className="bg-[#26242f] px-2 py-0.5 rounded-full text-xs">
-                    {count}
-                  </span>
-                </button>
-              ))}
+              {["All", "Active", "Pending", "Banner", "Rejected"].map(
+                (label, idx) => (
+                  <button
+                    key={idx}
+                    className="bg-[#1E1D24] px-4 py-1 rounded text-gray-300 flex items-center gap-2"
+                  >
+                    {label}
+                    <span className="bg-[#26242f] px-2 py-0.5 rounded-full text-xs">
+                      {Math.floor(Math.random() * 20)}
+                    </span>
+                  </button>
+                )
+              )}
             </div>
 
-            {/* Controls */}
-            <div className="flex flex-wrap items-center gap-4 mb-3">
-              <input
-                value={search}
-                onChange={handleSearch}
-                placeholder="Search Plan Name"
-                className="bg-[#1e1d24] text-white px-4 py-2 rounded w-full sm:w-72"
-              />
-              <div className="flex gap-4 ml-auto">
-                <button className="bg-[#1e1d24] px-4 py-2 rounded border border-[#2c2a33] text-white text-sm">
+            <div className="flex flex-col md:flex-row flex-wrap items-center gap-4 mb-3">
+              <div className="relative w-full md:w-[600px]">
+                <input
+                  value={search}
+                  onChange={handleSearch}
+                  placeholder="Search Plan Name"
+                  className="bg-[#1e1d24] text-white pl-10 pr-4 py-3 rounded w-full border border-[#2c2a33]"
+                />
+                <FaSearch className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 text-sm" />
+              </div>
+              <div className="flex gap-4 w-full md:w-auto justify-end ml-auto">
+                <button className="bg-[#1e1d24] px-5 py-3 rounded border border-[#2c2a33] text-white text-sm flex items-center gap-2 w-full md:w-auto">
+                  <FaDownload className="text-base" />
                   Download Excel
                 </button>
-                <select className="bg-[#1e1d24] px-4 py-2 rounded border border-[#2c2a33] text-sm text-white">
+                <select className="bg-[#1e1d24] px-5 py-3 rounded border border-[#2c2a33] text-sm text-white w-full md:w-auto">
                   <option>Show 10</option>
                   <option>Show 20</option>
                 </select>
               </div>
             </div>
 
-            {/* Keyword Filters */}
             <div className="text-sm text-gray-400 mb-3 flex items-center gap-2 flex-wrap">
               <span>Status:</span>
               <span className="bg-[#26242f] px-3 py-1 rounded-full">Keyword</span>
@@ -143,7 +139,6 @@ export default function TransactionHistory() {
               {filtered.length} results found
             </p>
 
-            {/* Table */}
             <div className="overflow-x-auto">
               <table className="min-w-full text-sm text-left">
                 <thead className="bg-[#1E1D24] text-gray-400">
@@ -217,7 +212,6 @@ export default function TransactionHistory() {
               </table>
             </div>
 
-            {/* Pagination */}
             <div className="flex justify-between items-center mt-6 text-sm text-gray-500">
               <p>Rows per page: 5</p>
               <p>6–10 of 11</p>
