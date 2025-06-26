@@ -37,7 +37,7 @@ const dummyData = [
     id: 4567,
     name: "Harrison Stein",
     email: "violet.strake86@yahoo.com",
-    amount: "$800",
+    amount: "$500",
     method: "692-767-2903",
     created: "$500",
     action: "Hegmann, Kreiger and Bayer",
@@ -70,63 +70,85 @@ export default function TransactionHistory() {
   };
 
   return (
-    <div className="flex min-h-screen  bg-[#121117]">
-      {/* Sidebar */}
+    <div className="flex min-h-screen bg-[#0D0F1C] text-white">
       <div className="hidden md:block">
         <Sidebar />
       </div>
 
-      {/* Main Content */}
       <div className="flex-1 flex flex-col">
         <DashboardHeader />
-        <main className="p-4">
-          <div className="min-h-screen bg-[#121117] text-white p-6">
-            <div className="flex justify-between items-center mb-4">
-              <h2 className="text-xl bg-gradient-to-b from-yellow-900 via-yellow-300 to-yellow-900 bg-clip-text text-transparent">
-                Transaction History
-              </h2>
-              <button className="bg-[#26242f] px-4 py-2 rounded text-white">
-                + Add Payment
-              </button>
+
+        <main className="p-6 bg-black min-h-screen">
+          {/* 🔺 Title + Button OUTSIDE Card */}
+          <div className="flex justify-between items-center mb-4">
+            <h2 className="text-xl font-semibold">Transaction History</h2>
+            <button className="bg-[#0D0F1C] hover:bg-[#ffffff1f] text-white font-medium px-4 py-2 rounded border border-[#ffffff22]">
+              + Add Payment
+            </button>
+          </div>
+
+          {/* 📦 Card Starts */}
+          <div className="bg-[#121117] rounded-xl shadow-md p-6 border border-[#1c1c24]">
+            {/* Tabs */}
+            <div className="flex gap-2 flex-wrap mb-4 text-sm">
+              {[
+                ["All", 80],
+                ["Active", 18],
+                ["Pending", 22],
+                ["Banner", 11],
+                ["Rejected", 32],
+              ].map(([label, count], idx) => (
+                <button
+                  key={idx}
+                  className="bg-[#1E1D24] px-4 py-1 rounded text-gray-300 flex items-center gap-2"
+                >
+                  {label}
+                  <span className="bg-[#26242f] px-2 py-0.5 rounded-full text-xs">
+                    {count}
+                  </span>
+                </button>
+              ))}
             </div>
 
-            <div className="flex flex-wrap gap-3 items-center mb-4 text-sm">
-              {["All", "Active", "Pending", "Banned", "Rejected"].map(
-                (tab, idx) => (
-                  <button
-                    key={idx}
-                    className="bg-[#1e1d24] px-3 py-1 rounded text-gray-300"
-                  >
-                    {tab}{" "}
-                    <span className="text-xs ml-1 bg-[#26242f] px-2 py-0.5 rounded-full">
-                      {Math.floor(Math.random() * 20)}
-                    </span>
-                  </button>
-                )
-              )}
-            </div>
-
-            <div className="flex flex-wrap gap-4 items-center mb-6">
+            {/* Controls */}
+            <div className="flex flex-wrap items-center gap-4 mb-3">
               <input
-                type="text"
                 value={search}
                 onChange={handleSearch}
                 placeholder="Search Plan Name"
-                className="bg-[#1e1d24] text-white px-4 py-2 rounded w-full sm:w-64"
+                className="bg-[#1e1d24] text-white px-4 py-2 rounded w-full sm:w-72"
               />
-              <button className="bg-[#26242f] px-4 py-2 rounded">
-                Download Excel
-              </button>
-              <select className="bg-[#26242f] px-4 py-2 rounded">
-                <option>Show 10</option>
-                <option>Show 20</option>
-              </select>
+              <div className="flex gap-4 ml-auto">
+                <button className="bg-[#1e1d24] px-4 py-2 rounded border border-[#2c2a33] text-white text-sm">
+                  Download Excel
+                </button>
+                <select className="bg-[#1e1d24] px-4 py-2 rounded border border-[#2c2a33] text-sm text-white">
+                  <option>Show 10</option>
+                  <option>Show 20</option>
+                </select>
+              </div>
             </div>
 
-            <div className="overflow-auto">
-              <table className="min-w-full text-sm">
-                <thead>
-                  <tr className="text-left text-gray-400 bg-[#1e1d24]">
+            {/* Keyword Filters */}
+            <div className="text-sm text-gray-400 mb-3 flex items-center gap-2 flex-wrap">
+              <span>Status:</span>
+              <span className="bg-[#26242f] px-3 py-1 rounded-full">Keyword</span>
+              <span>Role:</span>
+              <span className="bg-[#26242f] px-3 py-1 rounded-full">Keyword</span>
+              <span className="bg-[#26242f] px-3 py-1 rounded-full">Keyword</span>
+              <span className="text-red-400 cursor-pointer ml-2">🗑 Clear</span>
+            </div>
+
+            <p className="text-gray-500 text-sm mb-4">
+              {filtered.length} results found
+            </p>
+
+            {/* Table */}
+            <div className="overflow-x-auto">
+              <table className="min-w-full text-sm text-left">
+                <thead className="bg-[#1E1D24] text-gray-400">
+                  <tr>
+                    <th className="px-4 py-2"><input type="checkbox" /></th>
                     <th className="px-4 py-2">#</th>
                     <th className="px-4 py-2">Name</th>
                     <th className="px-4 py-2">Amount</th>
@@ -141,8 +163,11 @@ export default function TransactionHistory() {
                   {filtered.map((row, i) => (
                     <tr
                       key={i}
-                      className="border-b border-[#26242f] hover:bg-[#1f1e26]"
+                      className="border-b border-[#26242f] hover:bg-[#1a1a20]"
                     >
+                      <td className="px-4 py-3">
+                        <input type="checkbox" />
+                      </td>
                       <td className="px-4 py-3">#{row.id}</td>
                       <td className="px-4 py-3">
                         <div className="flex items-center gap-2">
@@ -153,7 +178,9 @@ export default function TransactionHistory() {
                           />
                           <div>
                             <p>{row.name}</p>
-                            <p className="text-gray-500 text-xs">{row.email}</p>
+                            <p className="text-xs text-gray-500">
+                              {row.email}
+                            </p>
                           </div>
                         </div>
                       </td>
@@ -169,17 +196,20 @@ export default function TransactionHistory() {
                               : row.status === "Pending"
                               ? "bg-yellow-400 text-black"
                               : row.status === "Banned"
-                              ? "bg-red-600"
-                              : "bg-gray-600"
+                              ? "bg-red-600 text-white"
+                              : "bg-gray-600 text-white"
                           }`}
                         >
                           {row.status}
                         </span>
                       </td>
-                      <td className="px-4 py-3">
-                        <button className="text-gray-300 hover:text-white">
+                      <td className="px-4 py-3 relative group">
+                        <span className="text-white text-lg cursor-pointer">
                           ✏️
-                        </button>
+                        </span>
+                        <div className="absolute top-[-30px] right-0 text-xs bg-gray-700 text-white px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition">
+                          Quick edit
+                        </div>
                       </td>
                     </tr>
                   ))}
@@ -187,7 +217,8 @@ export default function TransactionHistory() {
               </table>
             </div>
 
-            <div className="flex justify-between items-center mt-6 text-sm text-gray-400">
+            {/* Pagination */}
+            <div className="flex justify-between items-center mt-6 text-sm text-gray-500">
               <p>Rows per page: 5</p>
               <p>6–10 of 11</p>
             </div>

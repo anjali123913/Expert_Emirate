@@ -96,31 +96,14 @@ const ReviewCard = ({ review }) => (
 export default function ReviewSection() {
   return (
     <div className="min-h-screen bg-black py-10 px-4">
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-6 max-w-7xl mx-auto">
-        {reviews.map((review, index) => (
-          <ReviewCard key={index} review={review} />
-        ))}
+      {/* SCROLLABLE DIV */}
+      <div className="max-h-[80vh] overflow-y-auto scrollbar-thin scrollbar-thumb-gray-700 scrollbar-track-gray-900">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-6 max-w-7xl mx-auto">
+          {reviews.map((review, index) => (
+            <ReviewCard key={index} review={review} />
+          ))}
+        </div>
       </div>
     </div>
   );
 }
-.0
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

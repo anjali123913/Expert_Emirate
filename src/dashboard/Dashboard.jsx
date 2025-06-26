@@ -10,7 +10,7 @@ export default function Dashboard() {
   const [clicked, setClicked] = useState("forex");
 
   return (
-    <div className="flex min-h-screen  bg-[#121117]">
+    <div className="flex min-h-screen bg-black">
       {/* Sidebar */}
       <div className="hidden md:block">
         <Sidebar />

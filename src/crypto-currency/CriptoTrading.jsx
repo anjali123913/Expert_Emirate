@@ -35,7 +35,7 @@ const CriptoTrading = () => {
           WebkitTextFillColor: "transparent",
         }}
       >
-        With cripto trading, you can:
+        With crypto trading, you can:
       </h2>
 
       {/* Cards */}
