@@ -1,37 +1,33 @@
 import React, { useState } from "react";
-import Navbar from "./Navbar1";
 import video from "../assets/Expert_Emirates.mp4";
 import { motion } from "framer-motion";
 
 const HeroSection = () => {
-  const [hoveredBtn, setHoveredBtn] = useState(null); // null or "btn1" or "btn2"
+  const [hoveredBtn, setHoveredBtn] = useState(null); // null | 'btn1' | 'btn2'
 
-  const getButtonClass = (btn) => {
+  const getButtonStyle = (btn) => {
     const isHovered = hoveredBtn === btn;
-    if (!hoveredBtn) {
-      // Default state: btn1 is gradient, btn2 is black with golden border
-      if (btn === "btn1")
-        return `bg-[linear-gradient(86.31deg,#281000_0%,#C0971C_25%,#FFE976_50.5%,#C0971C_74.5%,#281000_100%)] text-black border border-yellow-700`;
-      else
-        return `bg-black text-white border border-yellow-700`;
-    } else {
-      // Hover state: swap styles
-      if (isHovered) {
-        return btn === "btn1"
-          ? `bg-black text-white border border-black shadow-lg`
-          : `bg-[linear-gradient(86.31deg,#281000_0%,#C0971C_25%,#FFE976_50.5%,#C0971C_74.5%,#281000_100%)] text-black border border-yellow-700 shadow-lg`;
-      } else {
-        return btn === "btn1"
-          ? `bg-[linear-gradient(86.31deg,#281000_0%,#C0971C_25%,#FFE976_50.5%,#C0971C_74.5%,#281000_100%)] text-black border border-yellow-700`
-          : `bg-black text-white border border-yellow-700`;
-      }
+
+    if (btn === "btn1") {
+      // START FREE TRIAL (default gradient)
+      return isHovered
+        ? "bg-black text-white"
+        : "bg-[linear-gradient(90deg,#281000_0%,#C0971C_25.5%,#FFE976_49.5%,#C0971C_74.5%,#281000_100%)] text-black";
     }
+
+    if (btn === "btn2") {
+      // EXPLORE OUR SERVICES (default black)
+      return isHovered
+        ? "bg-[linear-gradient(90deg,#281000_0%,#C0971C_25.5%,#FFE976_49.5%,#C0971C_74.5%,#281000_100%)] text-black"
+        : "bg-black text-white";
+    }
+
+    return "";
   };
 
   return (
     <section className="relative w-full min-h-screen pt-24 overflow-hidden">
-      
-      {/* Video Background */}
+      {/* Background Video */}
       <div className="absolute inset-0 -z-10">
         <video
           autoPlay
@@ -51,17 +47,14 @@ const HeroSection = () => {
           transition={{ duration: 1 }}
           className="max-w-4xl text-left"
         >
-        <div className="inline-flex items-center justify-center my-9">
-  <div className="pt-[1px] pr-[0px] pb-[1px] pl-[0px] rounded-b-full rounded-l-full rounded-r-full bg-gradient-to-b from-[#7C4B00] to-[#FFE9A0]">
-    <button className="rounded-full bg-[#0F0F0F] px-6 py-[10px] text-white font-poppins font-medium text-base leading-[100%] tracking-[0.12em]">
-      Turning Hopes Into Reality
-    </button>
-  </div>
-</div>
-
-
-
-
+          {/* Small Tagline Button */}
+          <div className="inline-flex items-center justify-center my-9">
+            <div className="pt-[1px] px-[1px] rounded-full bg-gradient-to-b from-[#7C4B00] to-[#FFE9A0]">
+              <button className="rounded-full bg-[#0F0F0F] px-6 py-[10px] text-white font-poppins font-medium text-base leading-[100%] tracking-[0.12em]">
+                Turning Hopes Into Reality
+              </button>
+            </div>
+          </div>
 
           {/* Heading */}
           <h1 className="text-white font-poppins font-bold text-[32px] leading-[42px] tracking-wider my-3">
@@ -83,27 +76,31 @@ const HeroSection = () => {
 
           {/* Buttons */}
           <div className="flex gap-4 mt-10 flex-wrap">
-            <button
-              // onMouseEnter={() => setHoveredBtn("btn1")}
-              // onMouseLeave={() => setHoveredBtn(null)}
-              className={`   // <div class="text-center justify-start text-black text-sm font-semibold font-[Poppins] uppercase leading-relaxed tracking-widest">Start Free Trial</div>
-</div><div data-property-1="Frame 33" class="w-[165] h-[39px] px-9 py-2.5 bg-gradient-to-l from-stone-900 via-yellow-600 to-stone-900 rounded-[77.61px] shadow-[0px_0px_17.24637794494629px_1.724637746810913px_rgba(254,214,0,0.20)] shadow-[inset_0px_0px_21.557971954345703px_0px_rgba(255,215,0,0.20)] outline outline-[0.86px] outline-offset-[-0.86px] outline-yellow-600/50 inline-flex justify-center items-center gap-2.5">
- 
-              )}`}
-            >
-            
-              START FREE TRIAL
-            </button>
+            {/* START FREE TRIAL (default: gradient) */}
+            <div className="p-[2px] rounded-full bg-[linear-gradient(90deg,#281000_0%,#C0971C_25.5%,#FFE976_49.5%,#C0971C_74.5%,#281000_100%)] shadow-[0_0_17px_rgba(254,214,0,0.2)]">
+              <button
+                onMouseEnter={() => setHoveredBtn("btn1")}
+                onMouseLeave={() => setHoveredBtn(null)}
+                className={`min-w-[140px] md:min-w-[165px] h-[39px] px-[18px] py-[7px] rounded-full font-bold text-sm font-poppins transition duration-300 ${getButtonStyle(
+                  "btn1"
+                )}`}
+              >
+                START FREE TRIAL
+              </button>
+            </div>
 
-            <button
-              onMouseEnter={() => setHoveredBtn("btn2")}
-              onMouseLeave={() => setHoveredBtn(null)}
-              className={`min-w-[140px] md:min-w-[165px] h-[39px] px-[10px] py-[5px] rounded-full text-sm font-bold font-poppins transition duration-300 ${getButtonClass(
-                "btn2"
-              )}`}
-            >
-              EXPLORE OUR SERVICES
-            </button>
+            {/* EXPLORE OUR SERVICES (default: black) */}
+            <div className="p-[2px] rounded-full bg-[linear-gradient(90deg,#281000_0%,#C0971C_25.5%,#FFE976_49.5%,#C0971C_74.5%,#281000_100%)] shadow-[0_0_17px_rgba(254,214,0,0.2)]">
+              <button
+                onMouseEnter={() => setHoveredBtn("btn2")}
+                onMouseLeave={() => setHoveredBtn(null)}
+                className={`min-w-[140px] md:min-w-[165px] h-[39px] px-[18px] py-[7px] rounded-full font-bold text-sm font-poppins transition duration-300 ${getButtonStyle(
+                  "btn2"
+                )}`}
+              >
+                EXPLORE OUR SERVICES
+              </button>
+            </div>
           </div>
         </motion.div>
       </div>

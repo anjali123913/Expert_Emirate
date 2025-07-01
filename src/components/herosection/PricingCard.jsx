@@ -1,52 +1,75 @@
 import React from "react";
-import icon3 from "../../assets/heroSectionImages/image 10.png";
-import icon2 from "../../assets/heroSectionImages/image 11.png";
 import icon1 from "../../assets/heroSectionImages/image 12.png";
+import icon2 from "../../assets/heroSectionImages/image 11.png";
+import icon3 from "../../assets/heroSectionImages/image 10.png";
+import bgImage from "../../assets/Rectanglebg.png";
 
 const PricingCard = () => {
   return (
-    <div className="flex justify-center items-center">
+    <div className="w-[641px] h-[360px] flex justify-center items-center py-6 px-4">
       <div
-        className="group relative w-full h-auto md:h-80 lg:h-80 sm:w-[500px] md:w-[500px] lg:w-[550px] rounded-2xl overflow-hidden px-4 py-6 sm:p-5 transition-all duration-500 border border-gray-900 hover:border-t-yellow-600 hover:border-l-yellow-700 hover:border-r-yellow-700 hover:border-b-yellow-600 flex flex-col justify-center items-center"
-        style={{
-          background:
-            "linear-gradient(283.02deg, rgba(243, 205, 1, 0.07) 0.62%, rgba(13, 12, 19, 0.2) 99.27%)",
-        }}
+        className="group relative w-full h-full rounded-2xl overflow-hidden px-4 py-6 sm:p-6 border border-gray-900 hover:border-yellow-600 transition-all duration-500 bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: `url(${bgImage})` }}
       >
-        {/* Overlapping glowing icons in horizontal row */}
+        {/* Golden Glowing Icons with Full Golden Look */}
         <div className="absolute top-4 right-4 flex flex-row z-10">
           {[icon1, icon2, icon3].map((icon, i) => (
             <div
               key={i}
-              className={`w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 rounded-full bg-gradient-to-br from-yellow-500 to-yellow-700 flex items-center justify-center shadow-yellow-400 shadow-md ${
+              className={`w-10 h-10 md:w-12 md:h-12 rounded-full flex items-center justify-center ${
                 i > 0 ? "-ml-3" : ""
-              }`}
+              } transition-transform duration-500 group-hover:scale-110`}
+              style={{
+                background:
+                  "linear-gradient(180deg, #FFE976, #C0971C, #281000)",
+                boxShadow: "0 0 12px rgba(255, 217, 0, 0.6)",
+              }}
             >
               <img
                 src={icon}
                 alt={`icon-${i}`}
-                className="w-5 h-5 sm:w-6 sm:h-6 transition-transform duration-500 group-hover:scale-150"
+                className="w-6 h-6 transition-transform duration-500 group-hover:scale-125"
+                style={{
+                  filter:
+                    "brightness(1.1) saturate(120%) sepia(100%) hue-rotate(-15deg) contrast(1.2)",
+                }}
               />
             </div>
           ))}
         </div>
 
-        {/* Card content */}
-        <div className="relative z-10 text-white text-left transition-all duration-1000 transform">
-          <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-start group-hover:bg-gradient-to-b group-hover:from-transparent group-hover:via-yellow-400 group-hover:to-transparent group-hover:bg-clip-text group-hover:text-transparent mb-4">
-            GET TO KNOW OUR <br />
-            PLANS AND PRICING
+        {/* Text Content */}
+        <div className="relative z-10 text-white text-left">
+          <h2 className="text-xl md:text-3xl font-bold mb-3 leading-snug">
+            <span
+              className="group-hover:text-transparent bg-clip-text transition-all duration-500"
+              style={{
+                backgroundImage:
+                  "linear-gradient(180deg, #281000 -17.24%, #C0971C 16.61%, #FFE976 48.47%, #C0971C 81.66%, #281000 115.52%)",
+              }}
+            >
+              GET TO KNOW OUR <br />
+              PLANS AND PRICING
+            </span>
           </h2>
-          <p className="text-xs sm:text-sm md:text-base text-gray-300 tracking-wider uppercase mb-6">
+
+          <p className="text-sm md:text-xl text-gray-300 tracking-wide uppercase mb-4">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
             varius enim in eros elementum tristique.
           </p>
 
-          {/* Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4">
-            <button className="w-full sm:w-40 py-2 tracking-wider rounded-full border-t-[1px] border-b-[1px] border-t-yellow-500 border-l-yellow-700 border-r-yellow-700 border-b-yellow-500 bg-black text-white transition-all duration-500 hover:text-black hover:bg-gradient-to-l hover:from-[#452e06] hover:via-[#d1bf5a] hover:via-50% hover:to-[#452e06] hover:border-l-yellow-700 hover:border-t-yellow-600 hover:border-b-yellow-600 hover:border-r-yellow-700 font-medium">
-              Plan
-            </button>
+          {/* CTA Button (golden border + hover label) */}
+          <div className="flex mt-10">
+            <div className="p-[2px] rounded-full bg-[linear-gradient(90deg,#281000_0%,#C0971C_25.5%,#FFE976_49.5%,#C0971C_74.5%,#281000_100%)]">
+              <button className="w-[130px] h-[52px] rounded-full bg-black text-white text-sm font-medium tracking-wider relative overflow-hidden transition-all duration-500 hover:text-black hover:bg-[linear-gradient(90deg,#281000,#C0971C,#FFE976,#C0971C,#281000)]">
+                <span className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                  Pricing
+                </span>
+                <span className="group-hover:opacity-0 transition-opacity duration-500">
+                  Plan
+                </span>
+              </button>
+            </div>
           </div>
         </div>
       </div>

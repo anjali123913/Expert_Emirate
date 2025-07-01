@@ -4,7 +4,10 @@ const WhyExpertSection = () => {
   return (
     <section className="w-full bg-black text-white  py-10 px-4 flex flex-col items-center gap-10 mt-0" style={{ fontFamily: "Poppins" }}>
       {/* Top Button */}
-      <button className="bg-black text-white px-10 py-3 border border-l-yellow-900 border-r-yellow-900 border-b-yellow-500 border-t-yellow-950 rounded-full tracking-wider">
+
+      <button className="bg-black text-white px-10 py-3 border border-l-yellow-900 border-r-yellow-900 border-b-yellow-500 border-t-yellow-950 rounded-full tracking-wider"
+      
+      >
         Why Expert Emirates?
       </button>
 

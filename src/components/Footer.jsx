@@ -43,7 +43,7 @@ const Footer = () => {
         >
           Go to Top
         </a> */}
-        <a
+        {/* <a
   href="#top"
   className="text-black rounded-full px-6 py-2 text-sm sm:text-base font-bold shadow-[0px_0px_17px_1.7px_rgba(254,214,0,0.20)] shadow-[inset_0px_0px_21px_0px_rgba(255,215,0,0.20)] outline outline-[0.86px] outline-offset-[-0.86px] outline-yellow-600/50"
   style={{
@@ -52,6 +52,19 @@ const Footer = () => {
     border: "1px solid",
     borderImageSource:
       "linear-gradient(266.31deg, rgba(200, 161, 39, 0.5) 0%, rgba(102, 102, 102, 0) 100%)",
+  }}
+>
+  Go to Top */}
+
+  <a
+  href="#top"
+  className="text-black font-semibold px-6 py-3 rounded-full hover:scale-105 transition-all duration-300 shadow-[0px_0px_17px_1.7px_rgba(254,214,0,0.20)] shadow-[inset_0px_0px_21px_0px_rgba(255,215,0,0.20)] outline outline-[0.86px] outline-offset-[-0.86px] outline-yellow-600/50"
+  style={{
+    background:
+      "linear-gradient(270deg, #281000 -4.65%, #C0971C 23.29%, #FFE976 49.59%, #C0971C 76.98%, #281000 104.92%)",
+    border: "1px solid",
+    borderImageSource:
+      "linear-gradient(266.31deg, rgba(200, 161, 39, 0.5) 0%, rgba(102, 102, 102, 0) 100%)"
   }}
 >
   Go to Top

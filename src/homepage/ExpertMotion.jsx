@@ -1,59 +1,58 @@
 import { motion } from "framer-motion";
-import { useEffect, useState } from "react";
 import coinsTop from "../assets/coinsTop.png";
-import coinsBottom from "../assets/coinsTop.png"; // You can change if needed
+import coinsBottom from "../assets/coinsTop.png";
 
 const ExpertMotion = () => {
-  const [reverse, setReverse] = useState(true);
+  const scrollLeft = {
+    animate: { x: ["0%", "-100%"] },
+    transition: {
+      duration: 20,
+      ease: "linear",
+      repeat: Infinity,
+    },
+  };
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setReverse((prev) => !prev);
-    }, 8000); // Change direction every 8 seconds
-    return () => clearInterval(interval);
-  }, []);
-
-  const createMotionProps = (isTop) => {
-    const direction = reverse ? 1 : -1;
-    const opposite = reverse ? -1 : 1;
-    const from = isTop ? 100 * direction : 100 * opposite;
-    const to = isTop ? -100 * direction : -100 * opposite;
-
-    return {
-      animate: { x: [`${from}%`, `${to}%`] },
-      transition: { duration: 8, ease: "linear", repeat: Infinity },
-    };
+  const scrollRight = {
+    animate: { x: ["-100%", "0%"] },
+    transition: {
+      duration: 20,
+      ease: "linear",
+      repeat: Infinity,
+    },
   };
 
   return (
     <div className="w-full min-h-[50vh] bg-black relative flex items-center justify-center px-4 py-16 sm:py-24 overflow-hidden">
 
-      {/* Top Coin */}
-      <motion.img
-        src={coinsTop}
-        alt="coins top"
-        className="absolute top-9 right-96 left-96 w-full opacity-30 z-0 pointer-events-none"
-        {...createMotionProps(true)}
-      />
+      {/* Top continuous scroll (left) */}
+      <motion.div
+        className="absolute top-9 left-0 w-[200%] flex opacity-30 z-0 pointer-events-none"
+        {...scrollLeft}
+      >
+        <img src={coinsTop} alt="coin top 1" className="w-full" />
+        <img src={coinsTop} alt="coin top 2" className="w-full" />
+      </motion.div>
 
-      {/* Bottom Coin */}
-      <motion.img
-        src={coinsBottom}
-        alt="coins bottom"
-        className="absolute bottom-7 left-96 right-96 w-full opacity-30 z-0 pointer-events-none"
-        {...createMotionProps(false)}
-      />
+      {/* Bottom continuous scroll (right) */}
+      <motion.div
+        className="absolute bottom-7 left-0 w-[200%] flex opacity-30 z-0 pointer-events-none"
+        {...scrollRight}
+      >
+        <img src={coinsBottom} alt="coin bottom 1" className="w-full" />
+        <img src={coinsBottom} alt="coin bottom 2" className="w-full" />
+      </motion.div>
 
       {/* Text */}
       <div className="bg-black/50 relative z-10 flex flex-col items-center justify-center text-center px-2">
-        <h1
-          className="text-7xl font-bold bg-gradient-to-t from-transparent via-yellow-300 to-transparent bg-clip-text text-transparent"
-        >
+        <h1 className="text-7xl font-bold bg-gradient-to-t from-transparent via-yellow-300 to-transparent bg-clip-text text-transparent">
           EXPERT EMIRATES
         </h1>
-        <p className="text-white mt-2 text-3xl">Empowering Smart Traders, Every <br/>Step of the Way</p>
+        <p className="text-white mt-2 text-3xl">
+          Empowering Smart Traders, Every <br />
+          Step of the Way
+        </p>
       </div>
-        </div>
+    </div>
   );
 };
 

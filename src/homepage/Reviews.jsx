@@ -1,5 +1,5 @@
 import React from "react";
-import VerifyIcon from "../assets/review/Verify.png"; // make sure this icon exists
+import VerifyIcon from "../assets/review/Verify.png"; // Make sure this path is correct
 
 const reviews = [
   {
@@ -83,7 +83,7 @@ const StarRating = () => (
 );
 
 const ReviewCard = ({ review }) => (
-  <div className="bg-[#1C1B2A] text-white p-4 rounded-xl shadow hover:shadow-xl transition-all duration-300">
+  <div className="bg-[#1C1B2A] text-white p-4 rounded-xl shadow hover:shadow-xl transition-all duration-300max-h-[80vh] overflow-y-auto scrollbar-hidden">
     <StarRating />
     <h2 className="text-sm font-semibold">
       {review.name},{" "}
@@ -96,8 +96,8 @@ const ReviewCard = ({ review }) => (
 export default function ReviewSection() {
   return (
     <div className="min-h-screen bg-black py-10 px-4">
-      {/* SCROLLABLE DIV */}
-      <div className="max-h-[80vh] overflow-y-auto scrollbar-thin scrollbar-thumb-gray-700 scrollbar-track-gray-900">
+      {/* Scrollable area with scrollbar hidden */}
+      <div className="max-h-[80vh] overflow-y-auto scrollbar-hidden">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-6 max-w-7xl mx-auto">
           {reviews.map((review, index) => (
             <ReviewCard key={index} review={review} />

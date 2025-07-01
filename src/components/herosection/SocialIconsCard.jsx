@@ -5,6 +5,7 @@ import {
   FaFacebookF,
   FaXTwitter,
 } from "react-icons/fa6";
+import bgImage from "../../assets/Rectangle 83.png"; // ✅ Adjust this path as needed
 
 const SocialIconsCard = () => {
   return (
@@ -13,8 +14,10 @@ const SocialIconsCard = () => {
         className="group w-80 h-80 rounded-2xl p-10 border-2 border-gray-900
         transition-all duration-500 relative overflow-hidden flex flex-col justify-between items-center"
         style={{
-          background:
-            "linear-gradient(283.02deg, rgba(243, 165, 1, 0.07) 0.62%, rgba(13, 12, 19, 0.2) 99.27%)",
+          backgroundImage: `url(${bgImage})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
         }}
       >
         {/* ICONS ROW 1 */}
@@ -24,7 +27,7 @@ const SocialIconsCard = () => {
               key={idx}
               className="group/icon bg-gradient-to-br from-yellow-500 to-yellow-700 w-16 h-16 rounded-full flex items-center justify-center 
               shadow-yellow-400 shadow-md hover:scale-110 transition-transform duration-500
-              border border-gray-900 group/icon-hover:border-t-yellow-600 group/icon-hover:border-l-yellow-700 group/icon-hover:border-r-yellow-700 hover:border-b-yellow-600 "
+              border border-gray-900 group/icon-hover:border-t-yellow-600 group/icon-hover:border-l-yellow-700 group/icon-hover:border-r-yellow-700 hover:border-b-yellow-600"
             >
               <div
                 className="bg-black w-12 h-12 rounded-full flex items-center justify-center 
