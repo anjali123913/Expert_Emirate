@@ -6,26 +6,28 @@ const WhatIsComex = () => {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
-    <section className="bg-black text-white px-4 sm:px-6 pt-0 pb-6 font-poppins">
+    <section className="bg-black text-white px-6 sm:px-6 pt-0 pb-6 font-poppins">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-2">
-        {/* Text Section */}
-        <div className="w-full md:w-1/2">
+       
+ <div className="w-full lg:w-1/2">
+          {/* Gradient Heading */}
           <h2
-            className="text-[17px] sm:text-[20px] font-semibold leading-[24px] sm:leading-[28px] mb-0 bg-clip-text text-transparent"
+            className="text-[28px] sm:text-[32px] font-semibold leading-[36px] sm:leading-[40px] mb-4 font-poppins bg-clip-text text-transparent"
             style={{
               backgroundImage:
                 "linear-gradient(180deg, #281000 -17.24%, #C0971C 16.61%, #FFE976 48.47%, #C0971C 81.66%, #281000 115.52%)",
             }}
           >
-            What is Glod
+            What is Gold?
           </h2>
 
+          {/* Description */}
           <p
-            className="text-[#CCCCCC] mt-1 leading-relaxed"
+            className="text-[#CCCCCC] font-poppins"
             style={{
-              fontSize: "16px",
-            
-              fontWeight:50,
+              fontWeight: 400,
+              fontSize: "18px",
+              letterSpacing: "0%",
             }}
           >
             Gold (XAU/USD) offers top liquidity, 

@@ -9,7 +9,7 @@ import MarqueeSlider from "./herosection/MarqueeSlider";
 
 const SecondHero = () => {
   return (
-    <section className="relative w-full min-h-screen pt-24 px-4 md:px-12 lg:px-20 bg-black text-white overflow-hidden">
+    <section className="relative w-full min-h-screen pt-24 px-4 md:px-10 lg:px-10 bg-black text-white overflow-hidden">
       {/* Main Motion Wrapper */}
       <motion.div
         initial={{ opacity: 0, y: 30 }}
@@ -18,7 +18,7 @@ const SecondHero = () => {
         className="space-y-16"
       >
         {/* Top Cards Row */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 md:gap-10 lg:gap-64 justify-items-center">
+        <div className="flex items-center justify-start  flex-wrap">
   <ExpertCard />
   <PricingCard />
   <SocialIconsCard />

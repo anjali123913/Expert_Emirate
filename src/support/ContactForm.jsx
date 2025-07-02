@@ -1,15 +1,43 @@
-import React from "react";
+import React, { useState } from "react";
 
 export default function ContactForm() {
+  const wrapperStyle = {
+    background:
+      "linear-gradient(90deg, #281000 0%, #C0971C 25.5%, #FFE976 49.5%, #C0971C 74.5%, #281000 100%)",
+    padding: "2px",
+    borderRadius: "9999px",
+  };
+
+  const GradientButton = ({ text }) => {
+    const [hover, setHover] = useState(false);
+
+    return (
+      <button
+        type="submit"
+        className="w-full h-9 sm:h-10 md:h-11 rounded-full text-[11px] sm:text-xs font-medium capitalize transition-all duration-300"
+        style={{
+          background: hover
+            ? "black"
+            : "linear-gradient(86.31deg, #281000 0%, #C0971C 25%, #FFE976 50.5%, #C0971C 74.5%, #281000 100%)",
+          color: hover ? "white" : "black", // ✅ Hover text white
+        }}
+        onMouseEnter={() => setHover(true)}
+        onMouseLeave={() => setHover(false)}
+      >
+        {text}
+      </button>
+    );
+  };
+
   return (
     <div className="min-h-screen bg-black text-white flex items-center justify-center p-4">
       <div
-        className="w-full max-w-5xl p-8 rounded-2xl border border-[#2d2d2d]"
+        className="w-full max-w-5xl p-4 sm:p-6 md:p-8 rounded-2xl border border-[#2d2d2d]"
         style={{ background: "#121117" }}
       >
         {/* Gradient Heading */}
         <h2
-          className="text-center text-[28px] sm:text-[32px] font-[600] leading-[100%] tracking-[0.12em] mb-8"
+          className="text-center text-[24px] sm:text-[28px] md:text-[32px] font-semibold leading-[100%] tracking-[0.12em] mb-6 sm:mb-8"
           style={{
             fontFamily: "Poppins",
             background:
@@ -75,23 +103,11 @@ export default function ContactForm() {
             </label>
           </div>
 
-          {/* Submit Button */}
-          <div className="flex justify-center pt-2">
-            <button
-              type="submit"
-              className="px-6 py-2 rounded-full text-sm font-[600] tracking-[0.12em] shadow-[0_0_10px_#C0971C] border border-transparent 
-              transition-all duration-300 
-              bg-gradient-to-r from-[#281000] via-[#FFE976] to-[#281000] 
-              text-black 
-              hover:bg-black hover:text-[#FFD700] hover:border-[#FFD700]"
-              style={{
-                fontFamily: "Poppins",
-                fontSize: "16px",
-                lineHeight: "29px",
-              }}
-            >
-              Send Message
-            </button>
+          {/* Gradient Send Message Button */}
+          <div className="flex justify-center pt-2 w-full">
+            <div style={wrapperStyle} className="w-full max-w-xs">
+              <GradientButton text="Send message" />
+            </div>
           </div>
         </form>
       </div>

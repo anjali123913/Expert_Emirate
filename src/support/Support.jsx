@@ -8,7 +8,7 @@ import { div } from "framer-motion/client";
 export default function Support() {
   return (
    <div className="bg-black ">
-     <div className="mx-10">
+     <div className="mx-8">
     <SupportHeroSection/>
     <SupportOptions/>
     <ContactForm/>

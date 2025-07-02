@@ -5,63 +5,93 @@ import {
   FaFacebookF,
   FaXTwitter,
 } from "react-icons/fa6";
-import bgImage from "../../assets/Rectangle 83.png"; // ✅ Adjust this path as needed
+import bgImage from "../../assets/Rectangle 83.png";
+
+// Gradient fill defs
+const GradientDefs = () => (
+  <svg width="0" height="0">
+    <defs>
+      <linearGradient id="gold-gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+        <stop offset="0%" stopColor="#FFE976" />
+        <stop offset="50%" stopColor="#C0971C" />
+        <stop offset="100%" stopColor="#281000" />
+      </linearGradient>
+    </defs>
+  </svg>
+);
 
 const SocialIconsCard = () => {
   return (
-    <div className="flex justify-center items-center">
-      <div
-        className="group w-80 h-80 rounded-2xl p-10 border-2 border-gray-900
-        transition-all duration-500 relative overflow-hidden flex flex-col justify-between items-center"
-        style={{
-          backgroundImage: `url(${bgImage})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          backgroundRepeat: "no-repeat",
-        }}
-      >
-        {/* ICONS ROW 1 */}
-        <div className="flex items-center justify-center gap-16">
-          {[FaInstagram, FaFacebookF].map((Icon, idx) => (
-            <div
-              key={idx}
-              className="group/icon bg-gradient-to-br from-yellow-500 to-yellow-700 w-16 h-16 rounded-full flex items-center justify-center 
-              shadow-yellow-400 shadow-md hover:scale-110 transition-transform duration-500
-              border border-gray-900 group/icon-hover:border-t-yellow-600 group/icon-hover:border-l-yellow-700 group/icon-hover:border-r-yellow-700 hover:border-b-yellow-600"
-            >
-              <div
-                className="bg-black w-12 h-12 rounded-full flex items-center justify-center 
-                shadow-gray-400 shadow-md group-hover:scale-110 transition-transform duration-500
-                group-hover:border-yellow-400"
-              >
-                <Icon className="text-yellow-400 text-3xl group-hover/icon:scale-110 transition-transform duration-500" />
-              </div>
-            </div>
-          ))}
-        </div>
+    <div className="flex justify-center items-center p-4">
+      <div className="relative group w-80 h-80">
+        {/* Golden Outline on Hover */}
+        <div
+          className="absolute inset-0 rounded-2xl pointer-events-none z-10 transition-all duration-500 opacity-0 group-hover:opacity-100"
+          style={{
+            border: "2px solid transparent",
+            background:
+              "linear-gradient(#000, #000) padding-box, linear-gradient(180deg, #FFE976, #C0971C, #281000) border-box",
+            WebkitMask:
+              "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
+            WebkitMaskComposite: "xor",
+            maskComposite: "exclude",
+          }}
+        ></div>
 
-        {/* ICONS ROW 2 */}
-        <div className="flex items-center justify-center gap-16">
-          {[FaYoutube, FaXTwitter].map((Icon, idx) => (
-            <div
-              key={idx}
-              className="group/icon bg-gradient-to-br from-yellow-500 to-yellow-700 w-16 h-16 rounded-full flex items-center justify-center 
-              shadow-yellow-400 shadow-md hover:scale-110 transition-transform duration-500
-              group-hover:border-yellow-500"
-            >
-              <div
-                className="bg-black w-12 h-12 rounded-full flex items-center justify-center 
-                shadow-gray-400 shadow-md group-hover:scale-110 transition-transform duration-500
-                group-hover:border-yellow-400"
-              >
-                <Icon className="text-yellow-400 text-3xl group-hover/icon:scale-110 transition-transform duration-500" />
-              </div>
-            </div>
-          ))}
-        </div>
+        {/* Main Card */}
+        <div
+          className="relative z-20 w-full h-full rounded-2xl p-10 border-2 border-gray-900
+          transition-all duration-500 overflow-hidden flex flex-col justify-start items-center bg-cover bg-center bg-no-repeat"
+          style={{
+            backgroundImage: `url(${bgImage})`,
+          }}
+        >
+          <GradientDefs />
 
-        {/* Border Highlight on Icon Hover */}
-        <div className="absolute inset-0 border border-transparent group-hover:border-t-yellow-600 group-hover:border-l-yellow-700 group-hover:border-r-yellow-700 group-hover:border-b-yellow-600 rounded-2xl transition-all duration-500 pointer-events-none" />
+          {/* ICONS ROW 1 */}
+          <div className="flex items-center justify-center gap-20 mt-2">
+            {[FaInstagram, FaFacebookF].map((Icon, idx) => (
+              <div
+                key={idx}
+                className="w-16 h-16 rounded-full flex items-center justify-center hover:scale-110 transition-transform duration-500"
+                style={{
+                  background:
+                    "linear-gradient(180deg, #FFE976, #C0971C, #281000)",
+                  boxShadow: "0 0 12px rgba(255, 217, 0, 0.6)",
+                }}
+              >
+                <div className="bg-black w-12 h-12 rounded-full flex items-center justify-center shadow-md">
+                  <Icon
+                    className="text-3xl"
+                    style={{ fill: "url(#gold-gradient)" }}
+                  />
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* ICONS ROW 2 */}
+          <div className="flex items-center justify-center gap-20 mt-12">
+            {[FaYoutube, FaXTwitter].map((Icon, idx) => (
+              <div
+                key={idx}
+                className="w-16 h-16 rounded-full flex items-center justify-center hover:scale-110 transition-transform duration-500"
+                style={{
+                  background:
+                    "linear-gradient(180deg, #FFE976, #C0971C, #281000)",
+                  boxShadow: "0 0 12px rgba(255, 217, 0, 0.6)",
+                }}
+              >
+                <div className="bg-black w-12 h-12 rounded-full flex items-center justify-center shadow-md">
+                  <Icon
+                    className="text-3xl"
+                    style={{ fill: "url(#gold-gradient)" }}
+                  />
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
     </div>
   );

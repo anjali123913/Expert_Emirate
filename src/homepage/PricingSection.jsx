@@ -58,6 +58,13 @@ const plans = [
   },
 ];
 
+const wrapperStyle = {
+  background:
+    "linear-gradient(90deg, #281000 0%, #C0971C 25.5%, #FFE976 49.5%, #C0971C 74.5%, #281000 100%)",
+  padding: "2px",
+  borderRadius: "9999px",
+};
+
 export default function PricingSection() {
   return (
     <div className="bg-black text-white py-16 px-4 sm:px-6 lg:px-12 font-[Poppins]">
@@ -69,9 +76,7 @@ export default function PricingSection() {
           >
             {/* Plan Badge */}
             <div className="flex items-center gap-2 bg-[#1D1B25] rounded-full px-4 py-1.5 w-max mb-6">
-              <span className="p-2 bg-[#073B3A] rounded-full">
-                {plan.icon}
-              </span>
+              <span className="p-2 bg-[#073B3A] rounded-full">{plan.icon}</span>
               <span className="text-sm font-semibold text-white group-hover:bg-gradient-to-b group-hover:from-yellow-800 group-hover:via-yellow-300 group-hover:to-yellow-800 group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300">
                 {plan.name}
               </span>
@@ -88,14 +93,27 @@ export default function PricingSection() {
               {plan.description}
             </p>
 
-            {/* Buy Now Button */}
-            <button
-              className="w-full sm:w-[147px] h-[48px] text-sm font-bold rounded-full px-6 py-2 mb-6
-              bg-[#1F1E25] text-white hover:bg-gradient-to-r from-[#281000] via-[#FFE976] to-[#281000] 
-              hover:text-black shadow-md transition-all duration-300"
-            >
-              Buy Now
-            </button>
+            {/* Buy Now Button with gradient border */}
+            <div style={wrapperStyle} className="w-full sm:w-[147px] h-[48px] mb-6">
+              <button
+                className="w-full h-full rounded-full text-sm font-bold uppercase transition-all duration-300"
+                style={{
+                  background: "black",
+                  color: "white",
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.background =
+                    "linear-gradient(86.31deg, #281000 0%, #C0971C 25%, #FFE976 50.5%, #C0971C 74.5%, #281000 100%)";
+                  e.currentTarget.style.color = "black";
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.background = "black";
+                  e.currentTarget.style.color = "white";
+                }}
+              >
+                Buy Now
+              </button>
+            </div>
 
             {/* Features */}
             <ul className="space-y-3 text-sm text-gray-300">
@@ -111,38 +129,6 @@ export default function PricingSection() {
               ))}
             </ul>
           </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-          
         ))}
       </div>
     </div>

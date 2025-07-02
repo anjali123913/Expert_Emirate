@@ -73,7 +73,7 @@ export default function LoginPage() {
   return (
     <div className="relative min-h-screen w-full flex flex-col md:flex-row overflow-hidden">
       {/* ✅ Right Side Video Only */}
-      <div className="absolute right-0 top-0 w-1/2 h-full -z-10">
+      <div className="absolute right-0 top-0 md:w-1/2 w-full h-full -z-10">
         <video
           ref={videoRef}
           autoPlay

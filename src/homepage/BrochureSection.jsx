@@ -16,50 +16,53 @@ const BrochureSection = () => {
               Expert Emirates Brochure
             </h2>
 
-            <div className="flex justify-center md:justify-start">
-  <button
-    className="rounded-full px-8 py-4 text-base font-bold font-poppins tracking-wide flex items-center justify-center gap-3 transition-all duration-300 text-black border-none"
-    style={{
-      background:
-        "linear-gradient(270deg, #281000 -4.65%, #C0971C 23.29%, #FFE976 49.59%, #C0971C 76.98%, #281000 104.92%)",
-      borderRadius: "9999px",
-    }}
-    onMouseEnter={(e) => {
-      e.currentTarget.style.background = "rgba(0, 0, 0, 1)";
-      e.currentTarget.style.color = "white";
-      e.currentTarget.style.borderWidth = "0.78px";
-      e.currentTarget.style.borderStyle = "solid";
-      e.currentTarget.style.borderImage =
-        "linear-gradient(90deg, #281000 0%, #C0971C 25.5%, #FFE976 49.5%, #C0971C 74.5%, #281000 100%) 1";
-      e.currentTarget.style.borderRadius = "9999px"; // ensures pill shape stays
-    }}
-    onMouseLeave={(e) => {
-      e.currentTarget.style.background =
-        "linear-gradient(270deg, #281000 -4.65%, #C0971C 23.29%, #FFE976 49.59%, #C0971C 76.98%, #281000 104.92%)";
-      e.currentTarget.style.color = "black";
-      e.currentTarget.style.border = "none";
-      e.currentTarget.style.borderRadius = "9999px";
-    }}
-  >
-    Download Now
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      className="h-5 w-5 transition-transform duration-300 group-hover:translate-y-1"
-      viewBox="0 0 20 20"
-      fill="currentColor"
-    >
-      <path
-        fillRule="evenodd"
-        d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z"
-        clipRule="evenodd"
-      />
-    </svg>
-  </button>
-</div>
-
-
-
-
+            {/* Updated Golden Button */}
+            <div
+              style={{
+                background:
+                  "linear-gradient(90deg, #281000 0%, #C0971C 25.5%, #FFE976 49.5%, #C0971C 74.5%, #281000 100%)",
+                padding: "2px",
+                borderRadius: "9999px",
+              }}
+              className="inline-block mt-6"
+            >
+              <button
+                className="rounded-full px-8 py-4 text-base font-bold font-poppins tracking-wide flex items-center justify-center gap-3 transition-all duration-300 text-black border-none"
+                style={{
+                  background:
+                    "linear-gradient(90deg, #281000 0%, #C0971C 25.5%, #FFE976 50.5%, #C0971C 74.5%, #281000 100%)",
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.background = "black";
+                  e.currentTarget.style.color = "white";
+                  e.currentTarget.style.borderWidth = "1px";
+                  e.currentTarget.style.borderStyle = "solid";
+                  e.currentTarget.style.borderImage =
+                    "linear-gradient(90deg, #281000 0%, #C0971C 25.5%, #FFE976 49.5%, #C0971C 74.5%, #281000 100%) 1";
+                  e.currentTarget.style.borderRadius = "9999px";
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.background =
+                    "linear-gradient(90deg, #281000 0%, #C0971C 25.5%, #FFE976 50.5%, #C0971C 74.5%, #281000 100%)";
+                  e.currentTarget.style.color = "black";
+                  e.currentTarget.style.border = "none";
+                }}
+              >
+                Download Now
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-5 w-5 transition-transform duration-300 group-hover:translate-y-1"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                >
+                  <path
+                    fillRule="evenodd"
+                    d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z"
+                    clipRule="evenodd"
+                  />
+                </svg>
+              </button>
+            </div>
           </div>
 
           {/* Image Section */}
