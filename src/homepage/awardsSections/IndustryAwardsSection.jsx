@@ -1,6 +1,11 @@
+import React from "react";
+
 const IndustryAwardsSection = () => {
   return (
-    <section className=" text-white pt-7 px-4 py-11 rounded-3xl max-w-4xl mx-auto border shadow-lg shadow-gray-900 border-gray-600" style={{background:"rgba(18,17,20,1"}}>
+    <section
+      className="text-white pt-7 px-4 py-11 rounded-3xl max-w-4xl mx-auto border shadow-lg shadow-gray-900 border-gray-600"
+      style={{ background: "rgba(18,17,20,1)" }}
+    >
       {/* Tag */}
       <div className="flex justify-center mb-6 animate-fadeIn">
         <span className="bg-[#1E1E2F] text-sm text-white px-6 py-2 rounded-full font-semibold tracking-widest hover:bg-[#2A2A3F] transition-colors duration-300">
@@ -23,15 +28,21 @@ const IndustryAwardsSection = () => {
       </p>
 
       {/* Award Highlights */}
-      <div className=" rounded-2xl p-6 space-y-6 mb-10 animate-fadeIn" style={{background:"rgba(29,27,37,1"}}>
+      <div
+        className="rounded-2xl p-6 space-y-6 mb-10 animate-fadeIn"
+        style={{ background: "rgba(29,27,37,1)" }}
+      >
         {/* Award 1 - Right Aligned */}
         <div className="flex justify-end">
-          <div className="flex flex-col sm:flex-row sm:items-center rounded-xl px-4 py-3 max-w-2xl w-full hover:bg-[#3A3A4F] transition-all duration-300 hover:shadow-md hover:shadow-yellow-500/20" style={{background:"rgba(40,37,50,1)"}}>
-            <h3 className="bg-gradient-to-t from-yellow-900 via-yellow-300 to-yellow-900 bg-clip-text text-transparent font-bold text-base sm:text-lg group-hover:bg-gradient-to-t group-hover:from-yellow-900 group-hover:via-yellow-300 group-hover:to-yellow-900 group-hover:bg-clip-text group-hover:text-transparent transition-colors duration-200">
+          <div
+            className="flex flex-col sm:flex-row sm:items-center rounded-xl px-4 py-3 max-w-2xl w-full hover:bg-[#3A3A4F] transition-all duration-300 hover:shadow-md hover:shadow-yellow-500/20"
+            style={{ background: "rgba(40,37,50,1)" }}
+          >
+            <h3 className="bg-gradient-to-t from-yellow-900 via-yellow-300 to-yellow-900 bg-clip-text text-transparent font-bold text-base sm:text-lg">
               Best Mobile Trading App
             </h3>
             <div className="h-[50px] mx-5 w-[2px] bg-gradient-to-b from-yellow-600 via-yellow-400 to-yellow-600 rounded-full hidden sm:block"></div>
-            <p className="text-gray-300 text-sm sm:text-base mt-2 sm:mt-0 group-hover:text-gray-200 transition-colors duration-200">
+            <p className="text-gray-300 text-sm sm:text-base mt-2 sm:mt-0">
               Recognized for delivering seamless trading on the go.
             </p>
           </div>
@@ -39,12 +50,15 @@ const IndustryAwardsSection = () => {
 
         {/* Award 2 - Left Aligned */}
         <div className="flex justify-start animate-marqueeRight">
-          <div className="flex flex-col sm:flex-row sm:items-center rounded-xl px-4 py-3 max-w-2xl w-full hover:bg-[#3A3A4F] transition-all duration-300 hover:shadow-md hover:shadow-yellow-500/20" style={{background:"rgba(40,37,50,1)"}}>
-            <h3 className="bg-gradient-to-t from-yellow-900 via-yellow-300 to-yellow-900 bg-clip-text text-transparent font-bold text-base sm:text-lg group-hover:bg-gradient-to-t group-hover:from-yellow-900 group-hover:via-yellow-300 group-hover:to-yellow-900 group-hover:bg-clip-text group-hover:text-transparent transition-colors duration-200">
+          <div
+            className="flex flex-col sm:flex-row sm:items-center rounded-xl px-4 py-3 max-w-2xl w-full hover:bg-[#3A3A4F] transition-all duration-300 hover:shadow-md hover:shadow-yellow-500/20"
+            style={{ background: "rgba(40,37,50,1)" }}
+          >
+            <h3 className="bg-gradient-to-t from-yellow-900 via-yellow-300 to-yellow-900 bg-clip-text text-transparent font-bold text-base sm:text-lg">
               Best Prime Trading Broker
             </h3>
             <div className="h-[50px] mx-5 w-[2px] bg-gradient-to-b from-yellow-600 via-yellow-400 to-yellow-600 rounded-full hidden sm:block"></div>
-            <p className="text-gray-300 text-sm sm:text-base mt-2 sm:mt-0 group-hover:text-gray-200 transition-colors duration-200">
+            <p className="text-gray-300 text-sm sm:text-base mt-2 sm:mt-0">
               Awarded for exceptional trading conditions and reliability.
             </p>
           </div>
@@ -52,12 +66,15 @@ const IndustryAwardsSection = () => {
 
         {/* Award 3 - Right Aligned */}
         <div className="flex justify-end">
-          <div className="flex flex-col sm:flex-row sm:items-center  rounded-xl px-4 py-3 max-w-2xl w-full hover:bg-[#3A3A4F] transition-all duration-300 hover:shadow-md hover:shadow-yellow-500/20" style={{background:"rgba(40,37,50,1)"}}>
-            <h3 className="bg-gradient-to-t from-yellow-900 via-yellow-300 to-yellow-900 bg-clip-text text-transparent font-bold text-base sm:text-lg group-hover:bg-gradient-to-t group-hover:from-yellow-900 group-hover:via-yellow-300 group-hover:to-yellow-900 group-hover:bg-clip-text group-hover:text-transparent transition-colors duration-200">
+          <div
+            className="flex flex-col sm:flex-row sm:items-center  rounded-xl px-4 py-3 max-w-2xl w-full hover:bg-[#3A3A4F] transition-all duration-300 hover:shadow-md hover:shadow-yellow-500/20"
+            style={{ background: "rgba(40,37,50,1)" }}
+          >
+            <h3 className="bg-gradient-to-t from-yellow-900 via-yellow-300 to-yellow-900 bg-clip-text text-transparent font-bold text-base sm:text-lg">
               Best Global Regulated Broker
             </h3>
             <div className="h-[50px] mx-5 w-[2px] bg-gradient-to-b from-yellow-600 via-yellow-400 to-yellow-600 rounded-full hidden sm:block"></div>
-            <p className="text-gray-300 text-sm sm:text-base mt-2 sm:mt-0 group-hover:text-gray-200 transition-colors duration-200">
+            <p className="text-gray-300 text-sm sm:text-base mt-2 sm:mt-0">
               Honored for our commitment to transparency and security.
             </p>
           </div>
@@ -71,41 +88,23 @@ const IndustryAwardsSection = () => {
         deliver unparalleled trading experiences.
       </p>
 
-      {/* Button */}
+      {/* ✅ Updated Button */}
       <div className="flex justify-center animate-fadeIn">
-        <button
-        className="relative text-black font-bold px-7 py-3 rounded-full shadow-md transition-all duration-300 overflow-hidden"
-        style={{
-          background: "linear-gradient(86.31deg, #281000 0%, #C0971C 25%, #FFE976 50.5%, #C0971C 74.5%, #281000 100%)",
-        }}
-        onMouseEnter={(e) => {
-          e.currentTarget.style.background = "black";
-          e.currentTarget.style.color = "white";
-        }}
-        onMouseLeave={(e) => {
-          e.currentTarget.style.background = "linear-gradient(86.31deg, #281000 0%, #C0971C 25%, #FFE976 50.5%, #C0971C 74.5%, #281000 100%)";
-          e.currentTarget.style.color = "black";
-        }}
-      >
-        {/* Gradient border using pseudo-element */}
-        <span 
-          className="absolute inset-0 rounded-full opacity-100 transition-opacity duration-300"
-          style={{
-            background: "linear-gradient(266.31deg, rgba(200,161,39,0.8), rgba(102,102,102,0.3))",
-            padding: "1px",
-            zIndex: -1
-          }}
-        >
-          <span 
-            className="block w-full h-full rounded-full"
-            style={{
-              background: "linear-gradient(86.31deg, #281000 0%, #C0971C 25%, #FFE976 50.5%, #C0971C 74.5%, #281000 100%)",
+        <div className="p-[2px] rounded-full bg-[linear-gradient(90deg,#281000_0%,#C0971C_25.5%,#FFE976_49.5%,#C0971C_74.5%,#281000_100%)] shadow-[0_0_17px_rgba(254,214,0,0.2)]">
+          <button
+            onMouseEnter={(e) => {
+              e.currentTarget.classList.add("bg-black", "text-white");
+              e.currentTarget.classList.remove("text-black");
             }}
-          />
-        </span>
-        
-        Explore Awards
-      </button>
+            onMouseLeave={(e) => {
+              e.currentTarget.classList.remove("bg-black", "text-white");
+              e.currentTarget.classList.add("text-black");
+            }}
+            className="min-w-[140px] md:min-w-[165px] h-[39px] px-[18px] py-[7px] rounded-full font-bold text-sm font-poppins transition duration-300 text-black"
+          >
+            Explore Awards
+          </button>
+        </div>
       </div>
     </section>
   );

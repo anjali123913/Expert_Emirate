@@ -5,7 +5,10 @@ import { FaArrowDown } from "react-icons/fa6";
 
 const TopAwardsSection = () => {
   return (
-    <section className=" text-white px-4 rounded-3xl max-w-4xl mx-auto border shadow-lg py-5 h-full shadow-gray-900 border-gray-600" style={{background:"rgba(18,17,20,1"}}>
+    <section
+      className="text-white px-4 rounded-3xl max-w-4xl mx-auto border shadow-lg py-5 h-full shadow-gray-900 border-gray-600"
+      style={{ background: "rgba(18,17,20,1)" }}
+    >
       {/* Tag */}
       <div className="flex justify-center mb-6 animate-fadeIn">
         <span className="bg-[#1E1E2F] text-sm text-white px-6 py-2 rounded-full font-semibold">
@@ -15,8 +18,7 @@ const TopAwardsSection = () => {
 
       {/* Heading */}
       <h2 className="text-center text-2xl sm:text-3xl md:text-4xl font-bold bg-gradient-to-t from-yellow-900 via-yellow-300 to-yellow-900 bg-clip-text text-transparent mb-4">
-        Stay Updated with the Latest from 
-        Expert Emirates.
+        Stay Updated with the Latest from Expert Emirates.
       </h2>
 
       {/* Paragraph */}
@@ -77,41 +79,23 @@ const TopAwardsSection = () => {
         </div>
       </div>
 
-      {/* Button */}
+      {/* ✅ Updated Button */}
       <div className="flex justify-center animate-fadeIn">
-        <button
-        className="relative text-black font-bold px-7 py-3 rounded-full shadow-md transition-all duration-300 overflow-hidden"
-        style={{
-          background: "linear-gradient(86.31deg, #281000 0%, #C0971C 25%, #FFE976 50.5%, #C0971C 74.5%, #281000 100%)",
-        }}
-        onMouseEnter={(e) => {
-          e.currentTarget.style.background = "black";
-          e.currentTarget.style.color = "white";
-        }}
-        onMouseLeave={(e) => {
-          e.currentTarget.style.background = "linear-gradient(86.31deg, #281000 0%, #C0971C 25%, #FFE976 50.5%, #C0971C 74.5%, #281000 100%)";
-          e.currentTarget.style.color = "black";
-        }}
-      >
-        
-        <span 
-          className="absolute inset-0 rounded-full opacity-100 transition-opacity duration-300"
-          style={{
-            background: "linear-gradient(266.31deg, rgba(200,161,39,0.8), rgba(102,102,102,0.3))",
-            padding: "1px",
-            zIndex: -1
-          }}
-        >
-          <span 
-            className="block w-full h-full rounded-full"
-            style={{
-              background: "linear-gradient(86.31deg, #281000 0%, #C0971C 25%, #FFE976 50.5%, #C0971C 74.5%, #281000 100%)",
+        <div className="p-[2px] rounded-full bg-[linear-gradient(90deg,#281000_0%,#C0971C_25.5%,#FFE976_49.5%,#C0971C_74.5%,#281000_100%)] shadow-[0_0_17px_rgba(254,214,0,0.2)]">
+          <button
+            onMouseEnter={(e) => {
+              e.currentTarget.classList.add("bg-black", "text-white");
+              e.currentTarget.classList.remove("text-black");
             }}
-          />
-        </span>
-        
-        Explore News
-      </button>
+            onMouseLeave={(e) => {
+              e.currentTarget.classList.remove("bg-black", "text-white");
+              e.currentTarget.classList.add("text-black");
+            }}
+            className="min-w-[140px] md:min-w-[165px] h-[39px] px-[18px] py-[7px] rounded-full font-bold text-sm font-poppins transition duration-300 text-black"
+          >
+            Explore News
+          </button>
+        </div>
       </div>
     </section>
   );
