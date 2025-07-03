@@ -1,24 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import mtImage from "../assets/platformMT4/image3.png";
 import platformIcon from "../assets/platformMT4/image1.png"; // Icon for the button
 
 const MTPlatformsSection = () => {
-  const buttonStyle = {
-    background:
-      "linear-gradient(270deg, #281000 -4.65%, #C0971C 23.29%, #FFE976 49.59%, #C0971C 76.98%, #281000 104.92%)",
-    border: "1px solid",
-    borderImageSource:
-      "linear-gradient(266.31deg, rgba(200, 161, 39, 0.5) 0%, rgba(102, 102, 102, 0) 100%)",
-    borderRadius: "9999px",
-    fontFamily: "Poppins",
-    fontWeight: 400,
-    fontSize: "18.63px",
-    color: "black",
-    padding: "0.75rem 1.5rem",
-    display: "flex",
-    alignItems: "center",
-    gap: "0.5rem",
-  };
+  const [hovered, setHovered] = useState(false);
+
+  const buttonClass = hovered
+    ? "bg-black text-white"
+    : "bg-[linear-gradient(90deg,#281000_0%,#C0971C_25.5%,#FFE976_49.5%,#C0971C_74.5%,#281000_100%)] text-black";
 
   return (
     <section className="bg-black text-white font-[Poppins] py-12 px-4 sm:px-6 md:px-12 lg:px-20 flex flex-col-reverse md:flex-row items-center justify-between gap-10">
@@ -52,12 +41,18 @@ const MTPlatformsSection = () => {
           MT4 has become one of the most popular trading platforms, offering cutting-edge trading and analytical tools. It is designed to provide traders with a robust and userfriendly environment for executing trades and analyzing financial markets.
         </p>
 
-        {/* ✅ Single Button with Icon */}
+        {/* ✅ Styled Button */}
         <div className="mt-6 flex justify-center md:justify-start">
-          <button style={buttonStyle}>
-            <img src={platformIcon} alt="Platform Icon" className="w-5 h-5" />
-            MT4 Platform
-          </button>
+          <div className="p-[2px] rounded-full bg-[linear-gradient(90deg,#281000_0%,#C0971C_25.5%,#FFE976_49.5%,#C0971C_74.5%,#281000_100%)] shadow-[0_0_17px_rgba(254,214,0,0.2)]">
+            <button
+              onMouseEnter={() => setHovered(true)}
+              onMouseLeave={() => setHovered(false)}
+              className={`flex items-center gap-2 px-6 py-3 rounded-full text-sm font-poppins font-semibold transition-all duration-300 ${buttonClass}`}
+            >
+              <img src={platformIcon} alt="Platform Icon" className="w-5 h-5" />
+              MT4 Platform
+            </button>
+          </div>
         </div>
       </div>
     </section>

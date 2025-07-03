@@ -1,5 +1,4 @@
-// src/components/ComexFeatures.jsx
-import React from "react";
+import React, { useState } from "react";
 import volatilityIcon from "../assets/gold/comex-trading/image1.png";
 import goldSilverIcon from "../assets/gold/comex-trading/image2.png";
 import leverageIcon from "../assets/gold/comex-trading/image3.png";
@@ -23,6 +22,8 @@ const features = [
 ];
 
 const CriptoTrading = () => {
+  const [hovered, setHovered] = useState(false);
+
   return (
     <div className="bg-black text-white font-poppins py-12 px-4">
       {/* Gradient Heading */}
@@ -43,12 +44,11 @@ const CriptoTrading = () => {
         {features.map(({ icon, title, desc }) => (
           <div
             key={title}
-            className="rounded-xl px-6 py-10 text-center relative overflow-hidden min-h-[300px] flex flex-col justify-start" style={{background:"rgba(18,17,23,1)"}}
+            className="rounded-xl px-6 py-10 text-center relative overflow-hidden min-h-[300px] flex flex-col justify-start"
+            style={{ background: "rgba(18,17,23,1)" }}
           >
-            {/* Top thin gold border */}
+            {/* Top and Bottom Borders */}
             <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-[#C0971C] via-[#FFE976] to-[#C0971C]" />
-
-            {/* Bottom thin gold border */}
             <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-[#C0971C] via-[#FFE976] to-[#C0971C]" />
 
             <img
@@ -66,18 +66,21 @@ const CriptoTrading = () => {
         ))}
       </div>
 
-      {/* Button */}
+      {/* Button (with gold outline and hover logic) */}
       <div className="flex justify-center mt-10">
-        <button
-          className="px-6 py-2 rounded-full font-semibold text-black shadow-lg hover:scale-105 transition"
-          style={{
-            background:
-              "linear-gradient(180deg, #281000 0%, #C0971C 27.62%, #FFE976 53.63%, #C0971C 80.71%, #281000 108.33%)",
-            fontFamily: "Poppins, sans-serif",
-          }}
-        >
-          Join Expert Emirates
-        </button>
+        <div className="p-[2px] rounded-full bg-[linear-gradient(90deg,#281000,#C0971C,#FFE976,#C0971C,#281000)] shadow-[0_0_17px_rgba(254,214,0,0.2)]">
+          <button
+            onMouseEnter={() => setHovered(true)}
+            onMouseLeave={() => setHovered(false)}
+            className={`px-6 py-2 rounded-full font-semibold transition-all duration-300 ${
+              hovered
+                ? "bg-black text-white"
+                : "bg-[linear-gradient(90deg,#281000,#C0971C,#FFE976,#C0971C,#281000)] text-black"
+            }`}
+          >
+            Join Expert Emirates
+          </button>
+        </div>
       </div>
     </div>
   );

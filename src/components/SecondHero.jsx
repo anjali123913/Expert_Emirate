@@ -18,7 +18,7 @@ const SecondHero = () => {
         className="space-y-16"
       >
         {/* Top Cards Row */}
-        <div className="flex items-center justify-start  flex-wrap">
+        <div className="flex sm-items-center justify-start  flex-wrap">
   <ExpertCard />
   <PricingCard />
   <SocialIconsCard />

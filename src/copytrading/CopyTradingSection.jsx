@@ -10,13 +10,7 @@ const CopyTradingSection = () => {
         <div className="w-full md:w-1/2 text-white text-left">
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight">
             Invest in <br />
-            <span
-              className="bg-clip-text text-transparent"
-              style={{
-                backgroundImage:
-                  'linear-gradient(180deg, #281000 -17.24%, #C0971C 16.61%, #FFE976 48.47%, #C0971C 81.66%, #281000 115.52%)',
-              }}
-            >
+            <span className="bg-gradient-to-t from-[#281000] via-[#C0971C] to-[#FFE976] bg-clip-text text-transparent">
               Copy Trading
             </span>
           </h1>
@@ -26,7 +20,7 @@ const CopyTradingSection = () => {
           </p>
         </div>
 
-        {/* RIGHT IMAGE + TOGGLE TEXT BELOW */}
+        {/* RIGHT IMAGE + TEXT BELOW IMAGE */}
         <div className="w-full md:w-1/2 flex flex-col items-center justify-center">
           <img
             src={copyTradingImg}
@@ -34,7 +28,8 @@ const CopyTradingSection = () => {
             className="w-[250px] sm:w-[320px] md:w-[400px] lg:w-[480px]"
           />
 
-          <div className="flex items-center justify-start gap-6 mt-6 flex-wrap text-left ml-6 sm:ml-10 md:ml-14 lg:ml-20">
+          {/* CENTERED TEXT BELOW IMAGE */}
+          <div className="flex items-center justify-center gap-6 mt-6 flex-wrap text-center">
             <h3 className="text-white text-sm sm:text-base md:text-lg font-bold">
               What is Copy Trading ?
             </h3>

@@ -1,52 +1,27 @@
-
-
-
 import React, { useState } from 'react';
 import mt4Icon from '../assets/platformMT4/image1.png';
 import mt5Icon from '../assets/platformMT4/image2.png';
 import phonesImage from '../assets/platformMT4/mobile.png';
 
 const PlatfromMt5HeroSection = () => {
-  const [hovered, setHovered] = useState(null);
+  const [hoveredBtn, setHoveredBtn] = useState(null); // null | 'mt4' | 'mt5'
 
-  const mt4DefaultStyle = {
-    background: "linear-gradient(86.31deg, #281000 0%, #C0971C 25%, #FFE976 50.5%, #C0971C 74.5%, #281000 100%)",
-    border: "1px solid #C0971C",
-    fontFamily: "Poppins",
-    fontWeight: 400,
-    fontSize: "18.63px",
-    color: "black",
-    borderRadius: "9999px"
-  };
+  const getButtonStyle = (btn) => {
+    const isHovered = hoveredBtn === btn;
 
-  const mt4HoverStyle = {
-    background: "rgba(0, 0, 0, 1)",
-    border: "1px solid #FFE976",
-    fontFamily: "Poppins",
-    fontWeight: 400,
-    fontSize: "18.63px",
-    color: "white",
-    borderRadius: "9999px"
-  };
+    if (btn === 'mt4') {
+      return isHovered
+        ? 'bg-black text-white'
+        : 'bg-[linear-gradient(90deg,#281000_0%,#C0971C_25.5%,#FFE976_49.5%,#C0971C_74.5%,#281000_100%)] text-black';
+    }
 
-  const mt5DefaultStyle = {
-    background: "rgba(0, 0, 0, 1)",
-    border: "1px solid #FFE976",
-    fontFamily: "Poppins",
-    fontWeight: 400,
-    fontSize: "18.63px",
-    color: "white",
-    borderRadius: "9999px"
-  };
+    if (btn === 'mt5') {
+      return isHovered
+        ? 'bg-[linear-gradient(90deg,#281000_0%,#C0971C_25.5%,#FFE976_49.5%,#C0971C_74.5%,#281000_100%)] text-black'
+        : 'bg-black text-white';
+    }
 
-  const mt5HoverStyle = {
-    background: "linear-gradient(86.31deg, #281000 0%, #C0971C 25%, #FFE976 50.5%, #C0971C 74.5%, #281000 100%)",
-    border: "1px solid #C0971C",
-    fontFamily: "Poppins",
-    fontWeight: 400,
-    fontSize: "18.63px",
-    color: "black",
-    borderRadius: "9999px"
+    return '';
   };
 
   return (
@@ -54,7 +29,7 @@ const PlatfromMt5HeroSection = () => {
       {/* Left Content */}
       <div className="w-full md:w-1/2 space-y-6 text-center md:text-left">
         <h2
-          className="text-[20px] sm:text-[20px] md:text-[20px] lg:text-[52px] font-semibold leading-[110%] font-poppins "
+          className="text-[20px] sm:text-[20px] md:text-[20px] lg:text-[52px] font-semibold leading-[110%] font-poppins"
           style={{
             background: "linear-gradient(180deg, #281000 0%, #C0971C 25.5%, #FFE976 49.5%, #C0971C 74.5%, #281000 100%)",
             WebkitBackgroundClip: "text",
@@ -71,27 +46,31 @@ const PlatfromMt5HeroSection = () => {
           suite of tools and features to help you succeed in the financial markets.
         </p>
 
-        {/* Buttons */}
+        {/* ✅ Styled Buttons */}
         <div className="flex flex-wrap justify-center md:justify-start gap-4">
-          <button
-            className="flex items-center gap-2 px-6 py-3 transition-all duration-300"
-            style={hovered === 'mt4' ? mt4HoverStyle : mt4DefaultStyle}
-            onMouseEnter={() => setHovered('mt4')}
-            onMouseLeave={() => setHovered(null)}
-          >
-            <img src={mt4Icon} alt="MT4" className="w-5 h-5" />
-            MT4 Platform
-          </button>
+          {/* MT4 Button */}
+          <div className="p-[2px] rounded-full bg-[linear-gradient(90deg,#281000_0%,#C0971C_25.5%,#FFE976_49.5%,#C0971C_74.5%,#281000_100%)] shadow-[0_0_17px_rgba(254,214,0,0.2)]">
+            <button
+              onMouseEnter={() => setHoveredBtn('mt4')}
+              onMouseLeave={() => setHoveredBtn(null)}
+              className={`flex items-center gap-2 px-6 py-3 rounded-full font-medium text-sm transition-all duration-300 ${getButtonStyle('mt4')}`}
+            >
+              <img src={mt4Icon} alt="MT4" className="w-5 h-5" />
+              MT4 Platform
+            </button>
+          </div>
 
-          <button
-            className="flex items-center gap-2 px-6 py-3 transition-all duration-300"
-            style={hovered === 'mt5' ? mt5HoverStyle : mt5DefaultStyle}
-            onMouseEnter={() => setHovered('mt5')}
-            onMouseLeave={() => setHovered(null)}
-          >
-            <img src={mt5Icon} alt="MT5" className="w-5 h-5" />
-            MT5 Platform
-          </button>
+          {/* MT5 Button */}
+          <div className="p-[2px] rounded-full bg-[linear-gradient(90deg,#281000_0%,#C0971C_25.5%,#FFE976_49.5%,#C0971C_74.5%,#281000_100%)] shadow-[0_0_17px_rgba(254,214,0,0.2)]">
+            <button
+              onMouseEnter={() => setHoveredBtn('mt5')}
+              onMouseLeave={() => setHoveredBtn(null)}
+              className={`flex items-center gap-2 px-6 py-3 rounded-full font-medium text-sm transition-all duration-300 ${getButtonStyle('mt5')}`}
+            >
+              <img src={mt5Icon} alt="MT5" className="w-5 h-5" />
+              MT5 Platform
+            </button>
+          </div>
         </div>
       </div>
 
